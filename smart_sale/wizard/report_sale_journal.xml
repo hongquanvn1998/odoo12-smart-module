@@ -1,0 +1,40 @@
+<odoo>
+    <record id="report_journal_main" model="ir.ui.view">
+        <field name="name">Sale Journal</field>
+        <field name="model">sale.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Sale Journal">
+                <group>
+                        <field name="filter_date" string="Filter Date"/>
+                    </group>
+                <group>
+                    <group>
+                        <field name="start_date" string="Date Start"/>
+                    </group>          
+                    <group>
+                        <field name="end_date" string="Date End"/>
+                    </group>
+                    <group>
+                        <field name="filter_nomoney" string="Status"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="set_params_to_list" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_sale_journal"
+                name="Sale Journal"
+                res_model="sale.wizard"
+                view_mode="form"
+                target="new"
+            />
+    
+    <menuitem sequence="-2" action="main_sale_journal"
+            id="menu_main_sale_journal"
+            parent="sale.menu_sale_report"/>
+</odoo>

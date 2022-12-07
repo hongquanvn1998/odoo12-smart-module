@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_end_of_day_by_goods_view">
+            <field name="name">Report end of day by goods</field>
+            <field name="model">report.end.of.day.by.goods</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Report end of day by goods" create="false" delete="false"> 
+                    <field name="id" string= "STT" />    
+                    <field name="product_code" />               
+                    <field name="product_name" />
+                    <field name="date" />
+                    <field name="quantity" sum="quantity"/>  
+                    <!-- <field name="code" />   -->
+                    <!-- <field name="counter_name" />                   -->
+                    <!-- <field name="seller_name" />                                       -->
+                    <!-- <field name="amount_paid" sum="Total Paid" /> -->
+                    <field name="amount_total" sum="Total Amount" />    
+                    <button name="detail" type="object" string="Chi tiết" class="oe_highlight"/>            
+                </tree>
+            </field>
+        </record> 
+        <record id="view_report_end_of_day_by_goods_search" model="ir.ui.view">
+            <field name="name">report.end.of.day.by.goods.search</field>
+            <field name="model">report.end.of.day.by.goods</field>                   
+            <field name="arch" type="xml">            
+                <search string="Search">                       
+                     <group expand="1" string="Group By">
+                        <!-- <filter string="Counter Name" name="counter_name" context="{'group_by': 'counter_name'}"></filter>     -->
+                        <filter string="Product Code" name="product_code" context="{'group_by': 'product_code'}"></filter>        
+                        <filter string="Product Name" name="product_name" context="{'group_by': 'product_name'}"></filter>                
+                    </group> 
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

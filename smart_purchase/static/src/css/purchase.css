@@ -1,0 +1,29 @@
+.sml_inner_group {
+
+    display: inline-block!important;
+    border-width: 1px;
+    border-color: #eee;
+    border-radius: 15px;
+
+}
+
+.o_form_view .o_group .o_td_label .o_form_label {
+    font-weight: normal!important;
+}
+
+.o_horizontal_separator{
+    font-size: 1.2rem!important;
+}
+
+.o_in_iframe #wrapwrap .container {
+
+    border-width: 1px!important;
+    border-style: solid!important;
+    border-color: #eee!important;
+    border-radius: 10px!important;
+    background-color: #fff!important
+}
+
+.o_in_iframe #wrapwrap {
+    background-color: #eee!important
+}

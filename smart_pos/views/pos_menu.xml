@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <menuitem name="Overview" id="menu_pos_overview" sequence="-1" parent="smart_pos.pos_menu_root" action="pos_config_counter_action_dashboard"/>
+        <!-- Giao dịch -->
+        <menuitem name="Giao Dịch" id="menu_pos_exchange" parent="smart_pos.pos_menu_root"/> 
+        <menuitem name="Các hoạt động" id="menu_pos_order" parent="smart_pos.menu_pos_exchange" action="pos_orders_action"/>
+        <menuitem name="Ca giao dịch" id="menu_pos_exchange_shifts" parent="smart_pos.menu_pos_exchange" action="pos_session_action"/>
+        <menuitem name="Thanh toán" id="menu_pos_payment" parent="smart_pos.menu_pos_exchange" action="pos_order_payment_line_action_form"/>
+        
+        <!-- <menuitem name="Đơn hàng" id="menu_pos_exchange_orders" parent="smart_pos.menu_pos_exchange" action="smart_pos_action_window"/> -->
+
+        <!-- Quản lý -->
+        <menuitem name="Quản lý" id="menu_pos_manage" parent="smart_pos.pos_menu_root" groups="group_pos_manager,group_pos_admin"/>
+        <menuitem name="Sản phẩm" id="menu_pos_manage_product" parent="smart_pos.menu_pos_manage" action="smart_pos_product_template_action"/> 
+        <menuitem name="Khách hàng" id="menu_pos_manage_custom" parent="smart_pos.menu_pos_manage" action="smart_pos_action_customer_form"/>
+        <menuitem name="Bảng giá" id="menu_pos_manage_list_price" parent="smart_pos.menu_pos_manage" action="smart_pos_product_pricelist_action2"  groups ="product.group_product_pricelist"/>
+
+
+        <!-- Báo cáo -->
+        <menuitem name="Báo cáo" id="menu_pos_report" parent="smart_pos.pos_menu_root" groups="group_pos_manager,group_pos_admin"/>
+        <menuitem name="Cuối ngày" id="menu_pos_report_endday" parent="smart_pos.menu_pos_report" action="main_pos_end_of_day"/>
+        <menuitem name="Doanh thu" id="menu_pos_report_revenue" parent="smart_pos.menu_pos_report"  action="main_smart_pos_revenue"/>
+        <menuitem name="Bán hàng" id="menu_smart_pos_report_sale" parent="smart_pos.menu_pos_report" action="main_smart_pos_sale"/>
+        <!-- <menuitem name="Hàng hóa" id="menu_pos_report_goods" parent="smart_pos.menu_pos_report" action="main_pos_goods"/> -->
+        <menuitem name="Nhân viên" id="menu_report_sale_by_employee" parent="smart_pos.menu_pos_report" action="main_smart_pos_seller"/>
+        <menuitem name="Khách hàng" id="menu_report_sale_by_partner" parent="smart_pos.menu_pos_report" action="main_smart_pos_partner"/>
+        <!-- <menuitem name="Tài chính" id="menu_pos_report_finance" parent="smart_pos.menu_pos_report" action="main_pos_financial"/> -->
+
+        <menuitem name="Thống kê tích điểm" id="menu_pos_report_reward_point" parent="smart_pos.menu_pos_report" action="main_smart_reward_point"/>
+        <menuitem name="Lịch sử tích điểm" id="menu_pos_report_reward_point_history" parent="smart_pos.menu_pos_report" action="main_smart_reward_point_history"/>
+
+
+
+
+        <!-- Thiết lập -->
+        <menuitem name="Thiết lập" id="menu_pos_config" parent="smart_pos.pos_menu_root" groups="group_pos_manager,group_pos_admin"/>
+        <menuitem name="Thiết lập chung" id="menu_pos_config_general" parent="smart_pos.menu_pos_config" action="smart_pos_action_pos_configuration" groups="group_pos_admin" />
+        <menuitem name="Quầy giao dịch" id="menu_pos_config_counter" parent="smart_pos.menu_pos_config" action="smart_pos.pos_config_counter_action" />
+        <menuitem name="Sổ nhật ký thanh toán" id="menu_pos_config_payment_method_journal" parent="smart_pos.menu_pos_config" action="smart_pos.payment_method_journal_action_window"/>
+        <menuitem name="Phương thức thanh toán" id="menu_pos_config_payments_method" parent="smart_pos.menu_pos_config" action="smart_pos.payment_methods_action_window"/>
+    </data>
+</odoo>
+  

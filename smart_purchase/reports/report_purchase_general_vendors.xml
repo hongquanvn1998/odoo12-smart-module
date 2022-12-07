@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_purchase_journal_vendor_view">
+            <field name="name">Purchase general report by vendors</field>
+            <field name="model">report.purchase.general.vendors</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">  
+                <tree string="Purchase general report by vendors" create="false" delete="false"    js_class="smart_sale_change_params">  
+                    <field name="vendor_code" />
+                    <field name="vendor_name" />  
+                    <field name="gross_value"  sum="Gross value" />
+                    <field name="discount" sum="Discount"  />
+                    <field name="return_quantity" sum="Return quantity" />
+                    <field name="return_value"  sum="Value of return" /> 
+                    <field name="net_value" sum="Gross value" /> 
+                    <field name="province" />
+                    <field name="district" />
+                </tree>
+            </field> 
+        </record> 
+    </data>  
+</odoo>

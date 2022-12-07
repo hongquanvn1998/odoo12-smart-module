@@ -1,0 +1,1115 @@
+<odoo>
+    <template id="shop_layout">
+        <xpath expr="." position="inside">
+            <script src="/smart_pos/static/src/js/jquery-1.12.4.js"></script>
+            <script src="/smart_pos/static/src/js/jquery-ui.js"></script>
+            <script src="/smart_pos/static/src/js/js-ui.js"></script>
+            
+            <script src="/smart_pos/static/src/js/popper.min.js"></script>
+            <script type="text/javascript" src="/smart_pos/static/src/js/bootstrap4x.js"></script>
+            <script type="text/javascript" src="/smart_pos/static/src/js/angular1.7.js"></script>
+            <script src="/smart_pos/static/src/js/angular-sanitize.js"></script>
+            <script src="/smart_pos/static/src/js/after-init.js"></script>
+            <script src="/smart_pos/static/src/toastr/js/toastr.min.js"></script>
+            <script src="/smart_pos/static/src/bootbox/bootbox.min.js"></script>
+            
+            <script type="text/javascript" src="/smart_pos/static/src/js/shop-init.js"></script>
+            <script type="text/javascript" src="/smart_pos/static/src/js/order-tabs.js"></script>
+            <script type="text/javascript" src="/smart_pos/static/src/js/customer.js"></script> 
+            <script src="/smart_pos/static/src/js/controllers/product-list.js"></script>
+            <script src="/smart_pos/static/src/js/controllers/order-info.js"></script>
+            
+            <link rel="stylesheet" href="/smart_pos/static/src/css/jquery-ui.css" />
+            <link rel="stylesheet" href="/smart_pos/static/src/css/bootstrap4x.css" />
+            <link rel="stylesheet" href="/smart_pos/static/src/css/pos-style.css" />
+            <link rel="stylesheet" href="/smart_pos/static/src/css/loading.css" />
+            <link href="/smart_pos/static/src/vendors/fontawesomes/css/all.min.css" rel="stylesheet" />
+            <link href="/smart_pos/static/src/toastr/css/toastr.min.css" rel="stylesheet" />
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.6/ui-bootstrap.js" integrity="sha512-3z5zbCPEG7DvKKz46yvPmKL+w+UDfwY0f2YWFVIwBb+2Y4E23jTZHZxG+naAiTllvMNQAhapPDKGHBT7V3fQOA==" crossorigin="anonymous"></script> -->
+            
+            <!-- <script src="/smart_pos/static/src/js-webshim/minified/polyfiller.js"></script> -->
+            <script>
+                    $( document ).ready(function() {
+                      localStorage.setItem("pos_counter",$("#pos_counter").text());
+                    })
+
+            </script>
+            <style>
+                .full button span {
+                    background-color: limegreen;
+                    border-radius: 32px;
+                    color: black;
+                }
+                .partially button span {
+                    background-color: orange;
+                    border-radius: 32px;
+                    color: black;
+                }
+            </style>
+
+        </xpath>
+
+      
+
+        <div class="row m-0 p-0 h-100 " ng-app="myApp" ng-controller="myCtrl">
+            <button id ="printPaperForm" ng-click="changePrintPaper()" ng-hide="true"></button>
+            <div class="smart-pos-layout col-12" ng-hide="loaded">
+                <div class="spinner"></div>
+            </div>
+            <div class="smart-pos-layout-payment col-12" ng-hide="loadedPayment">
+                <div class="spinner-payment"></div>
+            </div>
+            <div class="row h-100 mx-0 px-0 page-wrapper" ng-cloak="" ng-show="loaded">
+                <div class="col-12 mx-0 px-1 page-header">
+                    <div class="search-wrapper row">
+                        <div class="col-8 pr-0 autocomplete autocomplete-prod">
+                            <input class="form-control" onfocus="this.select();" type="text" placeholder="Tìm mặt hàng (F3)" ng-show="!isQrMode" key-focus=""
+                                ng-model="searchParam" ng-change="onSearching(searchParam)" autocomplete="off" id="productSearchInput" style="border-radius: 5px !important;"/>
+                            <input class="form-control" onfocus="this.select();" type="text" placeholder="Tìm mặt hàng theo Qr code (F3)" ng-show="isQrMode"
+                                ng-model="searchParamQR" sml-enter="onSearchingQr(searchParamQR)" autocomplete="off" id="productSearchQrInput" style="border-radius: 5px !important;"/>
+                            <div class="output-complete output-complete-prod" ng-class="{'has-add-new':isAddNew}" ng-show="productAutoHide">
+                                <!-- <a class="add-new-product ng-hide"
+                                    ng-class="{'no-border-top':searchParam &amp;&amp; productList.length == 0}"
+                                    ng-click="onAddNew()" ng-show="isAddNew" href="javascript:;">+ Thêm mới hàng hóa</a> -->
+                                <ul>
+                                    <li ng-repeat="suggestion in productList|filter:searchParam|filter:suggestion.defaultCode|filter:suggestion.barcode"
+                                        index="$index" val="{{suggestion.name}}"
+                                        ng-class="{active:($index.toString() === selectedIndex.toString()), multiple: !suggestion.id}"
+                                        ng-click="suggestion.id ? itemClicked(suggestion) : selectProduct(suggestion)"
+                                        class="">
+                                        <div class="search-product-img"> <img ng-src="{{suggestion.image}}" />
+                                        </div>
+
+                                        <div class="search-product-info" ng-if="suggestion.id">
+                                            <p class="name-item">{{suggestion.name}} <i class="attribute-label"></i> <i
+                                                    class="attribute-label"></i> <i class="unit-label"></i> </p>
+                                            <p><span class="codeValue price-item">{{suggestion.defaultCode}}</span>
+                                                <span><span>Giá</span></span>: <span
+                                                    class="priceValue">{{suggestion.basePrice}}</span> </p>
+                                            <p ng-if="suggestion.onHand"> <span class="price-item">Tồn<span>: <span
+                                                            class="onHandValue">{{suggestion.onHand}}</span></span></span>
+                                                <span> <span><span>KH đặt</span></span>: <span
+                                                        class="reservedValue">{{suggestion.onHold}}</span> </span> </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="not-found" ng-show="searchParam &amp;&amp; productList.length == 0">Không
+                                    tìm thấy kết
+                                    quả nào phù hợp</div>
+                            </div>
+                        </div>
+                        <div class="col-2 pr-0" ng-hide="isHideMode || hideQuantity">
+                            <input type="number" id="productQtyInput"
+                                class="form-control input-quatity" ng-model="productQty" placeholder="Số lượng" style="border-radius: 5px !important;"
+                                ng-hide="isHideMode || hideQuantity" tabindex="2" sml-enter="onChangeQuantity()" restrict-input="{type: 'digitsOnly'}" autocomplete="off" onfocus="this.select();"/>
+                        </div>
+                        <div class="col-2 px-2 header-barcode-wrapper">
+                            <a ng-disabled="" class="quick-sale" ng-class="{active:!isHideMode}" title="Chế độ nhập thường"
+                                ng-click="changeSaleMode()" id="change-sale-mode-button">
+                                <i class="barcode-scan"></i>
+                            </a>
+                            <a style="margin-left: 15px;color: #fff;" ng-show="barcode_scanner_active" class="quick-sale" ng-class="{active:isQrMode}" title="Chế độ nhập Qr code"
+                                ng-click="changeQrMode()" id="change-qr-mode-button">
+                                <i class="fa fa-qrcode"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="header-tab row" ng-controller="tabCtr">
+                        <ul class="tab-move" ng-hide="tabArrowDisable">
+                            <li class="tab-move-left">
+                                <a href="#" ng-click="moveToLeft()">
+                                    <i class="fa fa-chevron-left"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="tabbar">
+                            <li class="tab-item" ng-repeat="tab in orderTabs" ng-class="{active: tab.id === selected}">
+                                <a href="#" ng-click="selectOrder(tab.id,$index)"
+                                    ng-class="{active: tab.id === selected}">
+                                    {{tab.name}} </a>
+                                <span ng-click="closeTab(tab.id)" class="tab-close">
+                                    <i class="fas fa-times"></i>
+                                </span>
+
+                            </li>
+                        </ul>
+                        <ul class="tab-move-add">
+                            <li class="tab-move-right" ng-hide="tabArrowDisable">
+                                <a href="#" ng-click="moveToRight()">
+                                    <i skip-disable="" class="fa fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="add-tab" id="new-tab">
+                                <a href="#" id="create-tab-button" ng-click="createTab()">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="header-right">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link btn" data-toggle="popover"
+                                            data-popover-content="#manual_pop" data-placement="bottom">
+                                            <i class="fas fa-info-circle"></i>
+                                            Hướng dẫn
+                                        </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-user-circle"></i>
+                                            {{seller.seller_name}}
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" t-att-href="context['url']">Quản lý</a>
+                                            <!-- <a class="dropdown-item" href="#">Cài đặt</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Thoát</a> -->
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div id="manual_pop" class="popover-content d-none">
+                            <div class="discount-form px-3">
+                                <div class="row manual-item-header mx-0">
+                                    <div class="col-12 font-weight-bold">Các phím tắt chức năng</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F1</div>
+                                    <div class="col-10 pr-0">Thêm hóa đơn mới</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F2</div>
+                                    <div class="col-10 pr-0">Bật/tắt tìm kiếm hàng qua QR</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F3</div>
+                                    <div class="col-10 pr-0">Tìm hàng hóa</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F4</div>
+                                    <div class="col-10 pr-0">Tìm khách hàng</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F6</div>
+                                    <div class="col-10 pr-0">Thay đổi chế độ nhập số lượng</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F7</div>
+                                    <div class="col-10 pr-0">Thay đổi khổ giấy in</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F8</div>
+                                    <div class="col-10 pr-0">Khách hàng thanh toán</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F9</div>
+                                    <div class="col-10 pr-0">Thanh toán</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F10</div>
+                                    <div class="col-10 pr-0">Quét mã vạch cân điện tử</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">F11</div>
+                                    <div class="col-10 pr-0">Chế độ toàn màn hình</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 pt-3 font-weight-bold"> <i class="fas fa-long-arrow-alt-up" /> </div>
+                                    <div class="col-10 pr-0">Tăng số lượng sản phẩm</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 pt-3 font-weight-bold"> <i class="fas fa-long-arrow-alt-down" /></div>
+                                    <div class="col-10 pr-0">Giảm số lượng sản phẩm</div>
+                                </div>
+                                <!-- <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">Enter</div>
+                                    <div class="col-10 pr-0">Chuyển xuống dòng tiếp theo</div>
+                                </div>
+                                <div class="row manual-item mx-0">
+                                    <div class="col-2 px-0 font-weight-bold">Shift</div>
+                                    <div class="col-10 pr-0">Chuyển lên dòng trước đó</div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- <div class="row mx-0">
+                        <div class="col right-menu-item"> </div>
+                         <div class="col right-menu-item"> </div>
+                          <div class="col right-menu-item"> </div>
+                           <div class="col right-menu-item"> </div>
+                            <div class="col right-menu-item"> </div>
+                    </div> -->
+                    </div>
+                </div>
+                <div class="col-12 mx-0 px-0 page-body">
+                    <div class="row mx-0 px-0">
+                        <div id="page-left" class="col-9 page-left card">
+                            <div id="order-items" class="row mx-0 py-2 order-items">
+                                <div id="order-cart-list" class="col-12 list-group">
+                                    <div class="list-group-item list-group-item-action row"
+                                        ng-repeat="item in currentCart.items track by $index">
+                                        <div class="cart-item-order">{{$index+1}}</div>
+                                        <div class="cart-item-action">
+                                            <a ng-click="currentCart.items.splice($index,1);deleteProd($index)"
+                                                class="btn">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </div>
+                                        <div class="cart-item-products row mx-auto">
+                                            <div class="cart-product-code col-2">{{item.name}}</div>
+                                            <div class="cart-product-name col-4">{{item.defaultCode}}</div>
+
+                                            <div class="cart-product-quantity col-2">
+                                                <div class="number-input">
+                                                    <!-- this.parentNode.querySelector('input[type=number]').stepDown() -->
+                                                    <button
+                                                        ng-click="currentCart.items[$index].quantity=currentCart.items[$index].quantity-1;changeTotal(item)"
+                                                        ng-disabled="currentCart.items[$index].quantity &lt; 1 || isQrMode"
+                                                    ></button>
+                                                    <input class="quantity" min="0" name="quantity" ng-disabled="isQrMode"
+                                                        ng-change="changeTotal(item)"
+                                                        ng-model="currentCart.items[$index].quantity" type="number" restrict-input="{type: 'digitsOnly'}" onfocus="this.select();" autocomplete="off"/>
+                                                    <button
+                                                        ng-click="currentCart.items[$index].quantity=currentCart.items[$index].quantity+1;changeTotal(item)"
+                                                        ng-disabled="isQrMode"
+                                                        class="plus"></button>
+                                                    <!-- this.parentNode.querySelector('input[type=number]').stepUp() -->
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="cart-product-warning col-1">
+                                                <div class="unit-price btn"  ng-if="currentCart.items[$index].onHand == 0 || currentCart.items[$index].quantity &gt; currentCart.items[$index].onHand">
+                                                    <a href="" data-toggle="popover" data-placement="left" data-content="Tồn: {{currentCart.items[$index].onHand}} - Đặt: {{currentCart.items[$index].onHold}}" data-trigger="hover"><i class="fa fa-exclamation-triangle"></i></a>
+                                                </div>
+                                            </div> -->
+
+                                            <div class="cart-product-warning col-1">
+                                                <span class="unit-price btn" ng-show="currentCart.items[$index].onHand == 0 || currentCart.items[$index].quantity &gt; currentCart.items[$index].onHand" data-toggle="popover"
+                                                    data-popover-content="#info_product" ng-click="setInfoProd($index)"
+                                                    data-placement="left" > 
+                                                    <i class="fa fa-exclamation-triangle"></i></span>
+
+                                                <popover-directive></popover-directive>
+                                                <div class="popover-content d-none" id="info_product">
+                                                    <div class="form-wrapper form-label-80 discount-form">
+                                                        <div class="popover-inner" ng-controller="disCtrl">
+                                                            <div class="popover-content">Tồn: {{price_item.onHand}} - Đặt: {{price_item.onHold}}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                       
+
+                                            <div class="cart-item-price col"  >
+                                                <span class="unit-price"  data-toggle="popover"
+                                                    data-popover-content="#discount_price" ng-click="setPrice($index)"
+                                                    data-placement="left" ng-class="{'color-discount': item.salePrice &lt; item.originPrice}"> 
+                                                    {{item.salePrice | currency:"":0 }}</span>
+                                                <span class="cell-sub" ng-show="item.discountProd &gt; 0.00001">
+                                                    <span ng-if="item.discountRatio">- {{item.discountRatio | currency:"":2}} %</span>
+                                                    <span ng-if="!item.discountRatio">- {{item.discountProdVND}} </span>
+                                                </span>
+                                                <popover-directive></popover-directive>
+                                                <div class="popover-content d-none" id="discount_price">
+                                                    <div class="form-wrapper form-label-80 discount-form">
+                                                    <div ng-controller="disCtrl">
+                                                        <div class="form-group row mx-1" >
+                                                            <label class="col-4 px-0 form-label control-label"><span>Đơn giá</span></label>
+                                                            <input type="number" id="unit-price-form" data-number-to-fixed="2" data-number-stepfactor="100"
+                                                                class="col-8 form-control form-control-sm input-bottom-line "
+                                                                ng-model="price_item.unitPrice" ng-change="newChangePrice($index)"   autocomplete="off" onfocus="this.select();"/>
+                                                        </div>
+                                                        <div class="form-group row mx-1">
+                                                            <label class="col-4 px-0 form-label control-label"><span>Giảm giá</span></label>
+                                                            <input type="number"
+                                                                class="col-3 form-control form-control-sm input-bottom-line"
+                                                                ng-model="price_item.discountProdValues"
+                                                                ng-change="discOnProd($index)" restrict-input="{type: 'digitsOnly'}" onfocus="this.select();" />
+                                                            <a class="toggle-btn col-2"
+                                                                ng-class="{active:(price_item.selected==true)}"
+                                                                ng-click="select('vnd',$index)">VND</a>
+                                                            <a class="toggle-btn col-2"
+                                                                ng-class="{active:(price_item.selected==false)}"
+                                                                ng-click="select('percent',$index)">%</a>
+                                                        </div>
+                                                        <div class="form-group row mx-1">
+                                                            <label class="col-4 px-0 form-label control-label"><span>Giá bán</span></label>
+                                                            <input
+                                                                type="number" 
+                                                                class="col-8 form-control form-control-sm input-bottom-line"
+                                                                ng-model="price_item.salePrice"
+                                                                ng-change="ajustedPrice($index)" restrict-input="{type: 'digitsOnly'}" onfocus="this.select();"/>
+                                                        </div>
+                                                        <div class="form-group text-right color-discount" ng-show="price_item.salePrice &lt; price_item.cost">
+                                                        <i class="fa fa-exclamation-triangle"></i> Giá bán đang nhỏ hơn giá vốn</div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <!-- </script> -->
+                                                <!-- data-html="true" data-content="&lt;div&gt;text &lt;b&gt; text&lt;/b&gt;&lt;/div&gt;" -->
+                                            </div>
+                                            <div class="cart-item-total col font-weight-bold">
+                                                {{item.total | currency:"":0}}
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <!-- Order items <br />
+                        <h3>This is: {{tabCode}}</h3>
+                        <div ng-repeat="item in currentCart.items">
+                            <span>{{item.productCode}} / {{item.quantity}}</span>
+                        </div><br /> -->
+
+                                <!-- <div class="resize-btn">
+                                    <i class="fas fa-angle-double-up text-info"></i>
+                                </div> -->
+                            </div>
+                            
+                            <div id="product-items" class="row mx-0 px-0 product-items" ng-controller="productCtrl">
+                            <div class="resize-btn">
+                                    <i class="fas fa-angle-double-up text-info"></i>
+                                </div>
+                                <div class="col-12 px-0">
+                                    <nav class="navbar navbar-expand-lg navbar-light">
+                                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                            <ul class="navbar-nav mr-auto">
+                                                <li class="nav-item active">
+                                                    <a class="nav-link" href="#" title="Hiển thị hình ảnh hàng hóa" ng-click="changeProductView()">
+                                                        <i class="fas fa-th"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#" title="Lọc hàng hóa theo thuộc tính">
+                                                        <i class="fas fa-filter" ng-click="showAttrFilter()"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link " href="#" title="Lọc hàng hóa theo nhóm hàng">
+                                                        <i class="fas fa-stream" ng-click="showCateFilter()"></i>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                            <div class="form-inline my-2 my-lg-0">
+                                                <ul class="navbar-nav mr-auto">
+                                                    <li class="nav-item active py-1 mr-4">
+                                                        <span title="Hiển thị hình ảnh hàng hóa">
+                                                            {{page+1}}/ {{totalPage}}
+                                                        </span>
+                                                    </li>
+                                                    <li class="nav-item active">
+                                                        <a class="nav-link" href="#"
+                                                            ng-click="page&gt;0?page=page-1:page=page"
+                                                            title="Xem trang trước">
+                                                            <i class="fas fa-chevron-left"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item active">
+                                                        <a class="nav-link" href="#"
+                                                            ng-click="page&lt;totalPage-1?page=page+1:page=page"
+                                                            title="Xem trang sau">
+                                                            <i class="fas fa-chevron-right"></i>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </nav>
+                                    <!-- Lọc thuộc tính hàng hóa -->
+                                    <div class="float-nav left" ng-show="popOutAttribute">
+                                        <div class="float-nav-content" >
+                                            
+                                            <h3 class="title">Thuộc tính hàng hóa <a ng-click="clearFilter('attr')"><span>Xóa chọn tất cả</span></a></h3>
+
+                                            <div class="scroll-content">
+                                                <div class="filter-content" ng-repeat="attr in attributeList">
+                                                    <h4 class="title-line"><span>{{attr.name}}</span></h4>
+                                                    <div class="filter-scroll">
+                                                        <!---->
+                                                        <div class="checkbox-custom" ng-repeat="item in attr.values">
+                                                            <label><input type="checkbox" ng-model="item.checked" />
+                                                                <span>{{item.name}}</span></label></div>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="group-buttons"><a ng-click="applyAttrFilter()"
+                                                    class="btn btn-success"><i class="fa fa-check-square"></i> <span
+                                                        translate=""><span>Xong</span></span></a> <a
+                                                    ng-click="closeAttr()" class="btn btn-default"><i
+                                                        class="fa fa-ban"></i>Bỏ qua</a></div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="float-overlay" ng-show="popOutAttribute" ng-click="popOutAttribute=!popOutAttribute"></div>
+                                    <!-- Lọc nhóm hàng -->
+                                    <div class="float-nav left" ng-show="popOut">
+                                        <div class="float-nav-content" >
+                                            
+                                            <h3 class="title">Nhóm hàng <a ng-click="clearFilter('category')"><span>Xóa chọn tất cả</span></a></h3>
+
+                                            <!-- <div class="customer-search-autocomplete">
+                                                <div class="autocomplete"><i class="fa fa-search"></i> <input
+                                                        type="text" ng-model="searchParam"
+                                                        placeholder="Tìm kiếm nhóm hàng"
+                                                        class="form-control" ng-change="searchTreeView()"/></div>
+                                            </div> -->
+                                            <div class="scroll-content">
+                                                <ul class="tree-view-wrapper">
+                                                    <li>
+                                                        <input class="tree-checkbox" type="checkbox" ng-model="nodes.category_1.checked" ng-change="checkChange(nodes.category_1)"/>
+                                                        <label>All</label>
+                                                        <ul id="ul-1" class="tree-view-wrapper">
+
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="group-buttons"><a ng-click="applyFilter()"
+                                                    class="btn btn-success"><i class="fa fa-check-square"></i> <span><span>Xong</span></span></a> <a
+                                                    ng-click="close()" class="btn btn-default"><i
+                                                        class="fa fa-ban"></i>Bỏ qua</a></div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="float-overlay" ng-show="popOut" ng-click="popOut=!popOut"></div>
+                                    
+                                    <div class="row mx-0 p-2" ng-hide="switchProd"  >
+                                        <div class="col-2 px-0 product-item-wrapper"
+                                            ng-repeat="prod in itemsPaginated() | productFilter:categoryFilterId | productAttrFilter:attrFilterId">                                            
+                                            <div class="card">
+                                                <div class="card-body py-2 px-2 prod-item"
+                                                    ng-click="selectProduct(prod)">
+                                                    <div class="prod-image">
+                                                        <img class="prod-thumbnail" ng-src="{{prod.image}}" />
+                                                        <div href="#" class="badge  badge-info prod-price">
+                                                            {{prod.basePrice| currency:"":0}} <sup>&#8363;</sup></div>
+                                                    </div>
+                                                    <div class="prod-name">
+                                                        {{prod.name |limitTo: 35}}{{prod.name.length > 35 ? '...' : ''}}
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- sub -->
+                                    <div class="row mx-0 p-2 sub"  ng-hide="!switchProd" >
+                                        <div class="col-2 px-0 product-item-wrapper"
+                                            ng-repeat="prod in itemsPaginated() | productFilter:categoryFilterId | productAttrFilter:attrFilterId" >                                            
+                                            <div class="sub-card">
+                                                <div class="card-body py-2 px-2 sub-prod-item" ng-click="selectProduct(prod)">
+                                                    <div class="sub-prod-image">
+                                                        <img class="sub-prod-thumbnail2" ng-src="{{prod.image}}" />
+                                                    </div>
+                                                    <div href="#" class="badge  badge-info sub-prod-price">
+                                                        {{prod.basePrice| currency:"":0}} <sup>&#8363;</sup>
+                                                    </div>
+                                                    <div class="sub-prod-name">
+                                                        {{prod.name |limitTo: 35}}{{prod.name.length > 35 ? '...' : ''}}
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- sub -->
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-3 px-0 page-right" ng-controller="orderInfoCtrl">
+                            <div class="row mx-0 py-2">
+                                <div class="col-6 py-2"><i title="Người bán"
+                                        class="fas fa-user-circle text-info  pt-1"></i>
+                                        {{seller.seller_name}}
+                                </div>
+                                <div class="col-6 font-weight-normal digital-clock">
+                                    {{ clock | date:'dd-MM-yyyy HH:mm:ss'}}
+                                </div>
+                            </div>
+                            <div class="wrap-bill row mx-0">
+                            <!-- <div ng-click="toggleSearch()"></div> -->
+                                <div class="col-12 order-info-row autocomplete autocomplete-customer ">
+                                    <div class="input-group mb-3 order-customer" ng-if="!currentCustomer">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text px-0"><i
+                                                    class="fas fa-search text-info"></i></span>
+                                        </div>
+                                        <!-- focus-me="shouldBeOpen" -->
+                                        <input id="customerSearchInput" placeholder="Tìm kiếm khách hàng (F4)" type="text" class="form-control" ng-change="showSearch()"
+                                            aria-label="Customer" ng-model="searchCustomer" name="searchctr" onfocus="this.select();" autocomplete="off"/>
+                                        <div class="input-group-append">
+
+                                            <a href="#" class="input-group-text" data-backdrop="static"
+                                                data-keyboard="false" data-toggle="modal" data-target="#newCustomer">
+                                                <i class="fas fa-plus text-info"></i>
+                                            </a>
+
+                                            <!-- <span class="input-group-text"></span> -->
+                                        </div>
+                                        <div class="output-complete output-complete-customer" ng-show="openSearchCustomer">
+                                            <ul ng-hide="searchCustomer &amp;&amp; list_customer.length == 0">
+                                                <li
+                                                    ng-repeat="suggestion in list_customer|filter:searchCustomer|filter:suggestion.customer_code"
+                                                    ng-click="customerClicked(suggestion)" index="$index" class="">
+                                                    <span class="pull-right">{{suggestion.mobile}}</span>
+                                                    <div class="user-info">
+                                                        <span class="name-info">{{suggestion.name}}</span>
+                                                        <span>Mã: {{suggestion.customer_code}}</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="not-found"
+                                                ng-show="searchCustomer &amp;&amp; suggestion.length == 0">Không tìm
+                                                thấy khách hàng phù hợp</div>
+                                        </div>
+                                    </div>
+
+                                    <div ng-if="currentCustomer" class="row input-group mb-3 order-customer">
+                                        <div class="input-group-prepend col-1">
+                                            <span class="input-group-text px-0"><i class="fa fa-user"></i></span>
+                                        </div>
+
+                                        <!---->
+                                        <div ng-if="!(currentCustomer.isDeleted==true)" class="col-9 customer-current">
+                                            <a ng-click="openEditForm()" class="form-control" id="infoCustomer"
+                                                tabindex="2012" data-backdrop="static" data-keyboard="false"
+                                                data-toggle="modal" data-target="#newCustomer">
+                                                {{currentCustomer.name}} 
+                                                <!-- {{currentCustomer.mobile}} -->
+                                                </a>
+                                        </div>
+                                        <!---->
+                                        <!---->
+                                        <div class="input-group-append col-1">
+                                            <button class="btn-icon btn-delete" title="Xóa khách hàng"
+                                                ng-click="changeCustomer()" ng-hide="" id="deleteCustomer"
+                                                kv-tab-index="" tabindex="2013"><i></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="col-12 order-info-row">
+                                    <div class="input-group mb-3 order-price-list">
+                                        <div class="pt-2">
+                                            <i class="fas fa-tag text-info"></i>
+                                        </div>
+                                        <div class="py-1 px-2">
+                                            Bảng giá tháng 1
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 order-info-row">
+                                    <div class="input-group mb-3 order-total-quantity row">
+                                        <div class="pt-2 col-7">
+                                            Số lượng
+                                        </div>
+                                        <div class="py-1 px-2 col-5 text-right">
+                                            {{total_Quantity | number : fractionSize}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 order-info-row">
+                                    <div class="input-group mb-3 order-total row">
+                                        <div class="pt-2 col-7">
+                                            Tổng tiền hàng
+                                        </div>
+                                        <div class="py-1 px-2 col-5 order-total-amount text-right">
+                                            {{total_Bill | number : fractionSize}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 order-info-row">
+                                    <!-- <div class="input-group mb-3 order-discount row">
+                                        <div class="pt-2 col-7">
+                                            Giảm giá
+                                        </div>
+                                        <div class="py-1 px-2 col-5 ">
+                                            <input type="number"
+                                                class="form-control order-discount-amount text-right px-0 "
+                                                aria-label="Giảm giá" ng-model="orderInfo.discountValues" ng-change="getDiscount()"></input>
+                                        </div>
+                                    </div> -->
+                                    <div class="form-group row mx-1">
+                                        <label class="col-4 px-0 form-label control-label"><span>Giảm
+                                                giá</span></label>
+                                        <a class="toggle-btn col-2"
+                                            ng-class="{active:(discount_type.selected==true)}"
+                                            ng-click="selectDiscountType('vnd')">VND</a>
+                                        <a class="toggle-btn col-2"
+                                            ng-class="{active:(discount_type.selected==false)}"
+                                            ng-click="selectDiscountType('percent')">%</a>
+                                        <input type="number" id="discount-all"
+                                            class="col-3 form-control form-control-sm input-bottom-line"
+                                            ng-model="orderInfo.discountValues" ng-change="getDiscount()"  restrict-input="{type: 'digitsOnly'}" onfocus="this.select();" autocomplete="off"/>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 order-info-row">
+                                    <div class="input-group mb-3 order-payment row">
+                                        <div class="pt-2 col-7">
+                                            <strong>Khách cần trả</strong>
+                                        </div>
+                                        <div class="py-1 px-2 col-5 order-total-payment text-right">
+                                            <span>{{customerPay | number : fractionSize}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 order-info-row">
+                                    <div class="input-group mb-3 order-pay row">
+                                        <div style="font-size: 12px;" class="pt-2 col-6">
+                                            Khách thanh toán (F8)
+                                            <span class="sub-label" ng-if="methodStrCurrent.length > 0">{{methodStrCurrent}}</span>
+                                        </div>
+                                        <div class="py-1 pt-2 px-2 col-2   text-center">
+
+                                            <!-- <button type="button" class="input-group-text" data-backdrop="static"
+                                        data-keyboard="false" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="fas fa-plus text-info" />
+                                        </button> -->
+
+
+                                            <a href="#" title="Phương thức thanh toán" data-backdrop="static" 
+                                                data-keyboard="false" data-toggle="modal" data-target="#paymentMethod" ng-click="openEditPayingForm()">
+                                                <i class="fas fa-credit-card text-info payment-method"></i>
+                                            </a>
+                                        </div>
+                                        <div class="py-1 px-2 col-4 ">
+                                            <!-- <input type="text" id="paying-amount-input sub" class="form-control order-pay-amount text-right px-0 "
+                                                aria-label="Khách thanh toán" ng-model="orderInfo.payingamountValues"  onfocus="this.select();" ui-number-mask="3"/> -->
+
+                                            
+                                            <input type="number" ng-disabled="isDisabled()" id="paying-amount-input" class="form-control order-pay-amount text-right px-0 "
+                                                aria-label="Khách thanh toán" ng-model="orderInfo.payingamountValues" ng-change="PayingAmount()" onfocus="this.select();"/>
+
+                                        </div>
+                                    </div>
+                                    <!-- Select payment method Dialog  -->
+                                    <div class="modal fade" id="paymentMethod" tabindex="-1" role="dialog"
+                                        aria-labelledby="paymentMethodLabel" aria-hidden="true">
+                                        <div class="modal-dialog  modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="paymentMethodLabel">Phương thức thanh toán</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row mx-0 payment-item-row">
+                                                        <div class="col-7" >
+                                                            <strong>Số tiền</strong>
+
+                                                        </div>
+                                                        <div class="col-5" >
+                                                            <!-- <input type="number" ng-hide="true" 
+                                                                class="form-control text-success payment-total-digit" data-number-to-fixed="0" data-number-stepfactor="100" 
+                                                                ng-model="currentAmount" id="current-amount" onfocus="this.select();" /> -->
+                                                            <input type="number" aria-label="Số tiền"
+                                                                class="form-control text-success payment-total-digit"
+                                                                ng-model="currentAmount" id="current-amount" onfocus="this.select();" />
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="row mx-0 payment-item-row">
+                                                        <div class="col-12 py-2" ng-hide="isHidePaymentButton">
+                                                            <div class="border-payment-suggest">
+                                                                <span ng-hide="isHideSuggest" class="badge payment-suggest btn btn-white" ng-repeat="suggesAmount in listSuggest" ng-click="getSugges(suggesAmount)" data-dismiss="modal" >{{suggesAmount | number : fractionSize}}</span>
+                                                                <span ng-hide="!isHideSuggest" class="badge payment-suggest btn btn-white" ng-repeat="suggesAmount in listSuggest" ng-click="getSugges(suggesAmount)">{{suggesAmount | number : fractionSize}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="payment-group-btn clearfix" ng-hide="isHidePaymentButton">
+                                                        <div class="payment-btn">
+                                                            
+                                                            <button class="btn btn-border btn-payment-method" ng-repeat="pay in payment" ng-click="updatePayments(pay, currentAmount)" 
+                                                            ng-disabled="!(isMultiple || !lastMethod || lastMethod == paymentMethods.cash.Id)">
+                                                            <span>{{pay.MethodStr}}</span>
+                                                            </button>
+                                                
+                
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group text-right notification" ng-if="currentCustomer.prp_id &amp;&amp; isShowPointMethod">
+                                                        <div>Điểm hiện tại: {{currentCustomer.prp_points | number : fractionSize}} điểm ({{currentCustomer.pointToMoney | number : fractionSize}} đồng)</div>
+                                                    </div>
+                                                    <!-- <div class="form-group text-right notification" ng-if="!currentCustomer.id">
+                                                        <div>Bạn chưa nhập khách hàng.</div>
+                                                    </div> -->
+                                                    <div class="form-group text-right notification" ng-if="!currentCustomer.prp_id &amp;&amp; isShowPointMethod &amp;&amp; currentCustomer.id">
+                                                        <div>Khách hàng hiện tại chưa có điểm.</div>
+                                                    </div>
+                                                    <div class="row mx-0 payment-item-row">
+                                                        <div style="width:90%;font-size: 20px;">
+                                                            <strong>Khách cần trả</strong>
+                                                        </div>
+                                                        <div style="width:10%;">
+                                                            <span class="badge " style="float: right;">{{customerPay | number : fractionSize}}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div ng-show="payments &amp;&amp; payments.length > 0">
+                                                        <table class="table table-row-border">
+                                                            <tbody>
+                                                                <tr ng-repeat="pm in payments track by $index" >
+                                                                    <td class="cell-action" style="width: 10%"><button
+                                                                            class="btn-icon btn-delete" type="button"
+                                                                            ng-hide="pm.IsUpdate"
+                                                                            ng-click="removePayment($index)"><i></i></button>
+                                                                    </td>
+                                                                    <td class="" style="width:20%"
+                                                                        ng-if="pm.Method !== 'voucher'">{{pm.MethodStr}}</td>
+                                                                    <td style="width: 60%">
+                                                                        <span ng-if="pm.bankAccounts">
+                                                                            <!-- ng-if="pm.Method != 'voucher' &amp;&amp; (pm.MethodStr.toLowerCase().trim() != 'tiền mặt' &amp;&amp; pm.MethodStr.toLowerCase().trim()!='cash') &amp;&amp; (pm.MethodStr.toLowerCase().trim()!='điểm' &amp;&amp; pm.MethodStr.toLowerCase().trim()!='point')"> -->
+                                                                            <span  class="nullable">
+                                                                                <!-- <select  class="form-control" ng-model="pm.AccountId" ng-options="ac.id as ac.name for ac in pm.bankAccounts"> -->
+                                                                                <select  class="form-control" ng-model="pm.AccountId" ng-options="ac.id as ac.name for ac in pm.bankAccounts">
+                                                                                    <option value="">-- Tài khoản nhận --</option>
+                                                                                </select>
+                                                                            </span>
+                                                                        </span> 
+                                                                    </td>
+                                                                    <td class="cell-total" style="width: 10%;font-size: 18px;">{{pm.Amount | number : fractionSize}}</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="row mx-0 payment-item-row">
+                                                        <div style="width:90%;font-size: 20px;">
+                                                            <strong>Khách thanh toán</strong>
+                                                        </div>
+                                                        <div style="width:10%;">
+                                                            <span class="badge " style="float: right;">{{customerPay_present | number : fractionSize}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="modal-footer" >
+                                                    <!-- <button type="button" ng-click="save()" class="btn btn-success" data-dismiss="modal"><i class="fas fa-save"></i> Xong </button> -->
+                                                    <button type="button" ng-disabled="isDisableSave()"  ng-click="save()" class="btn btn-success" data-dismiss="modal" ><i class="fas fa-save"></i> Xong </button>
+                                                      
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i
+                                                            class="fas fa-ban"></i> Bỏ qua</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 order-info-row">
+                                    <div class="input-group mb-3 order-return row">
+                                        <div class="pt-2 col-7">
+                                            Tiền thừa trả lại
+                                        </div>
+                                        <div class="py-1 px-2 col-5 order-return-amount text-right">
+                                            <span>{{changeAmount | number : fractionSize}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 order-info-row col-right-inside">
+                                    <div class="form-note-wrap">
+                                        <div class="form-note"><textarea
+                                                class="form-control"
+                                                type="text" spellcheck="false" placeholder="Ghi chú" id="note"
+                                                maxlength="4000" ng-model="orderInfo.Description" style="height: 33px;"
+                                                tabindex="2462"></textarea></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="wrap-button no-print-button">
+                                <!----> <button skip-disable="" type="button" class="btn btn-success"
+                                    ng-click="saveTransaction()" id="saveTransaction" tabindex="2464">Thanh toán (F9)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+
+                <!--  Modal here -->
+                <!-- Create new Customer Dialog -->
+                <div class="modal fade" id="newCustomer" ng-controller="customerCtr" tabindex="-1" role="dialog"
+                    aria-labelledby="newCustomerLabel" aria-hidden="true">
+                    <div class="modal-dialog  modal-xlg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="newCustomerLabel">Thêm mới khách hàng</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row mx-0">
+                                    <div class="col-2">
+
+                                        Image
+
+                                    </div>
+
+                                    <div class="col-10">
+                                        <div class="row mx-0 my-2 customer-item-row">
+                                            <div class="col-2 px-0 font-weight-bold">
+                                                Loại khách hàng
+
+                                            </div>
+                                            <div class="col-4">
+                                                <label for="personal"> Cá nhân</label><input type="radio"
+                                                    ng-model="info_customer.company_type" value='person' name="personal"
+                                                    id="personal" class="mr-3 ml-3" />
+                                                <label for="company"> Công ty</label><input type="radio"
+                                                    ng-model="info_customer.company_type" value='company' name="company"
+                                                    id="company" class="mr-3 ml-3" />
+                                            </div>
+                                            <div class="col-2 font-weight-bold">
+                                                Mã khách hàng
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" ng-model="info_customer.customer_code" placeholder="Mã khách hàng tự động"
+                                                    class="form-control " aria-label="mã khách hàng" />
+                                            </div>
+
+                                        </div>
+                                        <div class="row mx-0 my-2 customer-item-row">
+                                            <div class="col-2 px-0 font-weight-bold">
+                                                Tên khách hàng
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" ng-model="info_customer.name" class="form-control "
+                                                    aria-label="mã khách hàng" />
+                                            </div>
+                                            
+                                            <div class="col-2 font-weight-bold">
+                                                Người tạo
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input ng-model="info_customer.creater_customer" readonly="" type="text" class="form-control " aria-label="Người tạo" />
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row mx-0 my-2 customer-item-row">
+                                            <div class="col-2 px-0 font-weight-bold">
+                                                Điện thoại
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" ng-model="info_customer.mobile" class="form-control "
+                                                    aria-label="mã khách hàng" />
+                                            </div>
+                                            
+                                            <div class="col-2 font-weight-bold">
+                                                Mã số thuế
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" ng-model="info_customer.vat" class="form-control "
+                                                    aria-label="Quầy tạo" />
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row mx-0 my-2 customer-item-row">
+                                            <div class="col-2 px-0 font-weight-bold">
+                                                Ngày sinh
+                                            </div>
+                                            <div class="col-4">
+                                            <input type="date" name="birthday" class="form-control" ng-model="info_customer.birthday" aria-label="mã khách hàng" />
+                                                <!-- <input type="text" placeholder="dd/mm/yyyy" ng-model="info_customer.birthday"
+                                                    class="form-control " aria-label="mã khách hàng" uib-datepicker-popup="{{format}}" is-open="popup1.opened" datepicker-options="dateOptions" close-text="Close" alt-input-formats="altInputFormats"/> -->
+                                                
+                                            </div>
+
+                                            <div class="col-2 font-weight-bold">
+                                                Giới tính
+
+                                            </div>
+                                            <div class="col-4">
+                                                <label for="mr"> Anh</label><input type="radio"
+                                                    ng-model="info_customer.title" value='3' name="mr"
+                                                    class="mr-3 ml-3" />
+                                                <label for="ms"> Chị</label><input type="radio"
+                                                    ng-model="info_customer.title" value='2' name="ms"
+                                                    class="mr-3 ml-3" />
+                                            </div>
+                                            <!-- <div class="col-4">
+                                            <input type="text"  class="form-control " aria-label="Quầy tạo" />
+
+                                        </div> -->
+
+                                        </div>
+
+                                        <div class="row mx-0 my-2 customer-item-row">
+                                            <div class="col-2 px-0 font-weight-bold">
+                                                Địa chỉ
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" ng-model="info_customer.street_address" class="form-control "
+                                                    aria-label="mã khách hàng" />
+                                            </div>
+                                            
+                                            <div class="col-2 font-weight-bold">
+                                                Email
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" ng-model="info_customer.email" class="form-control "
+                                                    aria-label="Quầy tạo" />
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row mx-0 my-2 customer-item-row">
+                                            <div class="col-2 px-0 font-weight-bold">
+                                                Tỉnh/TP
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" id="province-input" ng-model="info_customer.province_name" class="form-control " placeholder="Chọn Tỉnh/TP"
+                                                    aria-label="mã khách hàng" ng-change="onSearchArea()" autocomplete="off"/>
+                                                <div class="output-complete output-complete-area" ng-show="provinceAutoHide">
+                                                    <ul>
+                                                        <li ng-repeat="suggestion in provinceList | filter:info_customer.province_name"
+                                                            index="$index" val="{{suggestion.name}}"
+                                                            ng-class="{active:($index.toString() === selectedIndex.toString())}"
+                                                            ng-click="selectArea(suggestion)"
+                                                            class="">
+                                                            <div class="search-area-info">
+                                                                <p class="name-item">{{suggestion.name}}</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 font-weight-bold">
+                                                Facebook
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" ng-model="info_customer.facebook" class="form-control " aria-label="Quầy tạo" />
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row mx-0 my-2 customer-item-row">
+                                            <div class="col-2 px-0 font-weight-bold">
+                                                Quận/Huyện
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" id="district-input" ng-model="info_customer.district_name" class="form-control "
+                                                    aria-label="mã khách hàng" autocomplete="off"
+                                                    placeholder="Quận/Huyện" ng-change="onSearchArea()"/>
+                                                <div class="output-complete output-complete-area" ng-show="districtAutoHide">
+                                                    <ul>
+                                                        <li ng-repeat="suggestion in districtList | filter:info_customer.district_name"
+                                                            index="$index" val="{{suggestion.name}}"
+                                                            ng-class="{active:($index.toString() === selectedIndex.toString())}"
+                                                            ng-click="selectArea(suggestion)"
+                                                            class="">
+                                                            <div class="search-area-info">
+                                                                <p class="name-item">{{suggestion.name}}</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 font-weight-bold">
+                                                Nhóm
+
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" class="form-control " aria-label="Quầy tạo" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row mx-0 my-2 customer-item-row">
+                                            <div class="col-2 px-0 font-weight-bold">
+                                                Phường xã
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" id="ward-input" ng-model="info_customer.ward_name"
+                                                    class="form-control " aria-label="mã khách hàng" autocomplete="off"
+                                                    placeholder="Chọn Phường/Xã" ng-change="onSearchArea()"/>
+                                                <div class="output-complete output-complete-area" ng-show="wardAutoHide">
+                                                    <ul>
+                                                        <li ng-repeat="suggestion in wardList | filter:info_customer.ward_name"
+                                                            index="$index" val="{{suggestion.name}}"
+                                                            ng-class="{active:($index.toString() === selectedIndex.toString())}"
+                                                            ng-click="selectArea(suggestion)"
+                                                            class="">
+                                                            <div class="search-area-info">
+                                                                <p class="name-item">{{suggestion.name}}</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 font-weight-bold">
+                                                Ghi chú
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="text" ng-model="info_customer.comment"
+                                                    class="form-control " aria-label="Quầy tạo" />
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button ng-click="createCustomer()" type="button" class="btn btn-success" data-dismiss="modal" ng-show="(info_customer.name).length"><i
+                                        class="fas fa-save" ></i> Lưu</button>
+                                <button ng-click="createCustomer()" type="button" class="btn btn-success" ng-show="!(info_customer.name).length"><i
+                                        class="fas fa-save" ></i> Lưu</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i
+                                        class="fas fa-ban"></i> Bỏ qua</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        <div >
+          <a   id="pos_counter" t-esc="context" style="display:none;" >
+          </a>
+         </div>
+
+</template>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_partner_inherit_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='o_address_format']" position="replace">
+                    <field invisible="1" name="street" placeholder="Street..." class="o_address_street"/>
+                    <field invisible="1" name="street2" placeholder="Street 2..." class="o_address_street"/>
+                    <field invisible="1" name="city" placeholder="City" class="o_address_city"/>
+                    <field invisible="1" name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}' context="{'country_id': country_id, 'zip': zip}"/>
+                    <field invisible="1" name="zip" placeholder="ZIP" class="o_address_zip"/>
+                    <field invisible="1" name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
+                    <field name="province" string="Tỉnh TP" options="{'no_open' : True , 'no_create':True}"/>
+                    <field name="district" string="Quận Huyện" options="{'no_open' : True , 'no_create':True}"/>
+                    <field name="ward" string="Xã Phường" options="{'no_open' : True , 'no_create':True}"/>
+                    <field name="street_address" string="Tên đường, số nhà..."/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

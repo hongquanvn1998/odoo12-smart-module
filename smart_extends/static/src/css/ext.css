@@ -1,0 +1,95 @@
+.ribbon {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+}
+
+.o_form_sheet {
+    position: relative;
+}
+
+.paid-ribbon {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(29, 173, 218)!important;
+}
+
+
+/* common */
+
+.ribbon{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.ribbon::before,
+.ribbon::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: block;
+    border: 5px solid #008000;
+}
+
+.ribbon span {
+    position: absolute;
+    display: block;
+    width: 235px;
+    padding: 12px 0;
+    background-color: #008000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    color: #fff;
+    font: bold 20px/1 'Lato', sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* top right*/
+
+.ribbon-top-right {
+    top: 0px;
+    right: 0px;
+}
+
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+
+.ribbon-top-right::before {
+    top: 0;
+    left: 0;
+}
+
+.ribbon-top-right::after {
+    bottom: 0;
+    right: 0;
+}
+
+.ribbon-top-right span {
+    left: -25px;
+    top: 35px;
+    transform: rotate(45deg);
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 100%!important;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 3px;
+}

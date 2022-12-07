@@ -1,0 +1,54 @@
+<odoo>
+    <record id="report_end_of_day_main" model="ir.ui.view">
+        <field name="name">Smart pos end of day</field>
+        <field name="model">end.of.day.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Smart pos end of day">
+                        <group>
+                        <field name="filter_types" string="Filter types"  widget="radio" options="{'horizontal': true}"/>
+                        </group>
+                <!-- <group> -->
+                 <!-- <group>
+                        <field name="filter_employee" string="Employee"  options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}"/>
+                    </group>
+                    <group>
+                        <field name="filter_partner" string="Customer"  options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}"/>
+                    </group>
+                   
+                </group> -->
+                    <group>
+                         <group>
+                        <field name="start_date"  string="Date Start"/>
+                        </group>       
+                     <!-- <group>
+                        <field name="filter_method_payment" readonly="1" string="Payment method"/>
+                    </group> -->
+                    </group>
+                    
+                 
+
+                <footer>
+                    <button name="set_params_to_list" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_pos_end_of_day"
+                name="End of day wizard"
+                res_model="end.of.day.wizard"
+                view_mode="form"
+                target="new"/>
+
+    
+<!--     
+    <menuitem sequence="-2" action="main_pos_end_of_day"
+            id="menu_main_pos_end_of_day"
+            parent="smart_pos.menu_pos_report_endday"/> -->
+
+         
+
+
+</odoo>

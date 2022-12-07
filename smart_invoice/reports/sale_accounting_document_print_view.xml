@@ -1,0 +1,213 @@
+<odoo>
+
+    <data>
+
+        <template id="sale_accounting_document_view">
+                <xpath expr="." position="inside">
+                    <link href="/smart_invoice/static/src/css/smart_invoice.css" rel="stylesheet" />
+                </xpath>
+
+                <t t-call="smart_invoice.report_without_frame">
+
+                    <t t-set="o" t-value="o.with_context(lang=lang)" />
+
+                    <div class="page">
+                        <div class="container mx-auto" >
+
+                            <div class="row">
+                                <div class="col-12 text-center my-5">
+                                  <h3 class="font-weight-bold">
+                                           CHỨNG TỪ KẾ TOÁN 
+                                        </h3>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="row mx-5">
+                                        <span class=" mr-3">Tên: </span> 
+                                        <span t-esc="o.partner_id.name"/>
+                                    </div>
+                                    <div class="row mx-5">
+                                        <span class=" mr-3"> Địa chỉ: </span> 
+                                        <span t-esc="o.partner_address"/>
+                                    </div>
+                                    <div class="row mx-5">
+                                        <span class=" mr-3"> Diễn giải: </span>
+                                        <span t-esc="o.comment"/>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mx-5">
+                                        <span class=" mr-3">Số: </span> 
+                                        <span   t-esc="o.origin"/>
+                                    </div>
+                                    <div class="row mx-5">
+                                       <span class=" mr-3"> Ngày: </span> 
+                                       <span t-esc="o.date_invoice.strftime('%d-%m-%Y')"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mx-1 pl-3 pr-3">
+                            <table class="mx-auto table tb-invoice-4 mx-1 " cellpadding="0">
+                                <tr>
+                                    <th>
+                                        <span class=""> STT </span>
+                                    </th>
+                                    <th>
+                                        <span class=""> Diễn giải </span>
+                                    </th>
+                                    <th>
+                                        <span class="">Ghi nợ</span>
+                                    </th>
+                                    <th>
+                                        <span class="">Ghi có </span>
+                                    </th>
+                                    <th>
+                                        <span class="">Thành tiền </span>
+                                    </th>
+                                </tr>
+                                <t t-if="o.type == 'out_invoice'">
+                                    <t t-set="index" t-value="0" />
+                                    <t t-foreach="o.move_id.line_ids.sorted(key=lambda r: r.id)" t-as="line">
+                                        <t t-if="line.credit != 0">
+                                            <t t-set="index" t-value="index+1" />
+                                            <tr>
+                                                <td class="text-center">
+                                                    <t t-esc="index" />
+                                                </td>
+                                                <td>
+                                                    <span t-esc="line.name" />
+
+                                                </td>
+                                                <td>
+                                                    <span t-field="o.account_id.code" />
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.account_id.code" />
+                                                </td>
+                                                <td class="text-right">
+                                                    <span
+                                                        t-esc="('{:,.0f}'.format(line.credit).replace(',', ' ').replace('.', ',').replace(' ', '.'))" />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <t t-if="line.credit == 0">
+                                            <tr>
+                                                <td colspan="2" class="text-center font-weight-bold">
+                                                    <span>Tổng</span>
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td>
+                                                    
+                                                </td>
+                                                <td class="text-right">
+                                                    <span
+                                                        t-esc="('{:,.0f}'.format(line.debit).replace(',', ' ').replace('.', ',').replace(' ', '.'))" />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </t>
+                                    
+                                <t t-if="o.type == 'in_invoice'">
+                                    <t t-set="index" t-value="0" />
+                                    <t t-foreach="o.move_id.line_ids.sorted(key=lambda r: r.id)" t-as="line">
+                                        <t t-if="line.credit == 0">
+                                            <t t-set="index" t-value="index+1" />
+                                            <tr>
+                                                <td class="text-center">
+                                                    <t t-esc="index" />
+                                                </td>
+                                                <td>
+                                                    <span t-esc="line.name" />
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.account_id.code" />
+
+                                                </td>
+                                                <td>
+                                                    <span t-field="o.account_id.code" />
+                                                </td>
+                                                <td class="text-right">
+                                                    <span
+                                                        t-esc="('{:,.0f}'.format(line.debit).replace(',', ' ').replace('.', ',').replace(' ', '.'))" />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    <t t-if="line.credit != 0">
+                                        <tr>
+                                            <td colspan="2" class="text-center font-weight-bold">
+                                                <span>Tổng</span>
+
+                                            </td>
+                                            <td>
+                                                
+                                            </td>
+                                            <td>
+                                                
+                                            </td>
+                                            <td class="text-right">
+                                                <span
+                                                    t-esc="('{:,.0f}'.format(line.credit).replace(',', ' ').replace('.', ',').replace(' ', '.'))" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </t>
+                        </table>
+                    </div>
+
+                    <div class="page">
+                        <div class="container mx-auto" >
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row mx-5">
+                                        <span class=" mr-3">Thành tiền bằng chữ: </span>
+                                        <span class="font-weight-bold mr-1" t-esc="o.reader_number(o.amount_total)"> </span> 
+                                        <span class="font-weight-bold">  đồng chẵn./ </span>
+                                    </div>
+                                    <div class="row mx-5">
+                                        Ghi chú: .........................................................................................................................
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mx-3" style="margin-top: 3%;">
+                            <div class="col-4">
+                                <div class="col text-center"> <strong>Kế toán trưởng</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-2">
+                            </div>
+                            <div class="col-2"></div>
+                                
+                            <div class="col-4">
+                                <div class="col text-center" ><strong>Giám đốc</strong>
+                                </div>
+                                <div class="col text-center"> <i> (Ký, họ tên, đóng dấu) </i> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </t>
+            
+        </template>
+
+        <template id="sale_accounting_document_print_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="o.user_id.lang if o.type in ('in_invoice', 'in_refund') else o.partner_id.lang" />
+                    <t t-call="smart_invoice.sale_accounting_document_view" t-lang="lang" />
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

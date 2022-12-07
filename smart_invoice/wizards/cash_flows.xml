@@ -1,0 +1,52 @@
+<odoo>
+    <record id="smart_invoice_cash_flows_get" model="ir.ui.view">
+        <field name="name">Consolidated Statements of Cash Flows</field>
+        <field name="model">account.cash.flows</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Consolidated Statements of Cash Flows">
+               <group>
+                    <group>
+                        <field name="filter_date"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="data_from" />
+                    <field name="not_display"/>
+                </group>
+                <group>
+                    <group>
+                        <field name="start_date" />
+                    </group>          
+                    <group>
+                        <field name="end_date" />
+                    </group>
+                </group>
+                <group>
+                        
+                </group> 
+                <group>
+                     <field name="file_name" filename="cash_flow_data" />
+					<field name="cash_flow_data" invisible="1" />
+                </group>
+                <footer>
+                    <button name="get_info" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Export excel" class="btn-primary" name="export_excel" type="object"   icon="fa-download"/>
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_cash_flows"
+                name="Consolidated Statements of Cash Flows"
+                res_model="account.cash.flows"
+                view_mode="form"
+                target="new"
+            />
+    
+    <menuitem sequence="1" action="main_cash_flows"
+            id="menu_main_cash_flows"
+            parent="smart_invoice.menu_financial_new"
+            name="Consolidated Statements of Cash Flows"/>
+</odoo>

@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+     <record model="ir.ui.view" id="smart_dashboard_sale_graph_view">
+            <field name="name">Sale graph</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <graph string="Sale Graph ">
+                    <field name="date_order" interval="day"/>
+                    <field name="amount_total" type="measure"/>
+                </graph>
+            </field>
+      </record>
+
+        <record id="smart_dashboard_sale_calender_view" model="ir.ui.view">
+            <field name="name">Sale Calendar</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <calendar string="Sales Orders" date_start="date_order" color="state" mode='month'>
+                    <field name="partner_id"/>
+                    <field name="amount_total" widget="monetary"/>
+                </calendar>
+            </field>
+        </record>
+
+         <record model="ir.ui.view" id="smart_dashboard_purchase_graph_view">
+            <field name="name">Purchase graph</field>
+            <field name="model">purchase.order</field>
+            <field name="arch" type="xml">
+                <graph string="Purchase Graph ">
+                    <field name="date_approve" interval="day"/>
+                    <field name="amount_total" type="measure"/>
+                </graph>
+            </field>
+      </record>
+
+        <record id="smart_dashboard_stock_move_graph_view" model="ir.ui.view">
+            <field name="name">Stock Move Graph</field>
+            <field name="model">stock.move</field>
+            <field name="arch" type="xml">
+                <graph string="Stock Moves Analysis">
+                    <field name="product_id"/>
+                    <field name="location_dest_id" groups="stock.group_stock_multi_locations" type="row"/>
+                    <field name="product_uom_qty" type="measure"/>
+                </graph>
+            </field>
+        </record>
+        
+        <!-- <menuitem 
+            name="Smart Dashboard" 
+            id="base.menu_board_root"  
+            sequence="0"/> -->
+   
+  </data>
+</odoo>

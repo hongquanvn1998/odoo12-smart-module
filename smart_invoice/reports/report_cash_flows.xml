@@ -1,0 +1,464 @@
+<odoo>
+    
+    <report
+    id="cash_flows"
+    model="account.cash.flows"
+    string="Consolidated Statements of Cash Flows"
+    report_type="qweb-html"
+    name="smart_invoice.cash_flows_display"
+    file="smart_invoice.cash_flows_display"
+/>
+
+    <template id="cash_flows_display">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout"> 
+            <!-- <div class="page"> -->
+
+                <div class="header_right ">
+                    <div class="float-right">
+                        <p class="text-center "><strong>Mẫu số: B03-DN</strong></p>
+                        <p class="text-center"><span>(Ban hành theo Thông tư số 200/2014/TT-BTC</span></p>
+                        <p class="text-center"><span>Ngày 22/12/2014 của Bộ Tài chính)</span></p>
+                    </div>           
+                </div>
+
+            <div class="" style="border-bottom:2px solid black; clear:both;">
+                <h3 class="text-center">Báo cáo tổng hợp dòng tiền</h3>
+                <p class="text-center">(Theo phương pháp trực tiếp)</p>
+                <h5 class="text-center">
+                    <strong> Từ ngày 
+                    <!-- <t t-esc="end_date" t-options='{"widget": "date"}'/> -->
+                    <span t-esc="datetime.datetime.strptime(start_date, '%Y-%m-%d').strftime('%d/%m/%Y')"/>
+                    đến ngày 
+                    <span t-esc="datetime.datetime.strptime(end_date, '%Y-%m-%d %H:%M:%S').strftime('%d/%m/%Y')"/>
+                    </strong>
+
+                </h5>
+            </div>
+            <div class="article">
+                <table class="table table-sm table-reports table-bordered table-balance_sheet">
+                    <thead class=" th-journal">
+                        <th scope="col" class="text-center " style="width: 40%">Chỉ tiêu</th>
+                        <th scope="col" class="text-center " style="width: 10%">Mã số</th>
+                        <th scope="col" class="text-center " style="width: 10%">Thuyết Minh</th>
+                        <th scope="col" class="text-center " style="width: 20%">Số đầu kỳ</th>
+                        <th scope="col" class="text-center " style="width: 20%">Số cuối kỳ</th>
+                    </thead>
+                    <tbody>
+                        
+                            <tr class="o_level1">
+                                <td class="text-center"><strong>1</strong></td>
+                                <td class="text-center"><strong>2</strong></td>
+                                <td class="text-center"><strong>3</strong></td>
+                                <td class="text-center"><strong>4</strong></td>
+                                <td class="text-center"><strong>5</strong></td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left"><strong>I. Lưu chuyển tiền từ hoạt động kinh doanh</strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-right"><strong></strong></td>
+                                <td class="text-right"><strong></strong></td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">1. Tiền thu từ bán hàng, cung cấp dịch vụ và doanh thu khác</td>
+                                <td class="text-center">01</td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                 <t t-set="qwo_01" t-value="qw_01[0]['oc_01']"/>
+                                 <t t-if="qwo_01 >0"  t-esc="'{:,}'.format(qwo_01)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_01" t-value="qw_01[0]['ic_01']"/>
+                                 <t t-if="qwi_01 >0" t-esc="'{:,}'.format(qwi_01)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">2. Tiền chi trả cho người cung cấp hàng hóa và dịch vụ</td>
+                                <td class="text-center">02</td>
+                                <td class="text-center"></td>
+                              <td class="text-center">
+                                 <t t-set="qwo_02" t-value="qw_02[0]['od_02']"/>
+                                 <t t-if="qwo_02 >0"  t-esc="'{:,}'.format(qwo_02)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_02" t-value="qw_02[0]['id_02']"/>
+                                 <t t-if="qwi_02 >0" t-esc="'{:,}'.format(qwi_02)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">3. Tiền chi trả cho người lao động</td>
+                                <td class="text-center">03</td>
+                                <td class="text-center"></td>
+                               <td class="text-center">
+                                 <t t-set="qwo_03" t-value="qw_03[0]['od_03']"/>
+                                 <t t-if="qwo_03 >0"  t-esc="'{:,}'.format(qwo_03)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_03" t-value="qw_03[0]['id_03']"/>
+                                 <t t-if="qwi_03 >0" t-esc="'{:,}'.format(qwi_03)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">4. Tiền lãi vay đã trả</td>
+                                <td class="text-center">04</td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                 <t t-set="qwo_04" t-value="qw_04[0]['od_04']"/>
+                                 <t t-if="qwo_04 >0"  t-esc="'{:,}'.format(qwo_04)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_04" t-value="qw_04[0]['id_04']"/>
+                                 <t t-if="qwi_04 >0" t-esc="'{:,}'.format(qwi_04)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">5. Thuế thu nhập doanh nghiệp đã nộp</td>
+                                <td class="text-center">05</td>
+                                <td class="text-center"></td>
+                              <td class="text-center">
+                                 <t t-set="qwo_05" t-value="qw_05[0]['od_05']"/>
+                                 <t t-if="qwo_05 >0"  t-esc="'{:,}'.format(qwo_05)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_05" t-value="qw_05[0]['id_05']"/>
+                                 <t t-if="qwi_05 >0" t-esc="'{:,}'.format(qwi_05)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">6. Tiền thu khác từ hoạt động kinh doanh</td>
+                                <td class="text-center">06</td>
+                                <td class="text-center"></td>
+                               <td class="text-center">
+                                 <t t-set="qwo_06" t-value="qw_06[0]['oc_06']"/>
+                                 <t t-if="qwo_06 >0"  t-esc="'{:,}'.format(qwo_06)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_06" t-value="qw_06[0]['ic_06']"/>
+                                 <t t-if="qwi_06 >0" t-esc="'{:,}'.format(qwi_06)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">7. Tiền chi khác cho hoạt động kinh doanh</td>
+                                <td class="text-center">07</td>
+                                <td class="text-center"></td>
+                                 <td class="text-center">
+                                 <t t-set="qwo_07" t-value="qw_07[0]['od_07']"/>
+                                 <t t-if="qwo_07 >0"  t-esc="'{:,}'.format(qwo_07)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_07" t-value="qw_07[0]['id_07']"/>
+                                 <t t-if="qwi_07 >0" t-esc="'{:,}'.format(qwi_07)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left"><strong>Lưu chuyển tiền thuần từ hoạt động kinh doanh</strong></td>
+                                <td class="text-center">20</td>
+                                <td class="text-center"></td>
+                               <td class="text-center">
+                                 <t t-set="qwo_20" t-value="qwo_01 + qwo_02 +qwo_03 +qwo_04 +qwo_05 +qwo_06+qwo_07"/>
+                                 <t t-if="qwo_20 >0"  t-esc="'{:,}'.format(qwo_20)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_20" t-value="qwi_01 + qwi_02 +qwi_03 +qwi_04 +qwi_05 +qwi_06+qwi_07"/>
+                                 <t t-if="qwi_20 >0" t-esc="'{:,}'.format(qwi_20)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left"><strong>II. Lưu chuyển tiền từ hoạt động đầu tư</strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-right"><strong></strong></td>
+                                <td class="text-right"><strong></strong></td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">1. Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác</td>
+                                <td class="text-center">21</td>
+                                <td class="text-center"></td>
+                               <td class="text-center">
+                                 <t t-set="qwo_21" t-value="qw_21[0]['od_21']"/>
+                                 <t t-if="qwo_21 >0"  t-esc="'{:,}'.format(qwo_21)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_21" t-value="qw_21[0]['id_21']"/>
+                                 <t t-if="qwi_21 >0" t-esc="'{:,}'.format(qwi_21)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">2. Tiền thu từ thanh lý, nhượng bán TSCĐ và các tàu sản dài hạn khác</td>
+                                <td class="text-center">22</td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                 <t t-set="qwo_22" t-value="qw_22[0]['od_22']"/>
+                                 <t t-if="qwo_22 >0"  t-esc="'{:,}'.format(qwo_22)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_22" t-value="qw_22[0]['id_22']"/>
+                                 <t t-if="qwi_22 >0" t-esc="'{:,}'.format(qwi_22)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">3. Tiền chi cho vay, mua các công cụ nợ của đơn vị khác</td>
+                                <td class="text-center">23</td>
+                                <td class="text-center"></td>
+                             <td class="text-center">
+                                 <t t-set="qwo_23" t-value="qw_23[0]['od_23']"/>
+                                 <t t-if="qwo_23 >0"  t-esc="'{:,}'.format(qwo_23)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_23" t-value="qw_23[0]['id_23']"/>
+                                 <t t-if="qwi_23>0" t-esc="'{:,}'.format(qwi_23)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">4. Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác</td>
+                                <td class="text-center">24</td>
+                                <td class="text-center"></td>
+                            <td class="text-center">
+                                 <t t-set="qwo_24" t-value="qw_24[0]['oc_24']"/>
+                                 <t t-if="qwo_24 >0"  t-esc="'{:,}'.format(qwo_24)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_24" t-value="qw_24[0]['ic_24']"/>
+                                 <t t-if="qwi_24 >0" t-esc="'{:,}'.format(qwi_24)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">5. Tiền chi đầu tư góp vốn vào đơn vị khác</td>
+                                <td class="text-center">25</td>
+                                <td class="text-center"></td>
+                             <td class="text-center">
+                                 <t t-set="qwo_25" t-value="qw_25[0]['od_25']"/>
+                                 <t t-if="qwo_25 >0"  t-esc="'{:,}'.format(qwo_25)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_25" t-value="qw_25[0]['id_25']"/>
+                                 <t t-if="qwi_25>0" t-esc="'{:,}'.format(qwi_25)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác</td>
+                                <td class="text-center">26</td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                 <t t-set="qwo_26" t-value="qw_26[0]['oc_26']"/>
+                                 <t t-if="qwo_26 >0"  t-esc="'{:,}'.format(qwo_26)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_26" t-value="qw_26[0]['ic_26']"/>
+                                 <t t-if="qwi_26 >0" t-esc="'{:,}'.format(qwi_26)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">7. Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia</td>
+                                <td class="text-center">27</td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                 <t t-set="qwo_27" t-value="qw_27[0]['oc_27']"/>
+                                 <t t-if="qwo_27 >0"  t-esc="'{:,}'.format(qwo_27)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_27" t-value="qw_27[0]['ic_27']"/>
+                                 <t t-if="qwi_27 >0" t-esc="'{:,}'.format(qwi_27)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left"><strong>Lưu chuyển tiền thuần từ hoạt động đầu tư</strong></td>
+                                <td class="text-center"><strong>30</strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-center"><strong>
+                                   <t t-set="qwo_30" t-value="qwo_21+ qwo_22 + qwo_23 +qwo_24 + qwo_25+qwo_26+qwo_27"/>
+                                 <t t-if="qwo_30 >0"  t-esc="'{:,}'.format(qwo_30)"/>
+                                </strong></td>
+                                <td class="text-center"><strong>
+                                  <t t-set="qwi_30" t-value="qwi_21+ qwi_22 + qwi_23 +qwi_24 + qwi_25+qwi_26+qwi_27"/>
+                                 <t t-if="qwi_30 >0" t-esc="'{:,}'.format(qwi_30)"/>
+                                </strong></td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left"><strong>III. Lưu chuyển tiền từ hoạt động tài chính</strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-right"><strong></strong></td>
+                                <td class="text-right"><strong></strong></td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu</td>
+                                <td class="text-center">31</td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                 <t t-set="qwo_31" t-value="qw_31[0]['oc_31']"/>
+                                 <t t-if="qwo_31 >0"  t-esc="'{:,}'.format(qwo_31)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_31" t-value="qw_31[0]['ic_31']"/>
+                                 <t t-if="qwi_31 >0" t-esc="'{:,}'.format(qwi_31)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">2. Tiền trả lại vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành</td>
+                                <td class="text-center">32</td>
+                                <td class="text-center"></td>
+                                 <td class="text-center">
+                                 <t t-set="qwo_32" t-value="qw_32[0]['od_32']"/>
+                                 <t t-if="qwo_32 >0"  t-esc="'{:,}'.format(qwo_32)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_32" t-value="qw_32[0]['id_32']"/>
+                                 <t t-if="qwi_32 >0" t-esc="'{:,}'.format(qwi_32)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">3. Tiền vay ngắn hạn, dài hạn nhận được </td>
+                                <td class="text-center">33</td>
+                                <td class="text-center"></td>
+                                 <td class="text-center">
+                                 <t t-set="qwo_33" t-value="qw_33[0]['oc_33']"/>
+                                 <t t-if="qwo_33 >0"  t-esc="'{:,}'.format(qwo_33)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_33" t-value="qw_33[0]['ic_33']"/>
+                                 <t t-if="qwi_33 >0" t-esc="'{:,}'.format(qwi_33)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">4. Tiền trả nợ gốc vay</td>
+                                <td class="text-center">34</td>
+                                <td class="text-center"></td>
+                               <td class="text-center">
+                                 <t t-set="qwo_34" t-value="qw_34[0]['od_34']"/>
+                                 <t t-if="qwo_34 >0"  t-esc="'{:,}'.format(qwo_34)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_34" t-value="qw_34[0]['id_34']"/>
+                                 <t t-if="qwi_34 >0" t-esc="'{:,}'.format(qwi_34)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">5. Tiền trả nợ gốc thuê tài chính</td>
+                                <td class="text-center">35</td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                 <t t-set="qwo_35" t-value="qw_35[0]['od_35']"/>
+                                 <t t-if="qwo_35 >0"  t-esc="'{:,}'.format(qwo_35)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_35" t-value="qw_35[0]['id_35']"/>
+                                 <t t-if="qwi_35 >0" t-esc="'{:,}'.format(qwi_35)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">6. Cổ tức, lợi nhuận đã trả cho chủ sở hữu</td>
+                                <td class="text-center">36</td>
+                                <td class="text-center"></td>
+                                 <td class="text-center">
+                                 <t t-set="qwo_36" t-value="qw_36[0]['od_36']"/>
+                                 <t t-if="qwo_36 >0"  t-esc="'{:,}'.format(qwo_36)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_36" t-value="qw_36[0]['id_36']"/>
+                                 <t t-if="qwi_36 >0" t-esc="'{:,}'.format(qwi_36)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left"><strong>Lưu chuyển tiền thuần từ hoạt động tài chính</strong></td>
+                                <td class="text-center"><strong>40</strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-center">
+                                 <t t-set="qwo_40" t-value="qwo_31 + qwo_32 + qwo_33+ qwo_34 +qwo_35+qwo_36"/>
+                                 <t t-if="qwo_40>0"  t-esc="'{:,}'.format(qwo_40)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_40" t-value="qwi_31 + qwi_32 + qwi_33+ qwi_34 +qwi_35+qwi_36"/>
+                                 <t t-if="qwi_40>0" t-esc="'{:,}'.format(qwi_40)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left"><strong></strong>Lưu chuyển tiền thuần trong kỳ (50 = 20 + 30 + 40)</td>
+                                <td class="text-center"><strong>50</strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-center"><strong>
+                                  <t t-set="qwo_50" t-value="qwo_20 + qwo_30 + qwo_40"/>
+                                 <t t-if="qwo_50>0"  t-esc="'{:,}'.format(qwo_50)"/>
+                                </strong></td>
+                                <td class="text-center"><strong>
+                                 <t t-set="qwi_50" t-value="qwi_20 + qwi_30 + qwi_40"/>
+                                 <t t-if="qwi_50>0" t-esc="'{:,}'.format(qwi_50)"/>
+                                </strong></td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left"><strong>Tiền và tương đường tiền đâu kỳ</strong></td>
+                                <td class="text-center"><strong>60</strong></td>
+                                <td class="text-center"><strong></strong></td>
+                                <td class="text-center"><strong>
+                                <t t-set="qwo_60" t-value="qw_60[0]['od_60']"/>
+                                 <t t-if="qwo_60>0" t-esc="'{:,}'.format(qwo_60)"/>
+                                </strong></td>
+                                <td class="text-center"><strong>
+                                  <t t-set="qwi_60" t-value="qw_60[0]['id_60']"/>
+                                 <t t-if="qwi_60>0" t-esc="'{:,}'.format(qwi_60)"/>
+                                </strong></td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left">Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ</td>
+                                <td class="text-center">61</td>
+                                <td class="text-center"></td>
+                                 <td class="text-center">
+                                 <t t-set="qwo_61" t-value="qw_61[0]['oc_61']"/>
+                                 <t t-if="qwo_61 >0"  t-esc="'{:,}'.format(qwo_61)"/>
+                                </td>
+                                <td class="text-center">
+                                 <t t-set="qwi_61" t-value="qw_61[0]['ic_61']"/>
+                                 <t t-if="qwi_61 >0" t-esc="'{:,}'.format(qwi_61)"/>
+                                </td>
+                            </tr>
+                            <tr class="o_level1">
+                                <td class="text-left"><strong>Tiền và tương đương tiền cuối kỳ (70 = 50 + 60 + 61)</strong></td>
+                                <td class="text-center"><strong>70</strong></td>
+                                <td class="text-center"><strong>VIII</strong></td>
+                               <td class="text-center"><strong>
+                                  <t t-set="qwo_70" t-value="qwo_50+qwo_60 + qwo_61"/>
+                                 <t t-if="qwo_70>0"  t-esc="'{:,}'.format(qwo_70)"/>
+                                </strong></td>
+                                <td class="text-center"><strong>
+                                 <t t-set="qwi_70" t-value="qwi_50+qwi_60 + qwi_61"/>
+                                 <t t-if="qwi_70>0" t-esc="'{:,}'.format(qwi_70)"/>
+                                </strong></td>
+                            </tr>
+
+                    </tbody>
+                    
+                </table>
+                <div class="footer_right" >
+                    <div class="float-right">
+                        <p class="text-center ">Lập, Ngày ... tháng ... năm ... </p>
+                        
+                    </div>           
+                </div>  
+                <div class="row mt-4 set-space" style="clear:both;">
+                    <div class="col-4">
+                        <h6 class="text-center">
+                            <strong>Người lập biểu</strong>
+                        </h6>
+                        <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="text-center">
+                            <strong>Kế toán trưởng</strong>
+                        </h6>
+                        <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="text-center">
+                            <strong>Director</strong>
+                        </h6>
+                        <h6 class="text-center font-weight-light font-italic">(Ký, họ tên, đóng dấu)</h6>
+                    </div>
+                </div>
+                </div>
+            <!-- </div> -->
+            </t>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,177 @@
+<odoo>
+    <data> 
+        
+        <report id="stock_inventory_report" model="stock.inventory.report" paperformat="smart_inventory.paperformat_A4_landscape" string="Stock Inventory Report" report_type="qweb-pdf" name="smart_inventory.stock_inventory_report_template" file="smart_inventory.stock_inventory_report_template" />
+
+        <template id="stock_inventory_report_template">
+            <xpath expr="." position="inside">
+                <link href="/smart_inventory/static/src/css/inventory.css" rel="stylesheet" type="text/css" />
+            </xpath>
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 class="text-center">INVENTORY SUMMARY REPORT</h2>
+                        <div class="text-center mb-4">
+                            <strong>From <t t-esc="start_date" t-options='{"widget": "date", "fortmat":"dd-MM-yyyy"}'/>
+                            To <t t-esc="end_date" t-options='{"widget": "date", "fortmat":"dd-MM-yyyy"}'/>
+                            </strong>
+                        </div>
+                        <table class="table table-sm table-bordered">
+                            <thead >
+                                <tr>
+                                    <th rowspan="2" class="align-middle text-center">Item code</th>
+                                    <th rowspan="2" class="align-middle text-center">Name of goods</th>
+                                    <th rowspan="2" class="align-middle text-center">Unit</th>
+                                    <th colspan="2" class="text-center">Opening</th>
+                                    <th colspan="2" class="text-center">Inward stock</th>
+                                    <th colspan="2" class="text-center">Outward stock</th>
+                                    <th colspan="2" class="text-center">Closing</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">Quantity</th>
+                                    <th class="text-center">Amount</th>
+                                    <th class="text-center">Quantity</th>
+                                    <th class="text-center">Amount</th>
+                                    <th class="text-center">Quantity</th>
+                                    <th class="text-center">Amount</th>
+                                    <th class="text-center">Quantity</th>
+                                    <th class="text-center">Amount</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-if='len(docs) ==0'>
+                                    <td colspan="8">
+                                        <h6 class="text-center">Data not found!</h6>
+                                    </td>
+                                </tr>
+
+
+                                <!-- Warehouse loop -->
+                                <t t-foreach="docs" t-as="doc">
+                                    <!-- Product Loop  -->
+                                    <tr>
+                                        <td colspan="11"> 
+                                          <strong>Stock name: </strong> <strong>[<t t-esc="doc['warehouse_code']" />]    <t t-esc="doc['warehouse_name']" /> </strong>
+                                        </td>
+                                    </tr>
+                                    <t t-set="oq" t-value="0"/>
+                                    <t t-set="ov" t-value="0"/>
+
+                                    <t t-set="iq" t-value="0"/>
+                                    <t t-set="iv" t-value="0"/>
+
+                                    <t t-set="eq" t-value="0"/>
+                                    <t t-set="ev" t-value="0"/>
+
+                                    <t t-set="cq" t-value="0"/>
+                                    <t t-set="cv" t-value="0"/>
+                                    <t t-set="i" t-value="0" />
+
+                                    <t t-foreach="doc['items']" t-as="item">
+                                        <t t-set="i" t-value="i+1" />
+                                        <t t-set="oq" t-value="oq+item[6]"/>
+                                        <t t-set="ov" t-value="ov+item[7]"/>
+
+                                        <t t-set="iq" t-value="iq+item[8]"/>
+                                        <t t-set="iv" t-value="iv+item[9]"/>
+
+                                        <t t-set="eq" t-value="eq+item[10]"/>
+                                        <t t-set="ev" t-value="ev+item[11]"/>
+
+                                        <t t-set="cq" t-value="cq+item[12]"/>
+                                        <t t-set="cv" t-value="cv+item[13]"/> 
+                                        <tr>
+                                            <td >
+                                                <t t-esc="item[0]" />
+                                            </td>
+                                            <td >
+                                                <t t-esc="item[1]" />
+                                            </td>
+
+                                            <td class="text-center" >
+                                                <t t-esc="item[2]" />
+                                            </td>
+
+                                            <td class="text-right" >
+                                                <t t-esc="item[6]" />
+                                            </td> 
+                                            <td class="text-right">
+                                                <t t-esc="'{:,}'.format(abs(item[7] or 0))"  t-field-options="{'widget':'monetary', 'display_currency': 'o.currency_id'}" />
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-esc="item[8]" />
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-esc="'{:,}'.format(abs(item[9] or 0))"  t-field-options="{'widget':'monetary', 'display_currency': 'o.currency_id'}" />
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-esc="item[10]" />
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-esc="'{:,}'.format(abs(item[11] or 0))"  t-field-options="{'widget':'monetary', 'display_currency': 'o.currency_id'}" />
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-esc="item[12]" />
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-esc="'{:,}'.format(abs(item[13] or 0))"  t-field-options="{'widget':'monetary', 'display_currency': 'o.currency_id'}" />
+                                            </td>
+                                        </tr>
+                                        <tr t-if ="i==len(doc['items'])">
+                                            <td colspan="3" > <strong>Summary: </strong> <strong> <t t-esc="doc['warehouse_name']" /></strong> </td>
+                                            <td class="text-right"> <strong> <t t-esc="oq"/> </strong> </td>
+                                            <td class="text-right"><strong> <t t-esc="'{:,}'.format(abs(ov or 0))"/></strong> </td>
+                                            <td class="text-right"> <strong><t t-esc="iq"/></strong> </td>
+                                            <td class="text-right"><strong> <t t-esc="'{:,}'.format(abs(iv or 0))"/></strong> </td>
+                                            <td class="text-right"> <strong><t t-esc="eq"/></strong> </td>
+                                            <td class="text-right"><strong> <t t-esc="'{:,}'.format(abs(ev or 0))"/> </strong></td>
+                                            <td class="text-right"><strong> <t t-esc="cq"/> </strong></td>
+                                            <td class="text-right"><strong> <t t-esc="'{:,}'.format(abs(cv or 0))"/> </strong></td>
+                                              
+                                        </tr>
+
+                                    </t>
+                                </t> 
+                            </tbody>
+                            
+                        </table>
+                        <div class="oe_structure"/>
+                        <div class="row">
+                            <div class="col-4">
+                            </div>
+                            <div class="col-4">
+                            </div>
+                            <div class="col-4">
+                                <h6 class="text-center font-weight-light font-italic">Date ... month .... year.........</h6>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <h6 class="text-center">
+                                    <strong>Người lập biểu</strong>
+                                </h6>
+                                <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="text-center">
+                                    <strong>Kế toán trưởng</strong>
+                                </h6>
+                                <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="text-center">
+                                    <strong>Giám đốc</strong>
+                                </h6>
+                                <h6 class="text-center font-weight-light font-italic">(Ký, họ tên, đóng dấu)</h6>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>
+
+<!-- report_type="qweb-html" name="smart_purchase.purchase_journal_report_display" file="smart_purchase.purchase_journal_report_display" -->

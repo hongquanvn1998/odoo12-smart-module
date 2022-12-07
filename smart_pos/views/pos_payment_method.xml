@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="payment_method_journal_tree_view" model="ir.ui.view">
+            <field name="name">payment.method.journals</field>
+            <field name="model">account.journal</field>
+            <field eval="1" name="priority" />
+            <field name="arch" type="xml">
+                <tree string="Journals">
+                    <field name="code" />
+                    <field name="name" string="Name" />
+                    <field name="type" />
+                    <field name="active" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="payment_method_journal_forms_view" model="ir.ui.view">
+            <field name="name">pos.payment.method.journal.form</field>
+            <field name="model">account.journal</field>
+            <field name="arch" type="xml">
+                <form string="Payment Methods">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="object" name="toggle_active" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" />
+                            <h1>
+                                <field name="name" class="oe_inline" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="type" />
+
+                            </group>
+                            <group>
+                                <field name="pos_payment_method" value='1' string='POS Payments' />
+                                <field name="company_id" options="{'no_create': True}"
+                                    groups="base.group_multi_company" />
+                                <field name="company_partner_id" invisible="1" />
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="code" />
+                                <label for="sequence_number_next" />
+                                <div>
+                                    <field name="sequence_number_next" style="padding-right: 1.0em" />
+                                    <field name="sequence_id" required="0" attrs="{'readonly': 1}"
+                                        groups="base.group_no_one" />
+                                </div>
+                                <field name="refund_sequence"
+                                    attrs="{'invisible': [('type', 'not in', ['sale', 'purchase'])]}"
+                                    groups="base.group_no_one" />
+                                <label for="refund_sequence_number_next"
+                                    attrs="{'invisible': ['|',('type', 'not in', ['sale', 'purchase']), ('refund_sequence', '!=', True)]}" />
+                                <div
+                                    attrs="{'invisible': ['|',('type', 'not in', ['sale', 'purchase']), ('refund_sequence', '!=', True)]}">
+                                    <field name="refund_sequence_number_next" style="padding-right: 1.0em" />
+                                    <field name="refund_sequence_id" required="0" attrs="{'readonly': 1}"
+                                        groups="base.group_no_one" />
+                                </div>
+                            </group>
+                            <group>
+                                <field name="default_debit_account_id" domain="[('deprecated', '=', False)]"
+                                    groups="account.group_account_user" />
+                                <field name="default_credit_account_id" domain="[('deprecated', '=', False)]"
+                                    groups="account.group_account_user" />
+                                <field name="currency_id" options="{'no_create': True}"
+                                    groups="base.group_multi_currency" />
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page name="bank_account" string="Bank Account"
+                                attrs="{'invisible': [('type', '!=', 'bank')]}">
+                                <group>
+                                    <group>
+                                        <field name="company_partner_id" invisible="1" />
+                                        <field name="bank_account_id"
+                                            context="{'default_partner_id': company_partner_id, 'form_view_ref': 'account.view_company_partner_bank_form'}" />
+                                        <field name="bank_id" />
+                                    </group>
+                                    <group>
+                                        <field name="bank_statements_source" widget="radio"
+                                            attrs="{'required': [('type', '=', 'bank')]}"
+                                            groups="account.group_account_user" />
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="smart_pos.payment_method_journal_action_window">
+            <field name="name">Payment Method Journals</field>
+            <field name="res_model">account.journal</field>
+            <field name="context">{'pos_payment_method': 1}</field>
+            <field name="domain">[('pos_payment_method','=','1')]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="smart_pos.payment_method_journal_tree_action_window">
+            <field name="sequence" eval="1" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="smart_pos.payment_method_journal_tree_view" />
+            <field name="act_window_id" ref="smart_pos.payment_method_journal_action_window" />
+        </record>
+
+        <record model="ir.actions.act_window.view" id="smart_pos.payment_method_journal_form_action_window">
+            <field name="sequence" eval="2" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="smart_pos.payment_method_journal_forms_view" />
+            <field name="act_window_id" ref="smart_pos.payment_method_journal_action_window" />
+        </record>
+
+        <!-- Payment methods here ! -->
+        <record id="payment_method_tree_view" model="ir.ui.view">
+            <field name="name">payments.methods</field>
+            <field name="model">pos.payment.method</field>
+            <field eval="1" name="priority" />
+            <field name="arch" type="xml">
+                <tree string="Methods">
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="type" />
+                    <field name="default_journal_id" /> 
+                    <field name="active" />
+                </tree>
+            </field>
+        </record>
+        <record id="payment_method_forms_view" model="ir.ui.view">
+            <field name="name">pos.payment.method.form</field>
+            <field name="model">pos.payment.method</field>
+            <field name="arch" type="xml">
+                <form string="Payment Methods">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="object" name="toggle_active" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" />
+                            <h1>
+                                <field name="name" class="oe_inline" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1" force_save="1" />
+                                <field name="default_journal_id" attrs="{'invisible':[('type','in',('bank','transfer'))]}" />
+
+                            </group>
+                            <group>
+                                <field name="type" />
+                                <field name="active" />
+                            </group>
+                        </group>
+                        <group  attrs="{'invisible':[('type','in',('point','cash'))]}" >
+                            <!-- <field name="journal_ids" widget="section_and_note_one2many" mode="tree"> -->
+                            <!-- options="{'no_create_edit':'False','no_open':False, 'no_create':'False'}" -->
+                                <field name="journal_ids"
+                                
+                                default="1"
+                                string="Journal">
+                                    <tree>
+                                        <field name="code" />
+                                        <field name="name" />
+                                        <field name="type" />
+                                        <field name="active" /> 
+                                    </tree>
+                                </field>
+                                <!-- <tree string="Journal Lines"
+                                    editable="bottom">
+                                    <control>
+                                        <create string="Add a Payment Journal"/>
+                                    </control>
+                                    <field name="code" readonly="1"/>
+                                    <field name="name" widget="section_and_note_text"/>
+                                    <field name="type" readonly="1"/>
+                                    <field name="active" readonly="1"/> 
+                                </tree> -->
+                            <!-- </field> -->
+                        </group>
+                    </sheet>
+                     <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+            </div>
+                </form>
+            </field>
+        </record> 
+
+        <record model="ir.actions.act_window" id="smart_pos.payment_methods_action_window">
+            <field name="name">Payment Methods</field>
+            <field name="res_model">pos.payment.method</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="smart_pos.payment_method_tree_action_window">
+            <field name="sequence" eval="1" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="smart_pos.payment_method_tree_view" />
+            <field name="act_window_id" ref="smart_pos.payment_methods_action_window" />
+        </record>
+
+        <record model="ir.actions.act_window.view" id="smart_pos.payment_method_form_action_window">
+            <field name="sequence" eval="2" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="smart_pos.payment_method_forms_view" />
+            <field name="act_window_id" ref="smart_pos.payment_methods_action_window" />
+        </record>
+
+        <record id="pos_order_payment_line_view_tree" model="ir.ui.view">
+            <field name="name">pos.order.payment.tree</field>
+            <field name="model">pos.order.payment.line</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Pos payment" create="0" edit="0"  delete="0" default_order="id desc">
+                    <field name="journal_id"/>
+                    <field name="counter_id"/>
+                    <field name="seller_id"/>
+                    <field name="partner_id"/>
+                    <field name="amount" sum="Total"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pos_order_payment_line_action_form" model="ir.actions.act_window">
+            <field name="name">Pos order payment</field>
+            <field name="res_model">pos.order.payment.line</field>
+            <field name="limit">30</field>
+            <field name="view_mode">tree</field>
+             <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                    </p>
+            </field>
+        </record>
+        <record id="view_smart_pos_payment_line_filter" model="ir.ui.view">
+                    <field name="name">pos.payment.filter</field>
+                    <field name="model">pos.order.payment.line</field>                   
+                    <field name="arch" type="xml">            
+                        <search string="Search">                       
+                            <group expand="1" string="Group By">                       
+                                <filter name="Journal" string="Phương thức thanh toán" context="{'group_by': 'journal_id'}"></filter>                 
+                                <filter name="Counter" string="Quầy" context="{'group_by': 'counter_id'}"></filter>                 
+                                <filter name="Seller" string="Người bán" context="{'group_by': 'seller_id'}"></filter>                 
+                                <filter name="Partner" string="Người mua" context="{'group_by': 'partner_id'}"></filter>                 
+                                <filter name="Cash" string="Tiền mặt" domain="[('journal_id.type','=','cash')]"> </filter>                 
+                                <filter name="Point" string="Điểm" domain="[('journal_id.code','=','point')]"> </filter>                 
+                                <filter name="Bank" string="Ngân hàng" domain="[('journal_id.type','=','bank')]"> </filter>                 
+                            </group> 
+                        </search>
+                    </field>
+                </record>
+    </data>
+
+</odoo>

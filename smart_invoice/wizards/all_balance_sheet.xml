@@ -1,0 +1,56 @@
+<odoo>
+    <record id="smart_invoice_all_balance_sheet" model="ir.ui.view">
+        <field name="name">Balance Sheet</field>
+        <field name="model">account.all.balance.sheet</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="All Balance Sheet">
+               <group>
+                    <group>
+                        <field name="filter_date"/>
+                    </group>
+                </group>
+                <!-- <group>
+                    <field name="data_from" />
+                    <field name="not_display"/>
+                    <field name="accounted" attrs="{'invisible': [('data_from','=',True)]}"/>
+                </group> -->
+                 <group>
+                    <field name="filter_company"  options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}"/>
+                </group>
+                <group>
+                    <group>
+                        <field name="start_date" />
+                    </group>          
+                    <group>
+                        <field name="end_date" />
+                    </group>
+                </group>
+                <group>
+                        
+                </group> 
+                <group>
+                     <field name="file_name" filename="all_balance_data" />
+					<field name="all_balance_data" invisible="1" />
+                </group>
+                <footer>
+                    <button name="get_info" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Export excel" class="btn-primary" name="export_excel" type="object"   icon="fa-download"/>
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_all_balance_sheet"
+                name="Balance Sheet"
+                res_model="account.all.balance.sheet"
+                view_mode="form"
+                target="new"
+            />
+    
+    <menuitem sequence="1" action="main_all_balance_sheet"
+            id="menu_main_all_balance_sheet"
+            parent="smart_invoice.menu_financial_new"
+            name="All Balance Sheet"/>
+</odoo>

@@ -1,0 +1,13 @@
+.o_in_iframe #wrapwrap .container {
+
+    border-width: 1px!important;
+    border-style: solid!important;
+    border-color: #eee!important;
+    border-radius: 10px!important;
+    background-color: #fff!important;
+    max-width: 2000px;
+}
+#wrapwrap table.table.table-bordered, .o_editable table.table.table-bordered{box-sizing: border-box;font-size: 13px;}
+@media (orientation: landscape) {
+    /* landscape styles */
+}

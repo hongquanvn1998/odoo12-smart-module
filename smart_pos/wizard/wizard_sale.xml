@@ -1,0 +1,42 @@
+<odoo>
+    <record id="report_pos_sale_main" model="ir.ui.view">
+        <field name="name">Report Sale</field>
+        <field name="model">pos.sale.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Sale Journal">
+                <group>
+                 <group>
+                        <field name="filter_types_sale" string="Filter types" widget="radio" options="{'horizontal': true}"/>
+                    </group>
+                     <!-- <group>
+                        <field name="filter_pricelist" string="Pricelist" options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}" />
+
+                    </group> -->
+                </group>
+                <group>
+                    <group>
+                        <field name="start_date" string="Date Start"/>
+                    </group>          
+                    <group>
+                        <field name="end_date" string="End date"/>
+
+                    </group>
+                   
+                </group>
+                <footer>
+                    <button name="set_params_to_list" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_smart_pos_sale"
+                name="Report sale"
+                res_model="pos.sale.wizard"
+                view_mode="form"
+                target="new"
+            />
+    
+</odoo>

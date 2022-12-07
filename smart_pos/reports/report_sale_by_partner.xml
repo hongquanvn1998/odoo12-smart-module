@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_partner_view">
+            <field name="name">Report sale by partner</field>
+            <field name="model">report.sale.by.partner</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">              
+                 <tree string="Report end of day by sale" create="false" delete="false">
+                    <field name="id" string= "STT" />    
+                    <!-- <field name="code" /> -->
+                    <field name="date" />                    
+                    <field name="partner_name" /> 
+                    <field name="qty_total" />                      
+                    <field name="amount_total" sum="Total Amount" />               
+                </tree>
+            </field>
+
+        </record> 
+         <record id="view_report_end_of_day_search" model="ir.ui.view">
+            <field name="name">report sale by partner search</field>
+            <field name="model">report.sale.by.partner</field>                   
+            <field name="arch" type="xml">            
+                <search string="Search">                       
+                     <group expand="1" string="Group By">                                              
+                         <filter string="Partner" name="partner_name" context="{'group_by': 'partner_name'}"></filter>
+                     
+                    </group> 
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

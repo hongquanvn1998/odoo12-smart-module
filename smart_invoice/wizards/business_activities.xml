@@ -1,0 +1,52 @@
+<odoo>
+    <record id="smart_invoice_business_activities_get" model="ir.ui.view">
+        <field name="name">Business Activities</field>
+        <field name="model">account.business.activities</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="All Balance Sheet">
+               <group>
+                    <group>
+                        <field name="filter_date"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="data_from" />
+                    <field name="not_display"/>
+                </group>
+                <group>
+                    <group>
+                        <field name="start_date" />
+                    </group>          
+                    <group>
+                        <field name="end_date" />
+                    </group>
+                </group>
+                <group>
+                        
+                </group> 
+                <group>
+                     <field name="file_name" filename="acc_business_data" />
+					<field name="acc_business_data" invisible="1" />
+                </group>
+                <footer>
+                    <button name="get_info" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Export excel" class="btn-primary" name="export_excel" type="object"   icon="fa-download"/>
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_business_activities"
+                name="Business Activities"
+                res_model="account.business.activities"
+                view_mode="form"
+                target="new"
+            />
+    
+    <menuitem sequence="1" action="main_business_activities"
+            id="menu_main_business_activities"
+            parent="smart_invoice.menu_financial_new"
+            name="Business Activities"/>
+</odoo>

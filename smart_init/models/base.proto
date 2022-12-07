@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+service InstallApp{
+    rpc InstallApplication(AppRequest) returns (AppResponse);
+}
+
+message AppRequest{
+    map<string,string> args = 1;
+    repeated ListApps app_modules = 2;
+    string name = 3;
+    string login = 4;
+    string password = 5;
+    string email = 6;
+    string expired_date = 7;
+    string method = 8;
+    string model = 9;
+}
+
+message ListApps{
+    string apps = 1;
+}
+
+message AppResponse{
+    bool success = 1;
+}

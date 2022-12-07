@@ -1,0 +1,170 @@
+<odoo>
+
+    <report id="cash_ledger" model="cash.ledger" string="Cash on hand ledger" report_type="qweb-html"
+        name="smart_invoice.cash_ledger_display" file="smart_invoice.cash_ledger_display"
+        paperformat="smart_invoice.paperformat_A4_document_landscape" />
+    <template id="cash_ledger_display">
+        <t t-call="web.html_container">
+        <t t-call="web.internal_layout">
+            <div class="col-12 float-right">
+                <div class="col-4 float-right">
+                    <p class="text-center "><strong>Mẫu số S07a-DN</strong></p>
+                    <p class="text-center"><span>(Ban hành theo Thông tư số 200/2014/TT-BTC</span></p>
+                    <p class="text-center"><span>Ngày 22/12/2014 của Bộ Tài chính)</span></p>
+                </div>
+            </div>
+            <div class="mb-4" style="border-bottom:1px solid black">
+                <h3 class="text-center">Cash on hand ledger</h3>
+                <h5 class="text-center">
+                    <strong>From </strong>
+                    <t t-esc="start_date" t-options='{"widget": "date"}' />
+                    <strong> To </strong>
+                    <t t-esc="end_date" t-options='{"widget": "date"}' />
+                </h5>
+            </div>
+            <div class="page">
+                <table class="table table-sm table-reports table-bordered table-detail-cash">
+                    <thead class=" th-journal">
+                        <tr>
+                            <th scope="col" class="align-middle text-center" rowspan="2" style="">Date vouchers</th>
+                            <th scope="col" class="align-middle text-center" rowspan="2" style="">Accounting Date</th>
+                            <th scope="col" class="align-middle text-center" rowspan="2" style="">Number Receipts</th>
+                            <th scope="col" class="align-middle text-center" rowspan="2" style="">Number Pay Slip</th>
+                            <th scope="col" class="align-middle text-center" rowspan="2" style="">Description</th>
+                            <th scope="col" class="align-middle text-center" rowspan="2" style="">Account</th>
+                            <th scope="col" class="align-middle text-center" rowspan="2" style="">Contra Account</th>
+                            <th scope="col" class="align-middle text-center" colspan="2" style="">Incurred</th>
+                            <th scope="col" class="align-middle text-center" rowspan="2" style="">Inventory</th>
+                            <th scope="col" class="align-middle text-center" rowspan="2" style="">Receiver/Submitter
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th class="align-middle text-center">Debit</th>
+                            <th class="align-middle text-center">Credit</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr class="o_level1" t-if='len(docs) ==0'>
+                            <td colspan="11">
+                                <h6 class="text-center">Data not found!</h6>
+                            </td>
+                        </tr>
+                        <t t-set="tt_inventory" t-value="0"/>    
+                        <t t-set="tt_debit" t-value="0"/>    
+                        <t t-set="tt_credit" t-value="0"/>  
+
+                        <t class="o_level1"  t-foreach="docs" t-as="doc">
+                         <t t-set="tt_inventory" t-value="tt_inventory + doc['ob']"/>   
+                        <tr >
+                        <td colspan="5" class="text-right">
+                          <span class="font-weight-bold" >Số tồn đầu kỳ</span>
+                        </td>
+                        <td class="text-center"><span class="font-weight-bold" t-esc="doc['code']"></span></td>
+                        <td></td>
+                        <td class="text-center"><span class="font-weight-bold">0</span></td>
+                        <td class="text-center"><span class="font-weight-bold">0</span></td>
+                        <td class="text-center"  >
+                         <span class="font-weight-bold" t-esc="'{:,}'.format(doc['ob'])"></span>
+                         <t t-set="t_ob" t-value="doc['ob']"/>    
+
+                        </td>
+                        <td></td>
+                        </tr>
+                        
+                        <t class="o_level1" t-if="len(doc['items']) >0"  t-foreach="doc['items']" t-as="item">
+                           <t t-set="t_ob" t-value="t_ob + item[7]-item[8]"/>    
+                         <t t-set="tt_debit" t-value="tt_debit + item[7]"/>    
+                        <t t-set="tt_credit" t-value="tt_credit + item[8]"/>    
+                        <t t-set="tt_inventory" t-value="tt_inventory + item[7]-item[8]"/>    
+                        
+                           <tr>
+                                <td class="text-center">
+                                     <span t-esc="item[0]" t-options='{"widget": "date"}'/>
+                                </td>
+                                <td class="text-center">
+                                     <span t-esc="item[1]" t-options='{"widget": "date"}'/>
+                                </td>
+                                <td class="text-center">
+                                     <span t-if ="item[7] >0" t-esc="item[2]"/>
+                                 </td>
+                                <td class="text-center">
+                                     <span t-if ="item[8] >0" t-esc="item[2]"/>
+                                 </td>
+
+                                <td class="text-center">
+                                     <!-- <span t-esc="item[]"/> -->
+                                </td>
+                                <td class="text-center">
+                                     <span t-esc="item[3]"/>                                
+                                </td>
+                                <td class="text-center">
+                                     <span t-esc="item[4]"/>                                
+                                </td>
+                                <td class="text-center">
+                                     <span t-esc="'{:,}'.format(item[7])"/>
+                                </td>
+
+                                <td class="text-center">
+                                     <span t-esc="'{:,}'.format(item[8])"/>
+                                </td>
+                                <td class="text-center">
+                                     <span t-esc="'{:,}'.format(t_ob)"/>
+                                </td>
+                                 <td class="text-center">
+                                     <span t-esc="item[9]"/>
+                                </td>
+                                
+                            </tr>
+                        </t>
+                        </t>
+                         <tr t-if='len(docs) >0'>
+                            <td  colspan="7">Total</td>
+                            <td  class="text-center">
+                            <span  class="font-weight-bold" t-if ="tt_debit >0" t-esc="'{:,}'.format(tt_debit)"
+                            t-field-options="{'widget':'monetary', 'display_currency': 'tt_debit'}" />
+                            </td>
+                            <td  class="text-center">
+                            <span class="font-weight-bold"  t-if =" tt_credit >0" t-esc="'{:,}'.format(tt_credit)"
+                            t-field-options="{'widget':'monetary', 'display_currency': 'tt_credit'}" />
+                            </td>
+                            <td  class="text-center">
+                             <span class="font-weight-bold"  t-esc="'{:,}'.format(tt_inventory)"
+                            t-field-options="{'widget':'monetary', 'display_currency': 'tt_inventory'}" />
+                            <td  class="text-center"></td>
+                            
+                            </td>
+                         </tr> 
+                     </tbody>
+                </table>
+                <div class="oe_structure" />
+                <div class="row">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-4">
+                    </div>
+                    <div class="col-4">
+                        <h6 class="text-center font-weight-light font-italic">Ngày .... tháng .... năm.........</h6>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-4">
+                        <h6 class="text-center"><strong>Người lập</strong></h6>
+                        <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="text-center"><strong>Kế toán trưởng</strong></h6>
+                        <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="text-center"><strong>Director</strong></h6>
+                        <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                    </div>
+                </div>
+            </div>
+        </t>
+        </t>
+    </template>
+
+</odoo>

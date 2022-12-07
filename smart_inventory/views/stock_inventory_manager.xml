@@ -1,0 +1,103 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="stock_inventory_manager_view">
+            <field name="name">Stock Inventory Manager</field>
+            <field name="model">stock.inventory.manager</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">  
+                <tree string="Stock Inventory" create="false" delete="false" import="false"  js_class="smart_inventory_change_params"> 
+                    <field name="product_code" />
+                    <field name="product_name" />
+                    <field name="unit" />
+                    <field name="warehouse_code" />
+                    <field name="warehouse_name" />
+                    <field name="opening_quantity" />
+                    <field name="opening_value" />
+                    <field name="import_quantity" />
+                    <field name="import_value" />
+                    <field name="export_quantity" />
+                    <field name="export_value" />
+                    <field name="closing_quantity" />
+                    <field name="closing_value" /> 
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="stock_inventory_manager_view_search" model="ir.ui.view">
+            <field name="name">Stock Inventory Manager</field>
+            <field name="model">stock.inventory.manager</field>
+            <field name="arch" type="xml">
+                <search string="Stock Inventory">
+                    <field name="product_name" string="Reference" />
+                    <field name="warehouse_name" />  
+
+                    <!-- <separator /> -->
+                    <group expand="0" string="Group By">
+                        <filter string="Warehouse" name="groupby_warehouse_name" domain="[]" context="{'group_by':'warehouse_name'}" />
+                        <filter string="Product" name="groupby_product_id" domain="[]"
+                            context="{'group_by': 'pid','group_by': 'product_code','group_by': 'product_name'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="stock_inventory_manager_view_pivot">
+            <field name="name">Stock Inventory Manager</field>
+            <field name="model">stock.inventory.manager</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="product_code" />
+                    <field name="product_name" />
+                    <field name="unit" />
+                    <field name="warehouse_code" />
+                    <field name="warehouse_name" />
+                    <field name="opening_quantity" />
+                    <field name="opening_value" />
+                    <field name="import_quantity" />
+                    <field name="import_value" />
+                    <field name="export_quantity" />
+                    <field name="export_value" />
+                    <field name="closing_quantity" />
+                    <field name="closing_value" />
+                </pivot>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="menu_stock_inventory_manager_action">
+            <field name="name">Stock Inventory</field>
+            <field name="res_model">stock.inventory.manager</field>
+            <field name="view_mode">tree,form,kanban,pivot</field>
+            <field name="context">{'search_default_groupby_warehouse_name': 1}</field>
+            <!-- <field name="domain">[(),(),()]</field> -->
+            <field name="help" type="html">
+              <p class="o_view_nocontent_empty_folder">
+                There's no product stock yet
+              </p>
+            </field> 
+        </record>
+
+        <record id="action_make_testing" model="ir.actions.server">
+
+                    <field name="name">Stock Inventory</field>
+
+                    <field name="condition">True</field>
+
+                    <field name="type">ir.actions.server</field>
+
+                    <field name="model_id" ref="model_stock_inventory_manager" />
+
+                    <field name="state">code</field>
+
+                    <field name="code">action =  env.get('stock.inventory.manager').reload_data()</field>
+
+        </record>
+
+
+        <menuitem sequence="0" action="action_make_testing" name="Stock inventory"
+            id="menu_stock_inventory_manager" parent="smart_inventory.menu_stock_inventory_report_label" />
+
+    </data>
+</odoo>

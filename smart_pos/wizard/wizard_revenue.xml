@@ -1,0 +1,33 @@
+<odoo>
+    <record id="report_pos_revenue_main" model="ir.ui.view">
+        <field name="name">Report revenue</field>
+        <field name="model">pos.revenue.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Sale Journal">
+                <group>
+                    <group>
+                        <field name="start_date" string="Date Start"/>
+                    </group>          
+                    <group>
+                        <field name="end_date" string="End date"/>
+
+                    </group>
+                </group>
+                <footer>
+                    <button name="set_params_to_list" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_smart_pos_revenue"
+                name="Report revenue"
+                res_model="pos.revenue.wizard"
+                view_mode="form"
+                target="new"
+            />
+    
+
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data> 
+        <record id="smart_managermenu_manage_config_business_category_action" model="ir.actions.act_window">
+            <field name="name">Business Category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">smart_manager.business_category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <!-- <field name="view_id" ref="product.product_template_kanban_view"/>
+            <field name="search_view_id" ref="product.product_template_search_view"/> -->
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    View a new business category
+                </p><p>
+                    
+                    Have at least a business category
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

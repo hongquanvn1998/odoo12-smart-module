@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="pos_order_view_tree" model="ir.ui.view">
+    <field name="name">pos.order.view.tree</field>
+    <field name="model">pos.order</field>
+    <field name="type">tree</field>
+    <field name="arch" type="xml">
+        <tree string="Pos order" decoration-info="state == 'opened'" decoration-muted="state  =='done'" create="0" default_order="id desc">
+        <!-- <field name="name"/>        -->
+        <field name="code"/>       
+        <field name="date_order"/> 
+        <field name="company_id"/>            
+        <field name="seller_id"/>       
+        <field name="partner_id"/>       
+        <field name="amount_total" sum="Amount total"/>       
+        <field name="session_id"/>       
+        <field name="state"  invisible="1"/>
+        </tree>
+    </field>
+</record>
+   <record id="pos_order_view_form" model="ir.ui.view">
+        <field name="name">pos.order.view.form</field>
+        <field name="model">pos.order</field>
+        <field name="arch" type="xml">
+            <form string="Pos order" create="0">
+                <header>
+                   <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                <group col="4" colspan="4" name="order_fields">
+                    <field name="name"/>
+                    <field name="date_order"/>
+                    <field name="partner_id"/>
+                </group>
+                <notebook colspan="4">
+                    <page string="Products">
+                        <field name="lines" colspan="4" nolabel="1">
+                            <tree string="Order lines" editable="bottom">
+                                <field name="product_id"/>
+                                <field name="quantity"/>
+                                <field name="change_price" widget="monetary"/>
+                                <field name="discount" widget="monetary"/>
+                                <field name="price_subtotal" widget="monetary" force_save="1"/>
+                            </tree>
+                            <form string="Order lines">
+                                <group col="4">
+                                <field name="product_id"/>
+                                <field name="quantity"/>
+                                <field name="change_price" widget="monetary"/>
+                                <field name="discount" widget="monetary"/>
+                                <field name="price_subtotal" widget="monetary" force_save="1"/>
+                                </group>
+                            </form>
+                        </field>
+                        <div class="oe_clear"/>
+                    </page>
+
+                    <page string="Payments">
+                        <field name="payment_line_ids" colspan="4" nolabel="1">
+                            <tree editable="bottom" string="Payment lines">
+                                <field name="name"/>
+                                <field name="amount"/>
+                                <field name="seller_id"/>
+                                <field name="payment_method_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                    
+                     <page name="extra" string="General Information">
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="seller_id"/>
+                            <field name="partner_id"/>
+                            <field name="session_id"/>
+                            <field name="company_id"/>
+                            <field name="code"/>
+                           <field name="note"/>
+                        </group>
+                    </page>
+                </notebook>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+<record id="view_smart_pos_order_filter" model="ir.ui.view">
+        <field name="name">smart.pos.order.list.group</field>
+        <field name="model">pos.order</field>
+        <field name="arch" type="xml">
+            <search string="Search pos Order">
+            <field name="session_id"/>
+                <group expand="0" string="Group By">
+                    <filter name="Session" string="Phiên" domain="[]" context="{'group_by':'session_id'}"/>
+                    <filter name="Counter" string="Quầy" domain="[]" context="{'group_by':'counter_id'}"/>
+                    <filter name="Seller"  string="Người bán" domain="[]" context="{'group_by':'seller_id'}"/>
+                    <filter name="Partner" string="Người mua" domain="[]" context="{'group_by':'partner_id'}"/>
+                    <filter name="Opened" string="Đang mở" domain="[('state','=','opened')]"/>
+                    <filter name="Done" string="Đóng" domain="[('state','=','done')]"/>
+                </group>
+            </search>
+        </field>
+</record>   
+<record id="pos_orders_action" model="ir.actions.act_window">
+    <field name="name">Pos Orders</field>
+    <field name="res_model">pos.order</field>
+    <field name="limit">30</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+    <p class="o_view_nocontent_smiling_face">
+              </p>
+    </field>
+</record>
+
+
+</odoo>

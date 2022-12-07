@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_sale_journal_customer_view">
+            <field name="name">Sale general report by customers</field>
+            <field name="model">report.sale.general.customers</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">  
+                <tree string="Sale general report by customers" create="false" delete="false"    js_class="smart_sale_change_params">  
+                    <field name="customer_code" />
+                    <field name="customer_name" />  
+                    <field name="gross_revenue"  sum="Gross revenue" />
+                    <field name="discount" sum="Discount"  />
+                    <field name="return_quantity" sum="Return quantity" />
+                    <field name="return_value"  sum="Value of return" /> 
+                    <field name="net_revenue" sum="Gross revenue" /> 
+                    <field name="province" />
+                    <field name="district" />
+                </tree>
+            </field> 
+        </record> 
+    </data>  
+</odoo>

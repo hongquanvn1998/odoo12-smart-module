@@ -1,0 +1,61 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.actions.act_window" id="smart_pos_action_window">
+      <field name="name">smart_pos window</field>
+      <field name="res_model">pos.counter</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+   
+   
+
+    <!-- <record model="ir.ui.view" id="pos_counter_form_view">
+            <field name="name">pos counter form</field>
+            <field name="model">pos.counter</field>
+            <field name="arch" type="xml">
+              <form string='Counter'>
+                  <sheet>
+                    <group>
+                      <field name="name"/>
+                      <field name="code"/>
+                      <field name="company_id"/>
+                    </group>
+                  </sheet>
+              </form>
+            </field>
+    </record> -->
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="smart_pos.action_server">
+      <field name="name">smart_pos server</field>
+      <field name="model_id" ref="model_smart_pos_smart_pos"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    
+    <menuitem name="Smart POS" id="pos_menu_root"/>
+   
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="smart_pos.menu_1" parent="smart_pos.menu_root"/>
+    <menuitem name="Menu 2" id="smart_pos.menu_2" parent="smart_pos.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="smart_pos.menu_1_list" parent="smart_pos.menu_1"
+              action="smart_pos.action_window"/>
+    <menuitem name="Server to list" id="smart_pos" parent="smart_pos.menu_2"
+              action="smart_pos.action_server"/>
+    -->
+  </data>
+</odoo>

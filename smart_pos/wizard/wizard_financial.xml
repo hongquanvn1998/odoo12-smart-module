@@ -1,0 +1,26 @@
+<odoo>
+    <record id="report_financial_main" model="ir.ui.view">
+        <field name="name">Smart pos financial</field>
+        <field name="model">financial.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Sale Journal">
+                <group>
+                        <field name="filter_time" string="Filter time" widget="radio" options="{'horizontal': true}"/>
+                    </group>
+                <footer>
+                    <button name="set_params_to_list" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_pos_financial"
+                name="Report financial"
+                res_model="financial.wizard"
+                view_mode="form"
+                target="new"
+            />
+    
+</odoo>

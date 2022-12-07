@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve" >
+
+    <t t-name="Sale.report_params">
+        <button t-if="widget.modelName == 'report.sale.journal'"  type="button" class="btn btn-primary sale_change_params_button">
+            Change params
+        </button>  
+
+        <button t-if="widget.modelName == 'report.sale.journal'"  type="button" class="btn btn-primary sale_print_button">
+           Print
+        </button>  
+
+    </t>  
+
+    <t t-extend="ListView.buttons"  t-if="widget.modelName == 'report.sale.journal'">
+        <t t-jquery="button.o_list_button_add" t-operation="before"> 
+             <t t-call="Sale.report_params"/>  
+        </t> 
+    </t> 
+</templates>

@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+
+         <menuitem name="Admin Manager" id="manage_menu_root"/>
+
+        <menuitem name="Overview" id="menu_manage_overview" sequence="-1" parent="smart_manager.manage_menu_root"   />
+        <!-- Giao dịch -->
+        <menuitem name="Register" id="menu_manage_register" parent="smart_manager.manage_menu_root"/> 
+
+      <menuitem name="Registered" id="menu_manage_register_registered" parent="smart_manager.menu_manage_register" action="smart_manager_register_action_window"/>
+      
+      <menuitem name="Verifying" id="menu_manage_register_verifying" parent="smart_manager.menu_manage_register" action="smart_manager_verifying_action_window"/>
+
+      <menuitem name="Activated" id="menu_manage_register_activated" parent="smart_manager.menu_manage_register" action="smart_manager_activated_action_window"/>
+
+      <menuitem name="Expired" id="menu_manage_register_expired" parent="smart_manager.menu_manage_register" action="smart_manager_expired_action_window"/>
+
+     <menuitem name="Cancelled" id="menu_manage_register_cancelled" parent="smart_manager.menu_manage_register" action="smart_manager_cancelled_action_window"/>
+        <!--   <menuitem name="Ca giao dịch" id="menu_manage_exchange_shifts" parent="smart_manager.menu_manage_exchange" action="pos_session_action"/>
+        <menuitem name="Thanh toán" id="menu_manage_payment" parent="smart_manager.menu_manage_exchange" action="pos_order_payment_line_action_form"/> -->
+        
+        <!-- <menuitem name="Đơn hàng" id="menu_manage_exchange_orders" parent="smart_manager.menu_manage_exchange" action="smart_manager_action_window"/> -->
+
+        <!-- Quản lý -->
+        <menuitem name="Manager" id="menu_manage_manage" parent="smart_manager.manage_menu_root" />
+        <menuitem name="Traffic Manager" id="menu_manage_traffic" parent="smart_manager.menu_manage_manage" action="smart_manager_traffic_action"/>
+        <menuitem name="Apps" id="menu_manage_manage_product" parent="smart_manager.menu_manage_manage" action="smart_manager_product_template_action"/> 
+        <menuitem name="Customers" id="menu_manage_manage_custom" parent="smart_manager.menu_manage_manage" action="smart_manager_partner_action"/>        
+        <!-- 
+        
+        <menuitem name="Bảng giá" id="menu_manage_manage_list_price" parent="smart_manager.menu_manage_manage" action="smart_manager_product_pricelist_action2"  groups ="product.group_product_pricelist"/> -->
+        <!-- Sale Order -->
+        <menuitem name="Sale Orders" id="menu_manage_sale_order" parent="smart_manager.manage_menu_root" />
+        <menuitem name="Draft Orders" id="menu_manage_sale_order_draft" parent="smart_manager.menu_manage_sale_order"  action="smart_manager_draft_order_action_window"/>
+        <menuitem name="Sale Orders" id="menu_manage_sale_order_sale_order" parent="smart_manager.menu_manage_sale_order"  action="smart_manager_sale_order_action_window"/>
+        <menuitem name="Cancelled Orders" id="menu_manage_sale_order_cancelled" parent="smart_manager.menu_manage_sale_order"  action="smart_manager_cancel_order_action_window"/>
+        <!-- Báo cáo -->
+        <menuitem name="Report" id="menu_manage_report" parent="smart_manager.manage_menu_root" />
+      <menuitem id="smart_manager_report_customer_menu" name="Report Customer" action="smart_manager_report_customer" parent="smart_manager.menu_manage_report"/>
+      <menuitem id="smart_manager_report_partner_menu" name="Report Partner" action="smart_manager_report_partner" parent="smart_manager.menu_manage_report"/>
+      <menuitem id="smart_manager_report_order_menu" name="Report Order" action="smart_manager_report_order" parent="smart_manager.menu_manage_report"/>
+
+
+        <!-- <menuitem name="Cuối ngày" id="menu_manage_report_endday" parent="smart_manager.menu_manage_report" action="main_pos_end_of_day"/>
+        <menuitem name="Doanh thu" id="menu_manage_report_revenue" parent="smart_manager.menu_manage_report"  action="main_smart_manager_revenue"/>
+        <menuitem name="Bán hàng" id="menu_smart_manager_report_sale" parent="smart_manager.menu_manage_report" action="main_smart_manager_sale"/>
+         <menuitem name="Hàng hóa" id="menu_manage_report_goods" parent="smart_manager.menu_manage_report" action="main_pos_goods"/> -->
+        <!-- <menuitem name="Nhân viên" id="menu_report_sale_by_employee" parent="smart_manager.menu_manage_report" action="main_smart_manager_seller"/>
+        <menuitem name="Khách hàng" id="menu_report_sale_by_partner" parent="smart_manager.menu_manage_report" action="main_smart_manager_partner"/> -->
+        <!-- <menuitem name="Tài chính" id="menu_manage_report_finance" parent="smart_manager.menu_manage_report" action="main_pos_financial"/> -->
+
+        <!-- <menuitem name="Thống kê tích điểm" id="menu_manage_report_reward_point" parent="smart_manager.menu_manage_report" action="main_smart_reward_point"/>
+        <menuitem name="Lịch sử tích điểm" id="menu_manage_report_reward_point_history" parent="smart_manager.menu_manage_report" action="main_smart_reward_point_history"/> --> -->
+
+
+        <!-- Thiết lập -->
+        
+        <menuitem name="Setting" id="menu_manage_config" parent="smart_manager.manage_menu_root" />
+        <menuitem
+          id="smart_manager_config_menu"
+          name="General Setting"
+          action="smart_manager_action_configuration"
+          parent="smart_manager.menu_manage_config"
+          sequence="10"/>
+        <menuitem name="Payment Period" id="smart_manager_config_payment_period" parent="smart_manager.menu_manage_config" action="smart_manager_config_payment_period_action"   />
+        <menuitem name="App Module Price" id="smart_manager_config_app_module_price" parent="smart_manager.menu_manage_config" action="smart_manager.smart_manager_config_app_module_price_action"/>
+        
+        <!-- 
+      
+        
+        <menuitem name="Phương thức thanh toán" id="menu_manage_config_payments_method" parent="smart_manager.menu_manage_config" action="smart_manager.payment_methods_action_window"/> -->
+      <menuitem name="Business Categories" id="menu_manage_config_business_category" parent="smart_manager.menu_manage_config" action="smart_managermenu_manage_config_business_category_action" />
+    
+      
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve" >
+
+    <t t-name="Inventory.stock_manager">
+        <button t-if="widget.modelName == 'stock.inventory.manager'"  type="button" class="btn btn-primary change_params_button">
+            Change params
+        </button>  
+
+        <button t-if="widget.modelName == 'stock.inventory.manager'"  type="button" class="btn btn-primary stock_print_button">
+           Print
+        </button>  
+
+    </t>  
+
+    <t t-extend="ListView.buttons"  t-if="widget.modelName == 'stock.inventory.manager'">
+        <t t-jquery="button.o_list_button_add" t-operation="before"> 
+             <t t-call="Inventory.stock_manager"/>  
+        </t> 
+    </t> 
+</templates>

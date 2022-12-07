@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <!-- <record model="ir.ui.view" id="smart_dashboard_stock_picking_list">
+            <field name="name">smart_dashboard sale</field>
+            <field name="model">stock.picking</field>
+            <field name="arch" type="xml">
+            <tree>
+            </tree>
+            </field>
+        </record> -->
+
+        <!-- <record model="ir.actions.act_window" id="smart_dashboard.action_window">
+            <field name="name">smart_dashboard stock picking</field>
+            <field name="res_model">stock.picking</field>
+            <field name="view_mode">tree,form</field>
+        </record> -->
+
+        
+
+        <menuitem name="Stock Picking" id="smart_dashboard.stock_picking" parent="smart_dashboard.menu_root"/>
+
+        <menuitem name="Stock Picking" id="smart_dashboard.stock_picking_list" parent="smart_dashboard.stock_picking"
+              action="stock.action_picking_tree_all"/>
+    </data>
+</odoo>

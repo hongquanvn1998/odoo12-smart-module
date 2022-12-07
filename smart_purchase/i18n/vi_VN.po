@@ -1,0 +1,1176 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* smart_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-30 09:34+0000\n"
+"PO-Revision-Date: 2019-12-30 09:34+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "(Ký, họ tên)"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "<b>Company Address:</b>"
+msgstr "<b>Địa chỉ công ty:</b>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "<span class=\"o_form_label\" attrs=\"{'invisible': [('state','not in',('draft','sent'))]}\">Request for Quotation\n"
+"                            </span>\n"
+"                            <span class=\"o_form_label\" attrs=\"{'invisible': [('state','in',('draft','sent'))]}\">Purchase\n"
+"                                Order </span>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "<span>Confirmed</span>"
+msgstr "<span>Đã xác nhận</span>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "<span>Received</span>"
+msgstr "<span>Đã nhận</span>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Amount</strong>"
+msgstr "<strong>Số tiền</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Chief Accountant</strong>"
+msgstr "<strong>Kế toán trưởng<strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Creator</strong>"
+msgstr "<strong>Người lập</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Description</strong>"
+msgstr "<strong>Mô tả</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Director</strong>"
+msgstr "<strong>Giám đốc</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Expected</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "<strong>Giám đốc</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "<strong>Kế toán trưởng</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "<strong>Người lập</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Product Code</strong>"
+msgstr "<strong>Mã sản phẩm</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>Số lượng</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Subtotal: </strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Total: </strong>"
+msgstr "<strong>Tổng: </strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>Đơn giá</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Unit</strong>"
+msgstr "<strong>ĐVT</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Bill date"
+msgstr "Ngày hóa đơn"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Bill number"
+msgstr "Số hóa đơn"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_wizard_view
+msgid "Báo cáo mua hàng"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_wizard_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Code"
+msgstr "Mã"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "City"
+msgstr "Quận/Huyện"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__create_uid
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__create_uid
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__create_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__create_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Currency:"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__filter_vendors
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+msgid "Customers"
+msgstr "Khách hàng"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Data not found!"
+msgstr "Không tìm thấy dữ liệu!"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_wizard_view
+msgid "Date End"
+msgstr "Đến"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_wizard_view
+msgid "Date Start"
+msgstr "Từ"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Date received:"
+msgstr "Ngày nhận:"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+msgid "Date start"
+msgstr "Từ"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Date:"
+msgstr "Ngày:"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__description
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__description
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__description
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__description
+msgid "Description"
+msgstr "Diễn giải"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Description:"
+msgstr "Mô tả"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__discount
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__discount
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__discount
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__discount
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__discount
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__discount
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_vendors_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_vendor_view
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_product_supplierinfo__discount
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_order_line__discount
+msgid "Discount (%)"
+msgstr "Chiết khấu (%)"
+
+#. module: smart_purchase
+#: sql_constraint:purchase.order.line:0
+msgid "Discount must be lower than 100%."
+msgstr "Giảm giá phải nhỏ hơn 100%."
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Discount value"
+msgstr "Giá trị giảm giá"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_general_report_display__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_report_display__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_reportjournaldetail_display__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__district
+msgid "District"
+msgstr "Huyện"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__document_date
+msgid "Voucher date"
+msgstr "Ngày chứng từ"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__document_number
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__document_number
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__document_number
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__document_number
+msgid "Voucher Number"
+msgstr "Số chứng từ"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__document_date
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__document_date
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__document_date
+msgid "Voucher date"
+msgstr "Ngày chứng từ"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__employee_code
+msgid "Employee code"
+msgstr "Mã NV"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__employee_name
+msgid "Employee name"
+msgstr "Tên NV"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__filter_employees
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__filter_employees
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+msgid "Employees"
+msgstr "Nhân viên"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__end_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__end_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__end_date
+msgid "End Date"
+msgstr "Đến"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__filter_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__filter_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__filter_date
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_wizard_view
+msgid "Filter Date"
+msgstr "Kỳ Báo Cáo"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+msgid "Filter Product Categories"
+msgstr "Danh mục sản phẩm"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "From Date:"
+msgstr "Từ ngày:"
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,filter_date:0
+#: selection:purchase.journal.general.wizard,filter_date:0
+#: selection:purchase.journal.wizard,filter_date:0
+msgid "From the beginning of month to the present"
+msgstr "Từ đầu tháng đến hiện tại"
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,filter_date:0
+#: selection:purchase.journal.general.wizard,filter_date:0
+#: selection:purchase.journal.wizard,filter_date:0
+msgid "From the beginning of the year to present"
+msgstr "Từ đầu năm đến hiện tại"
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,filter_date:0
+#: selection:purchase.journal.general.wizard,filter_date:0
+#: selection:purchase.journal.wizard,filter_date:0
+msgid "From the early quarter to the present"
+msgstr "Từ đầu quý này đến hiện tại"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "General Infomation"
+msgstr "Thông tin chung"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_wizard_view
+msgid "Get Report"
+msgstr "Lấy Dữ Liệu"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__goods_amount
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_view
+msgid "Goods Amount"
+msgstr "Hàng hóa"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_by_goods_view
+msgid "Gross Value"
+msgstr "Tổng giá trị"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__gross_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__gross_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__gross_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__gross_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__gross_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__gross_value
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_vendors_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_vendor_view
+msgid "Gross value"
+msgstr "Tổng giá trị"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__id
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__id
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_general_report_display__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_report_display__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_reportjournaldetail_display__id
+msgid "ID"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__invoice_number_display
+msgid "Invoice No."
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__invoice_number
+msgid "Invoice Number"
+msgstr "Số hóa đơn"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__invoice_number
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__invoice_number
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__invoice_number
+msgid "Invoice number"
+msgstr "Số hóa đơn"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__invoiced_date
+msgid "Invoice date"
+msgstr "Ngày hóa đơn"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__invoiced_date
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__invoiced_date
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__invoiced_date
+msgid "Invoice date"
+msgstr "Ngày hóa đơn"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Invoices and Incoming Shipments"
+msgstr "Hoá đơn và Lô hàng sắp về"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__item_description
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__item_description
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__item_description
+msgid "Item description"
+msgstr "Mô tả hàng hóa"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_general_report_display____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_report_display____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_reportjournaldetail_display____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__write_uid
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__write_uid
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__write_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__write_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Name, TIN, Email, or Reference"
+msgstr "Tên, MST, Email, hoặc Mã"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__net_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__net_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__net_value
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_employees_view
+msgid "Net value"
+msgstr "Tổng giá trị mua"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Ngày .... tháng .... năm........."
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Order"
+msgstr "Lệnh"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__other_amount
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_view
+msgid "Other Amount"
+msgstr "Khác"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Other Information"
+msgstr "Thông tin khác"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "PURCHASE JOURNAL"
+msgstr "Sổ nhật ký bán hàng"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+msgid "PURCHASE JOURNAL DETAIL"
+msgstr "Sổ chi tiết bán hàng"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "PURCHASE JOURNAL GENERAL"
+msgstr "Tổng hợp bán hàng"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__payables
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_view
+msgid "Payables"
+msgstr "Phải trả"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Payment terms"
+msgstr "Điều khoản thanh toán"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Payment terms:"
+msgstr "Điều khoản thanh toán"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Phone:"
+msgstr "Điện thoại:"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Position received:"
+msgstr "Địa điểm nhận:"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__posted_date
+msgid "Posting date"
+msgstr "Ngày hạch toán"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__posted_date
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__posted_date
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__posted_date
+msgid "Posting date"
+msgstr "Ngày hạch toán"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Posting Date"
+msgstr "Ngày hạch toán"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Price Total"
+msgstr "Doanh số bán"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__product_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__product_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__product_name
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__filter_product_categories
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__filter_product_categories
+msgid "Product categories"
+msgstr "Danh mục sản phẩm"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__product_code
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__product_code
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__product_code
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__product_code
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+msgid "Product code"
+msgstr "Mã sản phẩm"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__product_name
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+msgid "Product name"
+msgstr "Tên hàng"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__filter_products
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__filter_products
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__province
+msgid "Province/City"
+msgstr "Tỉnh/Thành phố"
+
+#. module: smart_purchase
+#: model:ir.actions.act_window,name:smart_purchase.main_report_purchase_journal
+#: model:ir.actions.report,name:smart_purchase.purchase_journal_report
+#: model:ir.ui.menu,name:smart_purchase.menu_main_report_purchase_journal
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_view
+msgid "Purchase Journal"
+msgstr "Sổ nhật ký mua hàng"
+
+#. module: smart_purchase
+#: model:ir.actions.act_window,name:smart_purchase.main_purchase_journal_detail
+#: model:ir.actions.report,name:smart_purchase.purchase_journal_detail_report
+#: model:ir.ui.menu,name:smart_purchase.menu_main_purchase_journal_detail
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_vendors_view
+msgid "Purchase Journal Detail"
+msgstr "Sổ chi tiết mua hàng"
+
+#. module: smart_purchase
+#: model:ir.actions.act_window,name:smart_purchase.main_report_purchase_journal_general
+#: model:ir.actions.report,name:smart_purchase.purchase_journal_general_report
+#: model:ir.ui.menu,name:smart_purchase.menu_main_report_purchase_journal_general
+msgid "Purchase Journal General"
+msgstr "Tổng hợp mua hàng"
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_purchase_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+msgid "Purchase Order"
+msgstr "Đơn mua hàng"
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_purchase_order_line
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Purchase Order Line"
+msgstr "Chi tiết mua hàng"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Purchase Order Lines"
+msgstr "Chi tiết mua hàng"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Purchase Quotation"
+msgstr "Báo giá mua hàng"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_employees_view
+msgid "Purchase general report by employees"
+msgstr "Tổng hợp mua hàng theo nhân viên"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_by_goods_view
+msgid "Purchase general report by goods"
+msgstr "Tổng hợp mua hàng theo sản phẩm"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_vendor_view
+msgid "Purchase general report by vendors"
+msgstr "Tổng hợp mua hàng theo nhà cung cấp"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__quantity
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_vendors_view
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Quantity return"
+msgstr "Tổng số lượng trả lại"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+msgid "Report Purchase Detail"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+msgid "Report Purchase General"
+msgstr ""
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,report_type:0
+#: selection:purchase.journal.general.wizard,report_type:0
+msgid "Report by employees"
+msgstr "Báo cáo theo nhân viên"
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,report_type:0
+#: selection:purchase.journal.general.wizard,report_type:0
+msgid "Report by goods"
+msgstr "Báo cáo theo sản phẩm"
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,report_type:0
+#: selection:purchase.journal.general.wizard,report_type:0
+msgid "Report by vendors"
+msgstr "Báo cáo theo nhà cung cấp"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__report_type
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__report_type
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+msgid "Report type"
+msgstr "Loại báo cáo"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__return_quantity
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__return_quantity
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__return_quantity
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__return_quantity
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__return_quantity
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__return_quantity
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_vendor_view
+msgid "Return quantity"
+msgstr "Số lượng trả lại"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__return_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__return_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__return_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__return_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__return_value
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__return_value
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_vendors_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_vendor_view
+msgid "Value of return"
+msgstr "Giá trị trả lại"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__services_amount
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_view
+msgid "Services Amount"
+msgstr "Dịch vụ"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Set date to all order lines"
+msgstr "Đặt ngày cho tất cả các dòng của đơn hàng"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__start_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_general_wizard__start_date
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__start_date
+msgid "Start Date"
+msgstr "Từ"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_journal_wizard__filter_status
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "State"
+msgstr "Tỉnh/TP"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "Street 2..."
+msgstr "Địa chỉ dòng 2"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "Street..."
+msgstr "Số nhà, đường, phường (xã)"
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_product_supplierinfo
+msgid "Supplier Pricelist"
+msgstr "Bảng giá nhà cung cấp"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Tax"
+msgstr "Thuế"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__tax_amount
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_view
+msgid "Tax Amount"
+msgstr "Số tiền thuế"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Tax Code:"
+msgstr "Mã số thuế:"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Taxes:"
+msgstr "Các loại thuế:"
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,filter_date:0
+#: selection:purchase.journal.general.wizard,filter_date:0
+#: selection:purchase.journal.wizard,filter_date:0
+msgid "The first half of the year"
+msgstr "6 tháng đầu năm"
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,filter_date:0
+#: selection:purchase.journal.general.wizard,filter_date:0
+#: selection:purchase.journal.wizard,filter_date:0
+msgid "The last half of the year "
+msgstr "6 tháng cuối năm"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "This changes the scheduled date of all order lines to the given date"
+msgstr "Cái này sẽ thay đổi toàn bộ ngày ấn định của tất cả các dòng trên đơn hàng thành ngày được cho"
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,filter_date:0
+#: selection:purchase.journal.general.wizard,filter_date:0
+#: selection:purchase.journal.wizard,filter_date:0
+msgid "This quarter"
+msgstr "Quý này"
+
+#. module: smart_purchase
+#: selection:purchase.detail.wizard,filter_date:0
+#: selection:purchase.journal.general.wizard,filter_date:0
+#: selection:purchase.journal.wizard,filter_date:0
+msgid "This year"
+msgstr "Năm nay"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "To Date:"
+msgstr "Từ ngày:"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Total"
+msgstr "Tổng"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__total_amount
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_view
+msgid "Total Amount"
+msgstr "Tổng số tiền"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__quantity
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__quantity
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__quantity
+msgid "Total quantity"
+msgstr "Số lượng bán"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_goods__unit
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__unit
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__unit
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__unit
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_employees__unit
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__unit
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_general_main
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_main
+msgid "Unit"
+msgstr "ĐVT"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+msgid "Unit Price"
+msgstr "Đơn giá"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__unit_price
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__unit_price
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__unit_price
+msgid "Unit price"
+msgstr "Đơn giá"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Untaxed"
+msgstr "Giá trị trước thuế"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Value return"
+msgstr "Giá trị trả lại"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Vendor Address:"
+msgstr "Địa chỉ nhà cung cấp:"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Vendor Bills"
+msgstr "Hóa đơn nhà cung cấp"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__customer_code
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__vendor_code
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__vendor_code
+msgid "Vendor ID"
+msgstr "ID nhà cung cấp"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Vendor Name:"
+msgstr "Tên nhà cung cấp:"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_order__vendor_address
+msgid "Vendor address"
+msgstr "Địa chỉ nhà cung cấp"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__vendor_code
+msgid "Vendor code"
+msgstr "Mã nhà cung cấp"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_general_vendors__vendor_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_employees__customer_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_goods__vendor_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal_detail_vendors__vendor_name
+msgid "Vendor name"
+msgstr "Tên nhà cung cấp"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_order__vendor_tax_code
+msgid "Vendor tax code"
+msgstr "Mã số thuế NCC"
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_detail_wizard__filter_vendors
+#: model:ir.model.fields,field_description:smart_purchase.field_report_purchase_journal__vendor
+msgid "Vendors"
+msgstr "Nhà cung cấp"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Voucher date"
+msgstr "Ngày hạch toán"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Voucher number"
+msgstr "Số chứng từ"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "ZIP"
+msgstr "Mã bưu điện"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "e.g. 10111250000"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_filter_purchase_journal
+msgid "filter.purchase.journal"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_filter_purchase_journal_detail
+msgid "filter.purchase.journal.detail"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_filter_purchase_journal_general
+msgid "filter.purchase.journal.general"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_purchase
+msgid "purchase"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_purchase_detail_wizard
+msgid "purchase.detail.wizard"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_purchase_journal_general_wizard
+msgid "purchase.journal.general.wizard"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_purchase_journal_wizard
+msgid "purchase.journal.wizard"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_purchase_general_employees
+msgid "report.purchase.general.employees"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_purchase_general_goods
+msgid "report.purchase.general.goods"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_purchase_general_vendors
+msgid "report.purchase.general.vendors"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_purchase_journal
+msgid "report.purchase.journal"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_purchase_journal_detail_employees
+msgid "report.purchase.journal.detail.employees"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_purchase_journal_detail_goods
+msgid "report.purchase.journal.detail.goods"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_purchase_journal_detail_vendors
+msgid "report.purchase.journal.detail.vendors"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_smart_purchase_purchase_journal_detail_report_display
+msgid "report.smart_purchase.purchase_journal_detail_report_display"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_smart_purchase_purchase_journal_general_report_display
+msgid "report.smart_purchase.purchase_journal_general_report_display"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_smart_purchase_purchase_journal_report_display
+msgid "report.smart_purchase.purchase_journal_report_display"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_smart_purchase_reportjournaldetail_display
+msgid "report.smart_purchase.reportjournaldetail_display"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "smatlifevn.com ..."
+msgstr ""
+

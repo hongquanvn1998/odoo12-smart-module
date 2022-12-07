@@ -1,0 +1,46 @@
+<odoo>
+    <record model="ir.ui.view" id="report_purchase_journal_detail_view">
+        <field name="name">Purchase Journal Detail</field>
+        <field name="model">filter.purchase.journal.detail</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="PurchaseJournalDetail">
+                <group>
+                     <group>
+                    <field name="filter_date" string="Filter Date"/>
+                </group>
+                    <group>
+                            <field name="filter_product_categories"  options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}" string="Filter Product Categories"/>
+                    </group>
+                    <group>
+                        <field name="date_start" string="Date start"/>
+                    </group>
+                    
+                     <group>
+                        <field name="date_end" string="Date End"/>
+                    </group>
+                </group>
+                 <group>
+                        <field name="filter_product"  edit="false"
+                        options="{'no_open':True,'no_create' :True,'no_quick_create': True,'no_create_edit': True,}" string="Filter Product"
+                        />
+                </group> 
+                <footer>
+                    <button name="get_report" string="Get Report" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <act_window  id="main_report_purchase_journal_detail"
+                name="Purchase Journal Detail"
+                res_model="filter.purchase.journal.detail"
+                view_mode="form"
+                target="new"/>
+
+    <menuitem sequence="-1" action="main_report_purchase_journal_detail"
+              id="menu_main_report_purchase_journal_detail"
+              parent="purchase.purchase_report"/>
+</odoo>

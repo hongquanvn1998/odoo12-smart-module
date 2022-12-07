@@ -1,0 +1,150 @@
+<odoo>
+
+    <data>
+        <!-- <template id="assets_backend" name="stock_inventory_backend_view" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/smart_inventory/static/src/js/stock_inventory.js" />
+            </xpath>
+        </template> -->
+        <!-- <menuitem id="stock.menu_valuation" groups="smart_inventory.make_invisible" name="Inventory Report" parent="stock.menu_warehouse_report" sequence="100" action="stock.action_stock_quantity_history"/> -->
+        <record id="smart_inventory_pickup_form" model="ir.ui.view">
+            <field name="name">smart_inventory.pickup.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group/field[@name='location_id']" position="replace">
+                <!-- groups="stock.group_stock_multi_locations" -->
+                    <field name="location_id" widget="selection" attrs="{'invisible': [('picking_type_code', '=', 'incoming')]}" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]" />
+                </xpath>
+
+                <xpath expr="//form/sheet/group/group/field[@name='location_dest_id']" position="replace">
+                    <field name="location_dest_id" widget="selection" attrs="{'invisible': [('picking_type_code', '=', 'outgoing')]}" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]" />
+                    <!-- <field name="sale_id" invisible="1"/> -->
+                    <!-- <field name="purchase_id" invisible="1"/>
+                    <field name="is_sale" invisible="1"/>
+                    <field name="is_purchase" invisible="1"/> -->
+                </xpath>
+                <!-- <t t-if="picking_type_id.code = 'outgoing'"> -->
+                    <xpath expr="//form/sheet/group/group/field[@name='picking_type_id']" position="replace">
+                    <field name="picking_type_id" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
+                    <!-- <t t-if="picking_type_id.code == 'outgoing'"> -->   
+                        <!-- <field name="picking_type_id" string="sale" options="{'no_quick_create': True, 'no_create_edit' : True}" domain="['|',
+                                                    "&",
+                                                    ('is_sale', '=', True),('code','=','outgoing'),
+                                                    '|',('is_purchase', '=', True),('code','=','incoming')]"/> -->
+                    <!-- </t> -->
+                    <!-- <t t-elif="picking_type_id.code == 'incoming'"> -->
+                        <!-- <field name="picking_type_id" string="purchase" options="{'no_quick_create': True, 'no_create_edit' : True}" attrs="{'invisible': [('is_purchase', '=', False)]}" domain="[('is_purchase', '=', True),('code','=','incoming')]" /> -->
+                    <!-- </t> -->
+                    <!-- <t t-else="picking_type_id.code == 'internal'"> -->
+                        <!-- <field name="picking_type_id" string="internal" options="{'no_quick_create': True, 'no_create_edit' : True}" attrs="{'invisible': ['|',('is_purchase', '=', True),('is_sale', '=', True)]}" domain="[('is_purchase', '=', False),('is_sale', '=', False),('code','=','internal')]" /> -->
+                    <!-- </t> -->
+                    
+                </xpath>
+                <!-- </t> -->
+                
+                <!-- <t t-else="picking_type_id.code = 'incoming'"> -->
+                    <!-- <xpath expr="//form/sheet/group/group/field[@name='picking_type_id']" position="replace"> -->
+                        <!-- <field name="picking_type_id" options="{'no_quick_create': True, 'no_create_edit' : True}" default="1"/> -->
+                        <!-- <t t-if="picking_type_id.code == 'outgoing'"> -->   
+                            <!-- <field name="picking_type_id" string="sale" options="{'no_quick_create': True, 'no_create_edit' : True}" domain="[('code','=','outgoing')]" /> -->
+                        <!-- </t> -->
+                        <!-- <t t-elif="picking_type_id.code == 'incoming'"> -->
+                            <!-- <field name="picking_type_id" string="purchase" options="{'no_quick_create': True, 'no_create_edit' : True}" attrs="{'invisible': [('purchase_id', '=', False)]}" domain="[('code','=','incoming')]" /> -->
+                        <!-- </t> -->
+                        <!-- <t t-else="picking_type_id.code == 'internal'"> -->
+                            <!-- <field name="picking_type_id" string="internal" options="{'no_quick_create': True, 'no_create_edit' : True}" attrs="{'invisible': [('purchase_id', '=', 0),('sale_id', '>', 0)]}" t-if="picking_type_id.code == 'internal'" domain="[('code','=','internal')]" /> -->
+                        <!-- </t> -->
+                        
+                    <!-- </xpath> -->
+                <!-- </t> -->
+                
+
+                <xpath expr="//form/sheet/notebook/page/field[@name='move_ids_without_package']/tree/field[@name='product_uom']" position="after">
+                    <field name="price_unit" widget="monetary" />
+
+                </xpath>
+
+
+                <xpath expr="//form/sheet/notebook/page/field[@name='move_ids_without_package']/tree/field[@name='price_unit']" position="after">
+                   <field name="total" widget="monetary" readonly="True" /> 
+
+                </xpath>
+
+<!-- attrs="{'readonly': ['|',('state', '!=', 'draft'),('state', '!=', 'assigned')]}" -->
+                    <!-- <field name="move_ids_without_package" attrs="{'readonly': ['|', '&amp;', ('show_operations', '=', True), '|', ('is_locked', '=', True), ('state', '=', 'done'), '&amp;', ('state', '=', 'done'), ('is_locked', '=', True)]}" context="{'picking_type_code': picking_type_code, 'default_picking_id': id, 'form_view_ref':'stock.view_move_picking_form', 'address_in_id': partner_id, 'default_picking_type_id': picking_type_id, 'default_location_id': location_id, 'default_location_dest_id': location_dest_id}"> -->
+                        
+                        <!-- <tree decoration-danger="not parent.immediate_transfer and state != 'done' and quantity_done > reserved_availability and show_reserved_availability" decoration-muted="scrapped == True or state == 'cancel' or (state == 'done' and is_locked == True)" string="Stock Moves" editable="bottom"> -->
+                            <!-- <field name="name" invisible="1" />  -->
+                            <!-- <field name="product_id" required="1" attrs="{'readonly': ['|', '&amp;', ('state', '!=', 'draft'), ('additional', '=', False), ('has_move_lines', '=', True)]}" />
+
+                            <field name="location_id" />
+                            <field name="location_dest_id" />
+
+                            <field name="product_uom" attrs="{'readonly': [('state', '!=', 'draft'), ('additional', '=', False)]}" options="{'no_open': True, 'no_create': True}" string="Unit of Measure" groups="uom.group_uom" />
+
+                            <field name="product_uom_qty" string="Initial Demand" attrs="{'column_invisible': ['&amp;',('parent.immediate_transfer', '=', True), ('parent.is_locked', '=', True)], 'readonly': [('is_initial_demand_editable', '=', False)]}" />
+                            <field name="reserved_availability" string="Reserved" attrs="{'column_invisible': (['|','|', ('parent.state','=', 'done'), ('parent.picking_type_code', '=', 'incoming'),'&amp;',('parent.immediate_transfer', '=', True), ('parent.is_locked', '=', True)])}" />
+                            <field name="quantity_done" string="Done" attrs="{'readonly': [('is_quantity_done_editable', '=', False)]}" /> -->
+                            <!-- <field name="price_unit" widget="monetary" /> -->
+                            <!-- <field name="total" widget="monetary" readonly="True" /> -->
+                            <!-- <field name="date_expected" invisible="1" />
+                            <field name="state" invisible="1" readonly="0" />
+                            <field name="picking_type_id" invisible="1" />
+                            <field name="scrapped" invisible="1" />
+                            <field name="picking_code" invisible="1" />
+                            <field name="product_type" invisible="1" />
+                            <field name="show_details_visible" invisible="1" />
+                            <field name="show_reserved_availability" invisible="1" />
+                            <field name="show_operations" invisible="1" readonly="1" />
+                            <field name="additional" invisible="1" />
+                            <field name="has_move_lines" invisible="1" />
+                            <field name="is_locked" invisible="1" />
+                            <field name="is_initial_demand_editable" invisible="1" />
+                            <field name="is_quantity_done_editable" invisible="1" />
+                            <button name="action_show_details" string="Register lots, packs, location" type="object" icon="fa-list" attrs="{'invisible': [('show_details_visible', '=', False)]}" options="{'warn': true}" />
+                        </tree> -->
+                    <!-- </field> -->
+              
+                <xpath expr="//form/sheet/notebook/page/field[@name='move_line_ids_without_package']" position="replace">
+                    <field name="move_line_ids_without_package" attrs="{'readonly': ['|', '|', ('show_operations', '=', False), ('state', '=', 'cancel'), '&amp;', ('state', '=', 'done'), ('is_locked', '=', True)]}" context="{'default_picking_id': id, 'default_location_id': location_id, 'default_location_dest_id': location_dest_id}">
+                        <tree editable="bottom" decoration-muted="(state == 'done' and is_locked == True)" decoration-danger="qty_done&gt;product_uom_qty and state!='done'" decoration-success="qty_done==product_uom_qty and state!='done' and not result_package_id">
+                            <field name="product_id" required="1" attrs="{'readonly': ['|', ('state', '=', 'done'), ('move_id', '!=', False)]}" />
+                            <field name="move_id" invisible="1" />
+                            <field name="product_uom_id" force_save="1" attrs="{'readonly': [('state', '!=', 'draft')]}" groups="uom.group_uom" />
+                            <field name="location_id" attrs="{'column_invisible': [('parent.picking_type_code', '=', 'incoming')]}" groups="stock.group_stock_multi_locations" domain="[('id', 'child_of', parent.location_id)]" />
+                            <field name="location_dest_id" />
+                            <field name="location_dest_id" />
+                            <field name="package_id" groups="stock.group_tracking_lot" domain="[('location_id', '=', location_id)]" />
+                            <field name="result_package_id" groups="stock.group_tracking_lot" domain="['|', '|', ('location_id', '=', False), ('location_id', '=', location_dest_id), ('id', '=', package_id)]" />
+                            <field name="lots_visible" invisible="1" />
+                            <field name="owner_id" groups="stock.group_tracking_owner" />
+                            <field name="state" invisible="1" />
+                            <field name="lot_id" groups="stock.group_production_lot" attrs="{'column_invisible': [('parent.show_lots_text', '=', True)], 'invisible': [('lots_visible', '=', False)]}" domain="[('product_id', '=', product_id)]" context="{'default_product_id': product_id}" />
+                            <field name="lot_name" groups="stock.group_production_lot" attrs="{'column_invisible': [('parent.show_lots_text', '=', False)], 'invisible': [('lots_visible', '=', False)]}" context="{'default_product_id': product_id}" />
+                            <field name="is_initial_demand_editable" invisible="1" />
+                            <field name="product_uom_qty" readonly="1" />
+                            <field name="is_locked" invisible="1" />
+                            <field name="qty_done" attrs="{'readonly': [('state', 'in', ('done', 'cancel')), ('is_locked', '=', True)]}" force_save="1" />
+                        </tree>
+                    </field>
+                </xpath>
+                
+               
+                 <xpath expr="//form/sheet/group/group/field[@name='backorder_id']" position="after">
+                    <field name="note" string="Description" />
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <!-- <record id="menu_stock_inventory_report_action" model="ir.actions.client">
+            <field name="name">Report Page</field>
+            <field name="tag">stock_report</field>
+        </record>
+
+        <menuitem id="menu_stock_inventory_report_client" name="Stock Report" parent="smart_inventory.menu_stock_inventory_report_label" action="menu_stock_inventory_report_action" /> -->
+
+    </data>
+</odoo>

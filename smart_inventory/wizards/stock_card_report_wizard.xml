@@ -1,0 +1,46 @@
+<odoo>
+    <record model="ir.ui.view" id="stock_card_view">
+        <field name="name">Stock Card</field>
+        <field name="model">stock.card.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Stock Card"> 
+                <group>
+                    <group>
+                            <field name="filter_date"/>
+                    </group>
+                     <group>
+                            <field name="overall_count"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="start_date"/>
+                    </group>
+                    
+                     <group>
+                        <field name="end_date"/>
+                    </group> 
+                </group>
+                <footer>
+                    <button name="get_report" string="Report" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <act_window  id="stock_card_report_dialog"
+                name="Stock Card"
+                res_model="stock.card.wizard"
+                view_mode="form"
+                target="new"/> 
+
+    
+    <menuitem sequence="0" action="stock_card_report_dialog"
+              name="Stock Card"
+              id="menu_stock_card_report"
+              parent="smart_inventory.menu_stock_inventory_report_label"/>
+
+</odoo>

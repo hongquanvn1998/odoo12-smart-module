@@ -1,0 +1,41 @@
+<odoo>
+    <record model="ir.ui.view" id="report_purchase_journal_wizard_view">
+        <field name="name">Purchase Journal</field>
+        <field name="model">purchase.journal.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Báo cáo mua hàng">
+                <group>
+                    <field name="filter_date" string="Filter Date"/>
+                </group>
+                <group>
+                    <group>
+                        <field name="start_date" string="Date Start"/>
+                    </group>
+                    
+                     <group>
+                        <field name="end_date" string="Date End"/>
+                    </group>
+                    <!-- <group>
+                        <field name="filter_status" string="Status"/>
+                    </group> -->
+                </group>
+                <footer>
+                    <button name="set_params_to_list" string="Get Report" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <act_window  id="main_report_purchase_journal"
+                name="Purchase Journal"
+                res_model="purchase.journal.wizard"
+                view_mode="form"
+                target="new"/>
+
+    <menuitem sequence="-3" action="main_report_purchase_journal"
+              id="menu_main_report_purchase_journal"
+              parent="purchase.purchase_report"/>
+</odoo>

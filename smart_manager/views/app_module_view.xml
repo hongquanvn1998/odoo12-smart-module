@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data> 
+
+        <record model="ir.ui.view" id="smart_manager_payment_period_view_tree">
+            <field name="name">payment.period</field>
+            <field name="model">smart_manager.payment_period</field>
+            <field name="arch" type="xml">
+                <tree > 
+                    <field name="name" /> 
+                    <field name="value" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="smart_manager_app_price_view_tree">
+            <field name="name">app.module.price</field>
+            <field name="model">smart_manager.app_price</field>
+            <field name="arch" type="xml">
+                <tree >
+                    <field name="name" />
+                    <field name="app" />
+                    <field name="period" />
+                    <field name="price" /> 
+                    <field name="enable" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="smart_manager_config_payment_period_action" model="ir.actions.act_window">
+            <field name="name">Payment Period</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">smart_manager.payment_period</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field> 
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    View a new payment period
+                </p><p>
+                    
+                    Have at least a payment period
+                </p>
+            </field>
+        </record>
+
+
+        <record id="smart_manager_config_app_module_price_action" model="ir.actions.act_window">
+            <field name="name">App Module Price</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">smart_manager.app_price</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field> 
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    View a new app module price
+                </p><p>
+                    
+                    Have at least a app module price
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

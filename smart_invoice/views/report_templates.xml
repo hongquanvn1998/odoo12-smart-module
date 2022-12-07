@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_backend" name="account_reports assets" inherit_id="web.report_assets_common">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/smart_invoice/static/src/css/smart_invoice.css"/>
+        </xpath>
+    </template>
+
+    <template id="report_without_frame"> 
+            <div class="article "  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <!-- <t t-call="web.address_layout"/> -->
+                <t t-raw="0"/>
+            </div> 
+    </template>
+
+</odoo>

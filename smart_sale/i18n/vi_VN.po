@@ -1,0 +1,1292 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* smart_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-30 07:53+0000\n"
+"PO-Revision-Date: 2019-12-30 07:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
+msgstr "&amp;nbsp;<span>vào</span>&amp;nbsp;"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "(Ký,họ tên)"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<span>Disc.(%)</span>"
+msgstr "<span>G.Giá.(%)</span>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr "<span>Hoá đơn Chiếu lệ # </span>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr "<strong class=\"mr16\">Thành tiền</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Address:</strong>"
+msgstr "<strong>Địa chỉ</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Customer Name: </strong>"
+msgstr "<strong>Tên khách hàng: </strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Date Ordered: </strong>"
+msgstr "<strong>Ngày đặt hàng: </strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Delivery Address: </strong>"
+msgstr "<strong>Địa chỉ giao hàng: </strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Expiration Date:</strong>"
+msgstr "<strong>Ngày hết hạn:</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Giám đốc</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Invoice Address: </strong>"
+msgstr "<strong>Địa chỉ hóa đơn: </strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Kế toán trưởng</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Người lập</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Note: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Order #</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Payment Terms: </strong>"
+msgstr "<strong>Điều khoản thanh toán: </strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Payment Terms:</strong>"
+msgstr "<strong>Điều khoản thanh toán:</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Phone: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Quotation #</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Quotation Date: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Read Number: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Salesperson: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>Thành tiền:</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Tax Code: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>Tổng</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Your Reference:</strong>"
+msgstr "<strong>Tham chiếu của bạn:</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Add a note"
+msgstr "Thêm một ghi chú"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Add a product"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Add a section"
+msgstr "Thêm khu vực"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: smart_sale
+#. openerp-web
+#: code:addons/smart_sale/static/src/xml/button.xml:5
+#, python-format
+msgid "Change params"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Configure a product"
+msgstr "Cài đặt một sản phẩm"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__consignee
+msgid "Consignee"
+msgstr "Người nhận hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Create Invoice"
+msgstr "Tạo Hoá đơn"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_product_excel_extended__create_uid
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__create_uid
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__create_uid
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_product_excel_extended__create_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__create_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__create_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__customer
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__customer_address
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Customer Address"
+msgstr "Địa chỉ khách hàng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__customer_code
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__customer_code
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__customer_code
+msgid "Customer ID"
+msgstr "Mã KH"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__customer_tax_code
+msgid "Customer Tax Code"
+msgstr "Mã số thuế khách hàng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__customer_code
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__employee_code
+msgid "Customer code"
+msgstr "Mã khách hàng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__customer_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__customer_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__customer_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__customer_name
+msgid "Customer name"
+msgstr "Tên khách hàng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__filter_customers
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__filter_customers
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Customers"
+msgstr "Khách hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Date End"
+msgstr "Đến"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+msgid "Date Start"
+msgstr "Từ"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Date start"
+msgstr "Từ"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Delivered Quantity"
+msgstr "Số lượng Đã giao"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Delivery Products"
+msgstr "Vận chuyển hàng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__department
+msgid "Department"
+msgstr "Bộ phận"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__description
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__description
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__description
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__description
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__discount
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__discount
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__discount
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__discount
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__discount
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__discount
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__discount
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_customer_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_customers_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_employees_view
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_product_excel_extended__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportgeneral_display__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournal_display__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournaldetail_display__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__filter_nomoney
+msgid "Display only sale order not paid"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__district
+msgid "District"
+msgstr "Huyện"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__document_number
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__document_number
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__document_number
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__document_number
+msgid "Voucher Number"
+msgstr "Số chứng từ"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__document_date
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__document_date
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__document_date
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__document_date
+msgid "Voucher date"
+msgstr "Ngày chứng từ"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_product_excel_extended__excel_file
+msgid "Download Report :- "
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__filter_employees
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__filter_employees
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Employees"
+msgstr "Nhân viên"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__end_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__end_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__end_date
+msgid "End Date"
+msgstr "Đến"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_product_excel_extended__file_name
+msgid "Excel File"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__filter_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__filter_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__filter_date
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Filter Date"
+msgstr "Kỳ Báo Cáo"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Filter Product Categories"
+msgstr "Danh mục sản phẩm"
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+#: selection:sale.wizard,filter_date:0
+msgid "From the beginning of month to the present"
+msgstr "Đầu tháng đến hiện tại"
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+#: selection:sale.wizard,filter_date:0
+msgid "From the beginning of the year to present"
+msgstr "Đầu năm đến hiện tại"
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+#: selection:sale.wizard,filter_date:0
+msgid "From the early quarter to the present"
+msgstr "Đầu quý đến hiện tại"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "General Information"
+msgstr "Thông tin chung"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Get Report"
+msgstr "Lấy Dữ Liệu"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__gross_revenue
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__gross_revenue
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__gross_revenue
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__gross_revenue
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__gross_revenue
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__gross_revenue
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__gross_revenue
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_customer_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_customers_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_employees_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_view
+msgid "Gross revenue"
+msgstr "Tổng doanh thu"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_product_excel_extended__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportgeneral_display__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournal_display__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournaldetail_display__id
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__id
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__id
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: smart_sale
+#: model:res.groups,name:smart_sale.make_invisible
+msgid "Invisible"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__invoice_number
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__invoice_number
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__invoice_number
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__invoice_number
+msgid "Invoice number"
+msgstr "Số hóa đơn"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Invoiced Quantity"
+msgstr "SL đã xuất Hoá đơn"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__invoiced_date
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__invoiced_date
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__invoiced_date
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__invoiced_date
+msgid "Invoice date"
+msgstr "Ngày hóa đơn"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Invoices"
+msgstr "Các hóa đơn"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Invoicing"
+msgstr "Lên hóa đơn"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__is_blue
+msgid "Is blue"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__is_completed
+msgid "Is completed"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__item_description
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__item_description
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__item_description
+msgid "Item description"
+msgstr "Mô tả hàng hóa"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_product_excel_extended____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportgeneral_display____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournal_display____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournaldetail_display____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_product_excel_extended__write_uid
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__write_uid
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__write_uid
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_product_excel_extended__write_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__write_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__write_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__net_revenue
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__net_revenue
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__net_revenue
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__net_revenue
+msgid "Net revenue"
+msgstr "Doanh thu thuần"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__picking_type_id
+msgid "Operation Type"
+msgstr "Kiểu hoạt động"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Order"
+msgstr "Lệnh"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Order Lines"
+msgstr "Chi tiết đơn hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Ordered Qty"
+msgstr "SL Đặt hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Ordered Quantity"
+msgstr "Số lượng Đặt hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Other Information"
+msgstr "Thông tin khác"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__other_revenue
+msgid "Other revenues"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Payment terms"
+msgstr "Điều khoản thanh toán"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__posted_date
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__posted_date
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__posted_date
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__posted_date
+msgid "Posting date"
+msgstr "Ngày hạch toán"
+
+#. module: smart_sale
+#. openerp-web
+#: code:addons/smart_sale/static/src/xml/button.xml:9
+#, python-format
+msgid "Print"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__product_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__product_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__product_name
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Product Code"
+msgstr "Mã sản phẩm"
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_product_excel_extended
+msgid "Product Excel Extended"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Product Name"
+msgstr "Tên hàng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__filter_product_categories
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__filter_product_categories
+msgid "Product categories"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__product_code
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__product_code
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__product_code
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__product_code
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Product code"
+msgstr "Mã sản phẩm"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__employee_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__product_name
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Product name"
+msgstr "Tên hàng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__filter_products
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__filter_products
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__province
+msgid "Province/City"
+msgstr "Tỉnh/Thành phố"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__quantity
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_customers_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Quantity:"
+msgstr "Số lượng:"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__read_number
+msgid "Read Number"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Report Sale General"
+msgstr "Tổng hợp bán hàng"
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,report_type:0
+#: selection:sale.general.wizard,report_type:0
+msgid "Report by customers"
+msgstr "Báo cáo theo khách hàng"
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,report_type:0
+#: selection:sale.general.wizard,report_type:0
+msgid "Report by employees"
+msgstr "Báo cáo theo nhân viên"
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,report_type:0
+#: selection:sale.general.wizard,report_type:0
+msgid "Report by goods"
+msgstr "Báo cáo theo hàng hóa"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__report_type
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__report_type
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Report type"
+msgstr "Loại báo cáo"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Reporting"
+msgstr "Báo cáo"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__return_quantity
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__return_quantity
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__return_quantity
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__return_quantity
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__return_quantity
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__return_quantity
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_customer_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_employees_view
+msgid "Return quantity"
+msgstr "Số lượng trả lại"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_customers__return_value
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_employees__return_value
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__return_value
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__return_value
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__return_value
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__return_value
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__return_value
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_by_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_customer_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_customers_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_employees_view
+msgid "Value of return"
+msgstr "Giá trị trả lại"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__other_revenue
+msgid "Other revenues"
+msgstr "Doanh thu khác"
+
+#. module: smart_sale
+#: model:ir.actions.act_window,name:smart_sale.main_sale_general
+#: model:ir.ui.menu,name:smart_sale.menu_main_sale_general
+msgid "Sale General Report"
+msgstr "Tổng hợp bán hàng"
+
+#. module: smart_sale
+#: model:ir.actions.act_window,name:smart_sale.main_sale_journal
+#: model:ir.ui.menu,name:smart_sale.menu_main_sale_journal
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_view
+msgid "Sale Journal"
+msgstr "Sổ nhật ký bán hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_goods_view
+msgid "Sale Journal Detail By Goods"
+msgstr "Sổ chi tiết bán hàng theo sản phẩm"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_customers_view
+msgid "Sale Journal Detail By Customers"
+msgstr "Sổ chi tiết bán hàng theo theo khách hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_view
+msgid "Sale Journal Detail By Employees"
+msgstr "Sổ chi tiết bán hàng theo nhân viên"
+
+#. module: smart_sale
+#: model:ir.actions.act_window,name:smart_sale.main_sale_journal_detail
+#: model:ir.ui.menu,name:smart_sale.menu_main_sale_journal_detail
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_customers_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_goods_view
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_detail_view
+msgid "Sale Journal Detail"
+msgstr "Sổ chi tiết bán hàng"
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_sale_order
+msgid "Sale Order"
+msgstr "Đơn bán hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_customer_view
+msgid "Sale general report by customers"
+msgstr "Sale general report by customers"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_journal_employees_view
+msgid "Sale general report by employees"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_by_goods_view
+msgid "Sale general report by goods"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__sale_off_value
+msgid "Value of price reduction"
+msgstr "Giá trị hàng hóa"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Sales Information"
+msgstr "Các thông tin Kinh doanh"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Sales Order Lines"
+msgstr "Chi tiết đơn hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Sales Person"
+msgstr "Nhân viên bán hàng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__sales_revenue
+msgid "Finished product revenue"
+msgstr "Doanh thu hàng hóa"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Section Name (eg. Products, Services)"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal__services_revenue
+msgid "Revenue of service"
+msgstr "Doanh thu dịch vụ"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Shipping"
+msgstr "Vận chuyển"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Shipping Information"
+msgstr "Thông tin Giao hàng"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Shipping Options"
+msgstr "Tùy chọn vận chuyển"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_detail_wizard__start_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_general_wizard__start_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale_wizard__start_date
+msgid "Start Date"
+msgstr "Từ"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Taxes"
+msgstr "Thuế"
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+#: selection:sale.wizard,filter_date:0
+msgid "The first half of the year"
+msgstr "6 tháng đầu năm"
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+#: selection:sale.wizard,filter_date:0
+msgid "The last half of the year "
+msgstr "6 tháng cuối năm "
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+#: selection:sale.wizard,filter_date:0
+msgid "This quarter"
+msgstr "Quý này"
+
+#. module: smart_sale
+#: selection:sale.detail.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+#: selection:sale.wizard,filter_date:0
+msgid "This year"
+msgstr "Năm nay"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Total Price"
+msgstr "Giá tổng"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__quantity
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__quantity
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__quantity
+msgid "Total quantity"
+msgstr "Số lượng bán"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_general_goods__unit
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__unit
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__unit
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__unit
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Unit"
+msgstr "ĐVT"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Unit Price"
+msgstr "Đơn giá"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Unit Price:"
+msgstr "Đơn Giá:"
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_customers__unit_price
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_employees__unit_price
+#: model:ir.model.fields,field_description:smart_sale.field_report_sale_journal_detail_goods__unit_price
+msgid "Unit price"
+msgstr "Đơn giá"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "days"
+msgstr "ngày"
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_report_sale_general_goods_sale_general_goods_xls
+msgid "report.report_sale_general_goods.sale_general_goods_xls"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_sale_general_customers
+msgid "report.sale.general.customers"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_sale_general_employees
+msgid "report.sale.general.employees"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_sale_general_goods
+msgid "report.sale.general.goods"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_sale_journal
+msgid "report.sale.journal"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_sale_journal_detail_customers
+msgid "report.sale.journal.detail.customers"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_sale_journal_detail_employees
+msgid "report.sale.journal.detail.employees"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_sale_journal_detail_goods
+msgid "report.sale.journal.detail.goods"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_smart_sale_reportgeneral_display
+msgid "report.smart_sale.reportgeneral_display"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_smart_sale_reportjournal_display
+msgid "report.smart_sale.reportjournal_display"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_smart_sale_reportjournaldetail_display
+msgid "report.smart_sale.reportjournaldetail_display"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_reportsaledetail_salejournaldetail
+msgid "reportsaledetail.salejournaldetail"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_reportsalejournal_reportjournal
+msgid "reportsalejournal.reportjournal"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_sale_detail_wizard
+msgid "sale.detail.wizard"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_sale_general_goods_xls
+msgid "sale.general.goods.xls"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_sale_general_wizard
+msgid "sale.general.wizard"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_sale_wizard
+msgid "sale.wizard"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_salegeneral_reportgeneral
+msgid "salegeneral.reportgeneral"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_wizard_excel_report
+msgid "wizard.excel.report"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:sale_management.sale_order_form_quote
+#: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_form
+msgid "Add a product"
+msgstr "Thêm sản phẩm"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:sale.onboarding_quotation_layout_step
+msgid "Quotation Layout"
+msgstr "Bố cục báo giá"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:sale.sale_onboarding_order_confirmation_step
+msgid "Choose how to confirm quotations and get paid."
+msgstr "Chọn cách xác nhận báo giá và thanh toán"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.sale_onboarding_sample_quotation_step
+msgid "Sample Quotation"
+msgstr "Báo giá mẫu"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.sale_onboarding_sample_quotation_step
+msgid "Send a quotation to test the customer portal."
+msgstr "Gửi mẫu báo giá cho khách hàng"
+
+#. module: sale
+#: model_terms:ir.actions.act_window,help:sale.act_res_partner_2_sale_order
+#: model_terms:ir.actions.act_window,help:sale.action_orders_salesteams
+#: model_terms:ir.actions.act_window,help:sale.action_quotations
+#: model_terms:ir.actions.act_window,help:sale.action_quotations_salesteams
+#: model_terms:ir.actions.act_window,help:sale.action_quotations_with_onboarding
+msgid ""
+"Once the quotation is confirmed by the customer, it becomes a sales "
+"order.<br> You will be able to create an invoice and collect the payment."
+msgstr ""
+"Sau khi bao giá được xác nhận từ khách hàng, Nó sẽ trở thành phiếu mua "
+"hàng.<br> Bạn có thể tạo hóa đơn và thanh toán."
+
+#. module: sale
+#: model_terms:ir.actions.act_window,help:sale.action_orders
+msgid ""
+"Once the quotation is confirmed, it becomes a sales order.<br> You will be "
+"able to create an invoice and collect the payment."
+msgstr ""
+"Sau khi bao giá được xác nhận, Nó sẽ trở thành phiếu mua hàng.<br> Bạn có thể "
+"tạo hóa đơn và thanh toán."
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_open_sale_onboarding_quotation_layout
+msgid "Configure your document layout"
+msgstr "Cài đặt bố cục tài liệu của bạn"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
+msgid "Sale Warnings"
+msgstr "Cảnh báo bán hàng"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_view_search_inherit_sale
+msgid "To Upsell"
+msgstr "Bán thêm"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order__signed_by
+msgid "Signed by"
+msgstr "Ký kết bởi"
+
+#. module: partner_autocomplete
+#: model:ir.model.fields,field_description:partner_autocomplete.field_res_partner__additional_info
+msgid "Additional info"
+msgstr "Thêm thông tin"
+
+#. module: partner_autocomplete
+#: model:ir.model.fields,field_description:partner_autocomplete.field_res_company__partner_gid
+#: model:ir.model.fields,field_description:partner_autocomplete.field_res_partner__partner_gid
+msgid "Company database ID"
+msgstr "Mã cơ sở dữ liệu công ty"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_res_partner__sale_warn
+#: model:ir.model.fields,field_description:sale.field_res_users__sale_warn
+msgid "Sales Warnings"
+msgstr "Cảnh báo bán hàng"
+
+#. module: smart_pos
+#: model:ir.model.fields,field_description:smart_pos.field_product_product__pos_enable
+#: model:ir.model.fields,field_description:smart_pos.field_product_template__pos_enable
+msgid "Can be POS"
+msgstr "Có thể bán"
+
+#. module: sale_purchase
+#: model:ir.model.fields,field_description:sale_purchase.field_product_product__service_to_purchase
+#: model:ir.model.fields,field_description:sale_purchase.field_product_template__service_to_purchase
+msgid "Purchase Automatically"
+msgstr "Mua hàng tự động"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_product_product__expense_policy
+#: model:ir.model.fields,field_description:sale.field_product_template__expense_policy
+msgid "Re-Invoice Policy"
+msgstr "Lập lại chính sách báo cáo"
+
+#. module: website
+#: selection:website,auth_signup_uninvited:0
+msgid "On invitation"
+msgstr "Khi mời"
+
+#. module: website
+#: selection:website,auth_signup_uninvited:0
+msgid "Free sign up"
+msgstr "Đăng ký miễn phí"
+
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Down Payments</span>"
+msgstr "Trả trước"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Advanced Currencies Setup"
+msgstr "Cài đặt tiền tệ nâng cao"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_cash_rounding__rounding_method
+msgid "Rounding Method"
+msgstr "Phương pháp làm tròn"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_res_config_settings__digest_id
+#: model_terms:ir.ui.view,arch_db:digest.res_config_settings_view_form
+msgid "Digest Email"
+msgstr "Email thông báo"
+
+#. module: snailmail
+#: model_terms:ir.ui.view,arch_db:snailmail.res_config_settings_view_form
+msgid "Postal Printings"
+msgstr "Bản in bưu điện"
+
+#. module: snailmail
+#: model:ir.model.fields,field_description:snailmail.field_res_config_settings__snailmail_duplex
+msgid "Print Both sides"
+msgstr "In hai mặt"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_pad
+msgid "Collaborative Pads"
+msgstr "Pad Cộng tác"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_google_calendar
+msgid "Google Calendar"
+msgstr "Lịch Google"
+
+#. module: web_unsplash
+#: model_terms:ir.ui.view,arch_db:web_unsplash.res_config_settings_view_form
+msgid "<i class=\"fa fa-arrow-right\"/> Generate an Access Key"
+msgstr "Khóa truy cập"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Rounding Method</span>\n"
+"                                    <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr "Phương pháp làm tròn"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.res_config_settings_view_form
+msgid "Configure Digest Emails"
+msgstr "Cấu hình loại Email"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "Deactivate for everyone"
+msgstr "Hủy kích hoạt cho mọi người"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "How to customize your digest?"
+msgstr "Làm thế nào để tùy chỉnh thông báo của bạn?"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__kpi_res_users_connected
+msgid "Connected Users"
+msgstr "Người dùng được kết nối"
+
+#. module: sale_management
+#: model:ir.model.fields,field_description:sale_management.field_digest_digest__kpi_all_sale_total
+msgid "All Sales"
+msgstr "Tất cả doanh số"
+
+#. module: iap
+#. openerp-web
+#: code:addons/iap/static/src/xml/iap_templates.xml:31
+#, python-format
+msgid "Insufficient credit"
+msgstr "Không đủ tín dụng"
+
+#. module: partner_autocomplete
+#: model_terms:ir.ui.view,arch_db:partner_autocomplete.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                        Buy more credits"
+msgstr "Mua thêm tín dụng"
+
+#: model_terms:ir.actions.act_window,help:sale.product_template_action
+msgid ""
+"You must define a product for everything you purchase,\n"
+"                    whether it's a physical product, a consumable or services."
+msgstr ""
+"Bạn phải định dạng một sản phẩm cho mọi thứ bạn mua,\n"
+"                    Có thể là sản phẩm vật lý, sản phẩm tiêu dùng hoặc dịch vụ."

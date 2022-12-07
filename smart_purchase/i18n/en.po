@@ -1,0 +1,750 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* smart_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-29 02:03+0000\n"
+"PO-Revision-Date: 2019-10-29 02:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "(Ký, họ tên)"
+msgstr "(Signed, full name)"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "<b>Company Address:</b>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "<span class=\"o_form_label\" attrs=\"{'invisible': [('state','not in',('draft','sent'))]}\">Request for Quotation\n"
+"                            </span>\n"
+"                            <span class=\"o_form_label\" attrs=\"{'invisible': [('state','in',('draft','sent'))]}\">Purchase\n"
+"                                Order </span>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Amount</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Chief Accountant</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Creator</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Description</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Director</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Expected</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "<strong>Giám đốc</strong>"
+msgstr "<strong>Director</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "<strong>Kế toán trưởng</strong>"
+msgstr "<strong>Chief Accountant</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "<strong>Người lập</strong>"
+msgstr "<strong>Creator</strong>"
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Product Code</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Quantity</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Subtotal: </strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Total: </strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Unit Price</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "<strong>Unit</strong>"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "Address"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Bill date"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Bill number"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_order_view
+msgid "Báo cáo bán hàng"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_general_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_order_view
+msgid "Cancel"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "City"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Code"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "Country"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__create_uid
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__create_uid
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__create_date
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__create_date
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Currency:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Data not found!"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__date_end
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__date_end
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__date_end
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_general_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_order_view
+msgid "Date End"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__date_start
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__date_start
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__date_start
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_order_view
+msgid "Date Start"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Date received:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_general_view
+msgid "Date start"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Date:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_overview
+msgid "Day la trang chu cua Mua hang"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Description:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Discount"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Discount value"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_detail_report_display__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_general_report_display__display_name
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_report_display__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Employee"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__filter_date
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__filter_date
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__filter_date
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_general_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_order_view
+msgid "Filter Date"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__filter_product
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__filter_product
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_general_view
+msgid "Filter Product"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__filter_product_categories
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__filter_product_categories
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_general_view
+msgid "Filter Product Categories"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "From Date:"
+msgstr ""
+
+#. module: smart_purchase
+#: selection:filter.purchase.journal,filter_date:0
+#: selection:filter.purchase.journal.detail,filter_date:0
+#: selection:filter.purchase.journal.general,filter_date:0
+msgid "From the beginning of month to the present"
+msgstr ""
+
+#. module: smart_purchase
+#: selection:filter.purchase.journal,filter_date:0
+#: selection:filter.purchase.journal.detail,filter_date:0
+#: selection:filter.purchase.journal.general,filter_date:0
+msgid "From the beginning of the year to present"
+msgstr ""
+
+#. module: smart_purchase
+#: selection:filter.purchase.journal,filter_date:0
+#: selection:filter.purchase.journal.detail,filter_date:0
+#: selection:filter.purchase.journal.general,filter_date:0
+msgid "From the early quarter to the present"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "General Infomation"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_general_view
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_order_view
+msgid "Get Report"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__id
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__id
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__id
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_detail_report_display__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_general_report_display__id
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_report_display__id
+msgid "ID"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Invoices and Incoming Shipments"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_detail_report_display____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_general_report_display____last_update
+#: model:ir.model.fields,field_description:smart_purchase.field_report_smart_purchase_purchase_journal_report_display____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__write_uid
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__write_uid
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__write_date
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_detail__write_date
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal_general__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Name, TIN, Email, or Reference"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Ngày .... tháng .... năm........."
+msgstr "Date .... month .... year........."
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Notes"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Order"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Other Information"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.actions.act_window,name:smart_purchase.action_window_purchase_overview
+#: model:ir.ui.menu,name:smart_purchase.menu_purchase_overview
+msgid "Overview"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "PURCHASE JOURNAL"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+msgid "PURCHASE JOURNAL DETAIL"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "PURCHASE JOURNAL GENERAL"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Payment terms"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Payment terms:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Phone:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Position received:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Posting Date"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Price Total"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Product name"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Products"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.actions.act_window,name:smart_purchase.main_report_purchase_journal
+#: model:ir.actions.report,name:smart_purchase.purchase_journal_report
+#: model:ir.ui.menu,name:smart_purchase.menu_main_report_purchase_journal
+msgid "Purchase Journal"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.actions.act_window,name:smart_purchase.main_report_purchase_journal_detail
+#: model:ir.actions.report,name:smart_purchase.purchase_journal_detail_report
+#: model:ir.ui.menu,name:smart_purchase.menu_main_report_purchase_journal_detail
+msgid "Purchase Journal Detail"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.actions.act_window,name:smart_purchase.main_report_purchase_journal_general
+#: model:ir.actions.report,name:smart_purchase.purchase_journal_general_report
+#: model:ir.ui.menu,name:smart_purchase.menu_main_report_purchase_journal_general
+msgid "Purchase Journal General"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_purchase_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Purchase Order Lines"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_overview
+msgid "Purchase Overview"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Purchase Quotation"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_detail_view
+msgid "PurchaseJournalDetail"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_journal_general_view
+msgid "PurchaseJournalGeneral"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Quantity"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Quantity return"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Set date to all order lines"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_filter_purchase_journal__filter_status
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "State"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.report_purchase_order_view
+msgid "Status"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "Street 2..."
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "Street..."
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Tax"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Tax Code:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Taxes:"
+msgstr ""
+
+#. module: smart_purchase
+#: selection:filter.purchase.journal,filter_date:0
+#: selection:filter.purchase.journal.detail,filter_date:0
+#: selection:filter.purchase.journal.general,filter_date:0
+msgid "The first half of the year"
+msgstr ""
+
+#. module: smart_purchase
+#: selection:filter.purchase.journal,filter_date:0
+#: selection:filter.purchase.journal.detail,filter_date:0
+#: selection:filter.purchase.journal.general,filter_date:0
+msgid "The last half of the year "
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "This changes the scheduled date of all order lines to the given date"
+msgstr ""
+
+#. module: smart_purchase
+#: selection:filter.purchase.journal,filter_date:0
+#: selection:filter.purchase.journal.detail,filter_date:0
+#: selection:filter.purchase.journal.general,filter_date:0
+msgid "This quarter"
+msgstr ""
+
+#. module: smart_purchase
+#: selection:filter.purchase.journal,filter_date:0
+#: selection:filter.purchase.journal.detail,filter_date:0
+#: selection:filter.purchase.journal.general,filter_date:0
+msgid "This year"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "To Date:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Total"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Unit"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+msgid "Unit Price"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Untaxed"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_general_report_display
+msgid "Value return"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Vendor Address:"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.smart_purchase_order_form
+msgid "Vendor Bills"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_order
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_print_quotation
+msgid "Vendor Name:"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_order__vendor_address
+msgid "Vendor address"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model.fields,field_description:smart_purchase.field_purchase_order__vendor_tax_code
+msgid "Vendor tax code"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Voucher date"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_detail_report_display
+#: model_terms:ir.ui.view,arch_db:smart_purchase.purchase_journal_report_display
+msgid "Voucher number"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "ZIP"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "e.g. 10111250000"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_filter_purchase_journal
+msgid "filter.purchase.journal"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_filter_purchase_journal_detail
+msgid "filter.purchase.journal.detail"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_filter_purchase_journal_general
+msgid "filter.purchase.journal.general"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_purchase
+msgid "purchase"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_smart_purchase_purchase_journal_detail_report_display
+msgid "report.smart_purchase.purchase_journal_detail_report_display"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_smart_purchase_purchase_journal_general_report_display
+msgid "report.smart_purchase.purchase_journal_general_report_display"
+msgstr ""
+
+#. module: smart_purchase
+#: model:ir.model,name:smart_purchase.model_report_smart_purchase_purchase_journal_report_display
+msgid "report.smart_purchase.purchase_journal_report_display"
+msgstr ""
+
+#. module: smart_purchase
+#: model_terms:ir.ui.view,arch_db:smart_purchase.res_partner_view
+msgid "smatlifevn.com ..."
+msgstr ""
+

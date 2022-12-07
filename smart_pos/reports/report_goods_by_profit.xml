@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_goods_by_profit_view">
+            <field name="name">Report Goods by profit</field>
+            <field name="model">report.goods.by.profit</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Report goods by profit" create="false" delete="false">
+                    <field name="goods_code" />
+                    <field name="goods_name" />
+                    <field name="sale_quantity" />
+                    <field name="revenue" />
+                    <field name="return_quantity" />
+                    <field name="return_price" />
+                    <field name="real_income" />
+                    <field name="total_cost_price" />
+                    <field name="profit" />
+                </tree>
+            </field>
+        </record> 
+    </data>
+</odoo>

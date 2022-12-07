@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="30" model="province">
+            <field name="name">Tỉnh Hải Dương</field>
+            <field name="code_province">30</field>
+        </record>
+        <record id="37" model="province">
+            <field name="name">Tỉnh Ninh Bình</field>
+            <field name="code_province">37</field>
+        </record>
+        <record id="22" model="province">
+            <field name="name">Tỉnh Quảng Ninh</field>
+            <field name="code_province">22</field>
+        </record>
+        <record id="58" model="province">
+            <field name="name">Tỉnh Ninh Thuận</field>
+            <field name="code_province">58</field>
+        </record>
+        <record id="60" model="province">
+            <field name="name">Tỉnh Bình Thuận</field>
+            <field name="code_province">60</field>
+        </record>
+        <record id="82" model="province">
+            <field name="name">Tỉnh Tiền Giang</field>
+            <field name="code_province">82</field>
+        </record>
+        <record id="62" model="province">
+            <field name="name">Tỉnh Kon Tum</field>
+            <field name="code_province">62</field>
+        </record>
+        <record id="89" model="province">
+            <field name="name">Tỉnh An Giang</field>
+            <field name="code_province">89</field>
+        </record>
+        <record id="64" model="province">
+            <field name="name">Tỉnh Gia Lai</field>
+            <field name="code_province">64</field>
+        </record>
+        <record id="66" model="province">
+            <field name="name">Tỉnh Đắk Lắk</field>
+            <field name="code_province">66</field>
+        </record>
+        <record id="67" model="province">
+            <field name="name">Tỉnh Đắk Nông</field>
+            <field name="code_province">67</field>
+        </record>
+        <record id="68" model="province">
+            <field name="name">Tỉnh Lâm Đồng</field>
+            <field name="code_province">68</field>
+        </record>
+        <record id="83" model="province">
+            <field name="name">Tỉnh Bến Tre</field>
+            <field name="code_province">83</field>
+        </record>
+        <record id="80" model="province">
+            <field name="name">Tỉnh Long An</field>
+            <field name="code_province">80</field>
+        </record>
+        <record id="34" model="province">
+            <field name="name">Tỉnh Thái Bình</field>
+            <field name="code_province">34</field>
+        </record>
+        <record id="86" model="province">
+            <field name="name">Tỉnh Vĩnh Long</field>
+            <field name="code_province">86</field>
+        </record>
+        <record id="87" model="province">
+            <field name="name">Tỉnh Đồng Tháp</field>
+            <field name="code_province">87</field>
+        </record>
+        <record id="84" model="province">
+            <field name="name">Tỉnh Trà Vinh</field>
+            <field name="code_province">84</field>
+        </record>
+        <record id="04" model="province">
+            <field name="name">Tỉnh Cao Bằng</field>
+            <field name="code_province">04</field>
+        </record>
+        <record id="02" model="province">
+            <field name="name">Tỉnh Hà Giang</field>
+            <field name="code_province">02</field>
+        </record>
+        <record id="25" model="province">
+            <field name="name">Tỉnh Phú Thọ</field>
+            <field name="code_province">25</field>
+        </record>
+        <record id="26" model="province">
+            <field name="name">Tỉnh Vĩnh Phúc</field>
+            <field name="code_province">26</field>
+        </record>
+        <record id="01" model="province">
+            <field name="name">Thành phố Hà Nội</field>
+            <field name="code_province">01</field>
+        </record>
+        <record id="20" model="province">
+            <field name="name">Tỉnh Lạng Sơn</field>
+            <field name="code_province">20</field>
+        </record>
+        <record id="48" model="province">
+            <field name="name">Thành phố Đà Nẵng</field>
+            <field name="code_province">48</field>
+        </record>
+        <record id="49" model="province">
+            <field name="name">Tỉnh Quảng Nam</field>
+            <field name="code_province">49</field>
+        </record>
+        <record id="46" model="province">
+            <field name="name">Tỉnh Thừa Thiên Huế</field>
+            <field name="code_province">46</field>
+        </record>
+        <record id="08" model="province">
+            <field name="name">Tỉnh Tuyên Quang</field>
+            <field name="code_province">08</field>
+        </record>
+        <record id="45" model="province">
+            <field name="name">Tỉnh Quảng Trị</field>
+            <field name="code_province">45</field>
+        </record>
+        <record id="42" model="province">
+            <field name="name">Tỉnh Hà Tĩnh</field>
+            <field name="code_province">42</field>
+        </record>
+        <record id="40" model="province">
+            <field name="name">Tỉnh Nghệ An</field>
+            <field name="code_province">40</field>
+        </record>
+        <record id="27" model="province">
+            <field name="name">Tỉnh Bắc Ninh</field>
+            <field name="code_province">27</field>
+        </record>
+        <record id="24" model="province">
+            <field name="name">Tỉnh Bắc Giang</field>
+            <field name="code_province">24</field>
+        </record>
+        <record id="77" model="province">
+            <field name="name">Tỉnh Bà Rịa - Vũng Tàu</field>
+            <field name="code_province">77</field>
+        </record>
+        <record id="75" model="province">
+            <field name="name">Tỉnh Đồng Nai</field>
+            <field name="code_province">75</field>
+        </record>
+        <record id="12" model="province">
+            <field name="name">Tỉnh Lai Châu</field>
+            <field name="code_province">12</field>
+        </record>
+        <record id="72" model="province">
+            <field name="name">Tỉnh Tây Ninh</field>
+            <field name="code_province">72</field>
+        </record>
+        <record id="70" model="province">
+            <field name="name">Tỉnh Bình Phước</field>
+            <field name="code_province">70</field>
+        </record>
+        <record id="91" model="province">
+            <field name="name">Tỉnh Kiên Giang</field>
+            <field name="code_province">91</field>
+        </record>
+        <record id="06" model="province">
+            <field name="name">Tỉnh Bắc Kạn</field>
+            <field name="code_province">06</field>
+        </record>
+        <record id="93" model="province">
+            <field name="name">Tỉnh Hậu Giang</field>
+            <field name="code_province">93</field>
+        </record>
+        <record id="92" model="province">
+            <field name="name">Thành phố Cần Thơ</field>
+            <field name="code_province">92</field>
+        </record>
+        <record id="95" model="province">
+            <field name="name">Tỉnh Bạc Liêu</field>
+            <field name="code_province">95</field>
+        </record>
+        <record id="94" model="province">
+            <field name="name">Tỉnh Sóc Trăng</field>
+            <field name="code_province">94</field>
+        </record>
+        <record id="79" model="province">
+            <field name="name">Thành phố Hồ Chí Minh</field>
+            <field name="code_province">79</field>
+        </record>
+        <record id="96" model="province">
+            <field name="name">Tỉnh Cà Mau</field>
+            <field name="code_province">96</field>
+        </record>
+        <record id="11" model="province">
+            <field name="name">Tỉnh Điện Biên</field>
+            <field name="code_province">11</field>
+        </record>
+        <record id="10" model="province">
+            <field name="name">Tỉnh Lào Cai</field>
+            <field name="code_province">10</field>
+        </record>
+        <record id="38" model="province">
+            <field name="name">Tỉnh Thanh Hóa</field>
+            <field name="code_province">38</field>
+        </record>
+        <record id="15" model="province">
+            <field name="name">Tỉnh Yên Bái</field>
+            <field name="code_province">15</field>
+        </record>
+        <record id="14" model="province">
+            <field name="name">Tỉnh Sơn La</field>
+            <field name="code_province">14</field>
+        </record>
+        <record id="17" model="province">
+            <field name="name">Tỉnh Hoà Bình</field>
+            <field name="code_province">17</field>
+        </record>
+        <record id="33" model="province">
+            <field name="name">Tỉnh Hưng Yên</field>
+            <field name="code_province">33</field>
+        </record>
+        <record id="54" model="province">
+            <field name="name">Tỉnh Phú Yên</field>
+            <field name="code_province">54</field>
+        </record>
+        <record id="31" model="province">
+            <field name="name">Thành phố Hải Phòng</field>
+            <field name="code_province">31</field>
+        </record>
+        <record id="56" model="province">
+            <field name="name">Tỉnh Khánh Hòa</field>
+            <field name="code_province">56</field>
+        </record>
+        <record id="51" model="province">
+            <field name="name">Tỉnh Quảng Ngãi</field>
+            <field name="code_province">51</field>
+        </record>
+        <record id="36" model="province">
+            <field name="name">Tỉnh Nam Định</field>
+            <field name="code_province">36</field>
+        </record>
+        <record id="35" model="province">
+            <field name="name">Tỉnh Hà Nam</field>
+            <field name="code_province">35</field>
+        </record>
+        <record id="52" model="province">
+            <field name="name">Tỉnh Bình Định</field>
+            <field name="code_province">52</field>
+        </record>
+        <record id="19" model="province">
+            <field name="name">Tỉnh Thái Nguyên</field>
+            <field name="code_province">19</field>
+        </record>
+        <record id="74" model="province">
+            <field name="name">Tỉnh Bình Dương</field>
+            <field name="code_province">74</field>
+        </record>
+        <record id="44" model="province">
+            <field name="name">Tỉnh Quảng Bình</field>
+            <field name="code_province">44</field>
+        </record>
+
+    </data>
+</odoo>

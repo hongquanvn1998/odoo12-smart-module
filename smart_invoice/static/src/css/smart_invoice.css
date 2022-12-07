@@ -1,0 +1,141 @@
+/* html body {
+    height: 100%!important;
+}
+
+#wrapwrap {
+    height: 100%!important;
+}
+.container {
+    height: 100%!important;
+}
+.article {
+    height: 100%!important;
+} */
+
+.invoice_bg {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-image:url('https://farm5.staticflickr.com/4804/46774338461_158d84ea22_o.jpg')!important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position-x: 0ch
+}
+
+
+.invoice-copy-1 {
+    color: #800080
+}
+
+
+.invoice-copy-2 {
+    color: #FF0000
+}
+
+
+
+.invoice-copy-3 {
+    color: #006400
+}
+
+
+.tb-invoice-1 {
+    border: 1px solid #800080;
+}
+
+
+.tb-invoice-1 th  {
+    text-align: center;
+    height: 24px!important;
+    border: 1px solid #800080; 
+    padding: 0 10px 0 10px;
+}
+
+.tb-invoice-1  td {
+    height: 24px!important;
+    border: 1px solid #800080; 
+    padding: 0 5px 0 5px;
+}
+
+.tb-invoice-1  thead tbody { 
+    border: 1px solid #800080;  
+}
+
+/* Lien 2  */
+.tb-invoice-2 {
+    border: 1px solid #FF0000;
+}
+
+.tb-invoice-2 th  {
+    text-align: center;
+    height: 24px!important;
+    border: 1px solid #FF0000; 
+    padding: 0 10px 0 10px;
+}
+
+.tb-invoice-2  td {
+    height: 24px!important;
+    border: 1px solid #FF0000; 
+    padding: 0 5px 0 5px;
+}
+
+.tb-invoice-2  thead tbody { 
+    border: 1px solid #FF0000;  
+}
+
+/* Lien 3 */
+
+.tb-invoice-3 {
+    border: 1px solid #006400;
+}
+
+.tb-invoice-3 th  {
+    text-align: center;
+    height: 24px!important;
+    border: 1px solid #006400; 
+    padding: 0 10px 0 10px;
+}
+
+.tb-invoice-3  td {
+    height: 24px!important;
+    border: 1px solid #006400; 
+    padding: 0 5px 0 5px;
+}
+
+.tb-invoice-3  thead tbody { 
+    border: 1px solid #006400;  
+}
+ 
+.total-amount { font-style: italic} 
+.total-amount span { font-style: italic} 
+
+.printed-info {
+    font-size: 11px;
+    font-style: italic; 
+}
+
+.tb-invoice-4 {
+    border: 1px solid #333333;
+}
+
+
+.tb-invoice-4 th  {
+    text-align: center;
+    height: 24px!important;
+    border: 1px solid #333333; 
+    padding: 0 10px 0 10px;
+}
+
+.tb-invoice-4  td {
+    height: 24px!important;
+    border: 1px solid #333333; 
+    padding: 0 5px 0 5px;
+}
+
+.tb-invoice-4  thead tbody { 
+    border: 1px solid #333333;  
+}

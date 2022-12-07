@@ -1,0 +1,610 @@
+<odoo>
+    <data>
+        <template id="register_page">
+
+            <xpath expr="//div[@id='wrap']" position="inside">
+                <!-- <t t-call-assets="web.assets_common" t-js="false" /> -->
+                <t t-call-assets="web.assets_common" t-css="false" />
+                <!-- <t t-call-assets="web.assets_frontend" t-js="false" /> -->
+                <t t-call-assets="web.assets_frontend" t-css="false" />
+
+                <div class="stepper row mx-auto" style="height:500px, width:100%">
+                    <div class="col-8 mx-auto">
+                        <div class="bs-stepper">
+                            <div class="bs-stepper-header" role="tablist">
+                                <!-- your steps here -->
+                                <div class="step" data-target="#step-customer-info">
+                                    <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
+                                        <span class="bs-stepper-circle">
+                                            <i class="material-icons" style="font-size:16px;">perm_contact_calendar</i>
+                                        </span>
+                                        <span class="bs-stepper-label">Thông tin chung</span>
+                                    </button>
+                                </div>
+                                <div class="line"></div>
+                                <div class="step" data-target="#step-system-info">
+                                    <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                                        <span class="bs-stepper-circle">
+                                            <i class="material-icons" style="font-size:16px;">library_add</i>
+                                        </span>
+                                        <span class="bs-stepper-label">Tài khoản</span>
+                                    </button>
+                                </div>
+
+                                <div class="line"></div>
+                                <div class="step" data-target="#step-system-install">
+                                    <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                                        <span class="bs-stepper-circle">
+                                            <i class="material-icons" style="font-size:16px;">settings</i>
+                                        </span>
+                                        <span class="bs-stepper-label">Cài đặt</span>
+                                    </button>
+                                </div>
+
+                                <div class="line"></div>
+                                <div class="step" data-target="#step-system-finish">
+                                    <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                                        <span class="bs-stepper-circle">
+                                            <i class="material-icons" style="font-size:16px;">check</i>
+                                        </span>
+                                        <span class="bs-stepper-label">Hoàn thành</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="bs-stepper-content border">
+                                <!-- your steps content here -->
+                                <div id="step-customer-info" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+                                    <div class="row mx-auto">
+                                        <div class="col-12 py-5 px-0">
+                                            <form id="register_customer_info">
+                                                <div class="form-group">
+                                                    <label for="fullname">Họ tên</label>
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="material-icons">person</i>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" id="fullname" minlength="10" required="required" placeholder="Họ tên" class="form-control" />
+
+                                                        <div class="valid-feedback">
+                                                            <i class="material-icons">check</i>
+                                                             Nhập họ tên
+                                                        </div>
+                                                        <div class="invalid-feedback">Vui lòng nhập họ tên</div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mx-auto">
+                                                    <div class="col-6 pl-0">
+
+                                                        <div class="form-group">
+                                                            <label for="state">Tỉnh/thành phố</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">location_city</i>
+                                                                    </span>
+                                                                </div>
+                                                                <select name="state" id="state" class="form-control">
+                                                                    <option value="">--Chọn tỉnh/thành-- </option>
+                                                                    <t t-foreach="states" t-as="state">
+                                                                        <option t-att-value="state.id">
+                                                                            <t t-esc="state.name" />
+                                                                        </option>
+                                                                    </t>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-6 pr-0">
+
+                                                        <div class="form-group">
+                                                            <label for="district">Quận/huyện</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">location_on</i>
+                                                                    </span>
+                                                                </div>
+                                                                <select class="custom-select" selected="selected" id="district">
+                                                                </select>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="address">Địa chỉ</label>
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="material-icons">map</i>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" required="required" minlength="20" id="address" placeholder="Địa chỉ" class="form-control" />
+
+                                                        <div class="valid-feedback">
+
+                                                            <i class="material-icons">check</i>
+                                                             Đã nhập địa chỉ
+                                                        </div>
+                                                        <div class="invalid-feedback">Vui lòng nhập địa chỉ</div>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mx-auto">
+                                                    <div class="col-6 pl-0">
+                                                        <div class="form-group">
+                                                            <label for="phone">Điện thoại</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">phone</i>
+                                                                    </span>
+                                                                </div>
+
+                                                                <input type="tel" id="phone" placeholder="Điện thoại cố định" class="form-control" />
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-6 pr-0">
+                                                        <div class="form-group">
+                                                            <label for="mobile">Di động</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">mobile_screen_share</i>
+                                                                    </span>
+                                                                </div>
+
+                                                                <input type="tel" id="mobile" required="required" placeholder="Điện thoại di động" class="form-control" />
+
+                                                                <div class="valid-feedback">
+
+                                                                    <i class="material-icons">check</i>
+                                                                   Đã nhập số di động
+                                                                </div>
+                                                                <div class="invalid-feedback">Vui lòng nhập số di động</div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mx-auto">
+                                                    <div class="col-6 pl-0">
+                                                        <div class="form-group">
+                                                            <label for="email">Email</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">email</i>
+                                                                    </span>
+                                                                </div>
+
+                                                                <input type="email" required="required" id="email" placeholder="Email" class="form-control" />
+
+                                                                <div class="valid-feedback">
+
+                                                                    <i class="material-icons">check</i>
+                                                              Đã nhập email
+                                                                </div>
+                                                                <div class="invalid-feedback">Vui lòng nhập email</div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-6 pr-0">
+                                                        <div class="form-group">
+                                                            <label for="taxcode">Mã số thuế</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">fingerprint</i>
+                                                                    </span>
+                                                                </div>
+
+                                                                <input type="number" id="taxcode" placeholder="Mã số thuế" class="form-control" />
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="mode">Mô hình vận hành</label>
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="material-icons">business_center</i>
+                                                            </span>
+                                                        </div>
+                                                        <input id="mode" type="checkbox" data-toggle="toggle" data-on="Doanh nghiệp" data-off="Cá nhân" data-onstyle="success" data-offstyle="info" data-height="40" data-width="200" />
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    <div class="input-group row m-5">
+
+                                                        <div class="col-6 text-center mx-auto">
+
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend bg-success">
+                                                                    <span class="input-group-text bg-success">
+                                                                        <i class="material-icons text-white">add</i>
+                                                                    </span>
+                                                                </div>
+
+                                                                <input id="register" class="btn btn-success" type="button" value="Đăng ký thông tin" />
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </form>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="step-system-info" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+                                    <div class="row mx-auto">
+                                        <div class="col-12 py-3 px-0 ">
+                                            <form id="register_application">
+
+                                                <div class="row mx-auto">
+                                                    <div class="col-6 px-0">
+
+                                                        <div class="form-group">
+                                                            <label for="username">Tài khoản</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">person</i>
+                                                                    </span>
+                                                                </div>
+                                                                <input type="text" id="username" disabled="disabled" required="required" class="form-control font-weight-bold" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 px-0">
+
+
+                                                        <div class="form-group">
+                                                            <label for="domain">Tên miền</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">public</i>
+                                                                    </span>
+                                                                </div>
+                                                                <input type="text" id="domain" minlength="10" required="required" placeholder="tên miền" class="form-control" />
+                                                                <div class="input-group-append">
+                                                                    <input type="text" id="main-domain" disabled="disabled" value=".azuapay.com" placeholder="Họ tên" class="form-control text-success font-weight-bold" />
+
+                                                                </div>
+
+                                                                <div class="valid-feedback">
+                                                                    <i class="material-icons">check</i>
+                                                                            Đã chọn tên miền
+                                                                </div>
+                                                                <div class="invalid-feedback">Vui lòng chọn tên miền (viết liền không dấu)</div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                                <div class="row mx-auto">
+                                                    <div class="col-6 px-0">
+                                                        <div class="form-group">
+                                                            <label for="password">Mật khẩu</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">lock</i>
+                                                                    </span>
+                                                                </div>
+                                                                <input type="password" id="password" required="required" class="form-control font-weight-bold" />
+                                                                <div class="valid-feedback">
+                                                                    <i class="material-icons">check</i>
+                                                                            Đã nhập mật khẩu
+                                                                </div>
+                                                                <div class="invalid-feedback">Vui lòng nhập mật khẩu</div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-6 px-0">
+                                                        <div class="form-group">
+                                                            <label for="repassword">Nhắc lại mật khẩu</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">lock</i>
+                                                                    </span>
+                                                                </div>
+                                                                <input type="password" id="repassword" required="required" class="form-control font-weight-bold" />
+                                                                <div class="valid-feedback">
+                                                                    <i class="material-icons">check</i>
+                                                                </div>
+                                                                <div class="invalid-feedback">Vui lòng nhắc lại chính xác mật khẩu</div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mx-auto">
+                                                    <div class="col-8 px-0">
+                                                        <div class="row mx-auto">
+                                                            <div class="form-group">
+                                                                <label for="user-count">Số lượng người dùng</label>
+                                                                <div class="input-group mb-3">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text">
+                                                                            <i class="material-icons">person_add</i>
+                                                                        </span>
+                                                                    </div>
+                                                                    <input type="number" min="1" id="user-count" minlength="10" required="required" value="1" placeholder="5" class="form-control" />
+                                                                    <div class="input-group-append">
+                                                                        <div class="input-group-text" >
+                                                                        <t t-esc="'{0:,.0f}'.format(int(user.list_price))" > &#8363; </t>
+                                                                        /tháng
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            </div>
+                                                           
+                                                            <div class="row mx-0">
+                                                                <t t-foreach="products" t-as="product">
+                                                                    <div class="col-6 p-0">
+                                                                        <a t-att-href="'/register/trial#moduleid=%s' % product.id"> <t t-esc="product.name" />  </a>
+                                                                        <label t-att-id="'module_%s' % product.id" class="row mx-0 px-0 my-3 mr-3 border rounded cursor-pointer">
+                                                                            <div class="col-3 text-center p-1">
+                                                                                <img t-if="product.image_small != false" t-att-src="'data:image/png;base64,%s' % to_text(product.image_small)"/>
+                                                                                <img style="max-width:48px; max-height:48px" t-else="product.image_small == false" t-att-src="'data:image/png;base64,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'"/>
+                                                                                <!-- <img class="media-object" t-att-src="'image?model=product.template&amp;field=image_small&amp;id=%s', product.id" style="max-height: 24px;" />  -->
+                                                                            </div>
+                                                                            <div class="col-7 pl-1 pr-0">
+                                                                                <div class="row mx-0">
+                                                                                    <b>
+                                                                                        <t t-esc="product.name" />
+                                                                                    </b>
+                                                                                </div>
+                                                                                <div class="row mx-0" style="font-weight:normal">
+                                                                                    <span t-att-class="'monthly-price-%s' % product.name" class="monthly-price d-none" t-esc="'{0:,.0f}'.format(int(product.list_price))" />
+                                                                                    <span t-att-class="'yearly-price-%s' % product.name" class="annually-price " t-if="product.pricelist_item_ids" t-esc="'{0:,.0f}'.format(int(request.env['product.pricelist.item'].sudo().search([('id','=',product.pricelist_item_ids[0].id)],limit=1).fixed_price))"/>&#8363; 
+                                                                                </div>
+                                                                                <div class="row mx-0" style="font-weight:normal">
+                                                                                    <i>
+                                                                                        <t t-esc="product.description_sale" />
+                                                                                    </i>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <div class="col-2 text-center">
+                                                                                <div class="custom-control custom-checkbox m-2">
+                                                                                    <input t-att-id="product.code" type="checkbox" class="custom-control-input checkbox-success module-checkbox" />
+                                                                                    <label class="custom-control-label" t-att-for="product.code"></label>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <i class="material-icons text-success" style="font-size:20px" data-toggle="tooltip" data-html="true" title="Yêu cầu kết nối">info</i>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </label>
+                                                                      
+                                                                    </div>
+
+                                                                </t>
+                                                            </div>
+
+                                                            <!-- <div id="module_list" class="row mx-0"></div> -->
+
+                                                        </div>
+
+                                                        <div class="col-4 border rounded px-0">
+                                                            <!-- Nav tabs -->
+                                                            <ul class="nav nav-tabs">
+                                                                <li class="nav-item">
+                                                                    <a id="annually-title" class="nav-link active" data-toggle="tab" href="#annually">
+                                                                        <b> Hàng năm </b>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a id="monthly-title" class="nav-link" data-toggle="tab" href="#monthly">
+                                                                        <b> Hàng tháng </b>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+
+                                                            <!-- Tab panes -->
+                                                            <div class="tab-content">
+                                                                <div class="tab-pane container active px-0" id="annually">
+                                                                    <ul class="list-group">
+                                                                        <li class="list-group-item">
+                                                                            <div class="row mx-0 font-weight-bold">
+                                                                                <div class="col-7 p-0">
+                                                                                <span id="selected_user_count">1</span> Nguời dùng 
+                                                                                </div>
+                                                                                <div class="col-5 p-0">
+                                                                                <span id="selected_user_total">  <t t-esc="'{0:,.0f}'.format(int(user.list_price))" /> &#8363; </span> 
+                                                                                </div>  
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="list-group-item">
+                                                                             <div class="row mx-0 font-weight-bold">
+                                                                                <div class="col-7 p-0">
+                                                                                <span id="selected_module_count">0</span> Ứng dụng 
+                                                                                </div>
+                                                                                <div class="col-5 p-0">
+                                                                                <span id="selected_module_total">  <t t-esc="'{0:,.0f}'.format(int(user.list_price))" /> &#8363; </span> 
+                                                                                </div>  
+                                                                            </div> 
+                                                                        </li>
+                                                                        <li class="list-group-item"> 
+                                                                            <div class="row mx-0 font-weight-bold">
+                                                                                <div class="col-7 p-0">
+                                                                                <span id="selected_total"></span>Tổng tiền 
+                                                                                </div>
+                                                                                <div class="col-5 p-0">
+                                                                                <span id="selected_total">  <t t-esc="'{0:,.0f}'.format(int(user.list_price))" /> &#8363; </span> 
+                                                                                </div>  
+                                                                            </div> 
+                                                                        </li>
+                                                                    </ul>
+                                                                
+                                                                </div>
+                                                                <div class="tab-pane container fade px-0" id="monthly"> 
+                                                                    <ul class="list-group">
+                                                                        <li class="list-group-item">First item</li>
+                                                                        <li class="list-group-item">Second item</li>
+                                                                        <li class="list-group-item">Third item</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-4">
+
+                                                    </div>
+
+
+
+
+                                                    <div class="row mx-auto">
+                                                        <div class="col-6 mx-auto text-center">
+                                                            <input type="button" id="signup-submit" class="btn btn-primary" value="Create Application" />
+                                                        </div>
+
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="step-system-install" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+                                    Cai dat module
+                                    </div>
+
+                                    <div id="step-system-finish" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+                                    Hoan thien
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <form id="example-advanced-form" action="#">
+                        <h3> Account</h3>
+                        <fieldset>
+                            <legend>Account Information</legend>
+
+                            <label for="userName-2">User name *</label>
+                            <input id="userName-2" name="userName" type="text" class="required" />
+                            <label for="password-2">Password *</label>
+                            <input id="password-2" name="password" type="text" class="required" />
+                            <label for="confirm-2">Confirm Password *</label>
+                            <input id="confirm-2" name="confirm" type="text" class="required" />
+                            <p>(*) Mandatory</p>
+                        </fieldset>
+
+                        <h3>Profile</h3>
+                        <fieldset>
+                            <legend>Profile Information</legend>
+
+                            <label for="name-2">First name *</label>
+                            <input id="name-2" name="name" type="text" class="required" />
+                            <label for="surname-2">Last name *</label>
+                            <input id="surname-2" name="surname" type="text" class="required"/>
+                            <label for="email-2">Email *</label>
+                            <input id="email-2" name="email" type="text" class="required email"/>
+                            <label for="address-2">Address</label>
+                            <input id="address-2" name="address" type="text"/>
+                            <label for="age-2">Age (The warning step will show up if age is less than 18) *</label>
+                            <input id="age-2" name="age" type="text" class="required number"/>
+                            <p>(*) Mandatory</p>
+                        </fieldset>
+
+                        <h3>Warning</h3>
+                        <fieldset>
+                            <legend>You are to young</legend>
+
+                            <p>Please go away ;-)</p>
+                        </fieldset>
+
+                        <h3>Finish</h3>
+                        <fieldset>
+                            <legend>Terms and Conditions</legend>
+
+                            <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"/>
+                            <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+                        </fieldset>
+                    </form> -->
+
+                    </div>
+
+
+
+                </xpath>
+                <xpath expr="." position="after">
+                    <!-- <script type="application/javascript" src="/smarterp_sale/static/src/js/jquery.min.js"/>  -->
+                    <!-- Stepper CSS -->
+                    <!-- <link href="/smarterp_sale/static/src/css/bootstrap.checkbox.css" rel="stylesheet" id="bootstrap-css" /> -->
+                    <link href="/smarterp_sale/static/src/css/style.css" rel="stylesheet" id="bootstrap-css" />
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+                    <link href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css" rel="stylesheet" id="bootstrap-css" />
+                    <!-- <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" /> -->
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+
+                    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet" />
+                    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+
+                    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+                    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+                    <script type="application/javascript" src="/smarterp_sale/static/src/js/register.js"></script>
+
+                </xpath>
+            </template>
+        </data>
+    </odoo>

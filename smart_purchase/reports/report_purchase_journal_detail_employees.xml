@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_purchase_journal_detail_employees_view">
+            <field name="name">Purchase Journal Detail By Employees</field>
+            <field name="model">report.purchase.journal.detail.employees</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Purchase Journal Detail" create="false" delete="false" >
+                    <field name="posted_date" />
+                    <field name="document_date" />
+                    <field name="document_number" />
+                    <field name="invoiced_date" />
+                    <field name="invoice_number" widget="invoice" />
+                    <field name="description" />
+                    <field name="item_description" />
+                    <field name="customer_code" />
+                    <field name="customer_name" />
+                    <field name="product_code" />
+                    <field name="product_name" />
+                    <field name="unit" />
+                    <field name="quantity" sum="Quantity" />  
+                    <field name="unit_price" />
+                    <field name="gross_value" sum="Gross value" />
+                    <field name="discount" sum="Discount" />
+                    <field name="return_quantity" sum="Gross value" />
+                    <field name="return_value" sum="Value of return" /> 
+                </tree>
+            </field>
+        </record> 
+    </data>
+</odoo>

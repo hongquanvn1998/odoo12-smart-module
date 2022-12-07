@@ -1,0 +1,108 @@
+<odoo>
+  <data>
+    <record id="dept_search_view" model="ir.ui.view">
+            <field name="name">Payment search view</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+              <search>
+                <filter string="Payment Voucher" name="payment_voucher" domain="[('payment_type', '=', 'outbound')]"/>
+                <filter string="Receipts Voucher" name="receipt" domain="[('payment_type', '=', 'inbound')]"/>
+              </search>
+          </field>
+    </record>
+    <!-- List View  -->
+    <record model="ir.actions.act_window" id="action_window_invoice_funds_recepts">
+      <field name="name">Receipts Voucher</field>
+      <field name="res_model">account.payment</field>
+      <field name="view_mode">tree,form,kanban</field>
+      <field name="context">{'search_default_receipt': 1,'default_payment_type' : 'inbound',}</field>
+      <field name="arch" type="xml">
+        <tree decoration-info="state == 'draft'" decoration-muted="state in ['reconciled', 'cancelled']" edit="false">
+          <field name="payment_date" />
+          <field name="name" />
+          <field name="journal_id" />
+          <field name="payment_method_id" />
+          <field name="partner_id" string="Customer" />
+          <field name="amount" sum="Amount" />
+          <field name="state" />
+          <field name="company_id" groups="base.group_multi_company" />
+          <field name="currency_id" invisible="1" />
+          <field name="partner_type" invisible="1" />
+        </tree>
+      </field>
+    </record>
+
+    
+    <record model="ir.actions.act_window" id="action_window_invoice_funds_payment_voucher">
+        <field name="name">Payment Voucher</field>
+        <field name="res_model">account.payment</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{'search_default_payment_voucher': 1,'default_payment_type' : 'outbound',}</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="state == 'draft'" decoration-muted="state in ['reconciled', 'cancelled']" edit="false">
+            <field name="payment_date" />
+            <field name="name" />
+            <field name="journal_id" />
+            <field name="payment_method_id" />
+            <field name="partner_id" string="Customer" />
+            <field name="amount" sum="Amount" />
+            <field name="state" />
+            <field name="company_id" groups="base.group_multi_company" />
+            <field name="currency_id" invisible="1" />
+            <field name="partner_type" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View  -->
+    <record id="action_window_invoice_funds_recepts_form" model="ir.ui.view">
+      <field name="name">smart_invoice.funds.receipt.form</field>
+      <field name="model">account.payment</field>
+      <field name="mode">primary</field>
+      <field name="arch" type="xml">
+        <form string="Floor">
+         
+          <!-- <sheet>
+            <field name="floor_drawing" widget="image" class="oe_avatar" />
+            <div class="oe_title">
+              <label class="oe_edit_only" for="name" string="Floor" />
+              <h1>
+                <field name="name" placeholder="Floor name here" />
+              </h1>
+            </div>
+            <notebook>
+              <page string="General Infomation" name="general_information">
+                <group>
+                  <group name="group_main_info">
+                   
+                    <field name="code" string="Floor code" />
+                    <field name="block_id" string="Block" />
+                    <field name="ground_id" string="Typical grounds" />
+                  </group>
+
+                  <group name="group_main_ex_info">
+                    <field name="gross_floor_area" />
+                    <field name="gross_internal_area" />
+                    <field name="net_internal_area" />
+                  </group>
+
+                </group>
+                <group string="Internal Notes">
+                  <field name="description" nolabel="1" placeholder="This note is only for administrator." />
+                </group>
+              </page>
+              <page string='Floor ground design'>
+                <group name="extend_info" class="o_group_col_12">
+                  <field name="ground_draw" widget="image" string="Typical grounds" />
+                </group>
+
+              </page>
+
+            </notebook>
+          </sheet> -->
+
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

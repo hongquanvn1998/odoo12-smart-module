@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Update user form !-->
+        <record id="view_users_form_pos" model="ir.ui.view">
+            <field name="name">res.users.form.pos</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='login']" position="after">
+                <label for="mobile" class="oe_edit_only" string="Mobile"/>
+                            <h2><field string="Mobile" name="mobile"/></h2>
+                    
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

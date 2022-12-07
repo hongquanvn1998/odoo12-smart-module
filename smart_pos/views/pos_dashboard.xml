@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="hr assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/smart_pos/static/src/scss/pos_dashboard.scss"/>
+        </xpath>
+    </template>
+    <record id="pos_config_counter_action_dashboard" model="ir.actions.act_window">
+    <field name="name">POS Counter Overview</field>
+    <field name="res_model">pos.counter</field>
+    <field name="view_mode">kanban,form</field>
+    <field name="help" type="html">
+    <p class="o_view_nocontent_smiling_face">
+              </p>
+    </field>
+</record>
+   <record id="view_smart_pos_session_filter_search" model="ir.ui.view">
+            <field name="name">pos.session.search</field>
+            <field name="model">pos.session</field>
+            <field name="arch" type="xml">
+                <search string="Search Account Templates">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="openned"/>
+                <field name="qty_total"/>
+                <field name="amount_total"/>
+                <field name="closed"/>
+                <field name="config_id"/>
+                </search>
+            </field>
+    </record>
+
+<record id="smart_pos_session_filter" model="ir.actions.act_window">
+    <field name="name">pos.session.filter</field>
+    <field name="res_model">pos.session</field>
+    <field name="limit">30</field>
+    <field name="view_mode">tree,form</field>
+    <field name="search_view_id" ref="view_smart_pos_session_filter_search"/>
+    <field name="context">
+        {
+            "search_default_config_id": [active_id],
+             "default_config_id": active_id
+        }
+    
+    </field>
+</record>
+
+<record id="smart_pos_order_payment_filter_view_tree" model="ir.ui.view">
+            <field name="name">smart.pos.order.payment.filter.tree</field>
+            <field name="model">pos.order.payment.line</field>
+            <field name="arch" type="xml">
+                <tree string="Pos payment filter" create="0" edit="0"  delete="0">
+                    <field name="journal_id"/>
+                    <field name="counter_id"/>
+                    <field name="seller_id"/>
+                    <field name="partner_id"/>
+                    <field name="amount" sum="Total"/>
+                </tree>
+            </field>
+</record>
+
+<record id="smart_pos_payment_filter_action_form" model="ir.actions.act_window">
+    <field name="name">pos.order.payment.filter</field>
+    <field name="res_model">pos.order.payment.line</field>
+    <field name="limit">30</field>
+    <field name="view_mode">tree</field>
+    <field name="search_view_id" ref="smart_pos_order_payment_filter_view_tree"/>
+    <field name="context">
+       {
+        "search_default_counter_id":[active_id],
+        "default_counter_id" :active_id
+       }
+    </field>
+</record>
+ <!-- <record id="pos_order_filter_view_form" model="ir.ui.view">
+        <field name="name">pos.order.filter.view.form</field>
+        <field name="model">pos.order</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Pos order form" create="0">
+             <header>
+                    <field name="state" widget="statusbar" />
+             </header>
+                <sheet>
+                <group col="4" colspan="4" name="order_fields">
+                    <field name="name"/>
+                    <field name="date_order"/>
+                    <field name="partner_id"/>
+                </group>
+                <notebook colspan="4">
+                    <page string="Products">
+                        <field name="lines" colspan="4" nolabel="1">
+                            <tree string="Order lines" editable="bottom" >
+                                <field name="product_id"/>
+                                <field name="quantity"/>
+                                <field name="price_unit" widget="monetary"/>
+                                <field name="discount" widget="monetary"/>
+                                <field name="price_subtotal" widget="monetary" force_save="1"/>
+                            </tree>
+                            <form string="Order lines">
+                                <group col="4">
+                                <field name="product_id"/>
+                                <field name="quantity"/>
+                                <field name="price_unit" widget="monetary"/>
+                                <field name="discount" widget="monetary"/>
+                                <field name="price_subtotal" widget="monetary" force_save="1"/>
+                                </group>
+                            </form>
+                        </field>
+                        <div class="oe_clear"/>
+                    </page>
+
+                    <page string="Payments">
+                        <field name="payment_line_ids" colspan="4" nolabel="1">
+                            <tree editable="bottom" string="Payment lines">
+                                <field name="name"/>
+                                <field name="amount"/>
+                                <field name="seller_id"/>
+                                <field name="payment_method_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                    
+                     <page name="extra" string="General Information">
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="seller_id"/>
+                            <field name="partner_id"/>
+                            <field name="session_id"/>
+                            <field name="company_id"/>
+                            <field name="code"/>
+                           <field name="note"/>
+                        </group>
+                    </page>
+                </notebook>
+            </sheet>
+            </form>
+        </field>
+</record> -->
+
+<record id="smart_pos_order_filter_view_tree" model="ir.ui.view">
+    <field name="name">pos.order.filter.view.tree</field>
+    <field name="model">pos.order</field>
+    <field name="arch" type="xml">
+        <tree string="Pos order filter"  decoration-info="state == 'opened'" decoration-muted="state  =='done'"  create="0" default_order="id desc">
+        <!-- <field name="name"/>        -->
+        <field name="code"/>       
+        <field name="date_order"/> 
+        <field name="company_id"/>            
+        <field name="seller_id"/>       
+        <field name="partner_id"/>       
+        <field name="session_id"/>  
+        <field name="counter_id"/>
+        <field name="discount"/>
+        <field name="amount_total" sum="Amount total"/>       
+        <field name="state"  invisible="1"/>
+        </tree>
+    </field>
+</record>
+
+<record id="smart_pos_order_filter" model="ir.actions.act_window">
+    <field name="name">pos.order.filter</field>
+    <field name="res_model">pos.order</field>
+    <field name="limit">30</field>
+    <field name="view_mode">tree,form</field>
+    <field name="search_view_id" ref="smart_pos_order_filter_view_tree"/>
+    <field name="context">
+        {
+            "search_default_counter_id" : [active_id],
+            "default_counter_id": active_id
+        }
+    </field>
+</record>
+    <record id="view_pos_config_kanban" model="ir.ui.view">
+        <field name="name">pos.counter.kanban.view</field>
+        <field name="model">pos.counter</field>
+        <field name="arch" type="xml">
+            <kanban create="false" class="o_kanban_dashboard o_pos_kanban">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="iot_gateway"/>
+                <field name="barcode_scanner"/>
+                <field name="electronic_scale"/>
+                <field name="pricelist_ids"/>
+                <field name="company_id"/>
+                <field name="current_session_id"/>
+                <field name="current_session_state"/>
+                <field name="pos_session_state"/>
+                <field name="pos_session_username"/>
+                <field name="pos_session_duration"/>
+                <field name="last_session_closing_cash"/>
+                <field name="last_session_closing_date"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div>
+                            <div class="o_kanban_card_header">
+                                <div class="o_kanban_card_header_title mb16">
+                                    <div class="o_primary">
+                                     <field name="name"/>
+                                    </div>
+                                    <t t-if="record.current_session_state.raw_value === 'opened'">
+                                        <div class="badge badge-success o_kanban_inline_block">In Progress</div>
+                                    </t>
+                                    <t t-if="record.current_session_state.raw_value === 'closing_control'">
+                                        <div class="badge badge-info o_kanban_inline_block">Closing Control</div>
+                                    </t>
+                                    <t t-if="record.pos_session_state.raw_value == 'opened' and record.pos_session_duration.raw_value > 1">
+                                        <div t-attf-class="badge badge-#{record.pos_session_duration.raw_value > 3 and 'danger' or 'warning'} o_kanban_inline_block"
+                                             title="The session has been opened for an unusually long period. Please consider closing.">
+                                             To Close
+                                        </div>
+                                    </t>
+                                    <t t-set="unused_message">Unused</t>
+                                     <div class="o_secondary mt16"><t t-esc="record.pos_session_username.value || unused_message"/></div>
+                                    
+                                </div>
+                                
+                                <div class="o_kanban_manage_button_section">
+                                    <a class="o_kanban_manage_toggle_button" href="#"><i class="fa fa-ellipsis-v" role="img" aria-label="Manage" title="Manage"/></a>
+                                </div>
+                            </div>
+                            <div class="container o_kanban_card_content">
+                                <div class="row">
+                                    <div class="col-6 o_kanban_primary_left">
+
+                                      <button t-if="record.current_session_state.raw_value === 'opened'" class="btn btn-primary" name="continue_session" type="object">Resume</button>
+                                      <button t-if="_.contains(['opened'], record.current_session_state.raw_value)" class="btn btn-secondary" name="open_existing_session_cb" type="object">Close</button>
+                                      <button t-if="!record.current_session_id.raw_value &amp;&amp; !record.pos_session_username.value" class="btn btn-primary" name="open_new_session" type="object">New Session</button>
+                                    </div>
+                                    <div class="col-6 o_kanban_primary_right">
+
+                                        <div  class="row" t-if="record.last_session_closing_date.value">
+                                            <div class="col-6">
+                                                <span>Last closing date:</span>
+                                            </div>
+                                            <div class="col-6">
+                                                <span><t t-esc="record.last_session_closing_date.value"/></span>
+                                            </div>
+                                           
+                                        </div>
+                                        <div  class="row" t-if="record.last_session_closing_date.value">
+                                            <div class="col-6">
+                                                <span>Last closing cash:</span>
+                                            </div>
+                                             <div class="col-6">
+                                                <span><field name="last_session_closing_cash" widget="monetary"/></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div  class="row" t-if="record.last_session_closing_date.value">
+                                            <div class="col-6">
+                                                <span>Price list:</span>
+                                            </div>
+                                            <div class="col-6">
+                                                <span>
+                                                 <field name="pricelist_ids"/>
+                                                </span>
+                                            </div>
+                                           
+                                        </div> -->
+
+                                         <div  class="row" t-if="record.last_session_closing_date.value">
+                                            <div class="col-6">
+                                                <span>Company:</span>
+                                            </div>
+                                            <div class="col-6">
+                                                <span>
+                                                 <field name="company_id"/>
+                                                </span>
+                                            </div>
+                                           
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div><div class="container o_kanban_card_manage_pane dropdown-menu" role="menu">
+                                <div class="row">
+                                    <div class="col-6 o_kanban_card_manage_section o_kanban_manage_view">
+                                        <div role="menuitem" class="o_kanban_card_manage_title">
+                                            <span>View</span>
+                                        </div>
+                                        <div role="menuitem">
+                                            <a name="%(smart_pos_session_filter)d" type="action">Sessions</a>
+                                        </div>
+                                        <div role="menuitem">
+                                        </div>
+                                        <div role="menuitem">
+                                            <a name="%(smart_pos_order_filter)d" type="action">Sales Orders</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 o_kanban_card_manage_section o_kanban_manage_new">
+                                        <div role="menuitem" class="o_kanban_card_manage_title">
+                                            <span>Payment</span>
+                                        </div>
+                                        <div role="menuitem">
+                                            <a name="%(smart_pos_payment_filter_action_form)d" type="action">Payment</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div t-if="widget.editable" class="o_kanban_card_manage_settings row">
+                                    <div role="menuitem" class="col-12">
+                                        <a type="edit">Settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>

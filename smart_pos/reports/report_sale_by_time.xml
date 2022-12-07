@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_sale_by_time_view">
+            <field name="name">Report sale by time</field>
+            <field name="model">report.sale.by.time</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Report sale by time" create="false" delete="false">
+                    <field name="id" string= "STT" />    
+                    <field name="code" />
+                    <field name="date" />
+                    <field name="quantity" sum="quantity" />  
+                    <field name="partner_name" /> 
+                    <field name="seller_name" />    
+                    <field name="counter_name" />                                        
+                    <field name="amount_paid" sum="Total Paid" />
+                    <field name="amount_total" sum="Total Amount" />              
+                </tree>
+            </field>
+        </record>
+        <record id="view_report_sale_by_time_search" model="ir.ui.view">
+            <field name="name">Report_sale_by_time_search</field>
+            <field name="model">report.sale.by.time</field>                   
+            <field name="arch" type="xml">            
+                <search string="Search">                       
+                     <group expand="1" string="Group By">
+                        <filter string="Counter Name" name="code" context="{'group_by': 'counter_name'}"></filter>                          
+                         <filter string="Partner" name="partner_name" context="{'group_by': 'partner_name'}"></filter>
+                         <filter string="Seller" name="seller_name" context="{'group_by': 'seller_name'}"></filter> 
+                    </group> 
+                </search>
+            </field>
+        </record> 
+    </data>
+</odoo>

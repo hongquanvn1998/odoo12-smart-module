@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>  
+        <record id="paperformat_A4_sale_invoice" model="report.paperformat">
+            <field name="name">Sale Invoice Template</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">2</field>
+            <field name="margin_right">2</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">5</field>
+            <field name="dpi">96</field>
+        </record>
+
+        <record id="paperformat_A4_document" model="report.paperformat">
+            <field name="name">Accounting Document Template</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">15</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">15</field>
+            <field name="margin_right">15</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">5</field>
+            <field name="dpi">96</field>
+        </record>
+
+        <record id="paperformat_A4_document_landscape" model="report.paperformat">
+            <field name="name">Accounting Document Template</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">15</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">15</field>
+            <field name="margin_right">15</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">5</field>
+            <field name="dpi">96</field>
+        </record>
+
+
+        <record id="paperformat_A5_document" model="report.paperformat">
+            <field name="name">Accounting Document Template</field>
+            <field name="default" eval="True" />
+            <field name="format">A5</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">7</field>    
+            <field name="margin_bottom">7</field>    
+            <field name="margin_left">7</field>    
+            <field name="margin_right">7</field>    
+            <field name="header_line" eval="False" />    
+            <field name="header_spacing">0</field>    
+            <field name="dpi">90</field>
+        </record>
+
+
+        <report id="smart_invoice.sale_invoice_print_view_report" 
+            model="account.invoice"
+            string="Sale VAT Invoices" 
+            report_type="qweb-pdf" 
+            name="smart_invoice.sale_invoice_print_view" 
+            file="smart_invoice.sale_invoice_print_view" 
+            attachment="(object.state in ('open','in_payment','paid')) and ('HĐ'+(object.number or '').replace('/','')+'.pdf')" 
+            print_report_name="(object._get_report_base_filename())" 
+            groups="account.group_account_invoice"
+            paperformat="smart_invoice.paperformat_A4_sale_invoice"
+             />
+
+        <report id="smart_invoice.sale_invoice_untax_print_view_report" 
+            model="account.invoice"
+            string="Sale Invoices" 
+            report_type="qweb-pdf" 
+            name="smart_invoice.sale_invoice_untax_print_view" 
+            file="smart_invoice.sale_invoice_untax_print_view" 
+            attachment="(object.state in ('open','in_payment','paid')) and ('HĐ'+(object.number or '').replace('/','')+'.pdf')" 
+            print_report_name="(object._get_report_base_filename())" 
+            groups="account.group_account_invoice"
+            paperformat="smart_invoice.paperformat_A4_sale_invoice"
+            />
+    
+    
+        <report id="smart_invoice.sale_accounting_document_print_view_report" 
+            model="account.invoice"
+            string="Accounting document" 
+            report_type="qweb-pdf" 
+            name="smart_invoice.sale_accounting_document_print_view" 
+            file="smart_invoice.sale_accounting_document_print_view" 
+            attachment="(object.state in ('open','in_payment','paid')) and ('HĐ'+(object.number or '').replace('/','')+'.pdf')" 
+            print_report_name="(object._get_report_base_filename())" 
+            groups="account.group_account_invoice"
+            paperformat="smart_invoice.paperformat_A4_document"
+             />
+            
+        <report id="smart_invoice.receipt_invoice_print_view_report" 
+            model="account.payment"
+            string="Print Voucher (A4)" 
+            report_type="qweb-pdf" 
+            name="smart_invoice.smart_invoice_receipt_print_view" 
+            file="smart_invoice.smart_invoice_receipt_print_view" 
+            attachment="(object.state in ('open','in_payment','paid')) and ('HĐ'+(object.number or '').replace('/','')+'.pdf')"
+            print_report_name="(object._get_report_base_filename())"  
+            groups="account.group_account_invoice"
+            paperformat="smart_invoice.paperformat_A4_document"           
+            />
+
+        <report id="smart_invoice.receipt_invoice_print_a5view_report" 
+            model="account.payment"
+            string="Print Voucher (A5, 2 copy)" 
+            report_type="qweb-pdf" 
+            name="smart_invoice.smart_invoice_receipt_a5print_view" 
+            file="smart_invoice.smart_invoice_receipt_a5print_view" 
+            attachment="(object.state in ('open','in_payment','paid')) and ('HĐ'+(object.number or '').replace('/','')+'.pdf')"
+            print_report_name="(object._get_report_base_filename())"  
+            groups="account.group_account_invoice"
+            paperformat="smart_invoice.paperformat_A5_document"           
+            />
+        <!--  -->
+   </data>
+</odoo>

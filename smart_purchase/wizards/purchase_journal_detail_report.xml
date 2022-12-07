@@ -1,0 +1,78 @@
+<odoo>
+    <record id="report_purchase_journal_detail_main" model="ir.ui.view">
+        <field name="name">Purchase Journal Detail</field>
+        <field name="model">purchase.detail.wizard</field>
+        <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form string="Report Purchase Detail">
+               <group>
+                    <group>
+                        <field name="filter_date" string="Filter Date"/>
+                    </group>
+                    <group>
+                        <field name="report_type" string="Report type"/>
+                    </group>
+                    <group>
+                        <field name="filter_product_categories"  attrs="{'invisible':[('report_type','!=',0)]}"
+                        
+                         options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}" string="Filter Product Categories"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="start_date" string="Date start"/>
+                    </group>
+                    
+                     <group>
+                        <field name="end_date" string="Date End"/>
+                    </group>
+                </group>
+
+                <group>
+                        <field name="filter_products"   attrs="{'invisible':[('report_type','!=',0)]}"
+                        options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}"
+                        default="1"
+                        string="Products"
+                        >
+                            <tree>
+                                <field string="Product code" name="default_code" />
+                                <field string="Product name" name="name" />
+                                <field string="Unit" name ="uom_id" />
+                            </tree>
+                        </field>
+                </group> 
+                <group>
+                        <field name="filter_vendors" 
+                        attrs="{'invisible':[('report_type','!=',1)]}"
+                        options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}"
+                        default="1"
+                        string="Customers"
+                        />
+                </group> 
+                <group>
+                        <field name="filter_employees" 
+                        attrs="{'invisible':[('report_type','!=',2)]}"
+                        options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}"
+                        default="1"
+                        string="Employees"
+                        />
+                </group> 
+                <footer>
+                    <button name="set_params_to_list" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_purchase_journal_detail"
+                name="Purchase Journal Detail"
+                res_model="purchase.detail.wizard"
+                view_mode="form"
+                target="new"
+            />
+    
+    <menuitem sequence="-2" action="main_purchase_journal_detail"
+            id="menu_main_purchase_journal_detail"
+             parent="purchase.purchase_report"/>
+</odoo>

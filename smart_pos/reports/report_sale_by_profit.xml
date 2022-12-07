@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_sale_by_profit_view">
+            <field name="name">Report Sale</field>
+            <field name="model">report.sale.by.profit</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Report sale by profit" create="false" delete="false">
+                   <field name="id" string="STT" />                   
+                    <field name="product_name" />
+                    <field name="sold_quantity" />
+                    <field name="profit" />
+                    <field name="profit_rate" string = "Tỷ suất %" />                   
+                    <field name="counter_name" />                
+                </tree>
+            </field>
+        </record> 
+
+         <record id="view_report_sale_profit_search" model="ir.ui.view">
+            <field name="name">report sale profit search</field>
+            <field name="model">report.sale.by.profit</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <group expand="1" string="Group By">
+                        <filter string="Product" name="product_name" context="{'group_by': 'product_name'}"></filter>                        
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

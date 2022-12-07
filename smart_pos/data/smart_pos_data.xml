@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+         <record id="action_client_smart_pos_menu" model="ir.actions.client">
+            <field name="name">Open Smart POS Menu</field>
+            <field name="tag">reload</field>
+            <field name="params" eval="{'menu_id': ref('pos_menu_root')}"/>
+        </record>
+
+        <record id="smart_pos_discount" model="account.journal">
+            <field name="name">Chiết khẩu điểm bán lẻ</field>
+            <field name="code">DISC</field>
+            <field name="active">True</field>
+            <field name="type">general</field>
+            <field name="default_credit_account_id" model="account.account"  search="[('code', '=', '711')]"/>
+            <field name="default_debit_account_id" model="account.account"  search="[('code', '=', '711')]"/>
+            <field name="pos_payment_method">True</field>
+        </record>
+
+
+        <record id="smart_pos_res_partner_" model="res.partner">
+            <field name="name">Khách lẻ</field>
+            <field name="customer_code">KH-00000000</field>
+            <field name="active">True</field>
+            <field name="company_type">person</field>
+        </record>
+
+         <record id="smart_pos_journal_cash" model="account.journal">
+            <field name="name">Thanh toán bằng tiền mặt</field>
+            <field name="code">CASH</field>
+            <field name="active">True</field>
+            <field name="type">cash</field>
+            <field name="default_credit_account_id" model="account.account"  search="[('code', '=', '1111')]"/>
+            <field name="default_debit_account_id" model="account.account"  search="[('code', '=', '1111')]"/>
+            <field name="pos_payment_method">True</field>
+        </record>
+
+         <record id="smart_pos_journal_card" model="account.journal">
+            <field name="name">Thanh toán bằng thẻ</field>
+            <field name="code">CARD</field>
+            <field name="active">True</field>
+            <field name="type">bank</field>
+            <field name="default_credit_account_id" model="account.account"  search="[('code', '=', '1121')]"/>
+            <field name="default_debit_account_id" model="account.account"  search="[('code', '=', '1121')]"/>
+            <field name="pos_payment_method">True</field>
+        </record>
+
+         <record id="smart_pos_journal_transfer" model="account.journal">
+            <field name="name">Thanh toán bằng chuyển khoản</field>
+            <field name="code">BTRF</field>
+            <field name="active">True</field>
+            <field name="type">bank</field>
+            <field name="default_credit_account_id" model="account.account"  search="[('code', '=', '1121')]"/>
+            <field name="default_debit_account_id" model="account.account"  search="[('code', '=', '1121')]"/>
+            <field name="pos_payment_method">True</field>
+        </record>
+
+        <record id="smart_pos_journal_point" model="account.journal">
+            <field name="name">Thanh toán bằng điểm</field>
+            <field name="code">POINT</field>
+            <field name="active">True</field>
+            <field name="type">general</field>
+            <field name="default_credit_account_id" model="account.account"  search="[('code', '=', '711')]"/>
+            <field name="default_debit_account_id" model="account.account"  search="[('code', '=', '711')]"/>
+            <field name="pos_payment_method">True</field>
+        </record>
+
+        <record id="smart_pos_payment_cash" model="pos.payment.method">
+            <field name="name">Tiền mặt</field>
+            <field name="code">cash</field>
+            <field name="active">True</field>
+            <field name="type">cash</field>
+            <field name="default_journal_id" ref="smart_pos.smart_pos_journal_cash"></field>
+        </record>
+
+        <record id="smart_pos_payment_card" model="pos.payment.method">
+            <field name="name">Thẻ</field>
+            <field name="code">bank</field>
+            <field name="active">True</field>
+            <field name="type">bank</field>
+            <field name="journal_ids" eval="[(6, 0,  [ref('smart_pos_journal_card')])]"/>
+        </record>
+
+        <record id="smart_pos_payment_transfer" model="pos.payment.method">
+            <field name="name">Chuyển khoản</field>
+            <field name="code">transfer</field>
+            <field name="active">True</field>
+            <field name="type">transfer</field>
+            <field name="journal_ids" eval="[(6,0,[ref('smart_pos_journal_transfer')])]"/>
+        </record>
+
+        <record id="smart_pos_payment_point" model="pos.payment.method">
+            <field name="name">Điểm</field>
+            <field name="code">point</field>
+            <field name="active">True</field>
+            <field name="type">point</field>
+            <field name="default_journal_id" ref="smart_pos.smart_pos_journal_point"></field>
+        </record>
+
+        <record id="sequence_reconcile_seq" model="ir.sequence">
+            <field name="name">Res partner sequence</field>
+            <field name="code">res.partner</field>
+            <field name="prefix">KH-</field>
+            <field name="padding">8</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+        </record>
+
+        <record model="ir.ui.menu" id="hr.menu_hr_root">
+            <field name="groups_id" eval="[(6, 0, [ref('hr.group_hr_manager')]),(6, 0, [ref('hr.group_hr_user')])]"/>
+        </record>
+    </data>
+
+</odoo>

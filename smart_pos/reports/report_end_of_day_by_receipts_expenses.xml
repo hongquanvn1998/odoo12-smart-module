@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_sale_by_receipts_expenses_view">
+            <field name="name">Report end of day by receipts expenses </field>
+            <field name="model">report.end.of.day.by.receipts.expenses</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Report end of day by receipts expenses" create="false" delete="false">            
+                    <field name="id" string= "STT" />  
+                    <field name="code" />
+                    <field name="partner_id" />
+                    <field name="receipts_expenses" sum="Receipts Expenses"/>              
+                    <field name="date" string ="Thời gian" /> 
+                    <button name="detail" type="object" string="Chi tiết" class="oe_highlight"/>                   
+                    <!-- <field name="amount_paid" sum="Total Paid" />
+                    <field name="amount_total" sum="Total Amount" />     -->
+                </tree>
+            </field>
+        </record> 
+        <record id="view_report_end_of_day_by_goods_search" model="ir.ui.view">
+            <field name="name">Report end of day by receipts expenses search</field>
+            <field name="model">report.end.of.day.by.receipts.expenses</field>                   
+            <field name="arch" type="xml">            
+                <search string="Search">                       
+                     <group expand="1" string="Group By">                       
+                        <filter name="code" string="Mã đơn hàng" context="{'group_by': 'code'}"></filter>                 
+                    </group> 
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

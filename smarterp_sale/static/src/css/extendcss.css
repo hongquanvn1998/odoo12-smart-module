@@ -1,0 +1,447 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+  border-radius: 5px;
+  z-index: 99999;
+    /* position: absolute; */
+    /* width: 100%; */
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+h1 {
+  text-align: center;  
+}
+
+/*  */
+
+
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+
+.register-form{
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+
+.register-form-left {
+    border-radius: 17px;
+    width: 40%;
+    opacity: 0.55;
+    z-index: 99;
+    background: linear-gradient(218deg, #2bad36, #087292 90%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 30px 30px 30px 30px ;
+    position: relative;
+    margin-right: -25px;
+    padding: 30px;
+    /* background-image: url(/screen-1.jpg);  */
+    height: 600px;
+    float: left;
+}
+
+.register-form-right {
+    width: 60%;
+    border-radius: 17px;
+    padding: 60px 79px 48px;;
+    background-color: white;
+    position: relative;
+    z-index: 999;
+}
+
+.tab.col-register {
+    display: flex !important;
+    border-radius: 17px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+  
+  button {
+    /* color: #ffffff; */
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  #prevBtn {
+    background-color: #bbbbbb;
+  }
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #4CAF50;
+  }
+  
+  
+  .col-register {
+      display: flex !important;
+      border-radius: 17px;
+      overflow: hidden;
+      padding: 20px 20px 20px 20px;
+      position: relative;
+  }
+
+* {
+    outline: none;
+        box-sizing: border-box;
+}
+
+
+
+.box-list-industry {
+    margin-top: 0;
+    float: left;
+    width: 100%;
+    padding: 2px 60px;
+    margin-bottom: 10px;
+}
+
+
+
+.uln ul, ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.box-list-industry li:nth-child(3n+1) {
+    clear: both;
+}
+
+.box-list-industry li {
+    width: 33.3% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+      display: list-item;
+      list-style: none;
+}
+
+
+.box-list-industry li .list:hover {
+    background-color:skyblue;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.box-list-industry li a:focus {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.box-list-industry li a:focus {
+    padding-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0s !important;
+    transition: all 0s !important;
+    font-size: 16px;
+    border-radius: 17px;
+    transition: all 0s !important;
+    /* background-color: #4cb050; */
+    font-family: inherit;
+}
+
+
+
+.box-list-industry li a:hover {
+    border-radius: 17px;
+}
+
+.box-list-industry li .list {
+    border: none;
+}
+
+.box-list-industry li a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-transition: all 0s !important;
+    transition: all 0s !important;
+    border-radius: 17px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    height: 156px;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+}
+
+
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+
+
+.box-list-industry li .list:hover p {
+    color: #fff;
+}
+
+.box-list-industry li a:focus p {
+    padding-bottom: 0;
+    margin-top: 0;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.box-list-industry li a:hover p {
+    color: #4ca1b0;
+}
+
+.box-list-industry li a p {
+    float: left;
+    width: 100%;
+}
+
+.box-list-industry li a p {
+  font-family: inherit;
+    color: #111;
+}
+
+.box-list-industry li p {
+    padding-bottom: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0 0 15px;
+}
+
+.fa fa-tshirt:before {
+    content: "\f179";
+}
+
+.form-control {
+  margin-bottom: 25px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.form-control::-ms-expand {
+    background-color: transparent;
+    border: 0
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+.form-control::-moz-placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+.form-control:-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+.form-control::-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+ .form-group .form-control {
+    background-color: transparent;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 1px solid #bfbfbf;
+    padding-left: 0;
+}
+
+.form-group .form-control:focus {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #56ad51;
+    padding-top: 6px;
+    border-width: 2px !important;
+    background: #fff;
+    border: 1px solid #4d9c2f;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.register_box .form-group .form-control {
+    background: #e6e7e7;
+    border: none;
+    border-top: 1px solid #d0d0d0;
+    padding: 5px 15px;
+    height: 28px;
+    border-radius: 0;
+}
+
+input {
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+.register-form-right .tab .form-group{
+  position: relative;
+}
+
+.register-form-right .tab .form-group .note{
+  position: absolute;
+    background-color: #ccc;
+    right: 1px;
+    top: 13px;
+    border-radius: 4px;
+}
+
+.register-form-left .register-col-title{
+  z-index: 200;
+  position: absolute;
+}
+
+.register-form-left .register-content{
+  z-index: 200;
+  position: absolute;
+  bottom: 40%;
+}
+
+.register-form-left .register-contact{
+  z-index: 200;
+  position: absolute;
+  bottom: 5%;
+  left: 30%
+}
+
+.register-form-box{
+  margin-bottom: 10px;
+    display: block;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+}

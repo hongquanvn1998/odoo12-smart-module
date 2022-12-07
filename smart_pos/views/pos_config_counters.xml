@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="pos_config_counter_view_tree" model="ir.ui.view">
+    <field name="name">pos.config.counter.view.tree</field>
+    <field name="model">pos.counter</field>
+    <field name="arch" type="xml">
+        <tree>
+        <field name="name"/>            
+        <field name="code"/>            
+        <field name="company_id"/>            
+        </tree>
+    </field>
+</record>
+
+  <record id="pos_config_counter_view_form" model="ir.ui.view">
+        <field name="name">pos.config.counter.view.form</field>
+        <field name="model">pos.counter</field>
+        <field name="arch" type="xml">
+            <form string="pos">
+                <sheet>
+                    <div class="oe_title" id="title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name" class="mt8"/></h1>
+                    </div>
+                    <h2 class="mt8">Common Settings</h2>
+                    <div class="row mt16 o_settings_container" id="posbox_reference">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="code" string="Code"/>
+                                <div class="content-group mt16">
+                                <field name="code" readonly="1" force_save="1"/>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                             <field name="barcode_scanner"></field>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="barcode_scanner" string="Barcode scanner"></label>
+                                <div class="content-group mt16">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                        <field name="electronic_scale"></field>
+                        </div>
+                        <div class="o_setting_right_pane">
+                        <label for="electronic_scale" string="Electronic scale"></label>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="cash_drawer"></field>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for=" cash_drawer" string="Cash drawer"></label>
+                                <div class="content-group mt16">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="iot_gateway" string="Iot gateway"/>
+                                <div class="content-group mt16">
+                                 <field name="iot_gateway"/>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="price_displayer"></field>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="price_displayer" string="Price displayer"></label>
+                                <div class="content-group mt16">
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="order_code" string="Order code print"/>
+                                <div class="content-group mt16">
+                                 <field name="order_code"/>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    <h2>Payment</h2>
+                    <div class="row mt16 o_settings_container">
+                       
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="pricelist_ids" string="Price list"></label>
+                                <div class="content-group mt16">
+                                <field name="pricelist_ids" options="{'no_create':'1','no_create_edit':'1','no_open':'1'}" widget="many2many_tags"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="payment_method_ids" string="Payment method"></label>
+                                <div class="content-group mt16">
+                                <field name="payment_method_ids" widget="many2many_tags"/>
+                                </div>
+                            </div>
+                        </div>
+                    <div  class="col-12 col-lg-6 o_setting_box">
+                         <div class="o_setting_left_pane">
+                        </div>
+                            <div class="o_setting_right_pane">
+                                <label for="company_id" string="Company"/>
+                                <div class="content-group  mt16">
+                                <field name="company_id" options="{'no_create_edit':'1','no_open':True,'no_create':True}"/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div  class="col-12 col-lg-6 o_setting_box">
+                         <div class="o_setting_left_pane">
+                        </div>
+                            <div class="o_setting_right_pane">
+                                <label for="journal_id" string="Journal"/>
+                                <div class="content-group  mt16">
+                                <field name="journal_id"/>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div  class="col-12 col-lg-6 o_setting_box">
+                         <div class="o_setting_left_pane">
+                        </div>
+                            <div class="o_setting_right_pane">
+                                <label for="stock_picking_type_id" string="Stock picking type"/>
+                                <div class="content-group  mt16">
+                                <field name="stock_picking_type_id" autocomplete="False" options="{'no_create_edit' :'1','no_open': True,'no_create':True}"/>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </sheet>
+            <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+            </div>
+            </form>
+        </field>
+    </record>
+
+
+
+<record id="pos_config_counter_action" model="ir.actions.act_window">
+    <field name="name">POS Config Counter</field>
+    <field name="res_model">pos.counter</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+    <p class="o_view_nocontent_smiling_face">
+                Create  pos config counter
+              </p>
+    </field>
+</record>
+
+</odoo>

@@ -1,0 +1,126 @@
+<odoo>
+    <report
+        id="reportjournal"
+        model="sale.wizard"
+        string="Sale Journal"
+        report_type="qweb-pdf" 
+        paperformat="smart_inventory.paperformat_A4_landscape"
+        name="smart_sale.reportjournal_display"
+        file="smart_sale.reportjournal_display"
+    />
+    <template id="sale_journal_report_css" name="website assets for my module" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/smart_sale/static/src/css/style.css"/>
+            <!-- <script type="text/javascript" src="/managebook/static/src/js/scripts.js" /> -->
+        </xpath>
+    </template>
+
+    <template id="reportjournal_display">
+        <t t-call="web.html_container">
+         <t t-call="web.internal_layout">
+            <div class="header" style="border=bottom:2px solid black">
+                <h3 class="text-center">SALE JOURNAL</h3>
+                <h6 class="text-center">
+                  From 
+                    <t t-esc="start_date" t-options='{"widget": "date"}'/>
+                    To 
+                    <t t-esc="end_date" t-options='{"widget": "date"}'/>
+                </h6>
+            </div>
+
+            <div class="article mt-4">
+                <table class="table table-sm table-reports table-bordered table-journal">
+                    <thead class=" th-journal">
+                        <th scope="col" class="text-center" style="">Confirmed Date</th>
+                        <th scope="col" class="text-center" style="">Voucher Date</th>
+                        <th scope="col" class="text-center" style="">Voucher Number</th>
+                        <th scope="col" class="text-center" style="">Invoice Date</th>
+                        <th scope="col" class="text-center" style="">Invoice No.</th>
+                        <th scope="col" class="text-left" style="">Description</th>
+                        <th scope="col" class="text-right" style="">Gross revenue</th>
+                        <th scope="col" class="text-right" style="">Product Revenue</th>
+                        <th scope="col" class="text-right" style="">Service Revenue</th>
+                        <th scope="col" class="text-right" style="">Other revenues</th> 
+                        <th scope="col" class="text-right" style="">Discount</th>
+                        <th scope="col" class="text-right" style="">Value of return</th>
+                        <th scope="col" class="text-right" style="">Sale Off</th>
+                        <th scope="col" class="text-right" style="">Net Revenue</th>
+                        <th scope="col" class="text-left" style="">Customer Name</th>
+                    </thead>
+                    <tbody>
+                      <tr t-if='len(docs) ==0'>
+                            <td colspan="15" >
+                                <h6 class="text-center">Data not found!</h6>
+                            </td>
+                         </tr>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr class="o_level1">
+                                <td class="open_width"><span t-esc="doc['confirmation_date']" t-options='{"widget": "date"}' /></td>
+                                <td class="text-center" style="width:10%;"><span t-esc="doc['document_date']" t-options='{"widget": "date"}' /></td>
+                                <td class="text-center"><span  t-esc="doc['document_name']"/></td>
+                                <td class="text-center" style="width:10%;"><span  t-esc="doc['invoice_date']" t-options='{"widget": "date"}'/></td>
+                                <t t-if="doc['invoice_no']">
+                                 <td class="text-center"><span  t-esc="'{0:07d}'.format(doc['invoice_no'])"/> </td>
+                                </t> 
+                                <t t-else="doc['invoice_no'] is None">
+                                  <td class="text-center"><span  t-esc="doc['invoice_no']"/> </td>
+                                </t> 
+                                <td class="text-center"><span  t-esc="doc['description']"/></td>
+                                <td class="text-center"><span  t-esc="'{:,.0f}'.format(int(doc['gross_revenue'])).replace(',','.')"/></td>
+                                <td class="text-center"><span  t-esc="'{:,.0f}'.format(int(doc['product_revenue'])).replace(',','.')"/></td>
+                                <td class="text-center"><span  t-esc="'{:,.0f}'.format(int(doc['service_revenue'])).replace(',','.')"/></td>
+                                <td class="text-center"><span  t-esc="'{:,.0f}'.format(int(doc['other_revenue'])).replace(',','.')"/></td>
+                                <td class="text-center"><span  t-esc="'{:,.0f}'.format(int(doc['discount'])).replace(',','.')"/></td>
+                                <td class="text-center"><span  t-esc="'{:,.0f}'.format(int(doc['return_value'])).replace(',','.')"/></td>
+                                <td class="text-center"><span  t-esc="'{:,.0f}'.format(int(doc['sale_off'])).replace(',','.')"/></td>
+                                <td class="text-center"><span  t-esc="'{:,.0f}'.format(int(doc['net_revenue'])).replace(',','.')"/></td>
+                                <td class="text-center"><span  t-esc="doc['customer']"/></td>
+                            </tr>
+                        </t>
+ 
+
+                        <!-- <t t-foreach="all_total" t-as="t">
+                            <tr class="o_level1"  t-if='len(docs) > 0'>
+                                <td colspan="6" class="text-center"><strong>Total</strong></td>
+                                <td class="text-center"><strong><span  t-esc="'{:,.0f}'.format(int(t['all_price_total'])).replace(',','.')"/></strong></td>
+                                <td class="text-center"><strong><span  t-esc="'{:,.0f}'.format(int(t['all_price_total'])).replace(',','.')"/></strong></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"><strong><span  t-esc="t['all_discount']"/> </strong></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"><strong><span  t-esc="'{:,.0f}'.format(int(t['all_price_total'])).replace(',','.')"/></strong></td>
+                                <td class="text-center"></td>
+                            </tr>
+                        </t> -->
+                    </tbody>
+                </table>
+                <div class="oe_structure"/>
+                    <div class="row">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-4">
+                        </div>
+                        <div class="col-4">
+                            <h6 class="text-center font-weight-light font-italic">Ngày .... tháng .... năm.........</h6>
+                        </div>
+                    </div>
+                        <div class="row mt-4">
+                        <div class="col-4">
+                            <h6 class="text-center"><strong>Người lập</strong></h6>
+                            <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                        </div>
+                        <div class="col-4">
+                            <h6 class="text-center"><strong>Kế toán trưởng</strong></h6>
+                            <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                        </div>
+                        <div class="col-4">
+                            <h6 class="text-center"><strong>Giám đốc</strong></h6>
+                            <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                        </div>
+                    </div>
+            </div>
+        </t>
+        </t>
+    </template>
+</odoo>

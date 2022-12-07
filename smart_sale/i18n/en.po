@@ -1,0 +1,824 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* smart_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-28 02:55+0000\n"
+"PO-Revision-Date: 2019-10-28 02:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "(Ký, họ tên)"
+msgstr "(Signed, full name)"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "(Ký,họ tên)"
+msgstr "(Signed,full name)"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<span>Disc.(%)</span>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Address:</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Customer Name: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Date Ordered: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Delivery Address: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Expiration Date:</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Giám đốc</strong>"
+msgstr "<strong>Director</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Invoice Address: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Kế toán trưởng</strong>"
+msgstr "<strong>Chief Accountant</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Người lập</strong>"
+msgstr "<strong>Creator</strong>"
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Note: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Order #</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Payment Terms: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Payment Terms:</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Phone: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Quotation #</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Quotation Date: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Read Number: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Salesperson: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Subtotal</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Tax Code: </strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "<strong>Your Reference:</strong>"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Add a note"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Add a product"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Add a section"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Amount"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Cancel"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Code"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Configure a product"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__consignee
+msgid "Consignee"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__create_uid
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__create_uid
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__create_date
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__create_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Customer"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__customer_address
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Customer Address"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+msgid "Customer Name"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__customer_tax_code
+msgid "Customer Tax Code"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Data not found!"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Date End"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+msgid "Date Start"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Date start"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Delivered Quantity"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Delivery Products"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Description"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Discount (%)"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Discount Values"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportgeneral_display__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournal_display__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournaldetail_display__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__display_name
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__filter_nomoney
+msgid "Display only sale order not paid"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Employee"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__end_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__end_date
+msgid "End Date"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__end_date
+msgid "End date"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__filter_date
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__filter_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__filter_date
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Filter Date"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__filter_product
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__filter_product
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Filter Product"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__filter_product_categories
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__filter_product_categories
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Filter Product Categories"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+msgid "Finished Product Sale"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "From"
+msgstr ""
+
+#. module: smart_sale
+#: selection:reportsaledetail.salejournaldetail,filter_date:0
+#: selection:sale.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+msgid "From the beginning of month to the present"
+msgstr ""
+
+#. module: smart_sale
+#: selection:reportsaledetail.salejournaldetail,filter_date:0
+#: selection:sale.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+msgid "From the beginning of the year to present"
+msgstr ""
+
+#. module: smart_sale
+#: selection:reportsaledetail.salejournaldetail,filter_date:0
+#: selection:sale.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+msgid "From the early quarter to the present"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "General Information"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Get Report"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+msgid "Goods Sale"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+msgid "Gross revenue"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportgeneral_display__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournal_display__id
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournaldetail_display__id
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__id
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__id
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Id Customer"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Invoiced Quantity"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Invoices"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Invoicing"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportgeneral_display____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournal_display____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_report_smart_sale_reportjournaldetail_display____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal____last_update
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__write_uid
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__write_uid
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__write_date
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__write_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Name"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Name Customer"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+msgid "Net revenue"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Ngày .... tháng .... năm........."
+msgstr "Date .... month .... year........."
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Note"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Number Order"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Order"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Order Lines"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Ordered Qty"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Ordered Quantity"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+msgid "Other Income"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Other Information"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Payment terms"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Posting Date"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Price Total"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Price Unit"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Product Code"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Product Name"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Quantity"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Quantity:"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_sale_order__read_number
+msgid "Read Number"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.actions.act_window,name:smart_sale.main_sale_general
+#: model:ir.ui.menu,name:smart_sale.menu_main_sale_general
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_sale_general_main
+msgid "Report Sale General"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Reporting"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+msgid "SALE JOURNAL"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "SALE JOURNAL DETAIL"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+msgid "SALE JOURNAL GENERAL"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.actions.report,name:smart_sale.reportjournaldetail
+msgid "Sale Detail Journal"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.actions.report,name:smart_sale.reportgeneral
+msgid "Sale General"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.actions.act_window,name:smart_sale.main_sale_journal
+#: model:ir.actions.report,name:smart_sale.reportjournal
+#: model:ir.ui.menu,name:smart_sale.menu_main_sale_journal
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+msgid "Sale Journal"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.actions.act_window,name:smart_sale.main_sale_journal_detail
+#: model:ir.ui.menu,name:smart_sale.menu_main_sale_journal_detail
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_detail_main
+msgid "Sale Journal Detail"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_sale_order
+msgid "Sale Order"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Sale Total Quantity"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Sales Information"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Sales Order Lines"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Sales Person"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Sales Returns"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Section Name (eg. Products, Services)"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+msgid "Services Sale"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Shipping"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Shipping Information"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Shipping Options"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model.fields,field_description:smart_sale.field_reportsaledetail_salejournaldetail__start_date
+#: model:ir.model.fields,field_description:smart_sale.field_reportsalejournal_reportjournal__start_date
+#: model:ir.model.fields,field_description:smart_sale.field_sale.general.wizard__start_date
+msgid "Start Date"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.report_journal_main
+msgid "Status"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Taxes"
+msgstr ""
+
+#. module: smart_sale
+#: selection:reportsaledetail.salejournaldetail,filter_date:0
+#: selection:sale.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+msgid "The first half of the year"
+msgstr ""
+
+#. module: smart_sale
+#: selection:reportsaledetail.salejournaldetail,filter_date:0
+#: selection:sale.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+msgid "The last half of the year "
+msgstr ""
+
+#. module: smart_sale
+#: selection:reportsaledetail.salejournaldetail,filter_date:0
+#: selection:sale.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+msgid "This quarter"
+msgstr ""
+
+#. module: smart_sale
+#: selection:reportsaledetail.salejournaldetail,filter_date:0
+#: selection:sale.wizard,filter_date:0
+#: selection:sale.general.wizard,filter_date:0
+msgid "This year"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "To"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Total Price"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_report_saleorder_document
+msgid "Unit Price"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "Unit Price:"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Units"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+msgid "Value Discount"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportgeneral_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Values Returns"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Voucher Date"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournal_display
+#: model_terms:ir.ui.view,arch_db:smart_sale.reportjournaldetail_display
+msgid "Write Date"
+msgstr ""
+
+#. module: smart_sale
+#: model_terms:ir.ui.view,arch_db:smart_sale.smart_sale_order_form
+msgid "days"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_smart_sale_reportgeneral_display
+msgid "report.smart_sale.reportgeneral_display"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_smart_sale_reportjournal_display
+msgid "report.smart_sale.reportjournal_display"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_report_smart_sale_reportjournaldetail_display
+msgid "report.smart_sale.reportjournaldetail_display"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_reportsaledetail_salejournaldetail
+msgid "reportsaledetail.salejournaldetail"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_reportsalejournal_reportjournal
+msgid "sale.wizard"
+msgstr ""
+
+#. module: smart_sale
+#: model:ir.model,name:smart_sale.model_sale.general.wizard
+msgid "sale.general.wizard"
+msgstr ""
+

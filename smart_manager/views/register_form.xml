@@ -1,0 +1,406 @@
+<odoo>
+    <template id="register_form">
+
+      <xpath expr="//div[@id='wrap']" position="inside">
+        <!-- <t t-call-assets="web.assets_common" t-js="false" /> -->
+        <t t-call-assets="web.assets_common" t-css="false" />
+        <!-- <t t-call-assets="web.assets_frontend" t-js="false" /> -->
+        <t t-call-assets="web.assets_frontend" t-css="false" />
+        <div class="smart-pos-layout-payment col-12" ng-hide="loadedPayment">
+            <div class="spinner-payment"></div>
+        </div>
+        <form id="regForm" name="regForm" action="/action_page.php" ng-app="appRegister" ng-show="loadedPayment">
+          <div style="text-align:center;margin-top:40px;">
+            <span class="step "></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            
+          </div>
+          <div class=" col-register" ng-controller="registerCtrl">
+            <div class="register-form-left">
+              <!-- <img src="/screen-1.jpg" alt="#" style="position: absolute;"> -->
+              <div class="register-col-title">
+                <p style="color: #fff; font-size: 14px; text-transform: uppercase; font-family: font-helveticaNeueBold,arial,sans-serif;">Đăng ký sử dụng SmartERP </p>
+              </div>
+              <div class="register-content">
+                <h2 style="font-size: 34px; text-transform: uppercase; font-family: font-helveticaNeueBold,arial,sans-serif;color: #fff; margin-right: 25px" ng-hide="registerData.currentTab != 0">Chọn ngành hàng kinh doanh</h2>
+                <h2 style="font-size: 34px; text-transform: uppercase; font-family: font-helveticaNeueBold,arial,sans-serif;color: #fff; margin-right: 25px" ng-hide="registerData.currentTab != 1">Thông tin cá nhân</h2>
+                <h2 style="font-size: 34px; text-transform: uppercase; font-family: font-helveticaNeueBold,arial,sans-serif;color: #fff; margin-right: 25px" ng-hide="registerData.currentTab != 2">Chọn các sản phẩm</h2>
+              </div>
+              <div class="register-contact">
+                <p style="font-size: 14px; text-transform: uppercase; font-family: font-helveticaNeueBold,arial,sans-serif;color: #fff;">Hotline: 024 7778 7779</p>
+              </div>
+            </div>
+            <div class="register-form-right">
+              <div class="tab">
+                <ul class="box-list-industry ">
+                <li ng-repeat="items in businessCategory "> 
+                  <a href="javascript:void(0)"  class="list category-item" id="{{items.id}}" ng-click="businessCategorySelect(items.id)"> 
+                    <img class ="app-thumbnail"  src="data:image/png;base64, {{items.icon}}"  />
+                  <p class="register-form-box" >{{items.name}} </p>
+                   </a>
+                </li>
+                </ul>
+              </div>
+
+              <div class="tab">
+
+                <div class="form-group">
+                  <input type="text" class="form-control" ng-class="{'is-required':!regForm.partnerName.$valid &amp;&amp; registerData.inValid}" ng-model="registerData.partnerName" name="partnerName" placeholder="Họ tên" ng-required="true"></input>
+                  <div class="suffix-required" ng-show="!regForm.partnerName.$valid &amp;&amp; registerData.inValid">Vui lòng điền Họ Tên</div>
+
+
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+
+                    <div class="col-xs-12 col-md-4 form-check-label">
+                      <input type="text" class="form-control" ng-class="{'is-required':!regForm.mobile.$valid &amp;&amp; registerData.inValid}" name="mobile" ng-model="registerData.mobile" placeholder="Điện thoại" ng-required="true"></input>
+                      <div class="suffix-required" ng-show="!regForm.mobile.$valid &amp;&amp; registerData.inValid">Nhập số điện thoại</div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-md-8 form-check-label">
+                      <input type="text" class="form-control" ng-class="{'is-required':!regForm.email.$valid &amp;&amp; registerData.inValid}" name="email" ng-model="registerData.email" placeholder="Email" ng-required="true"></input>
+                      <div class="suffix-required" ng-show="!regForm.email.$valid &amp;&amp; registerData.inValid">Nhập Email</div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="form-group" ng-controller="customerCtr">
+                  <!-- <input type="text" class="form-control" id="address" ng-model="registerData.businessTaxAddress" placeholder="Địa chỉ"></input> -->
+                  <div class="row">
+
+                    <div class="col-xs-12 col-md-4 form-check-label">
+                      <input type="text" id="province-input" ng-model="info_customer.province_name" class="form-control area" placeholder="Chọn Tỉnh/TP"
+                          aria-label="mã khách hàng" ng-change="onSearchArea()" autocomplete="off"/>
+                      
+                      <div class="output-complete output-complete-area" ng-show="provinceAutoHide">
+                          <ul>
+                              <li ng-repeat="suggestion in provinceList | filter:info_customer.province_name"
+                                  index="$index" val="{{suggestion.name}}"
+                                  ng-class="{active:($index.toString() === selectedIndex.toString())}"
+                                  ng-click="selectArea(suggestion)"
+                                  class="">
+                                  <div class="search-area-info">
+                                      <p class="name-item">{{suggestion.name}}</p>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 form-check-label">
+                      <input type="text" id="district-input" ng-model="info_customer.district_name" class="form-control area"
+                          aria-label="mã khách hàng" autocomplete="off"
+                          placeholder="Quận/Huyện" ng-change="onSearchArea()"/>
+                      <div class="output-complete output-complete-area" ng-show="districtAutoHide">
+                          <ul>
+                              <li ng-repeat="suggestion in districtList | filter:info_customer.district_name"
+                                  index="$index" val="{{suggestion.name}}"
+                                  ng-class="{active:($index.toString() === selectedIndex.toString())}"
+                                  ng-click="selectArea(suggestion)"
+                                  class="">
+                                  <div class="search-area-info">
+                                      <p class="name-item">{{suggestion.name}}</p>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 form-check-label">
+                      <input type="text" id="ward-input" ng-model="info_customer.ward_name"
+                          class="form-control area" aria-label="mã khách hàng" autocomplete="off"
+                          placeholder="Chọn Phường/Xã" ng-change="onSearchArea()"/>
+                      <div class="output-complete output-complete-area" ng-show="wardAutoHide">
+                          <ul>
+                              <li ng-repeat="suggestion in wardList | filter:info_customer.ward_name"
+                                  index="$index" val="{{suggestion.name}}"
+                                  ng-class="{active:($index.toString() === selectedIndex.toString())}"
+                                  ng-click="selectArea(suggestion)"
+                                  class="">
+                                  <div class="search-area-info">
+                                      <p class="name-item">{{suggestion.name}}</p>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" class="form-control" id="taxcode" ng-model="registerData.businessTaxCode" placeholder="Mã số thuế"></input>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" ng-class="{'is-required':!regForm.shopDomain.$valid &amp;&amp; registerData.inValid}" name="shopDomain" ng-model="registerData.shopDomain" placeholder="Đặt tên cho gian hàng của bạn" ng-required="true"></input>
+                  <span class="note">.smarterp.vn</span>
+                    <div class="suffix-required" ng-show="regForm.shopDomain.$valid &amp;&amp; registerData.whiteSpace">Tên gian hàng không được có dấu hoặc khoảng trắng</div>
+                    <div class="suffix-required" ng-show="!regForm.shopDomain.$valid &amp;&amp; registerData.inValid">Tên gian hàng không được để trống</div>
+
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+
+                    <div class="col-xs-12 col-md-6 form-check-label">
+                      <input type="text" class="form-control" ng-class="{'is-required':!regForm.username.$valid &amp;&amp; registerData.inValid}" name="username" ng-model="registerData.username" placeholder="Tên đăng nhập" ng-required="true"></input>
+                      <div class="suffix-required" ng-show="!regForm.username.$valid &amp;&amp; registerData.inValid">Nhập tên đăng nhập</div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 form-check-label">
+                      <input type="password" class="form-control" ng-class="{'is-required':!regForm.password.$valid &amp;&amp; registerData.inValid}" name="password" ng-model="registerData.password" placeholder="Mật khẩu" ng-required="true"></input>
+                      <div class="suffix-required" ng-show="!regForm.password.$valid &amp;&amp; registerData.inValid">Nhập mật khẩu</div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+
+                    <div class="col-xs-12 col-md-6 ">
+                      <span type="text" class="form-control" id="business_type">Mô hình vận hành</span>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 form-check-label">
+                      <input id="mode" type="checkbox" ng-model="registerData.businessType" data-toggle="toggle" data-on="Doanh nghiệp" data-off="Cá nhân" data-onstyle="success" data-offstyle="info" data-height="40" data-width="200" />
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab">
+
+                <div class="form-group">
+                  <h4>
+                    <b>Ứng dụng và Chu kỳ thanh toán</b>
+                  </h4>  
+                 </div>
+
+                <div class="form-group ">
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="row mx-0 px-0 py-2">
+                        <div class="col-6 px-0">
+                        <b>Quy mô doanh nghiệp </b>  
+                        </div>
+                        <div class="col-6 px-0" id="business-size">
+                        <select name="size-bs" id="size-bs" class="select" ng-model="registerData.businessSize" ng-options="i.value as i.name for i in businessSize" ng-change="changeBusinessSize()">
+                          <!-- <option ng-repeat="size in businessSize" ng-model="registerData.businessSize" class="lt" value="{{size.value}}">{{size.name}}</option> -->
+                          </select>
+                        </div>
+                      </div>
+
+                    <div class="row mx-0 px-0 py-2">
+                        <div class="col-6 px-0">
+                     <b>Chu kỳ thanh toán</b> 
+                     </div>
+                        <div class="col-6" id="payment-period">
+                          <select ng-hide='registerData.isAnnualy' ng-model="registerData.paymentPeriods" ng-options="i.id as i.name for i in listPaymentPeriods.monthly" ng-change="getAppModules()">
+                          <option class="select-option-period" value="0">---</option>
+                          </select>
+                          <select ng-hide='!registerData.isAnnualy' ng-model="registerData.paymentPeriods" ng-change="getAppModules()" ng-options="a.id as a.name for a in listPaymentPeriods.annualy">
+                            <option class="select-option-period" value="0">---</option>
+                          </select>
+                        </div>
+
+                      </div>
+
+                      <div class="row mx-0 px-0 pt-4"> <b>Ứng dụng</b> </div>
+
+                      <div class="row row-list-product">
+                      <label ng-repeat="i in appModules" class="col-6"  style=" padding: 5px;">
+                      <div class="card">
+                      <div class="card-body row mx-0">
+                      <div class="col-3 px-0"><img class ="app-module-thumbnail"  src="{{i.image}}" /></div>
+                      <div class="col-9 pr-0 pl-2">
+                        <div class="row mx-0">
+                          <div class="col-9 pl-0 card-header">{{i.name}}</div>
+                          <div class ="col-3" >  
+                          <input type="checkbox"  class="checkbox-add app-module" ng-model="i.checked" ng-change="addProduct(i)"/> </div>
+                        </div>
+                        <div class="row mx-0">
+                              {{i.basePrice | number : fractionSize}} VND
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                      </label>
+                      </div>
+                    </div>
+                    <div class="col-4 p-0">
+
+                      <div class="container pr-0"> 
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a class="nav-link" ng-class="{ 'active':!registerData.isAnnualy}" data-toggle="tab" id="payment-monthly-select" href="#monthly" ng-click="changeTime(0)">Monthly</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" ng-class="{ 'active':registerData.isAnnualy}" data-toggle="tab" id="payment-annualy-select" href="#annualy" ng-click="changeTime(1)">Annualy</a>
+                          </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div id="monthly" class="container tab-pane active">
+                         
+                          </div>
+                          <div id="annualy" class="container tab-pane fade">
+                           
+                            <div class="row mx-0">
+                              <div class="col-12">
+                            Chu kỳ thanh toán
+                        </div>
+                              <div class="col-12" id="payment-period-annualy"></div>
+    
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container h-100  border-left border-right border-bottom table-responsive">
+                          <p style="color: #49b749; margin-bottom: 5%;" ng-if="registerData.appModules.length &gt; 0">{{registerData.appModules.length}} sản phẩm đã chọn</p>
+                          <p style="color: #49b749; margin-bottom: 5%;" ng-if="registerData.appModules.length &lt; 1">0 sản phẩm đã chọn</p>
+                          <table class="table table-hover">
+                            <tbody>
+                              <tr ng-repeat="v in appModules | checked">
+                                <td class="float-left">{{ v.appName }}</td>
+                                <td class="float-right">{{ v.basePrice | number : fractionSize}}</td>
+                              </tr>
+                              <tr>
+                                <td style="color: #333;" class="float-left font-weight-bold">Total</td>
+                                <td class="float-right font-weight-bold">{{ appModules | sumOfValue | number : fractionSize}}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6">
+                  Số lượng tài khoản(user)
+                  </div>
+                    <div class="col-sm-6 ">
+                      <select name="size-bs" id="size-bs" class="select">
+                        <option class="lt" value="0"> &lt; 10 </option>
+                        <option class="lt" value="1">10 - 30</option>
+                        <option class="lt" value="2"> 31 - 50</option>
+                        <option class="lt" value="3">51 - 100</option>
+                        <option class="lt" value="4">100 - 200</option>
+                        <option class="lt" value="5"> &gt; 200</option>
+                      </select>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6">
+                  Thời hạn (tháng)
+                  </div>
+                    <div class="col-sm-6 ">
+                      <select name="qt-select" id="qt-select" class="select">
+                        <option class="lt" value="1"> 1  </option>
+                        <option class="lt" value="3">3 </option>
+                        <option class="lt" value="6"> 6 </option>
+                        <option class="lt" value="9">9</option>
+                      </select>
+                    </div>
+                  </div>
+                </div> -->
+
+                <div class=" choose-app-info-panel" style="display: none;">
+                  <div class="row row-list-product-add ">
+                    <label for="" style="width: 50%;padding-left: 5px">
+                      <div class="selected-product"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div style="float:right;width: 30%;" ng-controller="registerCtrl">
+            <button type="button" id="prevBtn" ng-click="preTab()" style="display: none;">
+              <i class="fas fa-arrow-left"></i>
+              Quay lại
+            </button>
+            <button type="button" id="nextBtn" style="display: none;" ng-click="nextTopApp(regForm)">
+              Tiếp theo
+              <i class=" fas fa-arrow-right"></i>
+            </button>
+            <button type="button" ng-click="submitButton()" id="SubmitBtn" style="display: none;">Đăng ký</button>
+          </div>
+        </form>
+
+        <ul class="colorlib-bubbles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+      </xpath>
+      <xpath expr="." position="after">
+        <script src="/smart_manager/static/src/toastr/js/toastr.min.js"></script>
+        <link href="/smart_manager/static/src/toastr/css/toastr.min.css" rel="stylesheet" />
+
+        <!-- Stepper CSS -->
+        <!-- <link href="/smarterp_sale/static/src/css/bootstrap.checkbox.css" rel="stylesheet" id="bootstrap-css" /> -->
+        <link href="/smart_manager/static/css/register_form.css" rel="stylesheet" id="bootstrap-cssex" />
+
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /> -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> -->
+
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+
+
+        <!-- <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script> -->
+        <script type="application/javascript" src="/smart_manager/static/js/jquery/jquery-steps-1.1.0.js"></script>
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script> -->
+        <script type="text/javascript" src="/smart_manager/static/js/jquery/jquery-validate-1.16.0.js"></script>
+
+        <!-- <script type="application/javascript" src="/smart_manager/static/js/register.js"></script> -->
+        <!-- <script type="application/javascript" src="/smart_manager/static/js/period-payment.js"></script> -->
+
+        <!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" /> -->
+        <link src="/smart_manager/static/font/font-raleway.css" />
+
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" /> -->
+        <link href="/smart_manager/static/font/font-awesome-5.15.1.css" /> 
+
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" /> -->
+        <link rel="stylesheet" href="/smart_manager/static/css/bootstrap@4.5.3.css" />
+        
+        <!-- <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet" /> -->
+        <link href="/smart_manager/static/css/bootstrap-toggle-2.2.2.css" rel="stylesheet" />
+
+        <!-- <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
+        <script src="/smart_manager/static/js/jquery/bootstrap-toggle-2.2.2.js"></script>
+        <script type="text/javascript" src="/smart_manager/static/src/js/angular1.7.js"></script>
+        <script type="text/javascript" src="/smart_manager/static/src/js/form-init.js"></script>
+        <script type="text/javascript" src="/smart_manager/static/src/js/customer.js"></script>
+      </xpath>
+    </template>
+</odoo>

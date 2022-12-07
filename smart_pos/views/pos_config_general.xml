@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.smart.pos</field>
+        <field name="model">res.config.settings</field>
+        <!-- <field name="priority" eval="95"/> -->
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Smart POS" string="Smart POS" data-key="smart_pos">
+                    <h2>Pricing</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="pos_sales_price"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="pos_sales_price"/>
+                                <div class="text-muted">
+                                    Set multiple prices per product, automated discounts, etc.
+                                </div>
+                                <div class="content-group" attrs="{'invisible': [('pos_sales_price' ,'=', False)]}">
+                                    <div class="mt16">
+                                        <field name="group_product_pricelist" invisible="1"/>
+                                        <field name="group_sale_pricelist" invisible="1"/>
+                                        <field name="group_pricelist_item" invisible="1"/>
+                                        <field name="pos_pricelist_setting" widget="radio" class="o_light_label"/>
+                                    </div>
+                                    <button name="%(product.product_pricelist_action2)d" icon="fa-arrow-right" type="action" string="Pricelists"
+                                      attrs="{'invisible': [('pos_pricelist_setting', '=', False)]}" class="btn-link"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="multicurrencies_setting" title="This adds the choice of a currency on pricelists.">
+                            <div class="o_setting_left_pane">
+                                <field name="group_multi_currency"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="group_multi_currency"/>
+                                <div class="text-muted">
+                                    Sell in several currencies
+                                </div>
+                                <div class="content-group" attrs="{'invisible': [('group_multi_currency', '=', False)]}">
+                                    <div class="mt16">
+                                        <button type="action" name="%(base.action_currency_form)d" string="Currencies" class="btn-link" icon="fa-arrow-right"/>
+                                    </div>
+                                    <div>
+                                        <button name="%(base.action_currency_all_form)d" icon="fa-arrow-right" type="action" string="Advanced Currencies Setup" class="btn-link"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>RewardPoint</h2>
+                     <div class="row mt16 o_settings_container">
+                          <div class="col-12 col-lg-12 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="allow_reward_invoice"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="allow_reward_invoice"/>
+                            </div>
+                        </div>
+                            <div class="col-12 col-lg-12 o_setting_box" attrs="{'invisible':[('allow_reward_invoice','=',False)]}">
+                            <div class="o_setting_right_pane">
+                                 <label for="reward_point_money_per_point"/>
+                                <div class="content-group">
+                                    <div class="row mt16" title="Whenever you close a session, one entry is generated in the following accounting journal for all the orders not invoiced. Invoices are recorded in accounting separately.">
+                                        <field name="reward_point_money_per_point" class="col-lg-3 ml-3" widget="monetary"/>
+                                        <label string="VNĐ" for="reward_point_money_per_point" class="col-lg-1" widget="selection"/>
+                                        <label string="= 1 điểm thưởng" for="reward_point_money_per_point" class="col-lg-3" widget="selection"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          <div class="col-12 col-lg-12 o_setting_box">
+                            <div class="o_setting_left_pane">
+                               <field name="reward_point_is_point_to_money" class="col-lg-3"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="reward_point_is_point_to_money"/>
+                                  <div class="content-group"  attrs="{'invisible': [('reward_point_is_point_to_money', '=', False)]}">
+                                    <div class="row mt16" title="Whenever you close a session, one entry is generated in the following accounting journal for all the orders not invoiced. Invoices are recorded in accounting separately.">
+                                        <field name="reward_point_point_to_money" class="col-lg-3 ml-3"/>
+                                        <label string="Điểm =" for="reward_point_point_to_money" class="col-lg-3" widget="selection"/>
+                                        <field name="reward_point_money_to_point" class="col-lg-3 ml-3" widget="monetary"/>
+                                        <label string="VNĐ" for="reward_point_money_to_point" class="col-lg-1" widget="selection" />
+                                    </div>
+                                </div>
+                                <label for="reward_point_invoice_count" class="mt-3" attrs="{'invisible': [('reward_point_is_point_to_money', '=', False)]}"/>
+                                <div class="content-group" attrs="{'invisible': [('reward_point_is_point_to_money', '=', False)]}">
+                                    <div class="row mt16" title="Whenever you close a session, one entry is generated in the following accounting journal for all the orders not invoiced. Invoices are recorded in accounting separately.">
+                                        <field name="reward_point_invoice_count" class="col-lg-3 ml-3" />
+                                        <label string="lần mua" for="reward_point_invoice_count" class="col-lg-3" widget="selection"/>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                          <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="reward_point_for_discount_invoice"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="reward_point_for_discount_invoice"/>
+                            </div>
+                        </div>
+                          <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="reward_point_for_invoice_using_reward_point"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="reward_point_for_invoice_using_reward_point"/>
+                            </div>
+                        </div>
+                          <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="reward_point_for_invoice_using_voucher"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="reward_point_for_invoice_using_voucher"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="smart_pos_action_pos_configuration" model="ir.actions.act_window">
+        <field name="name">Settings smart pos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'smart_pos'}</field>
+    </record>
+</odoo>

@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_sale_by_employee_view">
+            <field name="name">Report Sale by employee</field>
+            <field name="model">report.sale.by.employee</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Report sale" create="false" delete="false">
+                    <field name="id" string ="STT" />
+                    <field name="date" />
+                    <field name="seller_name" />
+                    <field name="amount_total" sum="Total Amount" />
+                </tree>
+            </field>
+        </record> 
+        
+
+         <record id="view_res_partner_search" model="ir.ui.view">
+            <field name="name">report_sale_by_employee_search</field>
+            <field name="model">report.sale.by.employee</field>                   
+            <field name="arch" type="xml">            
+                <search string="Search employes">
+                       <group expand="1" string="Group By">
+                        <filter string="Employees" name="seller_name" context="{'group_by': 'seller_name'}"></filter>                           
+                    </group> 
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

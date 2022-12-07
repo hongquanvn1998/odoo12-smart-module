@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_company_form_view_override_tax_code" model="ir.ui.view">
+            <field name="name">res.company.form.override.tax.code</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page/group" position="replace">
+                    <group>
+                        <group>
+                            <field name="vat"/>
+                            <field name="tax_address"/>
+                            <field name="partner_id" readonly="1" required="0" groups="base.group_no_one"/>
+                            <label for="street" string="Address"/>
+                            <div class="o_address_format">
+                                <field name="street" placeholder="Số nhà, đường, phường (xã)" class="o_address_street"/>
+                                <field name="street2" placeholder="Địa chỉ dòng 2" class="o_address_street"/>
+                                <field name="city" placeholder="Quận/Huyện" class="o_address_city"/>
+                                <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}'/>
+                                <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True}'/>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="website" widget="url" placeholder="e.g. https://www.odoo.com"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="vat" invisible="1"/>
+                            <field name="company_registry"/>
+                            <field name="currency_id" options="{'no_create': True, 'no_open': True}" id="company_currency" context="{'active_test': False}"/>
+                            <field name="parent_id"  groups="base.group_multi_company"/>
+                            <field name="sequence" invisible="1"/>
+                        </group>
+                        <group name="social_media"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

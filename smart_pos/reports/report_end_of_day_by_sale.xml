@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_end_of_day_by_sale_view">
+            <field name="name">Report end of day by sale</field>
+            <field name="model">report.end.of.day.by.sale</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <!-- <tree string="Report end of day by sale" create="false" delete="false">
+                    <field name="code_exchange" />
+                    <field name="date" />
+                    <field name="quantity" />
+                    <field name="revenue" />
+                    <field name="other_revenues" />
+                    <field name="return_expenses" />
+                    <field name="payment" />
+                </tree> -->
+                 <tree string="Report end of day by sale" create="false" delete="false">
+                    <field name="id" string= "STT" />    
+                    <field name="code" />
+                    <field name="date" />
+                    <field name="qty_total"  sum="qty_total"/>  
+                    <field name="partner_name" /> 
+                    <field name="seller_name" />    
+                    <field name="counter_name" />                                        
+                    <field name="amount_paid" sum="Total Paid" />
+                    <field name="amount_total" sum="Total Amount" />   
+                    <button name="detail" type="object" string="Chi tiết" class="oe_highlight"/>             
+                </tree>
+            </field>
+
+        </record> 
+         <record id="view_report_end_of_day_search" model="ir.ui.view">
+            <field name="name">report end of day by sale search</field>
+            <field name="model">report.end.of.day.by.sale</field>                   
+            <field name="arch" type="xml">            
+                <search string="Search">                       
+                     <group expand="1" string="Group By">
+                        <filter string="Counter Name" name="code" context="{'group_by': 'counter_name'}"></filter>                          
+                         <filter string="Partner" name="partner_name" context="{'group_by': 'partner_name'}"></filter>
+                         <filter string="Seller" name="seller_name" context="{'group_by': 'seller_name'}"></filter> 
+                    </group> 
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

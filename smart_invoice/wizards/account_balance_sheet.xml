@@ -1,0 +1,54 @@
+<odoo>
+    <record id="smart_invoice_filter_cash_ledger" model="ir.ui.view">
+        <field name="name">Account Balance Sheet</field>
+        <field name="model">account.balance.sheet</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Account Balance Sheet">
+               <group>
+                    <group class="o_group_col_5">
+                        <field name="filter_date"/>
+                    </group>
+                    <group class="o_group_col_3">
+                        <field name="account_level" />
+                    </group>
+                    <group class="o_group_col_4">
+                        <field name="balance_with_credit_debit" />
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="start_date" />
+                    </group>          
+                    <group>
+                        <field name="end_date" />
+                    </group>
+                    
+                </group>
+                <group>
+                <group>
+                     <field name="file_name" filename="acc_balance_data" />
+					<field name="acc_balance_data" invisible="1" />
+                </group>
+                </group>
+                <footer>
+                    <button name="get_info" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Export excel" class="btn-primary" name="export_excel" type="object"   icon="fa-download"/>
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_account_cash_ledger"
+                name="Account Balance Sheet"
+                res_model="account.balance.sheet"
+                view_mode="form"
+                target="new"
+            />
+    
+    <menuitem sequence="1" action="main_account_cash_ledger"
+            id="menu_cash_ledger"
+            parent="smart_invoice.menu_financial_new"
+            name="Account Balance Sheet"/>
+</odoo>

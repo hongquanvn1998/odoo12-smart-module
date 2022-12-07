@@ -1,0 +1,62 @@
+.height_small{
+    width: 28px!important;
+}
+
+.info_general .o_horizontal_separator {
+    border: 1px solid #333;
+    border-radius: 25px;
+    padding-left: 11px;
+    /* border-width: 0px; */
+    width: 38%;
+}
+
+.order_input .o_horizontal_separator{
+    border: 1px solid #333;
+    border-radius: 25px;
+    padding-left: 9px;
+    /* border-width: 0px; */
+    width: 20%;
+}
+.o_group_col_4{
+    width: 33% !important;
+}
+
+.info_general textarea#o_field_input_57 {
+    height: 25px!important;
+}
+.container.parent-signature {
+    margin-top: 5%;
+}
+.th-journal th{
+    font-size: 13px;
+}
+
+table.table.table-sm.table-reports.table-bordered .o_level1 td span:last-child{
+    margin-left: 10px !important;
+}
+table.table.table-sm.table-reports.table-bordered.table-detail-journal .o_level1 td span:last-child{
+    margin-left: 0px !important;
+}
+.open_width {
+    width: 7% !important;
+}
+table.table.table-sm.table-reports.table-bordered.table-detail-journal tr.o_level1 td {
+    font-size: 12px;
+}
+table.table.table-sm.table-reports.table-bordered.table-journal tr.o_level1 td {
+    font-size: 12px;
+}
+table.table.table-sm.table-reports.table-bordered.table-general tr.o_level1 td {
+    font-size: 12px;
+}
+table.table.table-sm.table-reports.table-bordered tr.o_level1:hover {
+    background-color: #eee;
+}
+.table-bordered th, .table-bordered td{
+    border: 1px solid #333 !important;
+}
+@media (min-width: 1200px){
+    .container {
+    max-width: 1535px !important;
+    }
+}

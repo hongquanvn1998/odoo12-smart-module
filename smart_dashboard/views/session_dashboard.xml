@@ -1,0 +1,105 @@
+<odoo>
+
+    <record model="ir.actions.act_window" id="act_session_purchase_order_graph">
+            <field name="name">Purchase Dashboard</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_mode">graph</field>
+            <field name="context">{'graph_mode':'line'}</field>
+            <field name="view_id"
+                   ref="smart_dashboard.smart_dashboard_purchase_graph_view"/>
+    </record>
+
+     <record model="ir.actions.act_window" id="act_session_stock_move_graph">
+            <field name="name">Stock Move Dashboard</field>
+            <field name="res_model">stock.move</field>
+            <field name="view_mode">graph</field>
+            <field name="context">{'graph_mode':'pie'}</field>
+            <field name="view_id"
+                   ref="smart_dashboard.smart_dashboard_stock_move_graph_view"/>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="act_session_sale_calendar">
+            <field name="name">Sale Calendar</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">calendar</field>
+            <field name="context">{'group_by': ['date:month', 'partner_id']}</field>
+            <field name="view_id" ref="smart_dashboard.smart_dashboard_sale_calender_view"/>
+        </record>
+
+    <record model="ir.actions.act_window" id="smart_dashboard_line_act_session_graph">
+            <field name="name">Sale Graph Line</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">graph</field>
+            <field name="context">{'graph_mode':'line'}</field>
+            <field name="view_id"
+                   ref="smart_dashboard.smart_dashboard_sale_graph_view"/>
+    </record>
+
+    <record model="ir.ui.view" id="board_session_form">
+            <field name="name">Session Dashboard Form</field>
+            <field name="model">board.board</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Session Dashboard">
+                    <board style="1">
+                        <column>
+                            <action
+                                string="Sale Calendar"
+                                name="%(smart_dashboard.act_session_sale_calendar)d"
+                                height="150"
+                                width="510"/>
+                        </column>   
+                    </board>
+                    <board>
+                        <column>
+                            <action
+                                string="Purchase Order Graph"
+                                name="%(smart_dashboard.act_session_purchase_order_graph)d"/>
+                        </column>
+                        <column>
+                            <action
+                                string="Sale Graph Line"
+                                name="%(smart_dashboard.smart_dashboard_line_act_session_graph)d"/>
+                            <action 
+                                string="Stock Move"
+                                name="%(smart_dashboard.act_session_stock_move_graph)d"/>
+                        </column>
+                    </board>
+
+                    <!-- <hpaned>
+                        <child1>
+                             <action
+                                string="Sale Calendar"
+                                name="%(smart_dashboard.act_session_sale_calendar)d"
+                                colspan="2"/>  
+                        </child1>
+                        <child2>
+                           <action
+                                string="Sale Graph Line"
+                                name="%(smart_dashboard.smart_dashboard_line_act_session_graph)d"  colspan="2"/>
+                            <action 
+                                string="Stock Move"
+                                name="%(smart_dashboard.act_session_stock_move_graph)d"  colspan="2"/> 
+                        </child2>    
+                    </hpaned> -->
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="open_board_session">
+          <field name="name">Session Dashboard</field>
+          <field name="res_model">board.board</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">form</field>
+          <field name="usage">menu</field>
+          <field name="view_id" ref="board_session_form"/>
+        </record>
+       
+        <menuitem 
+            name="Smart Dashboard" 
+            id="base.menu_board_root"
+            action="open_board_session"  
+            sequence="0"/>
+
+</odoo>

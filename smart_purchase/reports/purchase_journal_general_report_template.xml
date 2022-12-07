@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+      <report id="purchase_journal_general_report"
+            model="filter.purchase.journal.general"
+            string="Purchase Journal General"
+            report_type="qweb-html"
+            name="smart_purchase.purchase_journal_general_report_display"
+            file="smart_purchase.purchase_journal_general_report_display"
+            paperformat ="smart_purchase.paperformat_purchase"
+/>
+    <template id="purchase_journal_general_report_display">
+      <xpath expr="." position="inside">
+                <link href="/smart_purchase/static/src/css/purchase_journal.css" rel="stylesheet" type="text/css" />
+    </xpath>
+        <t t-call="web.html_container">
+         <t t-call="web.internal_layout">
+            <div class="page">
+                <h3 class="text-center">PURCHASE JOURNAL GENERAL</h3>
+                <h6 class="text-center mb-4">
+                    From Date:
+                    <t t-esc="date_start" t-options='{"widget": "date"}'/>
+                    To Date:
+                    <t t-esc="date_end" t-options='{"widget": "date"}'/>
+                </h6>
+            <table class="table  table-bordered">
+              <thead >
+                    <tr>
+                        <th scope="col" class="text-center">Code</th>
+                        <th scope="col" class="text-center">Product name</th>
+                        <th scope="col" class="text-center">Unit</th>
+                        <th scope="col" class="text-center">Quantity</th>
+                        <th scope="col" class="text-center">Price Total</th>
+                        <th scope="col" class="text-center" >Discount</th>
+                        <th scope="col" class="text-center">Quantity return </th>
+                        <th scope="col" class="text-center">Value return </th>
+                        <th scope="col" class="text-center" >Discount value</th>
+                        <th scope="col" class="text-center">Total</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr t-if='len(docs) ==0'>
+                        <td colspan="10"  >
+                                <h6 class="text-center">Data not found!</h6>
+                            </td>
+                        </tr>
+                         <tr  t-foreach="docs" t-as="doc">
+                          <td class="text-center">
+                                    <span t-esc="doc['default_code']"/>
+                        </td>
+                          <td class="text-center"> 
+                                    <span t-esc="doc['name']" />
+                        </td>
+                           <td class="text-center"> 
+                                    <span t-esc="doc['unit']" />
+                        </td>
+                         <td class="text-center">
+                                    <span t-esc="doc['product_uom_qty']"/>
+                        </td>
+
+                        <td class="text-center">
+                                    <span t-esc="'{:,}'.format(doc['price_subtotal'])"/>
+                        </td>
+                        <td class="text-center">
+                                  
+                        </td>
+                        <td class="text-center">
+                                    <!-- <span t-if="doc['amount_returned'] > 0" t-esc="doc['amount_returned']"/>  -->
+                        </td>
+                          <td class="text-center">
+                                    <!-- <span t-if=" doc['return_value'] >0" t-esc="doc['return_value']"/> -->
+                        </td>
+                           <td class="text-center">
+                                    <!-- <span t-if="doc['price_tax'] > 0" t-esc="doc['price_tax']"/> -->
+                        </td>
+                        <td  class="text-center">
+                                    <span t-esc="'{:,}'.format(doc['price_subtotal'])"/> 
+                        </td>
+                    </tr>
+                    <tr t-if='len(docs) >0'>
+                    <td  colspan="3" >Total</td>
+                    <td class="text-center"> 
+                      <span t-if ="sum_product_uom_qty>0" t-esc="'{:,}'.format(sum_product_uom_qty)"
+                      t-field-options="{'widget':'monetary', 'display_currency': 'sum_product_uom_qty'}" />
+                     </td>
+                    <td class="text-center">
+                      <span t-if ="sum_price_subtotal>0" t-esc="'{:,}'.format(sum_price_subtotal)"
+                      t-field-options="{'widget':'monetary', 'display_currency': 'sum_price_subtotal'}" />
+                    </td>
+                    <td class="text-center"></td>
+                    <!-- <td class="hidden">
+                      <span t-if ="sum_price_tax>0" t-esc="'{:,}'.format(sum_price_tax)"
+                      t-field-options="{'widget':'monetary', 'display_currency': 'sum_price_tax'}" />
+                    </td> -->
+                    <!-- <td class="hidden">
+                      <span  t-if ="sum_amount_returned>0" t-esc="'{:,}'.format(sum_amount_returned)"
+                      t-field-options="{'widget':'monetary', 'display_currency': 'sum_amount_returned'}" />
+                     </td> -->
+                    <td class="text-center"></td>
+                    <!-- <td class="hidden">
+                      <span t-if ="sum_return_value>0" t-esc="'{:,}'.format(sum_return_value)"
+                      t-field-options="{'widget':'monetary', 'display_currency': 'sum_return_value'}" />
+                    </td> -->
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"> 
+                      <span t-if ="sum_price_subtotal>0" t-esc="'{:,}'.format(sum_price_subtotal)"
+                      t-field-options="{'widget':'monetary', 'display_currency': 'sum_price_subtotal'}" />
+                    </td>
+                    </tr>
+                    </tbody>
+                </table>
+            <div class="oe_structure"/>
+            <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                <h6 class="text-center font-weight-light font-italic">Ngày .... tháng .... năm.........</h6>
+            </div>
+         </div>
+           <div class="row mt-4">
+            <div class="col-4">
+                <h6 class="text-center"><strong>Người lập</strong></h6>
+                <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+            </div>
+            <div class="col-4">
+                <h6 class="text-center"><strong>Kế toán trưởng</strong></h6>
+                <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+            </div>
+            <div class="col-4">
+                <h6 class="text-center"><strong>Giám đốc</strong></h6>
+                <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+            </div>
+         </div>
+            </div>
+        </t>
+        </t>
+    </template>
+</odoo>

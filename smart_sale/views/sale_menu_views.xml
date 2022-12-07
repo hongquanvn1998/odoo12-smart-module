@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale.action_open_sale_onboarding_payment_acquirer_wizard" model="ir.actions.act_window">
+        <field name="name">Cách khách hàng của bạn có thể xác nhận đơn hàng</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.payment.acquirer.onboarding.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="sale.sale_onboarding_order_confirmation_form" />
+        <field name="target">new</field>
+    </record>
+
+    <record id="sale.action_open_sale_onboarding_quotation_layout" model="ir.actions.act_window">
+        <field name="name">Cấu hình bố cục của bạn</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.company</field>
+        <field name="view_mode">form</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="sale.sale_onboarding_quotation_layout_form" />
+        <field name="target">new</field>
+    </record>
+
+    <record id="account.action_open_account_onboarding_invoice_layout" model="ir.actions.act_window">
+        <field name="name">Cấu hình bố cục của bạn</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.company</field>
+        <field name="view_mode">form</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="account.account_invoice_onboarding_invoice_layout_form" />
+        <field name="target">new</field>
+    </record>
+
+    <record id="payment.action_open_payment_onboarding_payment_acquirer_wizard" model="ir.actions.act_window">
+        <field name="name">Chọn phương thức thanh toán</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">payment.acquirer.onboarding.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="payment.payment_acquirer_onboarding_wizard_form" />
+        <field name="target">new</field>
+    </record>
+    
+    <!-- <record id="website_sale.action_open_website_sale_onboarding_payment_acquirer_wizard" model="ir.actions.act_window">
+        <field name="name">Choose a payment method</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">website.sale.payment.acquirer.onboarding.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="payment.payment_acquirer_onboarding_wizard_form" />
+        <field name="target">new</field>
+    </record> -->
+
+    <record id="base.view_company_document_template_form" model="ir.ui.view">
+        <field name="name">res.company.document.template.form.override</field>
+        <field name="model">res.company</field>
+        <field name="mode">primary</field>
+        <field name="priority">2048</field>
+        <field name="arch" type="xml">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/smart_sale/static/src/js/change_click.js"></script>
+            </xpath>
+            <form class="o_company_document_layout">
+                    <group>
+                        <label for="external_report_layout_id" string="Template" colspan="2" />
+                        <field name="external_report_layout_id" colspan="2" nolabel="1"
+                                class="report_layout_container"
+                                widget="report_layout" options="{
+                                    'field_image': 'preview_image',
+                                    'field_binary': 'preview_pdf'
+                                }"/>
+                    </group>
+                    <group>
+                        <field name="logo" widget="image" />
+                        <field name="report_header"  widget="char"
+                            placeholder="e.g. Global Business Solutions" />
+                        <field name="report_footer" string="Footer"
+                            placeholder="e.g. Opening hours, bank accounts (one per line)" />
+                        <field name="paperformat_id" widget="selection" />
+                    </group>
+                    <footer>
+                        <button special="save" string="Save"
+                                class="btn btn-primary" type="object" />
+                        <button special="cancel" string="Cancel" />
+                    </footer>
+                </form>
+        </field>
+    </record>
+    
+</odoo>

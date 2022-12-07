@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_reward_point_view">
+            <field name="name">report reward point</field>
+            <field name="model">report.reward.point</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">              
+                 <tree string="Report end of day by sale" create="false" delete="false">
+                    <field name="id" string= "STT" />    
+                    <!-- <field name="code" /> -->                                      
+                    <field name="partner_name" /> 
+                    <field name="points" />             
+                    <field name="reward_count"/>    
+                    <field name="payment_count"/>   
+                    <field name="date" />   
+                </tree>
+            </field>
+        </record> 
+         <record id="view_report_reward_point_search" model="ir.ui.view">
+            <field name="name">report reward point search</field>
+            <field name="model">report.reward.point</field>                   
+            <field name="arch" type="xml">            
+                <search string="Search">                       
+                     <group expand="1" string="Group By">                                              
+                         <filter string="Partner" name="partner_name" context="{'group_by': 'partner_name'}"></filter>                     
+                    </group> 
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <!-- report.register.order tree view -->
+        <record id="report_register_order_view_tree" model="ir.ui.view">
+            <field name="name">report.register.order.view.tree</field>
+            <field name="model">report.register.order</field>
+            <!-- <field name="context">{'group_by':['date', 'customer_name']}</field> -->
+            <field name="context">{'search_default_partner_id': 1}</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name_order" />
+                    <field name="date" />
+                    <field name="register_quantity" />
+                    <field name="partner_id" invisible="0"/>
+                    <field name="partner_name" />
+                    <field name="amount_total" />
+                    <field name="use_type" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- report.register.order search view -->
+        <record id="report_register_order_view_search" model="ir.ui.view">
+            <field name="name">report.register.order.view.search</field>
+            <field name="model">report.register.order</field>
+            <field name="arch" type="xml">
+                <search string="Search Description">
+                    <!-- Add your fields here -->
+                    <group expand="1" string="Group By">
+                        <filter string="Date" name="date" context="{'group_by': 'date:day'}"></filter>
+                        <filter string="Partner" name="partner_id" context="{'group_by': 'partner_id'}"></filter>
+                    </group> 
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report id="balance_sheet" model="account.balance.sheet" string="Account Balance Sheet" report_type="qweb-html"
+        paperformat="paperformat_A4_document_landscape" name="smart_invoice.balance_sheet_display"
+        file="smart_invoice.balance_sheet_display" />
+    <template id="balance_sheet_display">
+        <xpath expr="." position="inside">
+            <link href="/smart_invoice/static/src/css/smart_invoice.css" rel="stylesheet" />
+        </xpath>
+        <t t-call="web.html_container">
+            <!-- <t t-set="data_report_margin_top" t-value="12" />
+            <t t-set="data_report_header_spacing" t-value="9" />
+            <t t-set="data_report_dpi" t-value="96" />
+          -->
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <div style="border-bottom:2px solid black" class="mt-4">
+                        <h3 class="text-center">BẢNG CÂN ĐỐI TÀI KHOẢN</h3>
+                        <h6 class="text-center">
+                            From
+                            <t t-esc="start_date" t-options='{"widget": "date"}' />
+                            To
+                            <t t-esc="end_date" t-options='{"widget": "date"}' />
+                        </h6>
+                    </div>
+
+                    <table class="table table-sm table-reports table-bordered table-detail-cash mt-4">
+                        <thead class=" th-journal">
+                            <tr>
+                                <th scope="col" class="align-middle text-center" rowspan="2" style="">Account Number</th>
+                                <th scope="col" class="align-middle text-center" rowspan="2" style="">Account Name</th>
+                                <th scope="col" class="align-middle text-center" colspan="2" style="">Opening</th>
+                                <th scope="col" class="align-middle text-center" colspan="2" style="">Incurred</th>
+                                <th scope="col" class="align-middle text-center" colspan="2" style="">Closing</th>
+                            </tr>
+
+                            <tr>
+                                <th class="align-middle text-center">Debit</th>
+                                <th class="align-middle text-center">Credit</th>
+                                <th class="align-middle text-center">Debit</th>
+                                <th class="align-middle text-center">Credit</th>
+                                <th class="align-middle text-center">Debit</th>
+                                <th class="align-middle text-center">Credit</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr class="o_level1" t-if='len(docs) ==0'>
+                                <td colspan="8">
+                                    <h6 class="text-center">Data not found!</h6>
+                                </td>
+                            </tr>
+                            <tr t-foreach="docs" t-as="doc">
+                                <td class='text-center'>
+                                    <span t-esc="doc['code']" />
+                                </td>
+                                <td class='text-left'>
+                                    <span t-esc="doc['account_name']" />
+                                </td>
+                                <td class='text-right'>
+                                    <span t-if="doc['o_debit'] > 0" t-esc="'{:,}'.format(doc['o_debit'])" />
+                                </td>
+                                <td class='text-right'>
+                                    <span t-if="doc['o_credit'] > 0" t-esc="'{:,}'.format(doc['o_credit'])" />
+                                </td>
+                                <td class='text-right'>
+                                    <span t-if="doc['i_debit'] > 0" t-esc="'{:,}'.format(doc['i_debit'])" />
+                                </td>
+                                <td class='text-right'>
+                                    <span t-if="doc['i_credit'] > 0" t-esc="'{:,}'.format(doc['i_credit'])" />
+                                </td>
+                                <td class='text-right'>
+                                    <span t-if="doc['c_debit'] > 0" t-esc="'{:,}'.format(doc['c_debit'])" />
+                                </td>
+                                <td class='text-right'>
+                                    <span t-if="doc['c_credit'] > 0" t-esc="'{:,}'.format(doc['c_credit'])" />
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <div class="footer_right" >
+                        <div class="float-right">
+                            <p class="text-center ">Lập, Ngày ... tháng ... năm ... </p>
+                            
+                        </div>           
+                    </div>  
+                    <div class="row mt-4 set-space" style="clear:both;">
+                        <div class="col-4">
+                            <h6 class="text-center">
+                                <strong>Người lập biểu</strong>
+                            </h6>
+                            <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                        </div>
+                        <div class="col-4">
+                            <h6 class="text-center">
+                                <strong>Kế toán trưởng</strong>
+                            </h6>
+                            <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                        </div>
+                        <div class="col-4">
+                            <h6 class="text-center">
+                                <strong>Người đại diện theo pháp luật</strong>
+                            </h6>
+                            <h6 class="text-center font-weight-light font-italic">(Ký, họ tên, đóng dấu)</h6>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

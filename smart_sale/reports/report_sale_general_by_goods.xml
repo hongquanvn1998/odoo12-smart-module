@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_sale_general_by_goods_view">
+            <field name="name">Sale general report by goods</field>
+            <field name="model">report.sale.general.goods</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">  
+                <tree string="Sale general report by goods" create="false" delete="false"    js_class="smart_sale_change_params">  
+                    <field name="product_code" />
+                    <field name="product_name" />
+                    <field name="unit" />
+                    <field name="quantity"  sum="Quantity" />
+                    <field name="gross_revenue"  sum="Gross revenue" />
+                    <field name="discount" sum="Discount"  />
+                    <field name="return_quantity" sum="Return quantity" />
+                    <field name="return_value"  sum="Value of return" /> 
+                    <field name="net_revenue" sum="Gross revenue" /> 
+                </tree>
+            </field> 
+        </record>
+
+        <!-- <record id="sale_general_goods_excel" model="ir.actions.server">
+            <field name="name">Export to Excel</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_report_sale_general_goods"/>
+            <field name="binding_model_id" ref="model_report_sale_general_goods"/>
+            <field name="state">code</field>
+            <field name="code">
+                records.generate_excel_report()
+            </field>
+        </record> -->
+
+        <!-- Excel Report Download Wizard Form View-->
+        <!-- <record id="view_product_excel_form_extended" model="ir.ui.view">
+            <field name="name">product.excel.extended.form</field>
+            <field name="model">product.excel.extended</field>
+            <field name="arch" type="xml">
+                <form string="Excel Report file">
+                    <group>
+                        <field name="excel_file" widget="binary" readonly="1" filename="file_name" />
+                        <field name="file_name" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button string="Cancel" class="oe_link oe_highlight" special="cancel"/>
+                        <button name="get_contract_template" string="Download" type="object" icon="gtk-ok" class="oe_highlight" />
+                    </footer>
+                </form>
+            </field>
+        </record> -->
+
+        <!-- Excel Report Download Wizard Action View-->
+        <!-- <record id="action_product_excel_form" model="ir.actions.act_window">
+            <field name="name">Reports Excel</field>
+            <field name="view_id" ref="view_product_excel_form_extended"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="res_model">product.excel.extended</field>
+            <field name="target">new</field>
+        </record> -->
+        
+        <!-- <act_window id="main_sale_general_xls"
+                name="Excel Sale General Report"
+                res_model="product.excel.extended"
+                view_mode="form"
+                target="new"
+            /> -->
+    
+        <!-- <menuitem sequence="-2" action="action_product_excel_form"
+                id="menu_main_sale_general_xls"
+                parent="sale.menu_sale_report"/> -->
+    </data>  
+</odoo>

@@ -1,0 +1,73 @@
+body {
+    font-size: 1rem!important;
+}
+
+.page {
+    font-size: 12px!important;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.o_report_layout_boxed table thead {
+    border-bottom: 1px solid #495057;
+}
+
+.o_report_layout_boxed table tbody td {
+    border-bottom: 1px dashed #495057;
+}
+
+.border-left {
+    border-left: 1px solid #000!important;
+}
+
+.border-right {
+    border-right: 1px solid #000!important;
+}
+
+.border-top {
+    border-top: 1px solid #000!important;
+}
+
+.report-header {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.o_report_layout_boxed table thead tr th {
+    text-transform: none!important;
+}
+
+.table-sm>thead>tr>th {
+    border-bottom: 1px solid #000!important;
+}
+
+.table-bordered>thead>tr>th {
+    border: 1px solid #000!important;
+}
+
+.table-bordered>tbody>tr>th {
+    border: 1px solid #000!important;
+}
+
+.table-bordered {
+    border: 1px solid #000!important;
+}
+
+.table-bordered>tbody>tr>td {
+    border-right: 1px solid #000!important;
+    border-bottom: 1px dashed #000!important;
+}
+
+.table-bordered th {
+    border: 1px solid #000!important;
+}
+
+.table-bordered td {
+    border-right: 1px solid #000!important;
+    border-left: 1px solid #000!important;
+    border-bottom: 1px dashed #000!important;
+}
+
+.o_form_sheet .wrapwrap {
+    background-color: #eee!important;
+}

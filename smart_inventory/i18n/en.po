@@ -1,0 +1,676 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* smart_inventory
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-26 05:47+0000\n"
+"PO-Revision-Date: 2019-10-26 05:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "(Ban hành kèm theo Thông tư số 200 ngày 22 tháng 12 năm 2014 của Bộ Tài chính)"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "(Ký, họ tên)"
+msgstr "(Signed, full name)"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "(Ký, họ tên, đóng dấu)"
+msgstr "(Signed, full name, mark)"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<i> (Ký, họ tên) </i>"
+msgstr "<i> (Signed, full name) </i>"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<i> (Ký, họ tên, đóng dấu) </i>"
+msgstr "<i> (Signed, full name, mark) </i>"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "<i> Tờ số ......... </i>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<span> -Số chứng từ gốc kèm theo: </span>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<span> -Tổng số tiền (Viết bằng chữ): </span>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<span> <i> Ngày ..... tháng ..... năm ..... </i> </span>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "<strong> Cộng cuối kỳ </strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "<strong> Số tồn đầu kỳ </strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Director</strong>"
+msgstr "<strong>Director</strong>"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Kế toán trưởng <br/>(Hoặc bộ phận có nhu cầu nhập)</strong>"
+msgstr "<strong>Chief Accountant <br/>(Hoặc bộ phận có nhu cầu nhập)</strong>"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "<strong>Kế toán trưởng</strong>"
+msgstr "<strong>Chief Accountant</strong>"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Mã số</strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Người giao hàng</strong>"
+msgstr "<strong>Deliver</strong>"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "<strong>Người lập biểu</strong>"
+msgstr "<strong>Creator</strong>"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Người lập phiếu</strong>"
+msgstr "<strong>Creator</strong>"
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "<strong>Stock name: </strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "<strong>Summary: </strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Số lượng</strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Thành tiền</strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Thủ kho</strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Tên, nhãn hiệu,qui cách, phẩm chất vật  tư, dụng cụ sản phẩm, hàng hoá)</strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Đơn giá</strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "<strong>Đơn vị tính</strong>"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Amount"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Barcode"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_view
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_view
+msgid "Cancel"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Closing"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__create_uid
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__create_date
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_account_move_line__picking_update
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_picking__credit
+msgid "Credit"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Có:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Data not found!"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Date ... month .... year........."
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_picking__debit
+msgid "Debit"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.smart_inventory_pickup_form
+msgid "Description"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_picking__location_dest_id
+msgid "Destination Location"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__display_name
+#: model:ir.model.fields,field_description:smart_inventory.field_report_smart_inventory_stock_card_report_template__display_name
+#: model:ir.model.fields,field_description:smart_inventory.field_report_smart_inventory_stock_inventory_report_template__display_name
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__display_name
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_inventory_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Diễn giải"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__end_date
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__end_date
+msgid "End Date"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__filter_date
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__filter_date
+msgid "Filter Date"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "From"
+msgstr ""
+
+#. module: smart_inventory
+#: selection:inventory.wizard,filter_date:0
+#: selection:stock.card.wizard,filter_date:0
+msgid "From the beginning of month to the present"
+msgstr ""
+
+#. module: smart_inventory
+#: selection:inventory.wizard,filter_date:0
+#: selection:stock.card.wizard,filter_date:0
+msgid "From the beginning of the year to present"
+msgstr ""
+
+#. module: smart_inventory
+#: selection:inventory.wizard,filter_date:0
+#: selection:stock.card.wizard,filter_date:0
+msgid "From the early quarter to the present"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_view
+msgid "Get Report"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Hạn sử dụng:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Họ tên người giao hàng:"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__id
+#: model:ir.model.fields,field_description:smart_inventory.field_report_smart_inventory_stock_card_report_template__id
+#: model:ir.model.fields,field_description:smart_inventory.field_report_smart_inventory_stock_inventory_report_template__id
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__id
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_inventory_report__id
+msgid "ID"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "INVENTORY SUMMARY REPORT"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_view
+msgid "Inventory"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.ui.menu,name:smart_inventory.menu_stock_inventory_report_label
+msgid "Inventory Report"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_picking__purchase_invoice_date
+msgid "Invoice Date"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Inward stock"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Item code"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model,name:smart_inventory.model_account_move
+msgid "Journal Entries"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model,name:smart_inventory.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Ký xác nhận của kế toán"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard____last_update
+#: model:ir.model.fields,field_description:smart_inventory.field_report_smart_inventory_stock_card_report_template____last_update
+#: model:ir.model.fields,field_description:smart_inventory.field_report_smart_inventory_stock_inventory_report_template____last_update
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard____last_update
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_inventory_report____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__write_uid
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__write_date
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Mã số:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Mẫu số: 01-VT"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Mẫu số: 02-VT"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Mẫu số: 03-VT"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Name of goods"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Ngày .... tháng .... năm........."
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Ngày nhập, xuất"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Ngày, tháng"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Nhập"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Nhập kho tại:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Nợ:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Opening"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_picking__picking_type_id
+msgid "Operation Type"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Outward stock"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "PHIẾU CHUYỂN KHO"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "PHIẾU NHẬP KHO"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "PHIẾU XUẤT KHO"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_picking__purchase_invoice_number
+msgid "Purchase Invoice"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Quantity"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_view
+msgid "Report"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "STT"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__start_date
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__start_date
+msgid "Start Date"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.actions.act_window,name:smart_inventory.stock_card_report_dialog
+#: model:ir.ui.menu,name:smart_inventory.menu_stock_card_report
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_view
+msgid "Stock Card"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.actions.report,name:smart_inventory.stock_card_report
+msgid "Stock Card Report"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.actions.act_window,name:smart_inventory.stock_inventory_report_dialog
+msgid "Stock Inventory"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.actions.report,name:smart_inventory.stock_inventory_report
+msgid "Stock Inventory Report"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model,name:smart_inventory.model_stock_move
+#: model:ir.model.fields,field_description:smart_inventory.field_account_move__stock_move_id
+msgid "Stock Move"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.ui.menu,name:smart_inventory.menu_stock_inventory_report
+msgid "Stock inventory"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Số TT"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Số hiệu chứng từ"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Số lô:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Số lượng"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Số:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "THẺ KHO (SỔ KHO)"
+msgstr ""
+
+#. module: smart_inventory
+#. openerp-web
+#: code:addons/smart_inventory/static/src/xml/stock_report.xml:9
+#, python-format
+msgid "Test"
+msgstr ""
+
+#. module: smart_inventory
+#: selection:inventory.wizard,filter_date:0
+#: selection:stock.card.wizard,filter_date:0
+msgid "The first half of the year"
+msgstr ""
+
+#. module: smart_inventory
+#: selection:inventory.wizard,filter_date:0
+#: selection:stock.card.wizard,filter_date:0
+msgid "The last half of the year "
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Theo chứng từ"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Theo hóa đơn số:"
+msgstr ""
+
+#. module: smart_inventory
+#: selection:inventory.wizard,filter_date:0
+#: selection:stock.card.wizard,filter_date:0
+msgid "This quarter"
+msgstr ""
+
+#. module: smart_inventory
+#: selection:inventory.wizard,filter_date:0
+#: selection:stock.card.wizard,filter_date:0
+msgid "This year"
+msgstr ""
+
+#. module: smart_inventory
+#. openerp-web
+#: code:addons/smart_inventory/static/src/xml/stock_report.xml:5
+#, python-format
+msgid "Thong bao moi"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Thực nhập"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "To"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_move__total
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Total"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model,name:smart_inventory.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Tên, nhãn hiệu, quy cách vật tư:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Tồn"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Từ ngày"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_inventory_report_template
+msgid "Unit"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model.fields,field_description:smart_inventory.field_inventory_wizard__warehouse
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_card_wizard__warehouse
+#: model:ir.model.fields,field_description:smart_inventory.field_stock_picking__warehouse
+msgid "Warehouse"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Xuất"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model,name:smart_inventory.model_inventory_wizard
+msgid "inventory.wizard"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model,name:smart_inventory.model_report_smart_inventory_stock_card_report_template
+msgid "report.smart_inventory.stock_card_report_template"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model,name:smart_inventory.model_report_smart_inventory_stock_inventory_report_template
+msgid "report.smart_inventory.stock_inventory_report_template"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model,name:smart_inventory.model_stock_card_wizard
+msgid "stock.card.wizard"
+msgstr ""
+
+#. module: smart_inventory
+#: model:ir.model,name:smart_inventory.model_stock_inventory_report
+msgid "stock.inventory.report"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "Đơn vị tính:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_picking_print_template
+msgid "Địa điểm:"
+msgstr ""
+
+#. module: smart_inventory
+#: model_terms:ir.ui.view,arch_db:smart_inventory.stock_card_report_template
+msgid "đến ngày"
+msgstr ""
+

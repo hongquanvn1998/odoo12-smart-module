@@ -1,0 +1,54 @@
+<odoo>
+    <record id="smart_invoice_filter_detail_cash" model="ir.ui.view">
+        <field name="name">Cash on hand ledger</field>
+        <field name="model">cash.ledger</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Cash on hand ledger">
+               <group>
+                    <field name="filter_date"/>
+                </group>
+                <group>
+                    <group>
+                        <field name="start_date" />
+                    </group>          
+                    <group>
+                        <field name="end_date" />
+                    </group>
+                </group>
+                <group>
+                        <field name="filter_account" 
+
+                        options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}"
+                        default="1"
+                        >
+                            <tree>
+                                <field name="code" />
+                                <field name="name" />
+                            </tree>
+                        </field>
+                </group> 
+                 <group>
+                     <field name="file_name" filename="cash_ledger_data" />
+					<field name="cash_ledger_data" invisible="1" />
+                </group>
+                <footer>
+                    <button name="get_info" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Export excel" class="btn-primary" name="export_excel" type="object"   icon="fa-download"/>
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record> 
+    <act_window id="main_cash_on_ledger"
+                name="Cash on hand ledger"
+                res_model="cash.ledger"
+                view_mode="form"
+                target="new"
+            />
+    
+    <menuitem sequence="1" action="main_cash_on_ledger"
+            id="menu_main_cash_on_ledger"
+            parent="smart_invoice.menu_financial_new"
+            name="Cash on hand ledger"/>
+</odoo>

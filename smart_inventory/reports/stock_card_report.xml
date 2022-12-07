@@ -1,0 +1,241 @@
+<odoo>
+    <data>
+        <record id="paperformat_A4_landscape" model="report.paperformat">
+            <field name="name">A4 Landscape</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">23</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report 
+        id="stock_card_report" 
+        model="stock.card.report" 
+        string="Stock Card Report" 
+        report_type="qweb-html" 
+        name="smart_inventory.stock_card_report_template" 
+        file="smart_inventory.stock_card_report_template" 
+        paperformat="smart_inventory.paperformat_A4_landscape"
+        />
+
+        <template id="stock_card_report_template">
+            <xpath expr="." position="inside">
+                <link href="/smart_inventory/static/src/css/inventory.css" rel="stylesheet" type="text/css" />
+            </xpath>
+
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <t t-foreach="docs" t-as="doc">
+                            <h2 class="text-center"> THẺ KHO (SỔ KHO)</h2>
+                            <div class="text-center mb-4">
+                                <strong>Từ ngày
+                                    <t t-esc="start_date" t-options='{"widget": "date", "fortmat":"dd-MM-yyyy"}' />
+                                đến ngày
+                                    <t t-esc="end_date" t-options='{"widget": "date", "fortmat":"dd-MM-yyyy"}' />
+                                </strong>
+                            </div>
+                            <div class="text-center mb-4">
+                               <strong>KHO: <t t-esc="doc['warehouse_name']" /> [<t t-esc="doc['warehouse_code']" />] </strong>
+                            </div>
+                            <div class="text-center mb-4">
+                                <i> Tờ số ......... </i>
+                            </div>
+ 
+                                <div class="row p-2">
+                                    <strong>Tên, nhãn hiệu, quy cách vật tư:  <t t-esc="doc['product_name']"/>
+                                    </strong>
+                                </div>
+                                <div class="row p-2">
+                                    <strong>Đơn vị tính: <t t-esc="doc['product_unit']"/>
+                                    </strong>
+                                </div>
+                                <div class="row p-2">
+                                    <strong>Mã số: <t t-esc="doc['product_code']"/>
+                                    </strong>
+                                </div> 
+
+                            <table class="table table-sm " style="border-width:1px!important; border-color:#000!important;">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2" class="text-center  align-middle">Số TT</th>
+                                        <th rowspan="2" class="text-center  align-middle">Ngày, tháng</th>
+                                        <th colspan="2" class="text-center  align-middle">Số hiệu chứng từ</th>
+                                        <th rowspan="2" class="text-center  align-middle">Diễn giải</th>
+                                        <th rowspan="2" class="text-center  align-middle">Ngày nhập, xuất</th>
+                                        <th colspan="3" class="text-center  align-middle">Số lượng</th>
+                                        <th rowspan="2" class="text-center  align-middle">Ký xác nhận của kế toán</th>
+                                    </tr>
+                                    <tr>
+
+                                        <th class="text-center">Nhập</th>
+                                        <th class="text-center">Xuất</th>
+                                        <th class="text-center">Nhập</th>
+                                        <th class="text-center">Xuất</th>
+                                        <th class="text-center">Tồn</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">A</th>
+                                        <th class="text-center">B</th>
+                                        <th class="text-center">C</th>
+                                        <th class="text-center">D</th>
+                                        <th class="text-center">E</th>
+                                        <th class="text-center">F</th>
+                                        <th class="text-center">1</th>
+                                        <th class="text-center">2</th>
+                                        <th class="text-center">3</th>
+                                        <th class="text-center">G</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3">Số lô:</th>
+                                        <th colspan="7">Hạn sử dụng:</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-if="doc['open_stock']>0">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <strong> Số tồn đầu kỳ </strong>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="text-right">
+                                                <strong>
+                                                    <t t-esc="doc['open_stock']"/>
+                                                </strong>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </t>
+                                    <t t-set="i" t-value="0"/>
+                                    <t t-set="closed" t-value="doc['open_stock']" />
+                                    <t t-set="imported" t-value="0"/>
+                                    <t t-set="exported" t-value="0"/> 
+                                    <t t-foreach="doc['items']" t-as="item">
+                                        <t t-set="closed" t-value="closed+item[9]-item[10]"/>
+                                        <t t-set="imported" t-value="imported+item[9]"/>
+                                        <t t-set="exported" t-value="exported+item[10]"/>
+                                        <t t-if="item[0]">
+                                             <tr>
+                                            <td class="text-center">
+                                                <t t-set="i" t-value="i+1"/>
+                                                <t t-esc="i" />
+                                            </td>
+                                            <td>
+                                                <t t-esc="item[0]" t-options='{"widget": "date", "fortmat":"dd-MM-yyyy"}' />
+                                            </td>
+                                            <td>
+                                                <t t-if="item[9]>0" t-esc="item[1]"/>
+                                            </td>
+                                            <td>
+                                                <t t-if="item[10]>0" t-esc="item[1]"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="item[11]"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="item[0]" t-options='{"widget": "date", "fortmat":"dd-MM-yyyy"}'/>
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-if="item[9]>0" t-esc="item[9]"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-if="item[10]>0" t-esc="item[10]"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-esc="closed" />
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        </t> 
+                                        <t t-else="">
+                                          <t t-set="i" t-value="i+1"/>
+                                          <t t-esc="i" />
+                                        </t> 
+                                        <t t-if="i==len(doc['items'])">
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td >
+                                                    <strong> Cộng cuối kỳ </strong>
+                                                </td>
+                                                <td></td>
+                                                <td class="text-right">
+                                                    <strong>
+                                                        <t t-if="imported>0" t-esc="imported"/>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-right">
+                                                    <strong>
+                                                        <t t-if="exported>0" t-esc="exported"/>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-right">
+                                                    <strong>
+                                                        <t t-esc="doc['open_stock'] + imported - exported"/>
+                                                    </strong>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </tbody>
+                            </table>
+
+                            <div class="oe_structure" />
+                            <div class="row">
+                                <div class="col-4">
+                                </div>
+                                <div class="col-4">
+                                </div>
+                                <div class="col-4">
+                                    <h6 class="text-center font-weight-light font-italic">Ngày .... tháng .... năm.........
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-4">
+                                    <h6 class="text-center">
+                                        <strong>Thủ kho</strong>
+                                    </h6>
+                                    <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                                </div>
+                                <div class="col-4">
+                                    <h6 class="text-center">
+                                        <strong>Kế toán trưởng</strong>
+                                    </h6>
+                                    <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+                                </div>
+                                <div class="col-4">
+                                    <h6 class="text-center">
+                                        <strong>Director</strong>
+                                    </h6>
+                                    <h6 class="text-center font-weight-light font-italic">(Ký, họ tên, đóng dấu)</h6>
+                                </div>
+                            </div>
+                            <p style="page-break-after:always;"/>
+                        </t>
+                    </div>
+                </t>
+            </t>
+
+        </template>
+
+    </data>
+</odoo>
+ 

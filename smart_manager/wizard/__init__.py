@@ -1,0 +1,1 @@
+from . import wizard_customer,wizard_partner,wizard_order

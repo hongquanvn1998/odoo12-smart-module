@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cat_goods" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Materials and Goods</field>
+        </record>
+        <record id="product_cate_property_stock_valuation_account_id" model="ir.property">
+            <field name="name">property_stock_valuation_account_id</field>
+            <field eval="'product.category,'+str(ref('cat_goods'))" name="res_id" model="product.category" /> 
+            <field name="fields_id" search="[('model','=','product.category'),('name','=','property_stock_valuation_account_id')]"/>
+            <field eval="'account.account,'+str(ref('l10n_vn.chart1561'))" model="account.account" name="value"/>
+            <field name="company_id" ref="base.main_company"/> 
+        </record>
+
+        <record id="product_cate_property_stock_account_output_categ_id" model="ir.property">
+            <field name="name">property_stock_account_output_categ_id</field>
+            <field eval="'product.category,'+str(ref('cat_goods'))" name="res_id" model="product.category" /> 
+            <field name="fields_id" search="[('model','=','product.category'),('name','=','property_stock_account_output_categ_id')]"/>
+            <field eval="'account.account,'+str(ref('l10n_vn.chart632'))" model="account.account" name="value"/>
+            <field name="company_id" ref="base.main_company"/> 
+        </record>
+
+        <record id="product_cate_property_stock_account_input_categ_id" model="ir.property">
+            <field name="name">property_stock_account_input_categ_id</field>
+            <field eval="'product.category,'+str(ref('cat_goods'))" name="res_id" model="product.category" /> 
+            <field name="fields_id" search="[('model','=','product.category'),('name','=','property_stock_account_input_categ_id')]"/>
+            <field eval="'account.account,'+str(ref('l10n_vn.chart3388'))" model="account.account" name="value"/>
+            <field name="company_id" ref="base.main_company"/> 
+        </record>
+
+        <record id="product_cate_property_account_expense_categ_id" model="ir.property">
+            <field name="name">property_account_expense_categ_id</field>
+            <field eval="'product.category,'+str(ref('cat_goods'))" name="res_id" model="product.category" /> 
+            <field name="fields_id" search="[('model','=','product.category'),('name','=','property_account_expense_categ_id')]"/>
+            <field eval="'account.account,'+str(ref('l10n_vn.chart3388'))" model="account.account" name="value"/>
+            <field name="company_id" ref="base.main_company"/> 
+        </record>
+
+
+        <record id="product_cate_property_valuation" model="ir.property">
+            <field name="name">property_valuation</field>
+            <field eval="'product.category,'+str(ref('cat_goods'))" name="res_id" model="product.category" /> 
+            <field name="fields_id" search="[('model','=','product.category'),('name','=','property_valuation')]"/>
+            <field name="value_text">real_time</field>
+            <field name="type">selection</field>
+            <field name="company_id" ref="base.main_company"/> 
+        </record>
+        <record id="product_cate_property_cost_method" model="ir.property">
+            <field name="name">property_valuation</field>
+            <field eval="'product.category,'+str(ref('cat_goods'))" name="res_id" model="product.category" /> 
+            <field name="fields_id" search="[('model','=','product.category'),('name','=','property_cost_method')]"/>
+            <field name="value_text">fifo</field>
+            <field name="type">selection</field>
+            <field name="company_id" ref="base.main_company"/> 
+        </record>
+
+         
+    </data> 
+</odoo>

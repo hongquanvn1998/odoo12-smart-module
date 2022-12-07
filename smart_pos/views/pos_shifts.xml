@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- model.name tree view -->
+        <record id="pos_shifts_view_tree" model="ir.ui.view">
+            <field name="name">pos.shifts.view.tree</field>
+            <field name="model">model.name</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Add your fields here -->
+                    
+                </tree>
+            </field>
+        </record>
+        <!-- model.name form view -->
+        <record id="pos_shifts_view_form" model="ir.ui.view">
+            <field name="name">pos.shifts.view.form</field>
+            <field name="model">model.name</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- model.name kanban view -->
+        <record id="pos_shifts_view_kanban" model="ir.ui.view">
+            <field name="name">pos.shifts.view.kanban</field>
+            <field name="model">model.name</field>
+            <field name="arch" type="xml">
+                <kanban string="Kanban Description">
+                    <!-- Add your fields here -->
+                    
+                </kanban>
+            </field>
+        </record>
+        <!-- model.name action window -->
+        <record id="pos_shifts_action" model="ir.actions.act_window">
+            <field name="name">pos.shifts.action</field>
+            <field name="res_model">model.name</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="help" type="html">
+                <!-- Add Text Here -->
+            </field>
+        </record>
+    </data>
+</odoo>

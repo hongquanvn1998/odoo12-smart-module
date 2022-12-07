@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+    
+        <record id="report_traffic_view_graph" model="ir.ui.view">
+            <field name="name">report.traffic.view.graph</field>
+            <field name="model">report.traffic</field>
+            <field name="arch" type="xml">
+                <graph string="Report Traffic Grap" stacked="False">
+                    <field name="name_link" type="row"/>
+                    <field name="total_traffic" type="col"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="view_sale_order_inherit_search" model="ir.ui.view">
+      <field name="name">report.traffic.search.expand.filter</field>
+      <field name="model">report.traffic</field>
+      <field name="arch" type="xml">
+        <search string="Stock Inventory">
+            <field name="total_traffic" string="Total Traffic" />
+            <group expand="0" string="Group By">
+                <filter string="Shop thoi trang" name="total_traffic" domain="[('total_traffic', '>', 5)]"/>
+            </group>
+            </search>
+      </field>
+    </record>
+    
+    </data>
+    
+
+</odoo>

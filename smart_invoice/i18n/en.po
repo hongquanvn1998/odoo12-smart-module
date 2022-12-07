@@ -1,0 +1,4318 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* smart_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-08 08:53+0000\n"
+"PO-Revision-Date: 2019-11-08 08:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "(Ban hành kèm theo Thông tư số 200 ngày 22 tháng 12 năm 2014 của Bộ Tài chính)"
+msgstr "Issued according to The Circular 200 of The Ministry Of Finance on  22/12/2014 )"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "(Ký, họ tên)"
+msgstr "(Signed, full name)"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "(Ký, họ tên, đóng dấu)"
+msgstr "(Signed, full name, mark)"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "(Theo phương pháp trực tiếp)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "- Cổ phiếu phổ thông có quyền biểu quyết"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "- Cổ phiếu ưu đãi"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "- Giá trị hao mòn lũy kế (*)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "- LNST chưa phân phối lũy kế đến cuối kỳ trước"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "- Nguyên giá"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "- Trong đó: Chi phí lãi vay"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "01"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "02"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "03"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "04"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "05"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "06"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "07"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Chi phí sản xuất, kinh doanh dở dang dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Chi phí trả trước dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Chi phí trả trước ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Chứng khoán kinh doanh"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Hàng tồn kho"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Nguồn kinh phí"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Phải thu dài hạn của khác hàng"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Phải thu ngắn hạn của khách hàng"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Phải trả dài hạn người bán"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Phải trả người bán ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Tiền"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "1. Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "1. Tiền thu từ bán hàng, cung cấp dịch vụ và doanh thu khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Tài sản cố định hữu hình"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Vốn góp của chủ sở hhwx"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "1. Đầu tư vào công ty con"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "1.Doanh thu bán hàng và cung cấp dịch vụ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "10"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "10. Cổ phiếu ưu đãi"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "10. Quỹ khác thuộc vốn chủ sở hữu"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "10. Vay và nợ thuê tài chính ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "10.Lợi nhuận thuần từ hoạt động kinh doanh (30 = 20 + (21 - 22) - 25 - 26)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "11"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "11. Dự phòng phải trả ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "11. Lợi nhuận sau thuế chưa phân phối"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "11. Thuế thu nhập hoãn lại phải trờ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "11.Thu nhập khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "111"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "112"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "12. Dự phòng phải trả dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "12. Nguồn vốn đầu tư XDCB"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "12. Quỹ khen thưởng. phúc lợ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "12.Chi phí khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "121"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "122"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "123"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "13. Quỹ bình ổn giá"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "13. Quỹ phát triển khoa học và công nghệ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "13.Lợi nhuận khác (40 = 31 - 32)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "131"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "132"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "133"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "134"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "135"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "136"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "137"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "139"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "14. Giao dịch mua bán lại trái phiến Chính phủ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "14.Tổng lợi nhuận kế toán trước thuế (50 = 30 + 40)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "141"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "149"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "15.Chi phí thuế TNDN hiện hành"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "151"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "152"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "153"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "154"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "155"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "16.Chi phí thuế TNDN hoãn lại"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "17.Lợi nhuận sau thuế thu nhập doanh nghiệp(60 = 50 - 51 - 52)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "18.Lãi cơ bản trên cổ phiếu(*)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "19.Lãi suy giảm trên cổ phiếu(*)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Chi phí xây dựng cơ bản dở dang"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Các khoản tương đương tiền"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Dự phòng giảm giá chứng khoán kinh doanh(*)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Nguồn kính phí đã hình thành TSCĐ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Người mua trả tiền trước dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Người mua trả tiền trước ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Thuế GTGT được khấu trừ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Thặng dư vốn cổ phần"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "2. Tiền chi trả cho người cung cấp hàng hóa và dịch vụ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "2. Tiền thu từ thanh lý, nhượng bán TSCĐ và các tàu sản dài hạn khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "2. Tiền trả lại vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Trả trước cho người bán dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Trả trước cho người bán ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Tài sản cố định thuê tài chính"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Tài sản thuế thu nhập hoãn lại"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2. Đầu tư vào công ty liên doanh,liên kết"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "2.Các khoản giảm trừ doanh thu"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "2.Dự phòng giảm giá hàng tồn kho (*)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "20"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "21"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "211"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "212"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "213"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "214"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "215"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "216"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "219"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "22"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "221"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "222"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "223"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "224"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "225"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "226"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "227"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "228"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "229"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "23"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "231"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "232"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "24"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "241"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "242"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "25"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "251"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "252"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "253"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "254"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "255"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "261"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "262"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "263"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "268"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "27"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "3 = 1 X 2"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Chi phí phải trả dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Phải thu nội bộ ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Quyền chọn chuyển đổi trái phiếu"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Thiết bị, vật tư,phụ tùng thay thế dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Thuế và các khoản khác phải thu Nhà nước"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Thuế và các khoản phải nộp Nhà nước"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "3. Tiền chi cho vay, mua các công cụ nợ của đơn vị khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "3. Tiền chi trả cho người lao động"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "3. Tiền vay ngắn hạn, dài hạn nhận được"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Tài sản cố định vô hình"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Vốn kinh doanh ở đơn vị trực thuộc"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Đầu tư góp vốn vào đơn vị khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "3. Đầu tư nắm giữ đến ngày đáo hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "3.Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "30"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "31"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "311"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "312"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "313"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "314"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "315"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "316"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "317"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "318"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "319"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "32"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "320"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "321"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "322"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "323"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "324"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "33"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "331"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "332"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "333"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "334"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "335"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "336"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "337"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "338"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "339"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "34"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "340"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "341"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "342"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "343"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "35"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "36"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "4. Dự phòng đầu tư tài chính dài hạn (*)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "4. Giao dịch mua bán lại trái phiếu Chính phủ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "4. Phải thu nội bộ dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "4. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "4. Phải trả người lao động"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "4. Phải trả nội bộ về vốn kinh doanh"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "4. Tiền lãi vay đã trả"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "4. Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "4. Tiền trả nợ gốc vay"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "4. Tài sản dài hạn khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "4. Vốn khác của chủ sở hữu"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "4.Giá vốn hàng bán"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "40"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "411"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "411a"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "411b"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "412"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "413"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "414"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "415"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "416"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "417"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "418"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "419"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "420"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "421"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "421a"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "421b"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "422"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "431"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "432"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "5. Chi phí phải trả ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "5. Cổ phiếu quỹ (*)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "5. Phải thu về cho vay dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "5. Phải thu về cho vay ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "5. Phải trả nội bộ dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "5. Thuế thu nhập doanh nghiệp đã nộp"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "5. Tiền chi đầu tư góp vốn vào đơn vị khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "5. Tiền trả nợ gốc thuê tài chính"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "5. Tài sản ngắn hạn khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "5. Đầu tư nắm giữ đến ngày đáo hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "5.Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20 = 10 -11)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "50"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "51"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "52"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "6. Chênh lệch đánh giá lại tài sản"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "6. Cổ tức, lợi nhuận đã trả cho chủ sở hữu"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "6. Doanh thu chưa thực hiện dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "6. Phải thu dài hạn khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "6. Phải thu ngắn hạn khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "6. Phải trả nội bộ ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "6. Tiền thu khác từ hoạt động kinh doanh"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "6.Doanh thu hoạt động tài chính"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "60"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "61"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "7. Chênh lệch tỷ giá đối đoái"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "7. Dự phòng phải thu dài hạn khó đòi (*)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "7. Dự phòng phải thu ngắn hạn khó đòi (*)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "7. Phải trả dài hạn khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "7. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "7. Tiền chi khác cho hoạt động kinh doanh"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "7. Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "7.Chi phí tài chính"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "70"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "71"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "8. Doanh thu chưa thực hiện ngắn hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "8. Quỹ đầu tư phát triển"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "8. Tài sản thiếu chờ xử lý"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "8. Vay và nợ thuế tài chính dài hạn"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "8.Chi phí bán hàng"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "9. Phải trả ngắn hạn khác"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "9. Quỹ hỗ tợ sắp xếp doanh nghiệp"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "9. Trái phiếu chuyển đổi"
+msgstr "9. Convertible bond"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "9.Chi phí bán hàng"
+msgstr "9.Sales expenses"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+msgid ": General ledger"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid ": Trial Balance"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "<i> (Ký, họ tên) </i>"
+msgstr "<i> (Signed, full name) </i>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "<i> (Ký, họ tên, đóng dấu) </i>"
+msgstr "<i> (Signed, full name, mark) </i>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<i> Ký, ghi rõ họ tên </i>"
+msgstr "<i> Signed, full name </i>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<i> Ký, đóng dấu, ghi rõ họ tên </i>"
+msgstr "<i> Signed, mark, full name </i>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\" invoice-copy-1 \"> Ngày </span>"
+msgstr "<span class=\" invoice-copy-1 \"> Date </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\" invoice-copy-1 \">năm </span>"
+msgstr "<span class=\" invoice-copy-1 \">year </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\" invoice-copy-1 \">tháng </span>"
+msgstr "<span class=\" invoice-copy-1 \">month </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\" invoice-copy-2 \"> Ngày </span>"
+msgstr "<span class=\" invoice-copy-2 \"> Date </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\" invoice-copy-2 \">năm </span>"
+msgstr "<span class=\" invoice-copy-2 \">year </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\" invoice-copy-2 \">tháng </span>"
+msgstr "<span class=\" invoice-copy-2 \">month </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\" invoice-copy-3 \"> Ngày </span>"
+msgstr "<span class=\" invoice-copy-3 \"> Date </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\" invoice-copy-3 \">năm </span>"
+msgstr "<span class=\" invoice-copy-3 \">year </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\" invoice-copy-3 \">tháng </span>"
+msgstr "<span class=\" invoice-copy-3 \">month </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "<span class=\"font-weight-bold\">1111</span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "<span class=\"font-weight-bold\">Số tồn đầu kỳ</span>"
+msgstr "<span class=\"font-weight-bold\">Opening</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-2\"> Ký hiệu: </span>"
+msgstr "<span class=\"invoice-copy-1 mr-2\"> Symbol: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-2\"> Mẫu số: </span>"
+msgstr "<span class=\"invoice-copy-1 mr-2\"> Form no.: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-2\"> Số: </span>"
+msgstr "<span class=\"invoice-copy-1 mr-2\"> NO.: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-2\">Số tiền bằng chữ: </span>"
+msgstr "<span class=\"invoice-copy-1 mr-2\">Amount in words: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\"> Hình thức thanh toán: </span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\"> Payment method: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\"> Họ tên người mua hàng:</span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\"> Full name buyer:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\"> Số tài khoản: </span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\"> Account number: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\"> Điện thoại:</span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\"> Phone:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\"> Đơn vị bán hàng: </span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\"> Point of sale: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\"> Địa chỉ: </span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\"> Address: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\">Mã số thuế:</span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\">Tax code:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\">Số tài khoản:</span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\">Account number:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\">Đơn vị:</span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\">Unit:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1 mr-3\">Địa chỉ:</span>"
+msgstr "<span class=\"invoice-copy-1 mr-3\">Address:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1\"> <i> (Cần kiểm tra, đối chiếu trước khi lập, giao, nhận hóa\n"
+"                                        đơn) </i> </span>"
+msgstr "<span class=\"invoice-copy-1\"> <i> (Need to check and compare before making, delivering and receiving \n"
+"                                        bill) </i> </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1\"> Mã hàng </span>"
+msgstr "<span class=\"invoice-copy-1\"> Product code </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1\"> STT </span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1\">Số lượng </span>"
+msgstr "<span class=\"invoice-copy-1\">Quantity </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1\">Thành tiền </span>"
+msgstr "<span class=\"invoice-copy-1\">Payment </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1\">Tên hàng hóa, dịch vụ </span>"
+msgstr "<span class=\"invoice-copy-1\">Name of product and service </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1\">Đơn giá </span>"
+msgstr "<span class=\"invoice-copy-1\">Unit price </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-1\">Đơn vị tính </span>"
+msgstr "<span class=\"invoice-copy-1\">Unit </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-2\"> Ký hiệu: </span>"
+msgstr "<span class=\"invoice-copy-2 mr-2\"> Symbol: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-2\"> Mẫu số: </span>"
+msgstr "<span class=\"invoice-copy-2 mr-2\"> Form no.: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-2\"> Số: </span>"
+msgstr "<span class=\"invoice-copy-2 mr-2\"> No.: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-2\">Số tiền bằng chữ: </span>"
+msgstr "<span class=\"invoice-copy-2 mr-2\">Amount in words: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\"> Hình thức thanh toán: </span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\"> Payment method: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\"> Họ tên người mua hàng:</span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\"> Full name buyer:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\"> Số tài khoản: </span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\"> Account number: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\"> Điện thoại:</span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\"> Phone:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\"> Đơn vị bán hàng: </span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\"> Point of sale: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\"> Địa chỉ: </span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\"> Address: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\">Mã số thuế:</span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\">Tax code:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\">Số tài khoản:</span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\">Account number:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\">Đơn vị:</span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\">Unit:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2 mr-3\">Địa chỉ:</span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\">Address:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2\"> <i> (Cần kiểm tra, đối chiếu trước khi lập, giao, nhận hóa\n"
+"                                        đơn) </i> </span>"
+msgstr "<span class=\"invoice-copy-1\"> <i> (Need to check and compare before making, delivering and receiving \n"
+"                                        bill) </i> </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2\"> Mã hàng </span>"
+msgstr "<span class=\"invoice-copy-2\"> Product code </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2\"> STT </span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2\">Số lượng </span>"
+msgstr "<span class=\"invoice-copy-1\">Quantity </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2\">Thành tiền </span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2\">Tên hàng hóa, dịch vụ </span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2\">Đơn giá </span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-2\">Đơn vị tính </span>"
+msgstr "<span class=\"invoice-copy-2 mr-3\">Unit:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-2\"> Ký hiệu: </span>"
+msgstr "<span class=\"invoice-copy-3 mr-2\"> symbol: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-2\"> Mẫu số: </span>"
+msgstr "<span class=\"invoice-copy-3 mr-2\"> Form no.: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-2\"> Số: </span>"
+msgstr "<span class=\"invoice-copy-3 mr-2\"> No.: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-2\">Số tiền bằng chữ: </span>"
+msgstr "<span class=\"invoice-copy-3 mr-2\">Amount in words: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\"> Hình thức thanh toán: </span>"
+msgstr "<span class=\"invoice-copy-3 mr-3\"> Payment method: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\"> Họ tên người mua hàng:</span>"
+msgstr "<span class=\"invoice-copy-3 mr-3\"> Full name buyer:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\"> Số tài khoản: </span>"
+msgstr "<span class=\"invoice-copy-3 mr-3\"> Account number: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\"> Điện thoại:</span>"
+msgstr "<span class=\"invoice-copy-3 mr-3\"> Phone:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\"> Đơn vị bán hàng: </span>"
+msgstr "<span class=\"invoice-copy-3 mr-3\"> Point of sale: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\"> Địa chỉ: </span>"
+msgstr "<span class=\"invoice-copy-3 mr-3\"> Address: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\">Mã số thuế:</span>"
+msgstr "<span class=\"invoice-copy-3 mr-3\">Tax code:</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\">Số tài khoản:</span>"
+msgstr "<span class=\"invoice-copy-3 mr-3\"> Account number: </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\">Đơn vị:</span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3 mr-3\">Địa chỉ:</span>"
+msgstr "<span class=\"invoice-copy-3 mr-3\">Address</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3\"> <i> (Cần kiểm tra, đối chiếu trước khi lập, giao, nhận hóa\n"
+"                                        đơn) </i> </span>"
+msgstr "<span class=\"invoice-copy-3\"> <i> (Need to check and compare before making, delivering and receiving\n"
+"                                        bill) </i> </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3\"> Mã hàng </span>"
+msgstr "<span class=\"invoice-copy-3\"> Product code </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3\"> STT </span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3\">Số lượng </span>"
+msgstr "<span class=\"invoice-copy-3\">Quantity </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3\">Thành tiền </span>"
+msgstr "<span class=\"invoice-copy-3\">Amount </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3\">Tên hàng hóa, dịch vụ </span>"
+msgstr "<span class=\"invoice-copy-3\">Product name, service </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3\">Đơn giá </span>"
+msgstr "<span class=\"invoice-copy-3\">Unit price </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<span class=\"invoice-copy-3\">Đơn vị tính </span>"
+msgstr "<span class=\"invoice-copy-3\">Unit </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "<span class=\"o_form_label\" attrs=\"{'invisible': ['|',('state','=','draft'), ('type','!=','out_refund')]}\">Credit Note</span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "<span> <i> Ngày ..... tháng ..... năm ..... </i> </span>"
+msgstr "<span> <i> Date ..... month ..... year ..... </i> </span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "<span>(Ban hành kèm theo Thông tư số 200/2014/TT-BTC</span> \n"
+"                                    <span>Ngày 22/12/2014 của Bộ Tài chính)</span>"
+msgstr "<span>(Issued according to The Circular 200/2014/TT-BTC of The Ministry</span> \n"
+"                                    <span>Of Finance on 22/12/2014)</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<span>(Ban hành theo Thông tư số 200/2014/TT-BTC</span>"
+msgstr "<span>(Issued according to The Circular 200/2014/TT-BTC</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<span>Ngày 22/12/2014 của Bộ Tài chính)</span>"
+msgstr "<span>of The Ministry Of Finance on 22/12/2014 của Bộ Tài chính)</span>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "<span>Not due</span>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong/>Lưu chuyển tiền thuần trong kỳ (50 = 20 + 30 + 40)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+msgid "<strong> HÓA ĐƠN BÁN HÀNG </strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "<strong> HÓA ĐƠN GIÁ TRỊ GIA TĂNG </strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "<strong> To </strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong> Tại ngày </strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>100</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>110</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>120</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>130</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>140</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>150</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>200</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>210</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>220</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>230</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>240</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>250</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>260</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>270</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>300</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>30</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>310</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>330</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>400</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>40</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>410</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>430</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>440</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>50</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>60</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>70</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>A. TÀI SẢN NGẮN HẠN</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>B. TÀI SẢN DÀI HẠN</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>C - NỢ PHẢI TRẢ</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+msgid "<strong>Company:</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>D - VỐN CHỦ SỞ HỮU</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_financial
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "<strong>Date from :</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_financial
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "<strong>Date to :</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "<strong>Display Account:</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+msgid "<strong>Display Account</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "<strong>Entries Sorted By:</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "<strong>From </strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_tax
+msgid "<strong>From</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "<strong>Ghi chú: (*)</strong> Chỉ áp dụng tại công ty cổ phần"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "<strong>Director</strong>"
+msgstr "<strong>Director</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>I. Các khoản phải thu dài hạn</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>I. Lưu chuyển tiền từ hoạt động kinh doanh</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>I. Nợ ngắn hạn</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>I. Tiền và các khoản tương đương tiền</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>I. Vốn chủ sở hữu</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>II. Lưu chuyển tiền từ hoạt động đầu tư</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>II. Nguồn kinh phí và quỹ khác</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>II. Nợ dài hạn</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>II. Tài sản cố định</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>II. Đầu tư tài chính ngắn hạn</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>III. Bất động sản đầu tư</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>III. Các khoản phải thu ngắn hạn</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>III. Lưu chuyển tiền từ hoạt động tài chính</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>IV. Hàng tồn kho</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>IV. Tài sản dở dang dài hạn</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "<strong>Journal:</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+msgid "<strong>Journals:</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "<strong>Kế toán trưởng</strong>"
+msgstr "<strong>Chief Accountant</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>Lưu chuyển tiền thuần từ hoạt động kinh doanh</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>Lưu chuyển tiền thuần từ hoạt động tài chính</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>Lưu chuyển tiền thuần từ hoạt động đầu tư</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>Mẫu số: B01-DN</strong>"
+msgstr "<strong>Form no.: B01-DN</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "<strong>Mẫu số: B02-DN</strong>"
+msgstr "<strong>Form no.: B02-DN</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>Mẫu số: B03-DN</strong>"
+msgstr "<strong>Form no.: B03-DN</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>NGUỒN VỐN</strong>"
+msgstr "<strong>OWNERS' EQUITY</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>Người lập biểu</strong>"
+msgstr "<strong>Creator</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "<strong>Người lập phiếu</strong>"
+msgstr "<strong>Creator</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "<strong>Người nộp tiền</strong>"
+msgstr "<strong>Payer</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "<strong>Partner's:</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "<strong>Period Length (days)</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_tax
+msgid "<strong>Purchase</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+msgid "<strong>Sorted By:</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "<strong>Start Date:</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_financial
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "<strong>Target Moves:</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "<strong>Thủ quỹ</strong>"
+msgstr "<strong>Treasurer</strong>"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>Tiền và tương đương tiền cuối kỳ (70 = 50 + 60 + 61)</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>Tiền và tương đường tiền đâu kỳ</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400)</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>TỔNG CỘNG TÀI SẢN (270 = 100 + 200)</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>V. Tài sản ngắn hạn khác</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>V. Đầu tư tài chính dài hạn</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "<strong>VI. Tài sản dài hạn khác</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "<strong>VIII</strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_tax
+msgid "<strong>to </strong>"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "Account"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_aged_trial_balance
+msgid "Account Aged Trial balance Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_common_account_report
+msgid "Account Common Account Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_common_partner_report
+msgid "Account Common Partner Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__credit_account_id
+msgid "Account Credit"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__debit_account_id
+msgid "Account Debit"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.main_cash_on_ledger
+#: model:ir.ui.menu,name:smart_invoice.menu_main_cash_on_ledger
+msgid "Cash on hand ledger"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.report,name:smart_invoice.cash_ledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_filter_detail_cash
+msgid "Cash on hand ledger"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_report_partner_ledger
+msgid "Account Partner Ledger"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_print_journal
+msgid "Account Print Journal"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_financial_report
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__children_ids
+#: model_terms:ir.ui.view,arch_db:smart_invoice.view_account_financial_report_form
+#: model_terms:ir.ui.view,arch_db:smart_invoice.view_account_financial_report_search
+#: model_terms:ir.ui.view,arch_db:smart_invoice.view_account_financial_report_tree
+msgid "Account Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__account_report_id
+#: model:ir.ui.menu,name:smart_invoice.menu_account_reports
+msgid "Account Reports"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "Account Total"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,type:0
+msgid "Account Type"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__account_type_ids
+msgid "Account Types"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "Accounting Date"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_accounting_report
+msgid "Accounting Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.report,name:smart_invoice.sale_accounting_document_print_view_report
+msgid "Accounting document"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,type:0
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__account_ids
+msgid "Accounts"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Add a line"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Add a note"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Add a section"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__address_submitter
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Address"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_account_aged_balance_view
+#: model:ir.actions.report,name:smart_invoice.action_report_aged_partner_balance
+#: model:ir.ui.menu,name:smart_invoice.menu_aged_trial_balance
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "Aged Partner Balance"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.balance.report,display_account:0
+#: selection:account.common.account.report,display_account:0
+#: selection:account.report.general.ledger,display_account:0
+msgid "All"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.report,name:smart_invoice.all_balance_sheet
+#: model:ir.ui.menu,name:smart_invoice.menu_main_all_balance_sheet
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_all_balance_sheet
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_business_activities_get
+msgid "All Balance Sheet"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.aged.trial.balance,target_move:0
+#: selection:account.balance.report,target_move:0
+#: selection:account.common.account.report,target_move:0
+#: selection:account.common.partner.report,target_move:0
+#: selection:account.print.journal,target_move:0
+#: selection:account.report.general.ledger,target_move:0
+#: selection:account.report.partner.ledger,target_move:0
+#: selection:account.tax.report,target_move:0
+#: selection:accounting.report,target_move:0
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_financial
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "All Entries"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.aged.trial.balance,target_move:0
+#: selection:account.balance.report,target_move:0
+#: selection:account.common.account.report,target_move:0
+#: selection:account.common.partner.report,target_move:0
+#: selection:account.print.journal,target_move:0
+#: selection:account.report.general.ledger,target_move:0
+#: selection:account.report.partner.ledger,target_move:0
+#: selection:account.tax.report,target_move:0
+#: selection:accounting.report,target_move:0
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_financial
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "All Posted Entries"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "All accounts"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+msgid "All accounts'"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__payment_amount
+msgid "Amount"
+msgstr ""
+
+#. module: smart_invoice
+#: model:account.financial.report,name:smart_invoice.account_financial_report_assets0
+msgid "Assets"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__attach
+msgid "Attach"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,style_overwrite:0
+msgid "Automatic formatting"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__accounted
+msgid "BCTC đã được kiểm toán"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_financial
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "Balance"
+msgstr ""
+
+#. module: smart_invoice
+#: model:account.financial.report,name:smart_invoice.account_financial_report_balancesheet0
+#: model:ir.actions.act_window,name:smart_invoice.action_account_report_bs
+#: model:ir.actions.act_window,name:smart_invoice.main_all_balance_sheet
+#: model:ir.ui.menu,name:smart_invoice.menu_account_report_bs
+msgid "Balance Sheet"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_supplier_form_override
+msgid "Bank Account"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "Base Amount"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.main_business_activities
+#: model:ir.actions.report,name:smart_invoice.business_activities
+#: model:ir.ui.menu,name:smart_invoice.menu_main_business_activities
+msgid "Business Activities"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__buyer_name
+msgid "Buyer name"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "Báo cáo kết quả hoạt động kinh doanh"
+msgstr "Business Activities"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "Báo cáo tổng hợp dòng tiền"
+msgstr "Consolidated Statements of Cash Flows"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "Bảng cân đối kế toán"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_accounting_document_view
+msgid "CHỨNG TỪ KẾ TOÁN"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.account_aged_balance_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_all_balance_sheet
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_business_activities_get
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_cash_flows_get
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_filter_detail_cash
+msgid "Cancel"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.invoice,payment_type:0
+msgid "Chuyển khoản"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "Chỉ tiêu"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "Code"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.payment,reason:0
+msgid "Collect refunds"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__label_filter
+msgid "Column Label"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__company_id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__company_id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__company_id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__company_id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__company_id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__company_id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__company_id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__company_id
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__company_id
+msgid "Company"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.accounting_report_view
+msgid "Comparison"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.main_cash_flows
+#: model:ir.actions.report,name:smart_invoice.cash_flows
+#: model:ir.ui.menu,name:smart_invoice.menu_main_cash_flows
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_cash_flows_get
+msgid "Consolidated Statements of Cash Flows"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "Contra Account"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__create_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__create_date
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_financial
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "Credit"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+msgid "Currency"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Customer"
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/models/account_receipt.py:485
+#, python-format
+msgid "Customer Credit Note"
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/models/account_receipt.py:482
+#, python-format
+msgid "Customer Payment"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Có:"
+msgstr "Debit:"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+msgid "Cộng tiền bán hàng hóa, dịch vụ:"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Cộng tiền hàng"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "Data not found!"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.print.journal,sort_selection:0
+#: selection:account.report.general.ledger,sortby:0
+#: selection:accounting.report,filter_cmp:0
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+msgid "Date"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__date_accouting
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Date Accounting"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__date_vouchers
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Date Vouchers"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "Date vouchers"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.accounting_report_view
+msgid "Dates"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_financial
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "Debit"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__description_vendor
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "Description"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Disc (%)"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__display_account
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__display_account
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__display_account
+msgid "Display Accounts"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__debit_credit
+msgid "Display Debit/Credit Columns"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_all_balance_sheet_display__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_business_activities_display__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_cash_flows_display__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_detail_cash_display__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_agedpartnerbalance__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_financial__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_generalledger__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_journal__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_partnerledger__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_tax__display_name
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_trialbalance__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,display_detail:0
+msgid "Display children flat"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,display_detail:0
+msgid "Display children with hierarchy"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__display_detail
+msgid "Display details"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_accounting_document_view
+msgid "Diễn giải:"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Draft Credit Note"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Draft Invoice"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__enable_filter
+msgid "Enable Comparison"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__date_to
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__end_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__date_to
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__end_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__end_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__date_to
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__date_to
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__end_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__date_to
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__date_to
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__date_to
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__date_to
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__date_to
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__date_to_cmp
+msgid "End Date"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__sort_selection
+msgid "Entries Sorted by"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+msgid "Entry Label"
+msgstr ""
+
+#. module: smart_invoice
+#: model:account.financial.report,name:smart_invoice.account_financial_report_expense0
+msgid "Expense"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__filter_account
+msgid "Filter Account"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__filter_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__filter_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__filter_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__filter_date
+msgid "Filter Date"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__filter_cmp
+msgid "Filter by"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.ui.menu,name:smart_invoice.menu_financial_new
+msgid "Financial"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__style_overwrite
+msgid "Financial Report Style"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_account_financial_report_tree
+#: model:ir.ui.menu,name:smart_invoice.menu_finance_reports_settings
+msgid "Financial Reports"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.report,name:smart_invoice.action_report_financial
+msgid "Financial report"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.action_window_invoice_funds_recepts_form
+msgid "Floor"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,help:smart_invoice.field_account_financial_report__sign
+msgid "For accounts that are typically more debited than credited and that you would like to print as negative amounts in your reports, you should reverse the sign of the balance; e.g.: Expense account. The same applies for accounts that are typically more credited than debited and that you would like to print as positive amounts in your reports; e.g.: Income account."
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/reports/report_aged_partner.py:219
+#: code:addons/smart_invoice/reports/report_financial.py:149
+#: code:addons/smart_invoice/reports/report_general_ledger.py:114
+#: code:addons/smart_invoice/reports/report_journal.py:100
+#: code:addons/smart_invoice/reports/report_partner_ledger.py:72
+#: code:addons/smart_invoice/reports/report_tax.py:13
+#: code:addons/smart_invoice/reports/report_trial_balance.py:63
+#, python-format
+msgid "Form content is missing, this report cannot be printed."
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.all.balance.sheet,filter_date:0
+#: selection:account.business.activities,filter_date:0
+#: selection:account.cash.flows,filter_date:0
+#: selection:cash.ledger,filter_date:0
+msgid "From the beginning of month to the present"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.all.balance.sheet,filter_date:0
+#: selection:account.business.activities,filter_date:0
+#: selection:account.cash.flows,filter_date:0
+#: selection:cash.ledger,filter_date:0
+msgid "From the beginning of the year to present"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.all.balance.sheet,filter_date:0
+#: selection:account.business.activities,filter_date:0
+#: selection:account.cash.flows,filter_date:0
+#: selection:cash.ledger,filter_date:0
+msgid "From the early quarter to the present"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.ui.menu,name:smart_invoice.menu_finance_fund
+msgid "Funds"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_account_general_ledger_menu
+#: model:ir.actions.report,name:smart_invoice.action_report_general_ledger
+#: model:ir.ui.menu,name:smart_invoice.menu_general_ledger
+msgid "General Ledger"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_report_general_ledger
+msgid "General Ledger Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_all_balance_sheet
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_business_activities_get
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_cash_flows_get
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_filter_detail_cash
+msgid "Get Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.view_account_financial_report_search
+msgid "Group By"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Họ tên người nộp tiền:"
+msgstr "Full name payer:"
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__id
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_all_balance_sheet_display__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_business_activities_display__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_cash_flows_display__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_detail_cash_display__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_agedpartnerbalance__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_financial__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_generalledger__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_journal__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_partnerledger__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_tax__id
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_trialbalance__id
+msgid "ID"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,help:smart_invoice.field_account_report_general_ledger__initial_balance
+msgid "If you selected date, this field allow you to add a row to display the amount of debit/credit/balance that precedes the filter you've set."
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "In bởi phần mềm SMART-ERP 2019 (smartlifevn.com.vn) MST:10253645645"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__initial_balance
+msgid "Include Initial Balances"
+msgstr ""
+
+#. module: smart_invoice
+#: model:account.financial.report,name:smart_invoice.account_financial_report_income0
+msgid "Income"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "Inventory"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Invoice"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Invoice Lines"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__invoice_number
+msgid "Invoice Number"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Invoice Number:"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__invoice_prefix
+msgid "Invoice prefix code"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_window_invoice_template
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__invoice_template_id
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template__name
+msgid "Invoice template"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template__code
+msgid "Invoice template code"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template__image
+msgid "Invoice template image"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Invoices"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,help:smart_invoice.field_account_report_partner_ledger__amount_currency
+msgid "It adds the currency column on report if the currency differs from the company currency."
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,style_overwrite:0
+msgid "Italic Text (smaller)"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__receipt_item_ids
+msgid "Item Ids"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+msgid "JRNL"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_account_invoice_payment
+msgid "Journal"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.report.general.ledger,sortby:0
+msgid "Journal & Partner"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.print.journal,sort_selection:0
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "Journal Entry Number"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Journal Items"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+msgid "Journal and Partner"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_account_invoice_payment
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Journal items"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__journal_ids
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__journal_ids
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__journal_ids
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__journal_ids
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__journal_ids
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__journal_ids
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__journal_ids
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__journal_ids
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__journal_ids
+msgid "Journals"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_account_print_journal_menu
+#: model:ir.actions.report,name:smart_invoice.action_report_journal
+#: model:ir.ui.menu,name:smart_invoice.menu_print_journal
+msgid "Journals Audit"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__not_display
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__not_display
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__not_display
+msgid "Không hiển thị các chỉ tiêu có số liệu = 0"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "Kỳ này"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "Kỳ trước"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+msgid "LNST chưa phân phối kỳ này"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_account_invoice_payment
+msgid "Label"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_all_balance_sheet_display____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_business_activities_display____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_cash_flows_display____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_detail_cash_display____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_agedpartnerbalance____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_financial____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_generalledger____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_journal____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_partnerledger____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_tax____last_update
+#: model:ir.model.fields,field_description:smart_invoice.field_report_smart_invoice_report_trialbalance____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__write_uid
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice_template__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__write_date
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__level
+msgid "Level"
+msgstr ""
+
+#. module: smart_invoice
+#: model:account.financial.report,name:smart_invoice.account_financial_report_liability0
+#: model:account.financial.report,name:smart_invoice.account_financial_report_liabilitysum0
+msgid "Liability"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Liên 1: Lưu"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Liên 2: Giao người mua hàng"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Liên 3: Sử dụng nội bộ"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Lý do nộp:"
+msgstr "Reason submit"
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__data_from
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__data_from
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__data_from
+msgid "Lấy dữ liệu từ BCTC đã lập"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "Lập, Ngày ... tháng ... năm ..."
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,style_overwrite:0
+msgid "Main Title 1 (bold, underlined)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "Move"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "Mã số"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Mẫu số: 01-TT"
+msgstr "Form no.: 01-TT"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Mẫu số: 02-TT"
+msgstr "Form no.: 02-TT"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_financial
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "Name"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_tax
+msgid "Net"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_accounting_document_view
+msgid "Ngày:"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Người bán hàng"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Người mua hàng"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:accounting.report,filter_cmp:0
+msgid "No Filters"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,display_detail:0
+msgid "No detail"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,style_overwrite:0
+msgid "Normal Text"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__payment_note
+msgid "Note"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "Number Pay Slip"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "Number Receipts"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "Năm"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Nợ:"
+msgstr "Credit:"
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/models/account_receipt.py:301
+#, python-format
+msgid "Only a draft payment can be posted."
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Other Info"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.payment,reason:0
+msgid "Other receivables"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.ui.menu,name:smart_invoice.menu_finance_legal_statement
+msgid "PDF Reports"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "PHIẾU CHI"
+msgstr "RECEIPTS VOUCHER"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "PHIẾU THU"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__parent_id
+msgid "Parent"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.view_account_financial_report_search
+msgid "Parent Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "Partner"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Partner Address"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_account_partner_ledger_menu
+#: model:ir.actions.report,name:smart_invoice.action_report_partnerledger
+#: model:ir.ui.menu,name:smart_invoice.menu_partner_ledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+msgid "Partner Ledger"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Partner Tax"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__result_selection
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__result_selection
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__result_selection
+msgid "Partner's"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "Partners"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.aged.trial.balance,result_selection:0
+#: selection:account.common.partner.report,result_selection:0
+#: selection:account.report.partner.ledger,result_selection:0
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "Payable Accounts"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__amount
+msgid "Payment Amount"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_receipt__payment_id
+msgid "Payment ID"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Payment Matching"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__payment_code
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Payment Number"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_window_invoice_funds_payment_voucher
+#: model:ir.ui.menu,name:smart_invoice.menu_action_currency_form_1
+#: model_terms:ir.ui.view,arch_db:smart_invoice.dept_search_view
+msgid "Payment Voucher"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__payment_type
+msgid "Payment type"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__period_length
+msgid "Period Length (days)"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_account_invoice_payment
+msgid "Post Difference In"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,sign:0
+msgid "Preserve balance sign"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Price"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.account_aged_balance_view
+msgid "Print"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,help:smart_invoice.field_account_print_journal__amount_currency
+msgid "Print Report with the currency column if the currency differs from the company currency."
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.report,name:smart_invoice.receipt_invoice_print_view_report
+msgid "Print reciept"
+msgstr ""
+
+#. module: smart_invoice
+#: model:account.financial.report,name:smart_invoice.account_financial_report_profitloss_toreport0
+msgid "Profit (Loss) to report"
+msgstr ""
+
+#. module: smart_invoice
+#: model:account.financial.report,name:smart_invoice.account_financial_report_profitandloss0
+#: model:ir.actions.act_window,name:smart_invoice.action_account_report_pl
+#: model:ir.ui.menu,name:smart_invoice.menu_account_report_pl
+msgid "Profit and Loss"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_supplier_form_override
+msgid "Purchaser"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Quantity:"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__reason
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Reason Submit"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__receipt_generate
+msgid "Receipt Generate"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__receipt_code
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Receipt Number"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_window_invoice_funds_recepts
+#: model:ir.ui.menu,name:smart_invoice.menu_action_currency_form
+#: model_terms:ir.ui.view,arch_db:smart_invoice.dept_search_view
+msgid "Receipts Voucher"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.aged.trial.balance,result_selection:0
+#: selection:account.common.partner.report,result_selection:0
+#: selection:account.report.partner.ledger,result_selection:0
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "Receivable Accounts"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.aged.trial.balance,result_selection:0
+#: selection:account.common.partner.report,result_selection:0
+#: selection:account.report.partner.ledger,result_selection:0
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+msgid "Receivable and Payable Accounts"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_ledger_display
+msgid "Receiver/Submitter"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__reconciled
+msgid "Reconciled Entries"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_partnerledger
+msgid "Ref"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.view_account_financial_report_form
+msgid "Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__name
+msgid "Report Name"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.account_aged_balance_view
+msgid "Report Options"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.view_account_financial_report_search
+msgid "Report Type"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,type:0
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__account_report_id
+msgid "Report Value"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,sign:0
+msgid "Reverse balance sign"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_tax
+msgid "Sale"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.report,name:smart_invoice.sale_invoice_untax_print_view_report
+msgid "Sale Invoices"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.report,name:smart_invoice.sale_invoice_print_view_report
+msgid "Sale VAT Invoices"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__user_id
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Salesperson"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__sign
+msgid "Sign on Reports"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,style_overwrite:0
+msgid "Smallest Text"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__sortby
+msgid "Sort by"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__date_from
+#: model:ir.model.fields,field_description:smart_invoice.field_account_all_balance_sheet__start_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__date_from
+#: model:ir.model.fields,field_description:smart_invoice.field_account_business_activities__start_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_cash_flows__start_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__date_from
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__date_from
+#: model:ir.model.fields,field_description:smart_invoice.field_account_detail_cash__start_date
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__date_from
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__date_from
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__date_from
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__date_from
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__date_from
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__date_from_cmp
+msgid "Start Date"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_payment__name_submitter
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_receipt
+msgid "Submitter"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Subtotal"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Số chứng từ gốc kèm theo: ................................................."
+msgstr "The number of original documents attached: ................................................."
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "Số cuối kỳ"
+msgstr "Closing number"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Số tiền:"
+msgstr "Amount:"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "Số đầu kỳ"
+msgstr "Opening number"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_accounting_document_view
+msgid "Số:"
+msgstr "No:"
+
+#. module: smart_invoice
+#: selection:account.invoice,payment_type:0
+msgid "TM/CK"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_aged_trial_balance__target_move
+#: model:ir.model.fields,field_description:smart_invoice.field_account_balance_report__target_move
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_account_report__target_move
+#: model:ir.model.fields,field_description:smart_invoice.field_account_common_partner_report__target_move
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__target_move
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_general_ledger__target_move
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__target_move
+#: model:ir.model.fields,field_description:smart_invoice.field_account_tax_report__target_move
+#: model:ir.model.fields,field_description:smart_invoice.field_accounting_report__target_move
+msgid "Target Moves"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_tax
+msgid "Tax"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "Tax Amount"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_journal
+msgid "Tax Declaration"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.report,name:smart_invoice.action_report_account_tax
+#: model:ir.model,name:smart_invoice.model_account_tax_report
+#: model:ir.ui.menu,name:smart_invoice.menu_account_report
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_tax
+msgid "Tax Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_account_tax_report
+msgid "Tax Reports"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_res_company__tax_address
+#: model:ir.model.fields,field_description:smart_invoice.field_res_partner__tax_address
+#: model:ir.model.fields,field_description:smart_invoice.field_res_users__tax_address
+msgid "Tax address"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.payment,reason:0
+msgid "Tax refund"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Taxes"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Terms and conditions..."
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.all.balance.sheet,filter_date:0
+#: selection:account.business.activities,filter_date:0
+#: selection:account.cash.flows,filter_date:0
+#: selection:cash.ledger,filter_date:0
+msgid "The first half of the year"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.all.balance.sheet,filter_date:0
+#: selection:account.business.activities,filter_date:0
+#: selection:account.cash.flows,filter_date:0
+#: selection:cash.ledger,filter_date:0
+msgid "The last half of the year "
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/models/account_receipt.py:304
+#, python-format
+msgid "The payment cannot be processed because the invoice is not open!"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,help:smart_invoice.field_accounting_report__label_filter
+msgid "This label will be displayed on report to show the balance computed for the given comparison filter."
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,help:smart_invoice.field_accounting_report__debit_credit
+msgid "This option allows you to get more details about the way your balances are computed. Because it is space consuming, we do not allow to use it while doing a comparison."
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.all.balance.sheet,filter_date:0
+#: selection:account.business.activities,filter_date:0
+#: selection:account.cash.flows,filter_date:0
+#: selection:cash.ledger,filter_date:0
+msgid "This quarter"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.all.balance.sheet,filter_date:0
+#: selection:account.business.activities,filter_date:0
+#: selection:account.cash.flows,filter_date:0
+#: selection:cash.ledger,filter_date:0
+msgid "This year"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.all_balance_sheet_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "Thuyết Minh"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Thuế suất GTGT:"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Thủ trưởng đơn vị"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,style_overwrite:0
+msgid "Title 2 (bold)"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,style_overwrite:0
+msgid "Title 3 (bold, smaller)"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.invoice,payment_type:0
+msgid "Tiền mặt"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Tiền thuế GTGT:"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_agedpartnerbalance
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Total"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__tradesman
+msgid "Tradesman"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.payment,reason:0
+msgid "Transfer deposit to cash fund"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.actions.act_window,name:smart_invoice.action_account_balance_menu
+#: model:ir.actions.report,name:smart_invoice.action_report_trial_balance
+#: model:ir.ui.menu,name:smart_invoice.menu_general_Balance_report
+msgid "Trial Balance"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_balance_report
+msgid "Trial Balance Report"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_financial_report__type
+msgid "Type"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Tên doanh nghiệp:"
+msgstr "Full name of the company"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_accounting_document_view
+msgid "Tên:"
+msgstr "Name:"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+msgid "Tổng số tiền (Viết bằng chữ):"
+msgstr "Total amount (In words):"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "Tổng thanh toán:"
+msgstr "Total payment:"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "Từ ngày"
+msgstr "From"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_invoice_form
+msgid "Unit Price:"
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/reports/report_aged_partner.py:208
+#, python-format
+msgid "Unknown Partner"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.1"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.10"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.11"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.2"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.3"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.4"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.5"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.6"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.7"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.business_activities_display
+msgid "VII.8"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__vendor_bill_number
+msgid "Vendor Bill Number"
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/models/account_receipt.py:488
+#, python-format
+msgid "Vendor Credit Note"
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/models/account_receipt.py:490
+#, python-format
+msgid "Vendor Payment"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.smart_invoice_supplier_form_override
+msgid "Vendor Reference"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__partner_address
+msgid "Vendor address"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_invoice__partner_tax_code
+msgid "Vendor tax code"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.financial.report,type:0
+msgid "View"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,field_description:smart_invoice.field_account_print_journal__amount_currency
+#: model:ir.model.fields,field_description:smart_invoice.field_account_report_partner_ledger__amount_currency
+msgid "With Currency"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.balance.report,display_account:0
+#: selection:account.common.account.report,display_account:0
+#: selection:account.report.general.ledger,display_account:0
+msgid "With balance is not equal to 0"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "With balance not equal to zero"
+msgstr ""
+
+#. module: smart_invoice
+#: selection:account.balance.report,display_account:0
+#: selection:account.common.account.report,display_account:0
+#: selection:account.report.general.ledger,display_account:0
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_generalledger
+#: model_terms:ir.ui.view,arch_db:smart_invoice.report_trialbalance
+msgid "With movements"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model.fields,help:smart_invoice.field_account_financial_report__style_overwrite
+msgid "You can set up here the format you want this record to be displayed. If you leave the automatic formatting, it will be computed based on the financial reports hierarchy (auto-computed field 'level')."
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/models/account_receipt.py:332
+#, python-format
+msgid "You have to define a sequence for %s in your company."
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/wizards/account_general_ledger.py:21
+#, python-format
+msgid "You must define a Start Date"
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/wizards/aged_partner.py:24
+#, python-format
+msgid "You must set a period length greater than 0."
+msgstr ""
+
+#. module: smart_invoice
+#: code:addons/smart_invoice/wizards/aged_partner.py:26
+#, python-format
+msgid "You must set a start date."
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_all_balance_sheet
+msgid "account.all.balance.sheet"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_business_activities
+msgid "account.business.activities"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_cash_flows
+msgid "account.cash.flows"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_detail_cash
+msgid "cash.ledger"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_invoice_template
+msgid "account.invoice.template"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_account_receipt
+msgid "account.receipt"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_all_balance_sheet_display
+msgid "report.smart_invoice.all_balance_sheet_display"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_business_activities_display
+msgid "report.smart_invoice.business_activities_display"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_cash_flows_display
+msgid "report.smart_invoice.cash_flows_display"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_detail_cash_display
+msgid "report.smart_invoice.cash_ledger_display"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_report_agedpartnerbalance
+msgid "report.smart_invoice.report_agedpartnerbalance"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_report_financial
+msgid "report.smart_invoice.report_financial"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_report_generalledger
+msgid "report.smart_invoice.report_generalledger"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_report_journal
+msgid "report.smart_invoice.report_journal"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_report_partnerledger
+msgid "report.smart_invoice.report_partnerledger"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_report_tax
+msgid "report.smart_invoice.report_tax"
+msgstr ""
+
+#. module: smart_invoice
+#: model:ir.model,name:smart_invoice.model_report_smart_invoice_report_trialbalance
+msgid "report.smart_invoice.report_trialbalance"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.payment_receipt_print_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_accounting_document_view
+msgid "Địa chỉ:"
+msgstr "Address:"
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "đến ngày"
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_untax_view
+#: model_terms:ir.ui.view,arch_db:smart_invoice.sale_invoice_vat_view
+msgid "đồng chẵn."
+msgstr ""
+
+#. module: smart_invoice
+#: model_terms:ir.ui.view,arch_db:smart_invoice.cash_flows_display
+msgid "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ"
+msgstr ""
+

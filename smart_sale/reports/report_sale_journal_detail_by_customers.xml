@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_sale_journal_detail_customers_view">
+            <field name="name">Sale Journal Detail By Customers</field>
+            <field name="model">report.sale.journal.detail.customers</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Journal Detail" create="false" delete="false" js_class="smart_sale_change_params">
+                    <field name="posted_date" />
+                    <field name="document_date" />
+                    <field name="document_number" />
+                    <field name="invoiced_date" />
+                    <field name="invoice_number" />
+                    <field name="description" />
+                    <field name="item_description" />
+                    <field name="customer_code" />
+                    <field name="customer_name" />
+                    <field name="product_code" />
+                    <field name="product_name" />
+                    <field name="unit" />
+                    <field name="quantity" sum="Quantity" />  
+                    <field name="unit_price" />
+                    <field name="gross_revenue" sum="Gross revenue" />
+                    <field name="discount" sum="Discount" />
+                    <field name="return_quantity" sum="Gross revenue" />
+                    <field name="return_value" sum="Value of return" /> 
+                </tree>
+            </field>
+        </record> 
+    </data>
+</odoo>

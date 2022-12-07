@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<odoo>
+    <data>
+		<template id="assets_frontend" name="SmartERP theme" >
+			<xpath expr="//link[last()]" position="after">   
+			  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"> </script>
+
+             <script type="application/javascript" src="/smarterp_sale/static/src/js/register.js"> </script>
+             <script type="application/javascript" src="/smarterp_sale/static/src/js/demo.js"> </script>
+			
+			</xpath>
+		</template>
+    </data>
+</odoo>

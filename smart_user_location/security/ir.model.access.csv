@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_province,province,model_province,,1,0,0,0
+access_district,district,model_district,,1,0,0,0
+access_ward,ward,model_ward,,1,0,0,0

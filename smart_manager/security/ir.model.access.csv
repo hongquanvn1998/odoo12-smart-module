@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_smart_manager_register,smart_manager.smart_manager_register,model_smart_manager_register,,1,1,1,1
+access_smart_manager.business_category,smart_manager.smart_manager.business_category,model_smart_manager_business_category,,1,1,1,1
+access_smart_manager.payment_period,smart_manager.smart_manager.payment_period,model_smart_manager_payment_period,,1,1,1,1
+access_smart_manager.app_price,smart_manager.smart_manager.app_price,model_smart_manager_app_price,,1,1,1,1
+
+access_smart_manager.report_register_customer,smart_manager.smart_manager.report_register_customer,model_report_register_customer,,1,1,1,1
+access_smart_manager.report_register_partner,smart_manager.smart_manager.report_register_partner,model_report_register_partner,,1,1,1,1
+access_smart_manager.report_register_order,smart_manager.smart_manager.report_register_order,model_report_register_order,,1,1,1,1
+access_smart_manager.report_traffic,smart_manager.smart_manager.report_traffic,model_report_traffic,,1,1,1,1
+
+
+
+

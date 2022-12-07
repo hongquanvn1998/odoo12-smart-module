@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="report.paperformat" id="paperformat_purchase">
+        <field name="name">purchase.journal</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+      <report id="purchase_journal_report"
+            model="filter.purchase.journal"
+            string="Purchase Journal"
+            report_type="qweb-html"
+            name="smart_purchase.purchase_journal_report_display"
+            file="smart_purchase.purchase_journal_report_display"
+            paperformat ="smart_purchase.paperformat_purchase"
+/>
+    <template id="purchase_journal_report_display">
+     <xpath expr="." position="inside">
+                <link href="/smart_purchase/static/src/css/purchase_journal.css" rel="stylesheet" type="text/css" />
+    </xpath>
+        <t t-call="web.html_container">
+         <t t-call="web.internal_layout">
+            <div class="page">
+                <h3 class="text-center">PURCHASE JOURNAL</h3>
+                <h6 class="text-center mb-4">
+                    From Date:
+                    <t t-esc="date_start" t-options='{"widget": "date"}'/>
+                    To Date:
+                    <t t-esc="date_end" t-options='{"widget": "date"}'/>
+                </h6>
+            <table class="table table-bordered">
+              <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Posting Date</th>
+                        <th scope="col" class="text-center">Voucher date</th>
+                        <th scope="col" class="text-center">Voucher number</th>
+                        <th scope="col" class="text-center">Bill date</th>
+                        <th scope="col" class="text-center">Bill number</th>
+                        <th scope="col" class="text-center">Status</th>
+                        <th scope="col" class="text-center" >Untaxed</th>
+                        <th scope="col" class="text-center">Tax</th>
+                        <th scope="col" class="text-center">Total</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr t-if='len(docs) ==0'>
+                        <td colspan="9"  >
+                                <h6 class="text-center">Data not found!</h6>
+                            </td>
+                        </tr>
+                         <tr  t-foreach="docs" t-as="doc">
+                        <td class="text-center">
+                                    <span t-esc="doc['accounting_date']" t-options='{"widget": "date"}'/>
+                        </td>
+                          <td class="text-center"> 
+                                    <span t-esc="doc['voucher_date']" t-options='{"widget": "date"}'/>
+                        </td>
+                           <td class="text-center">
+                                    <span t-esc="doc['voucher_number']" />
+                        </td>
+                         <td class="text-center">
+                                    <span t-esc="doc['bill_date']" t-options='{"widget": "date"}'/>
+                        </td>
+                         <td class="text-center">
+                                    <span t-esc="doc['bill_number']" />
+                        </td>
+                         <td t-if="doc['state']=='purchase'"  class="text-center">
+                                    <span t-esc="doc['invoice_status']"/> (<span  t-esc="doc['invoice_count']"/>)
+                        </td>
+                         <td t-else="" class="text-center">
+                                     <span t-esc="doc['invoice_status']"/>
+                        </td>
+
+                        <td class="text-center">
+                                    <span t-esc="'{:,}'.format(doc['amount_untaxed'])"/> 
+                        </td>
+                        <td class="text-center">
+                                    <span t-if="doc['amount_tax'] > 0"  t-esc="'{:,}'.format(doc['amount_tax'])"/>
+                        </td>
+                       <td class="text-center">
+                                    <span t-esc="'{:,}'.format(doc['amount_total'])"/>
+                        </td>
+                    </tr>
+                    <tr t-if='len(docs) >0'>
+                    <td  colspan="6" >Total</td>
+                    <td  class="text-center">
+                     <span  t-if="sum_amount_untaxed >0" t-esc="'{:,}'.format(sum_amount_untaxed)"
+                      t-field-options="{'widget':'monetary', 'display_currency': 'sum_amount_untaxed'}" />
+                    </td>
+                    <td  class="text-center">
+                     <span t-if="sum_amount_tax >0" t-esc="'{:,}'.format(sum_amount_tax)"
+                      t-field-options="{'widget':'monetary', 'display_currency': 'sum_amount_tax'}" />
+                     </td>
+                    <td class="text-center">
+                     <span t-if="sum_amount_total >0"  t-esc="'{:,}'.format(sum_amount_total)"
+                      t-field-options="{'widget':'monetary', 'display_currency': 'sum_amount_total'}" />
+                      <span t-else ="sum_amount_total ==0"></span>
+                    </td>
+                    </tr>
+                    </tbody>
+                </table>
+                 <div class="oe_structure"/>
+            <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                <h6 class="text-center font-weight-light font-italic">Ngày .... tháng .... năm.........</h6>
+            </div>
+         </div>
+           <div class="row mt-4">
+            <div class="col-4">
+                <h6 class="text-center"><strong>Người lập</strong></h6>
+                <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+            </div>
+            <div class="col-4">
+                <h6 class="text-center"><strong>Kế toán trưởng</strong></h6>
+                <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+            </div>
+            <div class="col-4">
+                <h6 class="text-center"><strong>Giám đốc</strong></h6>
+                <h6 class="text-center font-weight-light font-italic">(Ký, họ tên)</h6>
+            </div>
+         </div>
+            </div>
+        </t>
+        </t>
+    </template>
+</odoo>

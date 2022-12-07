@@ -1,0 +1,128 @@
+<odoo>
+    <data>
+
+    
+<!--     
+        <record model="ir.ui.view" id="report_pos_revenue_view">
+            <field name="name">Report Sale</field>
+            <field name="model">report.pos.revenue</field>
+            <field name="type">tree</field>
+           
+            <field name="arch" type="xml">
+                <tree string="Report revenue" create="false" delete="false" default_order="date">
+                    <field name="id" />
+                    <field name="code" />
+                    <field name="date" />
+                    <field name="total_goods" />
+                    <field name="discount" />
+                    <field name="revenue" />
+                    <field name="total_cost_price" />
+                    <field name="total_profit" sum="Total profit" />
+                </tree>
+            </field>
+        </record> -->
+
+
+        <!-- <record id="report_menu_action_an" model="ir.actions.act_window">
+            <field name="name">Report</field>
+            <field name="res_model">report.pos.revenue</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_type">form</field>
+
+            <field name="context">{'search_default_groupby_order': 1}</field>
+            
+            <field name="domain">[]</field>
+
+        </record> -->
+
+            <record id="view_res_partner_tree" model="ir.ui.view">
+            <field name="name">res.report.tree</field>
+            <field name="model">report.pos.revenue</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Contacts">
+                    <field name="id" string= "STT" />    
+                    <field name="code" />
+                    <field name="date" />
+                    <!-- <field name="create_date" />       -->
+                    <field name="total_quantity"  sum="Total quantity"/>                     
+                    <!-- <field name="discount" /> -->
+                    <!-- <field name="revenue" />
+                    <field name="total_cost_price" /> -->
+                    <field name="total_profit"   sum="Total profit" />  
+                    <!-- <field name="total_profit" widget='monetary' options="{'currency_field': 'currency_id', 'field_digits': True}"/>               -->
+                    <!-- <field name="total_profit" widget="monetary" options="{'digits': 'Product Price'}" /> --> 
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_res_partner_search" model="ir.ui.view">
+            <field name="name">report.pos.revenue.search</field>
+            <field name="model">report.pos.revenue</field>                   
+            <field name="arch" type="xml">            
+                <search string="Search contacts">
+                <!-- <header>
+                        <button name="action_name" string="Text to display" type="button_type" /> # button_type like object/action
+                    </header> -->
+                    <!-- <field name="id" />
+                    <field name="code" /> -->
+                    <!-- <filter string="Has tags" domain="[('category_id', '!=', False)]" name="has_tags"></filter>--> 
+                    <!-- <field name="date" /> -->                 
+                     <!--<field name="total_goods" />
+                    <field name="discount" />
+                    <field name="revenue" />
+                    <field name="total_cost_price" />
+                    <field name="total_profit" sum="Total profit" />
+                    <filter string="Has VAT number" domain="[('vat', '!=', '')]" name="has_vat"></filter>
+                    <filter string="Has tags" domain="[('category_id', '!=', False)]" name="has_tags"></filter>-->                   
+                     <group expand="1" string="Group By">
+                        <filter string="Date" name="date" context="{'group_by': 'date:day'}"></filter>  
+                          <!-- <filter string="Revenue" name="revenue" context="{'group_by': 'revenue'}"></filter>                        -->
+                        <!-- <filter string="Date" name="date" context="{'group_by': 'date:day'}"></filter>
+                        <filter string="Company" name="parent_id" context="{'group_by': 'parent_id'}"></filter>
+                        <filter string="Country" name="country_id" context="{'group_by': 'country_id'}"></filter>
+                        <filter string="Sales person" name="salesperson_id" context="{'group_by': 'user_id'}"></filter> -->
+                    </group> 
+                </search>
+            </field>
+        </record>
+
+        <!-- <record id="action_view_contacts" model="ir.actions.act_window">
+            <field name="name">Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.pos.revenue</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_res_partner_search"></field>
+            <field name="context">{'search_default_date': 1}</field>           
+        </record>
+        <menuitem id="contacts_menu" name="Contacts" action="action_view_contacts" >
+        </menuitem> -->
+
+
+          <!-- <record id="pos_orders_view_form_thienvd" model="ir.ui.view">
+            <field name="name">report.pos.revenue.kanban</field>
+            <field name="model">report.pos.revenue</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="bt" string="Export Excel" />
+                    </header>
+                    <sheet>
+
+                     <field name="id" />
+                    <field name="code" />
+                    <field name="date" />                    
+                    <field name="total_goods" />
+                    <field name="discount" />
+                    <field name="revenue" />
+                    <field name="total_cost_price" />
+                    <field name="total_profit"/>
+                        
+                    </sheet>
+                </form>
+            </field>
+
+        </record> -->
+
+    </data>
+</odoo>

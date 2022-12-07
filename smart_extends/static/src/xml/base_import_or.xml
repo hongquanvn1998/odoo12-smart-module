@@ -1,0 +1,21 @@
+<template>
+    <t t-extend="ImportView">
+        <t t-jquery=".o_nocontent_help" t-operation="replace">
+            <div class="o_nocontent_help">
+                <p class="o_view_nocontent_smiling_face">
+                    Chọn một tệp Csv hoặc Excel để nhập.
+                </p>
+                <p>
+                    Tệp Excel được khuyến khích vì các trường được nhận diện tự động
+                </p>
+                <div class="mt16 mb4">Bạn cần giúp đỡ?</div>
+                <div t-foreach="widget.importTemplates" t-as="template">
+                    <a t-att-href="template.template" aria-label="Download" title="Download">
+                        <i class="fa fa-download"/> <span><t t-esc="template.label"/></span>
+                    </a>
+                </div>
+                <a href="https://www.odoo.com/documentation/user/12.0/general/base_import/import_faq.html" target="new">Nhập FAQ</a>
+            </div>
+        </t>
+    </t>
+</template>

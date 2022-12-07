@@ -1,0 +1,67 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_smart_pos_pos_session_user_read,smart_pos.pos_session_user_read,model_pos_session,group_pos_user,1,0,0,0
+access_smart_pos_pos_session_user_write,smart_pos.pos_session_user_write,model_pos_session,group_pos_user,1,1,0,0
+access_smart_pos_pos_session_user_update,smart_pos.pos_session_user_update,model_pos_session,group_pos_user,1,1,1,0
+access_smart_pos_pos_session_manager,smart_pos.pos_session_manager,model_pos_session,group_pos_manager,1,1,1,0
+access_smart_pos_pos_session_admin,smart_pos.pos_session_admin,model_pos_session,group_pos_admin,1,1,1,1
+access_smart_pos_pos_order,smart_pos.pos_order,model_pos_order,,1,0,1,0
+access_smart_pos_pos_order_line,smart_pos.pos_order_line,model_pos_order_line,,1,1,1,0
+access_smart_pos_pos_order_payment_line,smart_pos.pos_order_payment_line,model_pos_order_payment_line,,1,0,1,0
+access_smart_pos_pos_reward_point,smart_pos.pos_reward_point,model_pos_reward_point,,1,1,1,0
+access_smart_pos_pos_reward_point_history,smart_pos.pos_reward_point_history,model_pos_reward_point_history,,1,1,1,0
+access_smart_pos_pos_payment_method,smart_pos.pos_payment_method,model_pos_payment_method,,1,1,1,0
+
+access_pos_counter_read,pos_counter.pos_counter_read,model_pos_counter,group_pos_user,1,0,0,0
+access_pos_counter_write,pos_counter.pos_counter_write,model_pos_counter,group_pos_user,1,1,0,0
+access_pos_counter_create,pos_counter.pos_counter_create,model_pos_counter,group_pos_user,1,1,1,0
+access_pos_counter_manager,pos_counter.pos_counter_manager,model_pos_counter,group_pos_manager,1,1,1,0
+access_pos_counter_admin,pos_counter.pos_counter_admin,model_pos_counter,group_pos_admin,1,1,1,1
+
+access_pos_reward,pos_counter.pos_reward_point,model_pos_reward_point,group_pos_user,1,0,0,0
+access_pos_reward_history,pos_counter.pos_reward_point_history,model_pos_reward_point_history,group_pos_manager,1,0,0,0
+access_pos_payment_method,pos_payment.pos_payment_method,model_pos_payment_method,group_pos_manager,1,0,0,0
+access_pos_payment_method_admin,pos_counter.pos_payment_method_admin,model_pos_payment_method,group_pos_admin,1,1,1,1
+
+access_report_pos_revenue,report_pos_revenue,model_report_pos_revenue,,1,1,1,1
+access_report_end_of_day_by_goods,report_end_of_day_by_goods,model_report_end_of_day_by_goods,,1,1,1,1
+access_report_end_of_day_by_sale,report_end_of_day_by_sale,model_report_end_of_day_by_sale,,1,1,1,1
+access_report_end_of_day_by_receipts_expenses,report_end_of_day_by_receipts_expenses,model_report_end_of_day_by_receipts_expenses,,1,0,0,0
+access_report_sale_by_employee,report_sale_by_employee,model_report_sale_by_employee,,1,0,0,0
+access_report_reward_point,report_reward_point,model_report_reward_point,,1,0,0,0
+access_report_reward_point_history,report_reward_point_history,model_report_reward_point_history,,1,0,0,0
+access_report_sale_by_time,report_sale_by_time,model_report_sale_by_time,,1,0,0,0
+access_report_sale_by_profit,report_sale_by_profit,model_report_sale_by_profit,,1,0,0,0
+access_report_sale_by_partner,report_sale_by_partner,model_report_sale_by_partner,,1,0,0,0
+
+access_stock_picking_pos_user,stock.picking pos_user,stock.model_stock_picking,group_pos_user,1,1,1,1
+access_stock_warehouse_pos_user,stock.warehouse pos_user,stock.model_stock_warehouse,group_pos_user,1,0,0,0
+access_pos_order_stock_worker,pos.order stock_worker,model_pos_order,stock.group_stock_user,1,0,0,0
+access_stock_move_pos_user,stock.move pos_user,stock.model_stock_move,group_pos_user,1,1,1,1
+access_stock_warehouse_manager,stock.warehouse manager,stock.model_stock_warehouse,group_pos_manager,1,0,0,0
+access_stock_location_manager,stock.location manager,stock.model_stock_location,group_pos_manager,1,0,0,0
+access_account_journal_pos_user,account.journal pos_user,account.model_account_journal,group_pos_user,1,0,0,0
+access_account_journal_pos_manager,account.journal.manager pos_user,account.model_account_journal,group_pos_manager,1,1,1,0
+access_account_move_pos_user,account.move pos_user,account.model_account_move,group_pos_user,1,1,1,0
+access_account_move_line_pos_user,account.move.line pos_user,account.model_account_move_line,group_pos_user,1,1,1,0
+access_account_partial_reconcile_pos_user,account_partial_reconcile pos_user,account.model_account_partial_reconcile,group_pos_user,1,1,1,0
+access_account_account_type_pos_user,account.account.type pos_user,account.model_account_account_type,group_pos_user,1,1,1,0
+access_account_payment_pos_user,account.payment pos_user,account.model_account_payment,group_pos_user,1,1,1,0
+access_account_payment_method_pos_user,account.payment.method pos_user,account.model_account_payment_method,group_pos_user,1,1,1,0
+access_account_invoice_pos_user,account.invoice pos_user,account.model_account_invoice,group_pos_user,1,1,1,0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

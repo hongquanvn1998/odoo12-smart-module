@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="smart_purchase_pickup_form" model="ir.ui.view">
+            <field name="name">smart_purchase.pickup.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group/field[@name='location_dest_id']" position="after">
+                    <field name="purchase_id" invisible="1"/>
+                    <field name="is_purchase" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

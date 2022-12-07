@@ -1,0 +1,130 @@
+<odoo>
+    <data>
+        <template id="smart_sale_css" name="Smart sale css" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link href="/smart_invoice/static/src/css/style.css" rel="stylesheet" type="text/css" />
+            </xpath>
+        </template>
+
+        <record id="receipt_next_code_sequence" model="ir.sequence">
+                    <field name="name">Field Incrementation</field>
+                    <field name="code">receipt_next_code</field>
+                    <field name="prefix">PT</field>
+                    <field name="padding">5</field>
+                    <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="payment_next_code_sequence" model="ir.sequence">
+                    <field name="name">Field Incrementation</field>
+                    <field name="code">payment_next_code</field>
+                    <field name="prefix">PC</field>
+                    <field name="padding">5</field>
+                    <field name="company_id" eval="False"/>
+        </record>
+
+
+        <!-- List of receipts  -->
+        <record id="account.view_account_payment_tree" model="ir.ui.view">
+            <field name="name">view_account_payment_tree</field>
+            <field name="model">account.payment</field> 
+            <field name="arch" type="xml">
+                <tree decoration-info="state == 'draft'" decoration-muted="state in ['reconciled', 'cancelled']" edit="false">
+                    <field name="payment_date"/>
+                    <field name="name"/>
+                    <field name="journal_id"/> 
+                    <field name="payment_type" />
+                    <field name="payment_type" string="Payment" attrs="{'invisible':[('payment_type','!=','outbound')]}" />
+                    <field name="payment_type" string="Receive" attrs="{'invisible':[('payment_type','!=','inbound')]}" />
+                    <field name="payment_method_id"/>
+                    <field name="partner_id" string="Partner"/>
+                    <field name="amount" sum="Amount"/>
+                    <field name="state"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="partner_type" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+     
+
+        <record id="smart_invoice_receipt" model="ir.ui.view" >
+            <field name="name">smart_invoice.receipt</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="replace">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="button_journal_entries"
+                                    string="Journal Items" type="object"
+                                    groups="account.group_account_user"
+                                    attrs="{'invisible':[('move_line_ids','=',[])]}" icon="fa-bars"/>
+                            <field name="move_line_ids" invisible="1"/>
+                            <button class="oe_stat_button" name="button_invoices"
+                                    string="Invoices" type="object"
+                                    attrs="{'invisible':[('has_invoices','=',False)]}" icon="fa-bars"/>
+                            <button class="oe_stat_button" name="open_payment_matching_screen"
+                                    string="Payment Matching" type="object"
+                                    attrs="{'invisible':[('move_reconciled','=',True)]}" icon="fa-university"/>
+                            <field name="has_invoices" invisible="1"/>
+                            <field name="move_reconciled" invisible="1"/>
+                        </div>
+                        <field name="id" invisible="1"/>
+                        <div class="oe_title" attrs="{'invisible': [('state', '=', 'draft')]}">
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="payment_type" widget="radio" invisible="1" attrs="{'readonly': [('state', '!=', 'draft')],}"/>
+                                <field name="partner_type" widget="selection" attrs="{'required': [('state', '=', 'draft'), ('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}" />
+                                <field name="partner_id" attrs="{'required': [('state', '=', 'draft'), ('payment_type', 'in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}" context="{'default_is_company': True, 'default_supplier': payment_type == 'outbound', 'default_customer': payment_type == 'inbound'}"/>
+                                <field name="name_submitter" attrs="{'readonly': [('state', '!=', 'draft')]}" string="Submitter"/>
+                                <field name="address_submitter" attrs="{'readonly': [('state', '!=', 'draft')]}" string="Address"/>
+                                <field name="reason" widget="selection" attrs="{'readonly': [('state', '!=', 'draft')]}" string="Reason Submit"/>
+                                <field name="user_id" attrs="{'required': [('state', '=', 'draft'), ('payment_type', 'in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}" context="{'default_is_company': True, 'default_supplier': payment_type == 'outbound', 'default_customer': payment_type == 'inbound'}" string="Salesperson"/>
+                                <field name="journal_id" widget="selection" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="destination_journal_id" widget="selection" attrs="{'required': [('payment_type', '=', 'transfer')], 'invisible': [('payment_type', '!=', 'transfer')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="hide_payment_method" invisible="1"/>
+                                <field name="payment_method_id" string=" " widget="radio" attrs="{'invisible': [('hide_payment_method', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_bank_account_id" attrs="{'invisible': [('show_partner_bank_account', '!=', True)], 'required': [('show_partner_bank_account', '=', True)], 'readonly': [('state', '!=', 'draft')]}" context="{'default_partner_id': partner_id}"/>
+                                <field name="show_partner_bank_account" invisible="1"/>
+                                <field name="payment_method_code" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="date_accouting" attrs="{'readonly': [('state', '!=', 'draft')]}" string="Date Accounting"/>
+                                <field name="date_vouchers" attrs="{'readonly': [('state', '!=', 'draft')]}" string="Date Vouchers"/>
+                                <field name="receipt_code" attrs="{'invisible': [('payment_type','!=','inbound')],'readonly': [('state', '!=', 'draft')]}" string="Receipt Number"/>
+                                <field name="payment_code" attrs="{'invisible': [('payment_type','!=','outbound')],'readonly': [('state', '!=', 'draft')]}" string="Payment Number"/>
+                                <label for="amount"/>
+                                    <div name="amount_div" class="o_row ">
+                                        <field name="amount" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    </div>
+                            </group>
+                        </group>
+                        <notebook class="display_journal_items">
+                            <page string="Journal items"  >
+                                <group >
+                                    <div class="article">
+                                    <field name="receipt_item_ids" widget="one2many_list" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                        <tree create="true" delete="true" editable="bottom">
+                                            <field name ="payment_note" />
+                                            <field name ="debit_account_id"/>
+                                            <field name ="credit_account_id"/>
+                                            <field name ="payment_amount" />
+                                        </tree> 
+                                    </field>
+                                    </div>
+                                </group>
+                                <group>
+                                    
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

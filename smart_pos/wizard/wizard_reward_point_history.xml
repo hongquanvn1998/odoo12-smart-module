@@ -1,0 +1,35 @@
+<odoo>
+    <record id="report_pos_reward_point_history_main" model="ir.ui.view">
+        <field name="name">Report Reward Point History</field>
+        <field name="model">pos.reward.point.history.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Report Reward">
+                <group>
+                    <group>
+                        <field name="start_date" string="Date Start" />
+                    </group>
+                    <group>
+                        <field name="end_date" string="End date" />
+
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="filter_partner" string="Partner"
+                            options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="set_params_to_list" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_smart_reward_point_history" name="Report Reward Point History" res_model="pos.reward.point.history.wizard"
+        view_mode="form" target="new" />
+
+
+</odoo>

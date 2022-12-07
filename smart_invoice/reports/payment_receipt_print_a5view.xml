@@ -1,0 +1,526 @@
+<odoo>
+
+    <template id="payment_receipt_a5print_view">
+           <xpath expr="." position="inside">
+                <link href="/smart_invoice/static/src/css/smart_invoice.css" rel="stylesheet" />
+            </xpath>
+
+        <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <!-- Receipt Input Receipts  -->
+            <t t-if="o.payment_type=='inbound'">
+                <t t-call="smart_invoice.report_without_frame">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-8">
+                                <!-- <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)"
+                                    style="width:300px;height:50px;" alt="Barcode" /> -->
+
+                            </div>
+                            <div class="col-4">
+                                <div class="col-12 text-center font-weight-bold " style="color:black;">Mẫu số: 01-TT</div>
+                                <div class="col-12 text-center" style="color:black;">
+                                    (Ban hành kèm theo Thông tư số 200 ngày 22 tháng 12 năm 2014 của Bộ Tài chính)
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row justify-content-end mb16">
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4">
+                                <div class="row background-success">
+                                    <div class="col-12 py-3 text-center">
+                                        <h2 class="report-header" style="color:black;">
+                                            PHIẾU THU
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+
+                                        <i t-if="o.create_date"> <span t-esc="o.create_date.strftime('Ngày %d tháng %m năm %Y')" /> </i>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 text-center" style="color:black;">
+                                        Số: <span t-field="o.name" style="color:black;"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 py-3" >
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span style="color:black;">Số: <span t-field="o.receipt_code" />  </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span style="color:black;">Nợ: 
+                                        <t t-foreach="o.receipt_item_ids" t-as="li">
+                                            <span t-field="li.debit_account_id.code" />, 
+                                        </t>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span style="color:black;">Có: 
+                                        <t t-foreach="o.receipt_item_ids" t-as="li">
+                                            <span t-field="li.credit_account_id.code" />, 
+                                        </t>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mx-5"> 
+                                Họ tên người nộp tiền: <span t-field="o.name_submitter" />  
+                        </div>
+                        <div class="row mx-5">
+                            Địa chỉ: <span t-field="o.address_submitter" />
+                            
+                        </div>
+                        <div class="row mx-5">
+                            Lý do nộp: <span t-field="o.reason" />
+                        </div>
+                        <div class="row mx-5">
+                            Số tiền: <span t-field="o.amount" />
+                        </div>
+
+                        <!-- Items listed -->
+                        <div class="row mx-5">
+                            Tổng số tiền (Viết bằng chữ): <span t-esc="o.reader_number(o.amount)"/>
+                        </div>
+                        <div class="row mx-5">
+                            Số chứng từ gốc kèm theo: .................................................
+                        </div>
+
+                        <div class="row mx-3 my-3">
+                            <div class="col-7">
+                            </div>
+                            <div class="col-5 text-center">
+                                <span> <i> Ngày ..... tháng ..... năm ..... </i> </span>
+                            </div>
+
+                        </div>
+
+                        <div class="row mx-3">
+                            <div class="col-2">
+                                <div class="col text-center"> <strong>Người lập phiếu</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="col text-center"><strong>Người nộp tiền</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="col text-center"><strong>Thủ quỹ</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col text-center"><strong>Kế toán trưởng</strong>
+                                </div>
+                                <div class="col text-center"> <i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col text-center" ><strong>Giám đốc</strong>
+                                </div>
+                                <div class="col text-center"> <i> (Ký, họ tên, đóng dấu) </i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="page-break-after: always;" />
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-8">
+                                <!-- <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)"
+                                    style="width:300px;height:50px;" alt="Barcode" /> -->
+
+                            </div>
+                            <div class="col-4">
+                                <div class="col-12 text-center font-weight-bold " style="color:black;">Mẫu số: 01-TT</div>
+                                <div class="col-12 text-center" style="color:black;">
+                                    (Ban hành kèm theo Thông tư số 200 ngày 22 tháng 12 năm 2014 của Bộ Tài chính)
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row justify-content-end mb16">
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4">
+                                <div class="row background-success">
+                                    <div class="col-12 py-3 text-center">
+                                        <h2 class="report-header" style="color:black;">
+                                            PHIẾU THU
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+
+                                        <i t-if="o.create_date"> <span t-esc="o.create_date.strftime('Ngày %d tháng %m năm %Y')" /> </i>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 text-center" style="color:black;">
+                                        Số: <span t-field="o.name" style="color:black;"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 py-3" >
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span style="color:black;">Số: <span t-field="o.receipt_code" />  </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span style="color:black;">Nợ: 
+                                        <t t-foreach="o.receipt_item_ids" t-as="li">
+                                            <span t-field="li.debit_account_id.code" />, 
+                                        </t>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span style="color:black;">Có: 
+                                        <t t-foreach="o.receipt_item_ids" t-as="li">
+                                            <span t-field="li.credit_account_id.code" />, 
+                                        </t>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mx-5"> 
+                                Họ tên người nộp tiền: <span t-field="o.name_submitter" />  
+                        </div>
+                        <div class="row mx-5">
+                            Địa chỉ: <span t-field="o.address_submitter" />
+                            
+                        </div>
+                        <div class="row mx-5">
+                            Lý do nộp: <span t-field="o.reason" />
+                        </div>
+                        <div class="row mx-5">
+                            Số tiền: <span t-field="o.amount" />
+                        </div>
+
+                        <!-- Items listed -->
+                        <div class="row mx-5">
+                            Tổng số tiền (Viết bằng chữ): <span t-esc="o.reader_number(o.amount)"/>
+                        </div>
+                        <div class="row mx-5">
+                            Số chứng từ gốc kèm theo: .................................................
+                        </div>
+
+                        <div class="row mx-3 my-3">
+                            <div class="col-7">
+                            </div>
+                            <div class="col-5 text-center">
+                                <span> <i> Ngày ..... tháng ..... năm ..... </i> </span>
+                            </div>
+
+                        </div>
+
+                        <div class="row mx-3">
+                            <div class="col-2">
+                                <div class="col text-center"> <strong>Người lập phiếu</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="col text-center"><strong>Người nộp tiền</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="col text-center"><strong>Thủ quỹ</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col text-center"><strong>Kế toán trưởng</strong>
+                                </div>
+                                <div class="col text-center"> <i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col text-center" ><strong>Giám đốc</strong>
+                                </div>
+                                <div class="col text-center"> <i> (Ký, họ tên, đóng dấu) </i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    </t>
+                    </t>
+                <t t-if="o.payment_type=='outbound'">
+                <t t-call="smart_invoice.report_without_frame">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-8">
+                                <!-- <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)"
+                                    style="width:300px;height:50px;" alt="Barcode" /> -->
+
+                            </div>
+                            <div class="col-4">
+                                <div class="col-12 text-center font-weight-bold">Mẫu số: 02-TT</div>
+                                <div class="col-12 text-center">
+                                    <span>(Ban hành kèm theo Thông tư số 200/2014/TT-BTC</span> 
+                                    <span>Ngày 22/12/2014 của Bộ Tài chính)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row justify-content-end mb16">
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4">
+                                <div class="row background-success">
+                                    <div class="col-12 py-3 text-center">
+                                        <h2 class="report-header">
+                                            PHIẾU CHI
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+
+                                        <i t-if="o.create_date"> <span t-esc="o.create_date.strftime('Ngày %d tháng %m năm %Y')" /> </i>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        Số: <span t-field="o.name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 py-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>Số: <span t-field="o.payment_code" />  </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>Nợ: 
+                                        <t t-foreach="o.receipt_item_ids" t-as="li">
+                                            <span t-field="li.debit_account_id.code" />, 
+                                        </t>    
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>Có: 
+                                        <t t-foreach="o.receipt_item_ids" t-as="li">
+                                            <span t-field="li.credit_account_id.code" />,
+                                        </t>    
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mx-5"> 
+                            Tên doanh nghiệp: <span t-field="o.company_id.name"/> 
+                        </div>
+                        <div class="row mx-5">
+                            Địa chỉ: <span t-field="o.company_id.tax_address" />
+                        </div>
+                        <div class="row mx-5">
+                            Lý do nộp: <span t-field="o.reason" />
+                        </div>
+                        <div class="row mx-5">
+                            Số tiền: <span t-field="o.amount" />
+                        </div>
+                        <!-- Items listed -->
+                        <div class="row mx-5">
+                            Tổng số tiền (Viết bằng chữ): <span t-esc="o.reader_number(o.amount)"/> đồng chẵn./
+                        </div>
+                        <div class="row mx-5">
+                            Số chứng từ gốc kèm theo: .................................................
+                        </div>
+
+                        <div class="row mx-3 my-3">
+                            <div class="col-7">
+                            </div>
+                            <div class="col-5 text-center">
+                                <span> <i> Ngày ..... tháng ..... năm ..... </i> </span>
+                            </div>
+
+                        </div>
+
+                        <div class="row mx-3">
+                            <div class="col-2 px-0">
+                                <div class="col text-center"> <strong>Người lập phiếu</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-2 px-0">
+                                <div class="col text-center"><strong>Người nộp tiền</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="col text-center"><strong>Thủ quỹ</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col text-center"><strong>Kế toán trưởng</strong>
+                                </div>
+                                <div class="col text-center"> <i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col text-center" ><strong>Giám đốc</strong>
+                                </div>
+                                <div class="col text-center"> <i> (Ký, họ tên, đóng dấu) </i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="page-break-after: always;" />
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-8">
+                                <!-- <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)"
+                                    style="width:300px;height:50px;" alt="Barcode" /> -->
+
+                            </div>
+                            <div class="col-4">
+                                <div class="col-12 text-center font-weight-bold">Mẫu số: 02-TT</div>
+                                <div class="col-12 text-center">
+                                    <span>(Ban hành kèm theo Thông tư số 200/2014/TT-BTC</span> 
+                                    <span>Ngày 22/12/2014 của Bộ Tài chính)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row justify-content-end mb16">
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4">
+                                <div class="row background-success">
+                                    <div class="col-12 py-3 text-center">
+                                        <h2 class="report-header">
+                                            PHIẾU CHI
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+
+                                        <i t-if="o.create_date"> <span t-esc="o.create_date.strftime('Ngày %d tháng %m năm %Y')" /> </i>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        Số: <span t-field="o.name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 py-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>Số: <span t-field="o.payment_code" />  </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>Nợ: 
+                                        <t t-foreach="o.receipt_item_ids" t-as="li">
+                                            <span t-field="li.debit_account_id.code" />,  
+                                        </t>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>Có: 
+                                        <t t-foreach="o.receipt_item_ids" t-as="li">
+                                            <span t-field="li.credit_account_id.code" />,  
+                                        </t>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mx-5"> 
+                            Tên doanh nghiệp: <span t-field="o.company_id.name"/> 
+                        </div>
+                        <div class="row mx-5">
+                            Địa chỉ: <span t-field="o.company_id.tax_address" />
+                        </div>
+                        <div class="row mx-5">
+                            Lý do nộp: <span t-field="o.reason" />
+                        </div>
+                        <div class="row mx-5">
+                            Số tiền: <span t-field="o.amount" />
+                        </div>
+                        <!-- Items listed -->
+                        <div class="row mx-5">
+                            Tổng số tiền (Viết bằng chữ): <span t-esc="o.reader_number(o.amount)"/> đồng chẵn./
+                        </div>
+                        <div class="row mx-5">
+                            Số chứng từ gốc kèm theo: .................................................
+                        </div>
+
+                        <div class="row mx-3 my-3">
+                            <div class="col-7">
+                            </div>
+                            <div class="col-5 text-center">
+                                <span> <i> Ngày ..... tháng ..... năm ..... </i> </span>
+                            </div>
+
+                        </div>
+
+                        <div class="row mx-3">
+                            <div class="col-2 px-0">
+                                <div class="col text-center"> <strong>Người lập phiếu</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-2 px-0">
+                                <div class="col text-center"><strong>Người nộp tiền</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="col text-center"><strong>Thủ quỹ</strong> </div>
+                                <div class="col text-center"><i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col text-center"><strong>Kế toán trưởng</strong>
+                                </div>
+                                <div class="col text-center"> <i> (Ký, họ tên) </i> </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col text-center" ><strong>Giám đốc</strong>
+                                </div>
+                                <div class="col text-center"> <i> (Ký, họ tên, đóng dấu) </i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    </t>
+                    </t>
+                </t>
+            </t>
+    </template>
+    <template id="smart_invoice_receipt_a5print_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <!-- <t t-set="lang" t-value="o.user_id.lang if o.type in ('in_invoice', 'in_refund') else o.partner_id.lang" /> -->
+                    <t t-call="smart_invoice.payment_receipt_a5print_view" t-lang="lang" />
+                </t>
+            </t>
+        </template>
+</odoo>

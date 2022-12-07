@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- report.order.wizard form view -->
+        <record id="report_order_wizard_form" model="ir.ui.view">
+            <field name="name">report.order.wizard.view.form</field>
+            <field name="model">report.order.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Report Order">
+                    <group>
+                        <group>
+                            <field name="start_date" />
+                        </group>
+                        <group>
+                            <field name="end_date" />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="filter_partner" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="set_list_params" string="Get Report" type="object" class="oe_highlight" />
+                        <button string="Cancel" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="smart_manager_report_order"
+            name="Report Order"
+            res_model="report.order.wizard"
+            view_mode="form"
+            target="new"
+        />
+    </data>
+</odoo>

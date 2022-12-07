@@ -1,0 +1,38 @@
+<odoo>
+    <record id="report_pos_smart_pos_seller" model="ir.ui.view">
+        <field name="name">Report Seller</field>
+        <field name="model">pos.seller.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Sale Employee">
+                <group>
+                    <group>
+                        <field name="start_date" string="Date Start"/>
+                    </group>          
+                    <group>
+                        <field name="end_date" string="End date"/>
+
+                    </group>
+                </group>
+                <group> 
+                  <group>
+                        <field name="filter_employee" string="Employee"  options="{'no_create_edit':'1','no_open':True, 'no_create':'1'}"/>
+                    </group>
+                     </group>
+                <footer>
+                    <button name="set_params_to_list" string="Get Report" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="main_smart_pos_seller"
+                name="Report Seller"
+                res_model="pos.seller.wizard"
+                view_mode="form"
+                target="new"
+            />
+    
+
+</odoo>

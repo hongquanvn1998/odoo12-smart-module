@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record id="smart_pos_order_filter" model="ir.actions.act_window">
+            <field name="name">pos.order.filter</field>
+            <field name="res_model">pos.order</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="report_reward_point_history_view">
+     
+            <field name="name">report reward point history</field>
+            <field name="model">report.reward.point.history</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Report end of day by sale" create="false" delete="false">
+                    <field name="id" string="STT" />                
+                    <field name="partner_name" />
+                    <field name="change_point" />
+                    <field name="date" />
+                    <field name="counter_name" />
+                    <field name="code" />
+           
+
+                </tree>
+            </field>
+        </record>
+        <record id="view_report_reward_point_history_search" model="ir.ui.view">
+            <field name="name">report reward point history search</field>
+            <field name="model">report.reward.point.history</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <group expand="1" string="Group By">
+                        <filter string="Partner" name="partner_name" context="{'group_by': 'partner_name'}"></filter>
+                        <filter string="Counter" name="counter_name" context="{'group_by': 'counter_name'}"></filter>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
